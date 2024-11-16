@@ -12,8 +12,7 @@ public class MC_movement : MonoBehaviour
     private Rigidbody rb;
 
     public Vector3 movingVector;
-
-    public GameObject camera;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +27,11 @@ public class MC_movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //gameObject.transform.rotation = Quaternion.Euler(gameObject.transform.rotation.x,camera.transform.rotation.y,gameObject.transform.rotation.z);
+       Move();
+    }
+
+    private void Move()
+    {
         if (Input.GetKey(KeyCode.W))
         {
             movingVector = transform.forward;
@@ -52,10 +55,5 @@ public class MC_movement : MonoBehaviour
             movingVector = Vector3.zero;
         }
         rb.MovePosition(rb.position + movingVector.normalized * (movingSpeed * Time.deltaTime));
-    }
-
-    private void Move()
-    {
-        
     }
 }

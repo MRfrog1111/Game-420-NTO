@@ -449,6 +449,51 @@ Transform:
   m_Father: {fileID: 1943011511}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1842147045
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1842147047}
+  - component: {fileID: 1842147046}
+  m_Layer: 0
+  m_Name: RequestGleb
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1842147046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842147045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0224195538cbe4c807633e14bf925a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  url: https://2025.nti-gamedev.ru/api/games/c94756a8-d518-48fa-90ca-3bb7c23fd1a2/players/
+--- !u!4 &1842147047
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842147045}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.33876777, y: -3.772828, z: -0.6684189}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1943011506
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,7 +508,6 @@ GameObject:
   - component: {fileID: 1943011508}
   - component: {fileID: 1943011513}
   - component: {fileID: 1943011512}
-  - component: {fileID: 1943011514}
   m_Layer: 0
   m_Name: MC
   m_TagString: Untagged
@@ -573,7 +617,6 @@ MonoBehaviour:
   movingSpeed: 10
   jumpForce: 0
   movingVector: {x: 0, y: 0, z: 0}
-  camera: {fileID: 963194225}
 --- !u!54 &1943011513
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -601,18 +644,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1943011514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1943011506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3530ac92255ac854f84e94ea110ed52f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 0
-  oxygen: 0
-  hunger: 0
