@@ -4,8 +4,6 @@ namespace DefaultNamespace
     public struct PlayerStruct
     {
         public string name;
-        public int hp;
-        public int oxygen;
-        public int hunger;
+        public string resources;
     }
 }
