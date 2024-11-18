@@ -6,54 +6,30 @@ using UnityEngine;
 public class MC_movement : MonoBehaviour
 {
     public float movingSpeed;
-
     public float jumpForce;
+
+    private float x;
+    private float z;
 
     private Rigidbody rb;
 
-    public Vector3 movingVector;
-    
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        x = Input.GetAxis("Horizontal") * movingSpeed;
+        z = Input.GetAxis("Vertical") * movingSpeed;
     }
 
     private void FixedUpdate()
     {
-       Move();
+        rb.MovePosition(transform.position + transform.forward * z * Time.fixedDeltaTime + transform.right * x * Time.fixedDeltaTime);
+
+       
     }
 
-    private void Move()
-    {
-        if (Input.GetKey(KeyCode.W))
-        {
-            movingVector = transform.forward;
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            movingVector = -transform.forward;
-        }
-        else if (Input.GetKey(KeyCode.A))
-        {
-            movingVector = -transform.right;
-        }
-
-        else if (Input.GetKey(KeyCode.D))
-        {
-            movingVector = transform.right;
-        }
-
-        else
-        {
-            movingVector = Vector3.zero;
-        }
-        rb.MovePosition(rb.position + movingVector.normalized * (movingSpeed * Time.deltaTime));
-    }
+    
 }
