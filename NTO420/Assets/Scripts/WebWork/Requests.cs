@@ -21,7 +21,7 @@ public class Requests : MonoBehaviour
 
     private IEnumerator Put()
     {
-        resources new_r = new resources()
+        PlayerResources new_r = new PlayerResources()
         {
             apples = 45
         };
@@ -41,12 +41,7 @@ public class Requests : MonoBehaviour
     private IEnumerator Post()
     {
         WWWForm form = new WWWForm();
-        /*PostStrut post = new PostStrut()
-        {
-            id = ''
-        } 
-        */
-        resources r = new resources()
+        PlayerResources r = new PlayerResources()
         {
             apples = 2
         };
@@ -58,10 +53,6 @@ public class Requests : MonoBehaviour
         string json = JsonUtility.ToJson(p);
         print(json);
         UnityWebRequest req = UnityWebRequest.Post(this.urlPost,json,"application/json");
-       /* byte[] postByte = Encoding.UTF8.GetBytes(json);
-        UploadHandler upload = new UploadHandlerRaw(postByte);
-        //UploadHandler upload = new UploadHandlerFile(json);
-        req.uploadHandler = upload;*/
         //req.SetRequestHeader();
         yield return req.SendWebRequest();
         
