@@ -1,6 +1,6 @@
 namespace DefaultNamespace
 {
-    public struct resources
+    public struct PlayerResources
     {
         public int apples;
     }
