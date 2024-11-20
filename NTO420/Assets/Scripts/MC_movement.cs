@@ -7,8 +7,6 @@ public class MC_movement : MonoBehaviour
 {
     public float movingSpeed;
     public float jumpForce;
-    public static int oxygen = 100;
-    public static float food = 100f;
     private int run;
     private int golod;
 
@@ -18,28 +16,28 @@ public class MC_movement : MonoBehaviour
     private float z;
 
     private Rigidbody rb;
+    private PlayerStats stuts;
 
     private void Start()
     {
+        stuts = GetComponent<PlayerStats>();
         rb = GetComponent<Rigidbody>();
-        StartCoroutine(rashodOxygen());
-        StartCoroutine(rashodFood());
     }
 
     
 
     private void Update()
     {
-        
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            run = 2;
-            if (x != 0 || z != 0) golod = 3;
+            run = 2; 
+            if ((x != 0 || z != 0) && stuts.golod != 3)  stuts.golod = 3;
         }
         else
         {
             run = 1;
-            golod = 1;
+            if (stuts.golod != 1)
+                stuts.golod = 1;
         }
         x = Input.GetAxis("Horizontal") * movingSpeed * run;
         z = Input.GetAxis("Vertical") * movingSpeed * run;
@@ -49,31 +47,6 @@ public class MC_movement : MonoBehaviour
     {
         rb.MovePosition(transform.position + transform.forward * z * Time.fixedDeltaTime + transform.right * x * Time.fixedDeltaTime);
     }
-    private IEnumerator rashodFood()
-    {
-        while(food > 0)
-        {
-            yield return new WaitForSeconds(1f);
-            food -= (1f / 12f) * golod;
-            
-        }
-    }
+
     
-    private IEnumerator rashodOxygen()
-    {
-        while (oxygen > 0)
-        {
-            yield return new WaitForSeconds(9f);
-            --oxygen;
-           
-        }
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.tag == "Base") oxygen = 100;
-    }
-
-
-
 }
