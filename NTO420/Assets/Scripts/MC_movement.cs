@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class MC_movement : MonoBehaviour
 {
@@ -12,15 +13,15 @@ public class MC_movement : MonoBehaviour
     private int run;
     private int golod;
 
-
-
     private float x;
     private float z;
 
     private Rigidbody rb;
 
+    
     private void Start()
     {
+        
         rb = GetComponent<Rigidbody>();
         StartCoroutine(rashodOxygen());
         StartCoroutine(rashodFood());
