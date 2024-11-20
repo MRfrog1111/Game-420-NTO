@@ -2,6 +2,8 @@ namespace DefaultNamespace
 {
     public struct PlayerResources
     {
-        public int apples;
+        public int hp;
+        public int oxygen;
+        public float food;
     }
 }

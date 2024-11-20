@@ -13,9 +13,9 @@ public class PrintOxygen : MonoBehaviour
     {
         MC_movement = GetComponent<MC_movement>();
     }
-    private void Update()
+   /* private void Update()
     {
         foodText.text = ("Food: " + (MC_movement.food)).ToString();
         oxygenText.text = ("Oxygen: " + (int)(MC_movement.oxygen)).ToString();
-    }
+    }*/
 }
