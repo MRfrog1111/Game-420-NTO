@@ -23,7 +23,7 @@ public class Requests : MonoBehaviour
     {
         resources new_r = new resources()
         {
-            apples = 45
+            //apples = 45
         };
         UpdateResourcesStruct upd = new UpdateResourcesStruct()
         {
@@ -48,7 +48,7 @@ public class Requests : MonoBehaviour
         */
         resources r = new resources()
         {
-            apples = 2
+            //apples = 2
         };
         PlayerStruct p = new PlayerStruct()
         {

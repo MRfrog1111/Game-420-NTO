@@ -19,8 +19,8 @@ public class PlayerStats : MonoBehaviour
             oxygen = 100,
             food = 100
         };
-        StartCoroutine(webAsker.UpdatePlayerResources(test)); // меняет статы на значения в test
-        StartCoroutine(webAsker.GetPlayerResources(GetRes)); //обновляет статы в соответствии со значением на сервере
+        StartCoroutine(webAsker.UpdatePlayerResources(test));
+        StartCoroutine(webAsker.GetPlayerResources(GetRes));
         StartCoroutine(rashodOxygen());
         StartCoroutine(rashodFood());
     }
