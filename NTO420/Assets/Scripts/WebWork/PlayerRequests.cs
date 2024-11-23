@@ -65,4 +65,20 @@ public class PlayerRequests : MonoBehaviour
         //print(req.downloadHandler.text);
         //return response;
     }
+    /*public IEnumerator SendLog(string comm, string changes)
+    {
+        string url = "https://2025.nti-gamedev.ru/api/games/c94756a8-d518-48fa-90ca-3bb7c23fd1a2/logs/";
+        PlayerLogs pl = new PlayerLogs()
+        {
+            comment = comm,
+            player_name = currentPlayerName,
+            resources_changed = changes
+            
+        };
+        
+        string json = JsonUtility.ToJson(pl);
+        UnityWebRequest req = UnityWebRequest.Post(url,json,"application/json");
+        yield return req.SendWebRequest();
+        
+    }*/
 }
