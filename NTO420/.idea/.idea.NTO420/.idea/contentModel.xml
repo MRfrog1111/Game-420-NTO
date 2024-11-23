@@ -6,12 +6,21 @@
     <e p="C:\Users\user\Documents\GitHub\NTO-game-420\NTO420" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Materials" t="Include" />
+        <e p="Prefabs" t="Include" />
         <e p="Scenes" t="Include" />
         <e p="Scripts" t="Include">
-          <e p="MC_movement.cs" t="Include" />
-          <e p="MouseCameraRotation.cs" t="Include" />
-          <e p="PlayerStats.cs" t="Include" />
-          <e p="PrintOxygen.cs" t="Include" />
+          <e p="Inventory" t="Include">
+            <e p="OpenInventory.cs" t="Include" />
+          </e>
+          <e p="Player" t="Include">
+            <e p="MC_movement.cs" t="Include" />
+            <e p="MouseCameraRotation.cs" t="Include" />
+            <e p="PlayerStats.cs" t="Include" />
+          </e>
+          <e p="UI" t="Include">
+            <e p="PrintOxygen.cs" t="Include" />
+          </e>
           <e p="WebWork" t="Include">
             <e p="PlayerRequests.cs" t="Include" />
             <e p="Requests.cs" t="Include" />
@@ -23,6 +32,10 @@
               <e p="ResoursesStruct.cs" t="Include" />
             </e>
             <e p="UpdateResourcesStruct.cs" t="Include" />
+          </e>
+          <e p="WorldResources" t="Include">
+            <e p="CollectResource.cs" t="Include" />
+            <e p="Highlight.cs" t="Include" />
           </e>
         </e>
       </e>
