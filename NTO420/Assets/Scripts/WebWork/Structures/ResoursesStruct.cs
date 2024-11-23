@@ -1,3 +1,5 @@
+using UnityEngine.UIElements;
+
 namespace DefaultNamespace
 {
     public struct PlayerResources
@@ -12,6 +14,12 @@ namespace DefaultNamespace
         public int send;
         public int metal;
         public int electronics;
-        //pulic int 
+        public int resin;
+        public int onyx_alloy;
+        public int printer_templates;
+        public int energy_crystal;
+        public int honey_esence;
+
+
     }
 }
