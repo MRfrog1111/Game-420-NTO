@@ -28,9 +28,8 @@ public class PlayerStats : MonoBehaviour
     {
         resources = res;
     }
-
-
-   private void FixedUpdate()
+    
+    private void FixedUpdate()
     {
         print("hp " + resources.hp);
         print("oxygen " + resources.oxygen);
@@ -52,7 +51,13 @@ public class PlayerStats : MonoBehaviour
         while(resources.food >= 0)
         {
             yield return new WaitForSeconds(hungerTime);
-            resources.food -= (1f / 12f) * golod;
+            StartCoroutine(webAsker.GetPlayerResources(GetRes));
+            resources.food -=  golod;
+            PlayerChangesLogs changes = new PlayerChangesLogs()
+            {
+                food_change = "-" + golod.ToString()
+            };
+            //StartCoroutine(webAsker.SendLog("player got more hungry", JsonUtility.ToJson(changes)));
             StartCoroutine(webAsker.UpdatePlayerResources(resources));
             StartCoroutine(webAsker.GetPlayerResources(GetRes));
         }
@@ -61,6 +66,7 @@ public class PlayerStats : MonoBehaviour
     {
         while (resources.oxygen >= 0)
         {
+            StartCoroutine(webAsker.GetPlayerResources(GetRes));
             yield return new WaitForSeconds(oxygenTime);
             --resources.oxygen;
             StartCoroutine(webAsker.UpdatePlayerResources(resources));
