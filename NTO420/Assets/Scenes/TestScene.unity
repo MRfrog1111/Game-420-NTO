@@ -442,8 +442,9 @@ GameObject:
   - component: {fileID: 268801250}
   - component: {fileID: 268801249}
   - component: {fileID: 268801253}
+  - component: {fileID: 268801254}
   m_Layer: 3
-  m_Name: Stone
+  m_Name: Honey
   m_TagString: CollectibleResource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -550,6 +551,33 @@ MonoBehaviour:
   renderers:
   - {fileID: 268801250}
   color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!54 &268801254
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268801248}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &335735250
 GameObject:
   m_ObjectHideFlags: 0
@@ -2362,7 +2390,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1842147046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2440,6 +2468,8 @@ GameObject:
   - component: {fileID: 1943011513}
   - component: {fileID: 1943011512}
   - component: {fileID: 1943011514}
+  - component: {fileID: 1943011515}
+  - component: {fileID: 1943011516}
   m_Layer: 6
   m_Name: MC
   m_TagString: Untagged
@@ -2587,11 +2617,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38a50754c680c2147b2b0a5f7d72a3d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  webAsker: {fileID: 1943011516}
   pickableLayerMask:
     serializedVersion: 2
     m_Bits: 8
   playerCameraTransform: {fileID: 963194228}
   pickapUI: {fileID: 0}
+--- !u!114 &1943011515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943011506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4017c5f9886563a4bb0118a6ce6ef9fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  webAsker: {fileID: 1943011516}
+  golod: 1
+  hungerTime: 1
+  oxygenTime: 9
+--- !u!114 &1943011516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943011506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc2e7ad1fbb5ff54099ada5625092fad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPlayerName: test3
 --- !u!1 &2005295887
 GameObject:
   m_ObjectHideFlags: 0
