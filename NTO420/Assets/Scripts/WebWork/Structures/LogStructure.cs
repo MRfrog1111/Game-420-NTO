@@ -1,6 +1,6 @@
 namespace DefaultNamespace
 {
-    public struct PlayerLogs
+    public struct PlayersLogs
     {
         public string comment; 
         public string player_name;

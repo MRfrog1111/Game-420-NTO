@@ -30,7 +30,7 @@ public class PlayerStats : MonoBehaviour
     }
 
 
-   private void FixedUpdate()
+   private void Update()
     {
         print("hp " + resources.hp);
         print("oxygen " + resources.oxygen);

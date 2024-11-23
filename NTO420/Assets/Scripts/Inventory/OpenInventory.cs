@@ -5,6 +5,7 @@ using UnityEngine;
 public class OpenInventory : MonoBehaviour
 {
     public GameObject inventory;
+    
 
     private void Awake()
     {
