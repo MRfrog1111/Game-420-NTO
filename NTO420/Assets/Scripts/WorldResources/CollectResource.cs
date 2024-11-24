@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using DefaultNamespace;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
+using UnityEngine.UI;
+
 public class CollectResource : MonoBehaviour
 {
     [SerializeField] private PlayerRequests webAsker;
@@ -64,7 +66,7 @@ public class CollectResource : MonoBehaviour
         }
         foreach (SlotInventory slot in slots)
         {
-            if (slot.isEmpty == false)
+            if (slot.isEmpty == true)
             {
                 slot.item = _item;
                 slot.count = _count;
@@ -74,7 +76,7 @@ public class CollectResource : MonoBehaviour
                 switch (slot.item.name)
                 {
                     case "Honey":
-                        resources.honey += 1;
+                        resources.honey += slot.count;
                         break;
                     default:
                         print("there's no such resource");

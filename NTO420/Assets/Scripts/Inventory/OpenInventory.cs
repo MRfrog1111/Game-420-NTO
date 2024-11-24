@@ -9,6 +9,7 @@ public class OpenInventory : MonoBehaviour
 
     private void Awake()
     {
+        inventory.SetActive(true);
         inventory.SetActive(false);
     }
     private void Update()
