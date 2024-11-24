@@ -12,7 +12,7 @@ public class SlotInventory : MonoBehaviour
     public GameObject _icon;
     public TMP_Text itemCountText;
 
-    private void Start()
+    private void Awake()
     {
         _icon = transform.GetChild(0).gameObject;
         itemCountText = transform.GetChild(1).GetComponent<TMP_Text>();
