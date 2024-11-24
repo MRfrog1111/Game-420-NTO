@@ -53,7 +53,7 @@ public class PlayerStats : MonoBehaviour
             yield return new WaitForSeconds(hungerTime);
             StartCoroutine(webAsker.GetPlayerResources(GetRes));
             resources.food -=  golod;
-            PlayerChangesLogs changes = new PlayerChangesLogs()
+            PChangeLogs changes = new PChangeLogs()
             {
                 food_change = "-" + golod.ToString()
             };

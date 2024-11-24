@@ -3,16 +3,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DefaultNamespace;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 public class CollectResource : MonoBehaviour
 {
     [SerializeField] private PlayerRequests webAsker;
     private PlayerResources resources;
     [SerializeField] private LayerMask pickableLayerMask;
     [SerializeField] private Transform playerCameraTransform;
-    [SerializeField] private GameObject pickapUI;
+    
+    public List<SlotInventory> slots = new List<SlotInventory>();
+    public Transform inventoryPanel;
     private float hitRange = 3;
-    private RaycastHit hit;
+    RaycastHit hit;
 
+    private void Start()
+    {
+        for (int i = 0; i < inventoryPanel.childCount; i++)
+        {
+            if (inventoryPanel.GetChild(i).GetComponent<SlotInventory>() != null)
+            {
+                slots.Add((inventoryPanel.GetChild(i).GetComponent<SlotInventory>()));
+
+            }
+        }
+    }
     private void Update()
     {
         if (hit.collider != null)
@@ -24,7 +38,8 @@ public class CollectResource : MonoBehaviour
             hit.collider.GetComponent<Highlight>()?.ToggleHightLight(true);
             if (Input.GetMouseButtonUp(0))
             {
-                AddResource(hit.collider.gameObject);
+                AddItem(hit.collider.GetComponent<Items>().Item, hit.collider.GetComponent<Items>().count);
+                Destroy(hit.collider);
             }
             
         }
@@ -33,21 +48,43 @@ public class CollectResource : MonoBehaviour
     {
         resources = res;
     }
-    void AddResource(GameObject obj)
+    
+
+    private void AddItem(ItemScriptableObject _item, int _count)
     {
         StartCoroutine(webAsker.GetPlayerResources(GetRes));
-        switch (obj.name)
+        foreach (SlotInventory slot in slots)
         {
-            case "Honey":
-                resources.honey += 1;
+            if (slot.item == _item)
+            {
+                slot.count += _count;
+                slot.itemCountText.text = slot.count.ToString();
+                return;
+            }
+        }
+        foreach (SlotInventory slot in slots)
+        {
+            if (slot.isEmpty == false)
+            {
+                slot.item = _item;
+                slot.count = _count;
+                slot.isEmpty = false;
+                slot.SetIcon(_item.icon);
+                slot.itemCountText.text = _count.ToString();
+                switch (slot.item.name)
+                {
+                    case "Honey":
+                        resources.honey += 1;
+                        break;
+                    default:
+                        print("there's no such resource");
+                        break;
+                }
                 break;
-            default:
-                print("there's no such resource");
-                break;
+            }
         }
         StartCoroutine(webAsker.UpdatePlayerResources(resources));
         StartCoroutine(webAsker.GetPlayerResources(GetRes));
-        Destroy(obj);
     }
-    
+
 }
