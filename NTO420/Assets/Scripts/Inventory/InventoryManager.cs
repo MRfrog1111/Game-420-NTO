@@ -30,11 +30,7 @@ public class InventoryManager : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, distance))
         {
-            /*if (Input.GetKeyDown(KeyCode.E))
-            {
-                
-
-            }*/
+            
             if (hit.collider.gameObject.GetComponent<Items>() != null)
             {
                 AddItem(hit.collider.gameObject.GetComponent<Items>().Item, hit.collider.gameObject.GetComponent<Items>().count);
