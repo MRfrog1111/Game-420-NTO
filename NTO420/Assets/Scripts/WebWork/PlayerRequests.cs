@@ -28,7 +28,7 @@ public class PlayerRequests : MonoBehaviour
                 resources = JsonUtility.ToJson(new_res)
             };
             string json = JsonUtility.ToJson(upd);
-            print(json);
+           // print(json);
             byte[] data = System.Text.Encoding.UTF8.GetBytes(json);
             UnityWebRequest req = UnityWebRequest.Put(url, data);
             req.SetRequestHeader("Content-Type", "application/json");
@@ -45,7 +45,7 @@ public class PlayerRequests : MonoBehaviour
             name = p_name,
         };
         string json = JsonUtility.ToJson(p);
-        print(json);
+       // print(json);
         UnityWebRequest req = UnityWebRequest.Post(url,json,"application/json");
         //req.SetRequestHeader();
         yield return req.SendWebRequest();
@@ -65,20 +65,22 @@ public class PlayerRequests : MonoBehaviour
         //print(req.downloadHandler.text);
         //return response;
     }
-    /*public IEnumerator SendLog(string comm, string changes)
+    public IEnumerator SendLog(string comm, PlayerChangesLogs changes)
     {
-        string url = "https://2025.nti-gamedev.ru/api/games/c94756a8-d518-48fa-90ca-3bb7c23fd1a2/logs/";
+        string url =  "https://2025.nti-gamedev.ru/api/games/c94756a8-d518-48fa-90ca-3bb7c23fd1a2/logs/";
         PlayerLogs pl = new PlayerLogs()
         {
             comment = comm,
             player_name = currentPlayerName,
             resources_changed = changes
-            
         };
+        print('a');
+        /*UnityWebRequest www = 
+            UnityWebRequest.PostWwwForm(url,JsonUtility.ToJson(pl));
+        www.SetRequestHeader( "","application/json");*/
+        UnityWebRequest www = UnityWebRequest.Post(url,JsonUtility.ToJson(pl),"application/json");
+        yield return www.SendWebRequest();
+        print(www.downloadHandler.text);
         
-        string json = JsonUtility.ToJson(pl);
-        UnityWebRequest req = UnityWebRequest.Post(url,json,"application/json");
-        yield return req.SendWebRequest();
-        
-    }*/
+    }
 }

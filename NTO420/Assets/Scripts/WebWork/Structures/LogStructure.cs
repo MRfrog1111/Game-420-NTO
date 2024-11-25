@@ -1,9 +1,10 @@
 namespace DefaultNamespace
 {
+    [System.Serializable]
     public struct PlayerLogs
     {
         public string comment; 
         public string player_name;
-        public string resources_changed;
+        public PlayerChangesLogs resources_changed;
     }
 }

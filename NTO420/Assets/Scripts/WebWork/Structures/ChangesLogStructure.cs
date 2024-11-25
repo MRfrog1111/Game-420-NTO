@@ -1,5 +1,6 @@
 namespace DefaultNamespace
 {
+    [System.Serializable]
     public struct PlayerChangesLogs
     {
         public string hp_change; 
