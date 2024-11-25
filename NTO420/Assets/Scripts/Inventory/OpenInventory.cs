@@ -5,7 +5,6 @@ using UnityEngine;
 public class OpenInventory : MonoBehaviour
 {
     public GameObject inventory;
-    
 
     private void Awake()
     {
@@ -18,6 +17,7 @@ public class OpenInventory : MonoBehaviour
         {
             inventory.SetActive(true);
             Cursor.lockState = CursorLockMode.Confined;
+            Time.timeScale = 0f;
         }
     }
 
@@ -25,5 +25,6 @@ public class OpenInventory : MonoBehaviour
     {
         inventory.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
+        Time.timeScale = 1f;
     }
 }

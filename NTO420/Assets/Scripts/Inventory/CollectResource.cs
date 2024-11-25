@@ -5,6 +5,7 @@ using UnityEngine;
 using DefaultNamespace;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class CollectResource : MonoBehaviour
 {
@@ -59,8 +60,11 @@ public class CollectResource : MonoBehaviour
         {
             if (slot.item == _item)
             {
-                slot.count += _count;
-                slot.itemCountText.text = slot.count.ToString();
+                if (slot.count + _count < _item.maxCount)
+                { 
+                    slot.count += _count;
+                    slot.itemCountText.text = slot.count.ToString();
+                }
                 return;
             }
         }
