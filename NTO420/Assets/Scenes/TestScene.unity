@@ -282,7 +282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.56078434}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -467,7 +467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2903202981531068322, guid: 042ef356f7ad4564e96f5ee4ec4fc86a, type: 3}
       propertyPath: m_Name
-      value: Honey (1)
+      value: 'Honey '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1752,6 +1752,67 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8601459300981945059, guid: 3f6a2c7e3fecbdc4c92a74eca41cf49e, type: 3}
   m_PrefabInstance: {fileID: 1239951010}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1246564332
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1609245481870084625, guid: 042ef356f7ad4564e96f5ee4ec4fc86a, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609245481870084625, guid: 042ef356f7ad4564e96f5ee4ec4fc86a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.303
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609245481870084625, guid: 042ef356f7ad4564e96f5ee4ec4fc86a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.3257555
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609245481870084625, guid: 042ef356f7ad4564e96f5ee4ec4fc86a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.8576925
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609245481870084625, guid: 042ef356f7ad4564e96f5ee4ec4fc86a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609245481870084625, guid: 042ef356f7ad4564e96f5ee4ec4fc86a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609245481870084625, guid: 042ef356f7ad4564e96f5ee4ec4fc86a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609245481870084625, guid: 042ef356f7ad4564e96f5ee4ec4fc86a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609245481870084625, guid: 042ef356f7ad4564e96f5ee4ec4fc86a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609245481870084625, guid: 042ef356f7ad4564e96f5ee4ec4fc86a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609245481870084625, guid: 042ef356f7ad4564e96f5ee4ec4fc86a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2903202981531068322, guid: 042ef356f7ad4564e96f5ee4ec4fc86a, type: 3}
+      propertyPath: m_Name
+      value: 'Honey  '
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 042ef356f7ad4564e96f5ee4ec4fc86a, type: 3}
 --- !u!1001 &1493259781
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2449,15 +2510,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 10
+    m_Left: -3
     m_Right: 0
-    m_Top: 0
+    m_Top: -3
     m_Bottom: 0
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 200, y: 125}
-  m_Spacing: {x: 26, y: 4.2}
+  m_CellSize: {x: 220, y: 130}
+  m_Spacing: {x: 9.49, y: 3.31}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!114 &1613468099
@@ -2913,12 +2974,11 @@ GameObject:
   - component: {fileID: 1943011508}
   - component: {fileID: 1943011513}
   - component: {fileID: 1943011512}
-  - component: {fileID: 1943011514}
   - component: {fileID: 1943011515}
   - component: {fileID: 1943011516}
   m_Layer: 6
   m_Name: MC
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3001,15 +3061,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1943011506}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.4, z: 0}
+  m_LocalRotation: {x: -0, y: 0.40116012, z: -0, w: 0.91600794}
+  m_LocalPosition: {x: 0, y: 0.39999998, z: 0}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 963194228}
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 47.301, z: 0}
 --- !u!114 &1943011512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3051,25 +3111,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &1943011514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1943011506}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38a50754c680c2147b2b0a5f7d72a3d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  webAsker: {fileID: 1943011516}
-  pickableLayerMask:
-    serializedVersion: 2
-    m_Bits: 8
-  playerCameraTransform: {fileID: 963194228}
-  slots: []
-  inventoryPanel: {fileID: 0}
 --- !u!114 &1943011515
 MonoBehaviour:
   m_ObjectHideFlags: 0
