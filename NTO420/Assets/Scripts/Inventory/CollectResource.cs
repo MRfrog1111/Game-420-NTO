@@ -42,7 +42,7 @@ public class CollectResource : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
                 AddItem(hit.collider.GetComponent<Items>().Item, hit.collider.GetComponent<Items>().count);
-                Destroy(hit.collider);
+                Destroy(hit.collider.gameObject);
             }
             
         }
@@ -60,12 +60,13 @@ public class CollectResource : MonoBehaviour
         {
             if (slot.item == _item)
             {
-                if (slot.count + _count < _item.maxCount)
+                if (slot.count + _count <= _item.maxCount)
                 { 
                     slot.count += _count;
                     slot.itemCountText.text = slot.count.ToString();
+                    return;
                 }
-                return;
+                break;
             }
         }
         foreach (SlotInventory slot in slots)

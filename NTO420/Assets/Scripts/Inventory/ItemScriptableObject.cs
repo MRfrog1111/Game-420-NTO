@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ItemType {Food, Weapon}
+public enum ItemType {Honey, Weapon, BuildingMaterials, Seeds, Electricals, Minerals, Upgrade, Repair }
 public class ItemScriptableObject : ScriptableObject
 {
     public ItemType itemType;
