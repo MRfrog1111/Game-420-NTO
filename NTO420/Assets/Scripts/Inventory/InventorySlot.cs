@@ -14,8 +14,8 @@ public class SlotInventory : MonoBehaviour
 
     private void Awake()
     {
-        _icon = transform.GetChild(0).gameObject;
-        itemCountText = transform.GetChild(1).GetComponent<TMP_Text>();
+        _icon = transform.GetChild(0).GetChild(0).gameObject;
+        itemCountText = transform.GetChild(0).GetChild(1).GetComponent<TMP_Text>();
     }
 
     public void SetIcon(Sprite icon)
