@@ -11,15 +11,21 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float hungerTime; //время за которое персонаж проголодается
     [SerializeField] private float oxygenTime; //время за которое персонаж потеряет кислород
     
-    private void Start()
+    private void Awake()
     {
-        PlayerResources test = new PlayerResources()
+        PlayerResources test1 = new PlayerResources()
         {
             hp = 100,
             oxygen = 100,
             food = 100
         };
-        StartCoroutine(webAsker.UpdatePlayerResources(test)); // меняет статы на значения в test
+        StartCoroutine(webAsker.UpdatePlayerResources(test1));
+        PlayerResources test = new PlayerResources()
+        {
+            hp = 100,
+            oxygen = 100,
+            food = 100
+        };// меняет статы на значения в test
         StartCoroutine(webAsker.GetPlayerResources(GetRes)); //обновляет статы в соответствии со значением на сервере
         StartCoroutine(rashodOxygen());
         StartCoroutine(rashodFood());
@@ -31,7 +37,7 @@ public class PlayerStats : MonoBehaviour
     
     private void FixedUpdate()
     {
-        print("hp " + resources.hp);
+       /* print("hp " + resources.hp);
         print("oxygen " + resources.oxygen);
         print("food " + resources.food);
         
@@ -48,7 +54,7 @@ public class PlayerStats : MonoBehaviour
    
    private IEnumerator rashodFood()
     {
-        while(resources.food >= 0)
+        while(true)
         {
             yield return new WaitForSeconds(hungerTime);
             StartCoroutine(webAsker.GetPlayerResources(GetRes));
@@ -57,7 +63,7 @@ public class PlayerStats : MonoBehaviour
             {
                 food_change = "-" + golod.ToString()
             };
-            //StartCoroutine(webAsker.SendLog("player got more hungry", JsonUtility.ToJson(changes)));
+            StartCoroutine(webAsker.SendLog("player got more hungry",changes));
             StartCoroutine(webAsker.UpdatePlayerResources(resources));
             StartCoroutine(webAsker.GetPlayerResources(GetRes));
         }
