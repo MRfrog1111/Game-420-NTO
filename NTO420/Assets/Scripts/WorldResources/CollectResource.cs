@@ -40,6 +40,11 @@ public class CollectResource : MonoBehaviour
         {
             case "Honey":
                 resources.honey += 1;
+                PlayerChangesLogs changes = new PlayerChangesLogs()
+                {
+                    honey_change = "+1"
+                };
+                StartCoroutine(webAsker.SendLog("collected honey",changes));
                 break;
             default:
                 print("there's no such resource");
