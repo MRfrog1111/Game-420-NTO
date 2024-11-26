@@ -36,15 +36,18 @@ public class CollectResource : MonoBehaviour
     void AddResource(GameObject obj)
     {
         StartCoroutine(webAsker.GetPlayerResources(GetRes));
+        PlayerChangesLogs changes = new PlayerChangesLogs();
         switch (obj.name)
         {
             case "Honey":
                 resources.honey += 1;
-                PlayerChangesLogs changes = new PlayerChangesLogs()
-                {
-                    honey_change = "+1"
-                };
+                changes.honey_change = "+1";
                 StartCoroutine(webAsker.SendLog("collected honey",changes));
+                break;
+            case "Vosk":
+                resources.vosk += 1;
+                changes.vosk_change = "+1";
+                StartCoroutine(webAsker.SendLog("collected vosk",changes));
                 break;
             default:
                 print("there's no such resource");
