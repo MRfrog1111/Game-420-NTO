@@ -3,29 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DefaultNamespace;
-public class CollectResource1 : MonoBehaviour
+public class CollectResource : MonoBehaviour
 {
     [SerializeField] private PlayerRequests webAsker;
     private PlayerResources resources;
     [SerializeField] private LayerMask pickableLayerMask;
     [SerializeField] private Transform playerCameraTransform;
     [SerializeField] private GameObject pickapUI;
-    public List<SlotInventory> slots = new List<SlotInventory>();
-    public Transform inventoryPanel;
     private float hitRange = 3;
     private RaycastHit hit;
 
-    private void Start()
-    {
-        for (int i = 0; i < inventoryPanel.childCount; i++)
-        {
-            if (inventoryPanel.GetChild(i).GetComponent<SlotInventory>() != null)
-            {
-                slots.Add((inventoryPanel.GetChild(i).GetComponent<SlotInventory>()));
-
-            }
-        }
-    }
     private void Update()
     {
         if (hit.collider != null)
