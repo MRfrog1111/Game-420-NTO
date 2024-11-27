@@ -74,13 +74,13 @@ public class PlayerRequests : MonoBehaviour
             player_name = currentPlayerName,
             resources_changed = changes
         };
-        print('a');
+       
         /*UnityWebRequest www = 
             UnityWebRequest.PostWwwForm(url,JsonUtility.ToJson(pl));
         www.SetRequestHeader( "","application/json");*/
         UnityWebRequest www = UnityWebRequest.Post(url,JsonUtility.ToJson(pl),"application/json");
         yield return www.SendWebRequest();
-        print(www.downloadHandler.text);
+        //print(www.downloadHandler.text);
         
     }
 }
