@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DefaultNamespace;
-public class CollectResource : MonoBehaviour
+public class CollectResource1 : MonoBehaviour
 {
     [SerializeField] private PlayerRequests webAsker;
     private PlayerResources resources;
