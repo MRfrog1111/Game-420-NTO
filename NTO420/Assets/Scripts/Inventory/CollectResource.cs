@@ -73,6 +73,7 @@ public class CollectResource : MonoBehaviour
         {
             if (slot.isEmpty == true)
             {
+                print(slot.item.name)
                 slot.item = _item;
                 slot.count = _count;
                 slot.isEmpty = false;
