@@ -8,6 +8,7 @@ public class OpenInventory : MonoBehaviour
 
     private void Awake()
     {
+        inventory.SetActive(true);
         inventory.SetActive(false);
     }
     private void Update()
@@ -16,6 +17,7 @@ public class OpenInventory : MonoBehaviour
         {
             inventory.SetActive(true);
             Cursor.lockState = CursorLockMode.Confined;
+            Time.timeScale = 0f;
         }
     }
 
@@ -23,5 +25,6 @@ public class OpenInventory : MonoBehaviour
     {
         inventory.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
+        Time.timeScale = 1f;
     }
 }

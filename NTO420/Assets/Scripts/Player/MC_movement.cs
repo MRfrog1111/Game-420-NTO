@@ -17,7 +17,7 @@ public class MC_movement : MonoBehaviour
     private float z;
 
     private Rigidbody rb;
-    private bool canJump = true;
+
     
     private void Start()
     {
@@ -31,7 +31,7 @@ public class MC_movement : MonoBehaviour
 
     private void Update()
     {
-        Jump();
+        
         if (Input.GetKey(KeyCode.LeftShift))
         {
             run = 2;
@@ -49,15 +49,6 @@ public class MC_movement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(transform.position + transform.forward * z * Time.fixedDeltaTime + transform.right * x * Time.fixedDeltaTime);
-    }
-
-    private void Jump()
-    {
-        if (canJump && Input.GetKey(KeyCode.Space))
-        {
-            rb.AddForce(Vector3.up*jumpForce*rb.mass,ForceMode.Impulse);
-            canJump = false;
-        }
     }
     private IEnumerator rashodFood()
     {
@@ -79,14 +70,10 @@ public class MC_movement : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision other)
-    {
-        canJump = true;
-    }
-    /* private void OnTriggerStay(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Base") oxygen = 100;
-    }*/
+    }
 
 
 

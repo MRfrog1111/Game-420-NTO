@@ -1,21 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PrintOxygen : MonoBehaviour
 {
-    public MC_movement MC_movement;
+    
     public Text foodText;
     public Text oxygenText;
 
     private void Awake()
     {
-        MC_movement = GetComponent<MC_movement>();
     }
-   /* private void Update()
+    /*private void Update()
     {
-        foodText.text = ("Food: " + (MC_movement.food)).ToString();
-        oxygenText.text = ("Oxygen: " + (int)(MC_movement.oxygen)).ToString();
+        foodText.text = ("Food: " + ()).ToString();
+        oxygenText.text = ("Oxygen: " + (int)()).ToString();
     }*/
 }
