@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     [Header("Preferences")]
    // private bool Static;
 
-    public Vector3[] Waypoints;
+    public Transform[] Waypoints;
     public float Speed;
     public  float TimeToWait;
 
@@ -54,11 +54,11 @@ public class Enemy : MonoBehaviour
             _isMovingForward = true;
             _waypointNum += 1;
         }
-
-        transform.position = Vector3.MoveTowards(transform.position, Waypoints[_waypointNum], Time.deltaTime * Speed);
+        gameObject.transform.LookAt(Waypoints[_waypointNum]);
+        transform.position = Vector3.MoveTowards(transform.position, Waypoints[_waypointNum].transform.position, Time.deltaTime * Speed);
         //Vector3 check = new Vector3(Waypoints[_waypointNum].x,transform.position.y,);
         
-        if(Vector3.Distance(transform.position, Waypoints[_waypointNum]) < 1f)
+        if(Vector3.Distance(transform.position, Waypoints[_waypointNum].transform.position) < 1f)
         {
             if (_isMovingForward) {
                  _waypointNum += 1;
