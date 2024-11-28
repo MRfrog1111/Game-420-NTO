@@ -8,7 +8,7 @@ namespace DefaultNamespace
         public int oxygen;
         public float food;
         public int honey;
-        public int vosk;
+        public int wax;
         public int minerals;
         public int seeds;
         public int send;

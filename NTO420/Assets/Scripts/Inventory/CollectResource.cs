@@ -83,6 +83,9 @@ public class CollectResource : MonoBehaviour
                     case "Honey":
                         resources.honey += slot.count;
                         break;
+                    case "Wax":
+                        resources.wax += slot.count;
+                        break;
                     default:
                         print("there's no such resource");
                         break;
