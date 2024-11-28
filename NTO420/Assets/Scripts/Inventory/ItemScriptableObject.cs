@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ItemType {Honey, Weapon, BuildingMaterials, Seeds, Electricals, Minerals, Upgrade, Repair }
+public enum ItemType {Honey, Wax, SiliconSand, Seeds, Electricals, Minerals, HoneyEssence,
+                      EnergyCrystal, MetallFragments, CrystallizedResin, OnyxAlloy, PrinterTemplate }
 public class ItemScriptableObject : ScriptableObject
 {
     public ItemType itemType;

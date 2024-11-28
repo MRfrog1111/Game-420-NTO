@@ -92,6 +92,9 @@ public class CollectResource : MonoBehaviour
                         changes.vosk_change = "+"+_count.ToString();
                         StartCoroutine(webAsker.SendLog("collected vosk 123",changes));
                         break;
+                    case "Wax":
+                        resources.wax += slot.count;
+                        break;
                     default:
                         print("there's no such resource");
                         break;
