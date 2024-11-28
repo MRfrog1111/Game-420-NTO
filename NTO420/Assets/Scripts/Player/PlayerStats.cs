@@ -75,11 +75,6 @@ public class PlayerStats : MonoBehaviour
             StartCoroutine(webAsker.GetPlayerResources(GetRes));
             yield return new WaitForSeconds(oxygenTime);
             --resources.oxygen;
-            PlayerChangesLogs changes = new PlayerChangesLogs()
-            {
-                oxygen_change =  "-1"
-            };
-            StartCoroutine(webAsker.SendLog("waste of oxygen outside the base",changes));
             StartCoroutine(webAsker.UpdatePlayerResources(resources));
             StartCoroutine(webAsker.GetPlayerResources(GetRes));
         }
@@ -90,11 +85,6 @@ public class PlayerStats : MonoBehaviour
         if (other.tag == "Base")
         {
             resources.oxygen = 100;
-            PlayerChangesLogs changes = new PlayerChangesLogs()
-            {
-                oxygen_change =  "=100"
-            };
-            StartCoroutine(webAsker.SendLog("oxygen restore in the base",changes));
             StartCoroutine(webAsker.UpdatePlayerResources(resources));
         }
     }
