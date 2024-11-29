@@ -18,6 +18,7 @@ public class MC_movement : MonoBehaviour
 
     private Rigidbody rb;
 
+    private bool isGrounded = true;
     
     private void Start()
     {
@@ -49,6 +50,11 @@ public class MC_movement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(transform.position + transform.forward * z * Time.fixedDeltaTime + transform.right * x * Time.fixedDeltaTime);
+        if (Input.GetKeyUp(KeyCode.Space) && isGrounded)
+        {
+            rb.AddForce(Vector3.up*jumpForce,ForceMode.Impulse);
+            isGrounded = false;
+        }
     }
     private IEnumerator rashodFood()
     {
@@ -68,6 +74,11 @@ public class MC_movement : MonoBehaviour
             --oxygen;
            
         }
+    }
+
+    private void OnCollisionEnter(Collision coll)
+    {
+        isGrounded = true;
     }
 
     private void OnTriggerStay(Collider other)
