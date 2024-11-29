@@ -11,14 +11,8 @@ public class MC_attack : MonoBehaviour
     Animator animator;
     AudioSource audioSource;
 
-    [Header("Controller")]
-    public float moveSpeed = 5;
-    public float gravity = -9.8f;
-    public float jumpHeight = 1.2f;
-
     Vector3 _PlayerVelocity;
-
-    bool isGrounded;
+    
 
     [Header("Camera")]
     public Camera cam;
@@ -31,8 +25,6 @@ public class MC_attack : MonoBehaviour
         controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
         audioSource = GetComponent<AudioSource>();
-        
-       // input = playerInput.Main;
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -40,11 +32,9 @@ public class MC_attack : MonoBehaviour
 
     void Update()
     {
-        isGrounded = controller.isGrounded;
-
         // Repeat Inputs
-        /*if(input.Attack.IsPressed())
-        { Attack(); }*/
+        if(Input.GetMouseButtonDown(0))
+        { Attack(); }
 
         SetAnimations();
     }
@@ -76,13 +66,14 @@ public class MC_attack : MonoBehaviour
             { ChangeAnimationState(WALK); }
         }
     }
+    
     [Header("Attacking")]
-    public float attackDistance = 3f;
-    public float attackDelay = 0.4f;
-    public float attackSpeed = 1f;
-    public int attackDamage = 1;
+    public float attackDistance ;
+    public float attackDelay ;
+    public float attackSpeed ;
+    public int attackDamage ;
     public LayerMask attackLayer;
-
+    public float attackForce;
     public GameObject hitEffect;
     public AudioClip swordSwing;
     public AudioClip hitSound;
@@ -90,7 +81,7 @@ public class MC_attack : MonoBehaviour
     bool attacking = false;
     bool readyToAttack = true;
     int attackCount;
-
+    
     public void Attack()
     {
         if(!readyToAttack || attacking) return;
@@ -106,12 +97,12 @@ public class MC_attack : MonoBehaviour
 
         if(attackCount == 0)
         {
-            //ChangeAnimationState(ATTACK1);
+            ChangeAnimationState(ATTACK1);
             attackCount++;
         }
         else
         {
-            //ChangeAnimationState(ATTACK2);
+            ChangeAnimationState(ATTACK2);
             attackCount = 0;
         }
     }
@@ -124,12 +115,14 @@ public class MC_attack : MonoBehaviour
 
     void AttackRaycast()
     {
+        print("abc");
         if(Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hit, attackDistance, attackLayer))
         { 
-            HitTarget(hit.point);
-
-           /*   if(hit.transform.TryGetComponent<Actor>(out Actor T))
-            { T.TakeDamage(attackDamage); }                         //*/
+           // HitTarget(hit.point);
+           GameObject enemy = hit.collider.gameObject;
+           enemy.GetComponent<Rigidbody>().AddForce(transform.forward*attackForce,ForceMode.Impulse);
+             if(enemy.TryGetComponent<HP>(out HP enemy_hp))
+            { enemy_hp.GiveDamage(attackDamage); }                         
         } 
     }
 
