@@ -134,5 +134,10 @@ public class MC_attack : MonoBehaviour
         GameObject GO = Instantiate(hitEffect, pos, Quaternion.identity);
         Destroy(GO, 20);
     }
+
+    public void Death()
+    {
+        print("Lox umer");
+    }
 }
 

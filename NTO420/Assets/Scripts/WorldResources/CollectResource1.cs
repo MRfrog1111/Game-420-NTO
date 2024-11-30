@@ -45,7 +45,7 @@ public class CollectResource1 : MonoBehaviour
                 StartCoroutine(webAsker.SendLog("collected honey",changes));
                 break;
             case "Vosk":
-                resources.vosk += 1;
+                resources.wax += 1;
                 changes.vosk_change = "+1";
                 StartCoroutine(webAsker.SendLog("collected vosk",changes));
                 break;

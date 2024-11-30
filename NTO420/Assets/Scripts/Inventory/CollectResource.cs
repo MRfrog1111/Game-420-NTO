@@ -88,7 +88,7 @@ public class CollectResource : MonoBehaviour
                         StartCoroutine(webAsker.SendLog("collected honey 123",changes));
                         break;
                     case "Vosk":
-                        resources.vosk += _count;
+                        resources.wax += _count;
                         changes.vosk_change = "+"+_count.ToString();
                         StartCoroutine(webAsker.SendLog("collected vosk 123",changes));
                         break;
