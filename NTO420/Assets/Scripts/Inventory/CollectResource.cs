@@ -79,18 +79,12 @@ public class CollectResource : MonoBehaviour
                 slot.isEmpty = false;
                 slot.SetIcon(_item.icon);
                 slot.itemCountText.text = _count.ToString();
-                PlayerChangesLogs changes = new PlayerChangesLogs();
+               
                 switch (_item.name)
                 {
                     case "Honey":
                         resources.honey += _count;
-                        changes.honey_change = "+"+_count.ToString();
-                        StartCoroutine(webAsker.SendLog("collected honey 123",changes));
-                        break;
-                    case "Vosk":
-                        resources.vosk += _count;
-                        changes.vosk_change = "+"+_count.ToString();
-                        StartCoroutine(webAsker.SendLog("collected vosk 123",changes));
+                        
                         break;
                     case "Wax":
                         resources.wax += slot.count;
