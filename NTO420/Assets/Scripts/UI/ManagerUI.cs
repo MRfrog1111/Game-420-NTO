@@ -7,10 +7,12 @@ public class ManagerUI : MonoBehaviour
     public GameObject Inventory;
     public GameObject Setings;
     public GameObject PauseMenu;
-    //public GameObject ShopUI;
+    public GameObject CraftMenu;
+
     private bool InventoryOpen = false;
     private bool SetingsOpen = false;
     private bool PauseMenuOpen = false;
+    private bool CraftMenuOpen = false;
 
     private void Awake()
     {
@@ -18,12 +20,15 @@ public class ManagerUI : MonoBehaviour
         Inventory.SetActive(false);
         Setings.SetActive(false);
         PauseMenu.SetActive(false);
+        CraftMenu.SetActive(false);
     }
 
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Tab)) InventoryShow();
         if(Input.GetKeyDown(KeyCode.Escape)) PauseMenuShow();
+        if(Input.GetKeyDown(KeyCode.Q)) CraftMenuShow();
+
     }
 
     public void InventoryShow()
@@ -73,6 +78,23 @@ public class ManagerUI : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Locked;
             PauseMenu.SetActive(false);
+            Time.timeScale = 1f;
+        }
+    }
+
+    public void CraftMenuShow()
+    {
+        CraftMenuOpen = !CraftMenuOpen;
+        if (CraftMenuOpen)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            CraftMenu.SetActive(true);
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            CraftMenu.SetActive(false);
             Time.timeScale = 1f;
         }
     }
