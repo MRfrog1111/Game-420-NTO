@@ -109,6 +109,6 @@ public class BugBehavior : Enemy
         print("bug is dead");
         GameObject spw = GameObject.Instantiate(deathSpawner);
         spw.transform.position = gameObject.transform.position;
-        Destroy(this.gameObject,5f);
+        Destroy(this.gameObject,2f);
     }
 }
