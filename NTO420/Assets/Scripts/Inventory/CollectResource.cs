@@ -56,6 +56,7 @@ public class CollectResource : MonoBehaviour
     private void AddItem(ItemScriptableObject _item, int _count)
     {
         StartCoroutine(webAsker.GetPlayerResources(GetRes));
+        PlayerChangesLogs changes = new PlayerChangesLogs();
         foreach (SlotInventory slot in slots)
         {
             if (slot.item == _item)
@@ -84,10 +85,18 @@ public class CollectResource : MonoBehaviour
                 {
                     case "Honey":
                         resources.honey += _count;
-                        
+                        changes.honey_change = "+"+_count.ToString();
+                        StartCoroutine(webAsker.SendLog("collected honey",changes));
                         break;
                     case "Wax":
                         resources.wax += slot.count;
+                        changes.vosk_change = "+"+_count.ToString();
+                        StartCoroutine(webAsker.SendLog("collected wax",changes));
+                        break;
+                    case "Minerals":
+                        resources.minerals += slot.count;
+                        changes.minerals_change = "+"+_count.ToString();
+                        StartCoroutine(webAsker.SendLog("collected minerals after killing bug",changes));
                         break;
                     default:
                         print("there's no such resource");
