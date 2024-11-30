@@ -104,6 +104,7 @@ public class BugBehavior : Enemy
 
     public void Death()
     {
+        movingState = 2;
         ChangeAnimationState("Apperance");
         print("bug is dead");
         GameObject spw = GameObject.Instantiate(deathSpawner);
