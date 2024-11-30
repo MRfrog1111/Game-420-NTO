@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Data;
 using UnityEngine;
 using DefaultNamespace;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
@@ -75,32 +74,20 @@ public class CollectResource : MonoBehaviour
             if (slot.isEmpty == true)
             {
                 print(_item.name);
-                print("qqqqqqqqq");
                 slot.item = _item;
                 slot.count = _count;
                 slot.isEmpty = false;
                 slot.SetIcon(_item.icon);
                 slot.itemCountText.text = _count.ToString();
-                PlayerChangesLogs changes = new PlayerChangesLogs();
+               
                 switch (_item.name)
                 {
                     case "Honey":
                         resources.honey += _count;
-                        changes.honey_change = "+"+_count.ToString();
-                        StartCoroutine(webAsker.SendLog("collected honey",changes));
-                        break;
-                    case "Vosk":
-                        resources.wax += _count;
-                        changes.vosk_change = "+"+_count.ToString();
-                        StartCoroutine(webAsker.SendLog("collected wax",changes));
+                        
                         break;
                     case "Wax":
                         resources.wax += slot.count;
-                        break;
-                    case "Minerals":
-                        resources.minerals += _count;
-                        changes.minerals_change = "+"+_count.ToString();
-                        StartCoroutine(webAsker.SendLog("collected minerals after killing bug",changes));
                         break;
                     default:
                         print("there's no such resource");
