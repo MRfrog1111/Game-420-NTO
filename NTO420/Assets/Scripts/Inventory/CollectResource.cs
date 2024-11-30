@@ -16,7 +16,7 @@ public class CollectResource : MonoBehaviour
     
     public List<SlotInventory> slots = new List<SlotInventory>();
     public Transform inventoryPanel;
-    private float hitRange = 3;
+    private float hitRange = 3f;
     RaycastHit hit;
 
     private void Start()
@@ -39,7 +39,7 @@ public class CollectResource : MonoBehaviour
         if(Physics.Raycast(playerCameraTransform.position,playerCameraTransform.forward,out hit,hitRange,pickableLayerMask))
         {
             hit.collider.GetComponent<Highlight>()?.ToggleHightLight(true);
-            if (Input.GetMouseButtonUp(0))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 AddItem(hit.collider.GetComponent<Items>().Item, hit.collider.GetComponent<Items>().count);
                Destroy(hit.collider.gameObject);
