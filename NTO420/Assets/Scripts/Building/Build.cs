@@ -20,31 +20,35 @@ public class Build : MonoBehaviour
 
     public void AddBase(GameObject _base,GameObject[] builds)
     {
-        bool canBuild = true;
+        bool canBuild = false;
         int j = 0;
+        int l =0;
         for (int i = 0; i < builds.Length; i++)
         {
             if(_base.tag == builds[i].tag)
             {
-                int resursesCount = 0;
+                
                 foreach (SlotInventory slot in FindObjectsOfType<CollectResource>()[0].slots)
                 {
-                    if(slot.isEmpty) continue;
-                    if(slot.item.itemName == builds[i].GetComponent<BuildItem>().buildItem.ToString())
+                    int resursesCount = 0;
+                    if (slot.isEmpty) continue;
+                    if(slot.item == builds[i].GetComponent<BuildItem>().buildItem.buildResurses[j].buildObject)
                     {
                         resursesCount += slot.count;
-                        j = i; 
+                        l = i; 
                     }
+                    if (resursesCount >= builds[i].GetComponent<BuildItem>().buildItem.buildResurses[j].buildObjectCount) canBuild = true;
+                    else canBuild = false;
+                    j++;
                 }
-                if (resursesCount < builds[j].GetComponent<BuildResurses>().buildObjectCount) canBuild = false;
-                else continue;
+                
                 
             }
         }
         if (canBuild)
         {
-            hit.collider.gameObject.SetActive(false);
-            buildings[j].gameObject.SetActive(true);
+            _base.SetActive(false);
+            buildings[l].gameObject.SetActive(true);
         }
     }
 }
