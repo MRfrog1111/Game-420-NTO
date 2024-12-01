@@ -8,7 +8,7 @@ public class BuildingScriptableObject : ScriptableObject
 }
 
 [System.Serializable]
-public class BuildResurses : MonoBehaviour
+public class BuildResurses 
 {
     public ItemScriptableObject buildObject;
     public int buildObjectCount;

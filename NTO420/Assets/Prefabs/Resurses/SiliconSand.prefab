@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 7900302341680021886}
   - component: {fileID: 6279018633465272975}
   - component: {fileID: 2263203321374273084}
-  m_Layer: 0
+  - component: {fileID: 6125454973792364225}
+  m_Layer: 3
   m_Name: SiliconSand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,3 +121,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Item: {fileID: 11400000, guid: d1d82711e0520414594e039590871ed4, type: 2}
   count: 100
+--- !u!114 &6125454973792364225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6872220981846866261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b9a5716260cf304eab4f0286320772d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers:
+  - {fileID: 7900302341680021886}
+  color: {r: 1, g: 1, b: 1, a: 1}
