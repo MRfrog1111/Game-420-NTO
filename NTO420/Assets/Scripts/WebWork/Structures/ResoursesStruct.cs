@@ -19,6 +19,9 @@ namespace DefaultNamespace
         public int printer_templates;
         public int energy_crystal;
         public int honey_esence;
+        public int quantum_beacon_of_return;
+        public int protective_dome;
+        public int atmospheric_filter;
 
 
     }
