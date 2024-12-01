@@ -7,7 +7,7 @@ public class ManagerUI : MonoBehaviour
     public GameObject Inventory;
     public GameObject Setings;
     public GameObject PauseMenu;
-
+    //public GameObject ShopUI;
     private bool InventoryOpen = false;
     private bool SetingsOpen = false;
     private bool PauseMenuOpen = false;
