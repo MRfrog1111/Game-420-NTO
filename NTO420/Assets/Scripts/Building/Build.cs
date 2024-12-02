@@ -20,32 +20,36 @@ public class Build : MonoBehaviour
 
     public void AddBase(GameObject _base,GameObject[] builds)
     {
-        bool canBuild = false;
-        int j = 0;
+        int canBuild = 0;
+        
         int l =0;
         for (int i = 0; i < builds.Length; i++)
         {
             if(_base.tag == builds[i].tag)
             {
-                
-                foreach (SlotInventory slot in FindObjectsOfType<CollectResource>()[0].slots)
+
+                for (int j = 0; j < builds[i].GetComponent<BuildItem>().buildItem.buildResurses.Count; j++)
                 {
-                    int resursesCount = 0;
-                    if (slot.isEmpty) continue;
-                    if(slot.item == builds[i].GetComponent<BuildItem>().buildItem.buildResurses[j].buildObject)
+                    foreach (SlotInventory slot in FindObjectsOfType<CollectResource>()[0].slots)
                     {
-                        resursesCount += slot.count;
-                        l = i; 
+                        int resursesCount = 0;
+                        if (slot.isEmpty) continue;
+                        if (slot.item == builds[i].GetComponent<BuildItem>().buildItem.buildResurses[j].buildObject)
+                        {
+                            resursesCount += slot.count;
+                            l = i;
+                            Debug.Log(builds[i].GetComponent<BuildItem>().buildItem.buildResurses[j].buildObject);
+                        }
+                        if (resursesCount >= builds[i].GetComponent<BuildItem>().buildItem.buildResurses[j].buildObjectCount) canBuild++;
+                        
+
                     }
-                    if (resursesCount >= builds[i].GetComponent<BuildItem>().buildItem.buildResurses[j].buildObjectCount) canBuild = true;
-                    else canBuild = false;
-                    j++;
                 }
-                
-                
+
+
             }
         }
-        if (canBuild)
+        if (canBuild == builds[l].GetComponent<BuildItem>().buildItem.buildResurses.Count)
         {
             _base.SetActive(false);
             buildings[l].gameObject.SetActive(true);
