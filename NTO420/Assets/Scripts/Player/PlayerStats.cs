@@ -7,7 +7,7 @@ public class PlayerStats : MonoBehaviour
 {
     [SerializeField] private PlayerRequests webAsker; // отправляет запросы на сервер
     public int golod = 1;
-    private PlayerResources resources; // объект, где хранится всяинофрмация игрока
+    private PlayerResources resources; // объект, где хранится вся инофрмация игрока
     [SerializeField] private float hungerTime; //время за которое персонаж проголодается
     [SerializeField] private float oxygenTime; //время за которое персонаж потеряет кислород
     
@@ -35,20 +35,19 @@ public class PlayerStats : MonoBehaviour
         resources = res;
     }
     
-    private void FixedUpdate()
+    private void Update()
     {
-       /* print("hp " + resources.hp);
-        print("oxygen " + resources.oxygen);
-        print("food " + resources.food);
         
-     /*if (Input.GetKey(KeyCode.LeftShift))
+        
+        if (Input.GetKey(KeyCode.LeftShift)) golod = 3;
+        else golod = 1;
+
+        if(resources.oxygen <= 0)
         {
-            if (x != 0 || z != 0) golod = 3;
+            print("oxygen " + resources.oxygen);
+            resources.oxygen = 0;
+            HpMines();
         }
-        else
-        {
-            golod = 1;
-        }*/
 
     }
    
@@ -58,7 +57,9 @@ public class PlayerStats : MonoBehaviour
         {
             yield return new WaitForSeconds(hungerTime);
             StartCoroutine(webAsker.GetPlayerResources(GetRes));
-            resources.food -=  golod;
+            print("food " + resources.food);
+            print("hp " + resources.hp);
+            resources.food -= resources.food * golod;
             PlayerChangesLogs changes = new PlayerChangesLogs()
             {
                 food_change = "-" + golod.ToString()
@@ -70,14 +71,23 @@ public class PlayerStats : MonoBehaviour
     }
     private IEnumerator rashodOxygen()
     {
-        while (resources.oxygen >= 0)
+        while (resources.oxygen > 0)
         {
             StartCoroutine(webAsker.GetPlayerResources(GetRes));
             yield return new WaitForSeconds(oxygenTime);
+            print("oxygen " + resources.oxygen);
             --resources.oxygen;
             StartCoroutine(webAsker.UpdatePlayerResources(resources));
             StartCoroutine(webAsker.GetPlayerResources(GetRes));
         }
+    }
+
+    private IEnumerator HpMines()
+    {
+        yield return new WaitForSeconds(5f);
+        print("hp " + resources.hp);
+        resources.hp -= 5;
+        
     }
 
     private void OnTriggerStay(Collider other)
