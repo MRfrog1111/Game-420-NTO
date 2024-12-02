@@ -3,10 +3,10 @@ namespace DefaultNamespace
     [System.Serializable]
     public struct ShopResources
     {
-        public string quantum_beacon_of_return;
-        public string protective_dome;
-        public string atmospheric_filter;
-        public string bee_plush;
-        public string bug_plush;
+        public int quantum_beacon_of_return;
+        public int protective_dome;
+        public int atmospheric_filter;
+        public int bee_plush;
+        public int bug_plush;
     }
 }
