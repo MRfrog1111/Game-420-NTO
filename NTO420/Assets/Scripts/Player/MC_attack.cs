@@ -22,7 +22,7 @@ public class MC_attack : MonoBehaviour
 
     void Awake()
     { 
-        controller = GetComponent<CharacterController>();
+       // controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
         audioSource = GetComponent<AudioSource>();
 
@@ -115,7 +115,7 @@ public class MC_attack : MonoBehaviour
 
     void AttackRaycast()
     {
-        print("abc");
+        //print("abc");
         if(Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hit, attackDistance, attackLayer))
         { 
            // HitTarget(hit.point);
