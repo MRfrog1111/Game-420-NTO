@@ -42,7 +42,8 @@ public class CollectResource : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 AddItem(hit.collider.GetComponent<Items>().Item, hit.collider.GetComponent<Items>().count);
-               Destroy(hit.collider.gameObject);
+                print("a");
+                Destroy(hit.collider.gameObject);
             }
             
         }
