@@ -42,7 +42,9 @@ public class CollectResource : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 AddItem(hit.collider.GetComponent<Items>().Item, hit.collider.GetComponent<Items>().count);
-               Destroy(hit.collider.gameObject);
+                print(hit.collider.gameObject.name);
+                Destroy(hit.collider.gameObject);
+               
             }
             
         }
@@ -105,6 +107,7 @@ public class CollectResource : MonoBehaviour
                 break;
             }
         }
+        print(resources.honey);
         StartCoroutine(webAsker.UpdatePlayerResources(resources));
         StartCoroutine(webAsker.GetPlayerResources(GetRes));
     }
