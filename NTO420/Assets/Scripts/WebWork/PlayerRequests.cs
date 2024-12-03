@@ -25,7 +25,7 @@ public class PlayerRequests : MonoBehaviour
             string url = "https://2025.nti-gamedev.ru/api/games/c94756a8-d518-48fa-90ca-3bb7c23fd1a2/players/"+currentPlayerName+"/";
             UpdateResourcesStruct upd = new UpdateResourcesStruct()
             {
-                resources = JsonUtility.ToJson(new_res)
+                resources = new_res
             };
             string json = JsonUtility.ToJson(upd);
            // print(json);

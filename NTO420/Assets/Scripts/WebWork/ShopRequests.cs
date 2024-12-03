@@ -59,23 +59,32 @@ public class ShopRequests : MonoBehaviour
     {
         if (currentPlayerName != null){
             string url = "https://2025.nti-gamedev.ru/api/games/c94756a8-d518-48fa-90ca-3bb7c23fd1a2/players/"+currentPlayerName+"/shops/"+shopName+"/";
-            UpdateResourcesStruct upd = new UpdateResourcesStruct()
+            UpdateShopResourcesStruct upd = new UpdateShopResourcesStruct()
             {
-                resources = JsonUtility.ToJson(new_res)
+                resources = new_res
             };
-            //print("upd"+upd.resources);
             string json = JsonUtility.ToJson(upd);
             // print(json);
             byte[] data = System.Text.Encoding.UTF8.GetBytes(json);
             UnityWebRequest req = UnityWebRequest.Put(url, data);
             req.SetRequestHeader("Content-Type", "application/json");
             yield return req.SendWebRequest();
-           //print("new_re" + new_res.quantum_beacon_of_return);
-           /* print("a "+JsonUtility.ToJson(upd));
-            byte[] myData = System.Text.Encoding.UTF8.GetBytes(JsonUtility.ToJson(upd));
-            UnityWebRequest www = UnityWebRequest.Put(url, myData);
-            yield return www.SendWebRequest();*/
-            print(req.downloadHandler.text);
         }
+    }
+    
+    public IEnumerator SendLog(string comm, ShopChangesLogs changes)
+    {
+        string url =  "https://2025.nti-gamedev.ru/api/games/c94756a8-d518-48fa-90ca-3bb7c23fd1a2/logs/";
+        ShopLogs sl = new ShopLogs()
+        {
+            comment = comm,
+            player_name = currentPlayerName,
+            shop_name = shopName,
+            resources_changed = changes
+        };
+        UnityWebRequest www = UnityWebRequest.Post(url,JsonUtility.ToJson(sl),"application/json");
+        yield return www.SendWebRequest();
+        print(www.downloadHandler.text);
+
     }
 }

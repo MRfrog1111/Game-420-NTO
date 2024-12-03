@@ -40,6 +40,7 @@ public class ManagerUI : MonoBehaviour
         if(ShopUIOpen && canOpen)
         {
             Cursor.lockState = CursorLockMode.None;
+           // Cursor.visible = tr
             ShopUI.SetActive(true);
             Time.timeScale = 0f;
         }

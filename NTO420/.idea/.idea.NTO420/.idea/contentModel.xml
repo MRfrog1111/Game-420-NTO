@@ -46,6 +46,7 @@
           </e>
         </e>
         <e p="Materials" t="Include">
+          <e p="1person_animation" t="Include" />
           <e p="juk" t="Include" />
           <e p="Ship parts" t="Include" />
         </e>
@@ -116,14 +117,21 @@
             <e p="Requests.cs" t="Include" />
             <e p="ShopRequests.cs" t="Include" />
             <e p="Structures" t="Include">
-              <e p="ChangesLogStructure.cs" t="Include" />
-              <e p="LogStructure.cs" t="Include" />
-              <e p="PlayersStruct.cs" t="Include" />
-              <e p="PlayerStruct.cs" t="Include" />
-              <e p="ResoursesStruct.cs" t="Include" />
-              <e p="ShopItemsStructure.cs" t="Include" />
-              <e p="ShopStructure.cs" t="Include" />
-              <e p="UpdateResourcesStruct.cs" t="Include" />
+              <e p="Player" t="Include">
+                <e p="ChangesLogStructure.cs" t="Include" />
+                <e p="LogStructure.cs" t="Include" />
+                <e p="PlayersStruct.cs" t="Include" />
+                <e p="PlayerStruct.cs" t="Include" />
+                <e p="ResoursesStruct.cs" t="Include" />
+              </e>
+              <e p="Shop" t="Include">
+                <e p="ShopChangesStructure.cs" t="Include" />
+                <e p="ShopItemsStructure.cs" t="Include" />
+                <e p="ShopLogStructure.cs" t="Include" />
+                <e p="ShopStructure.cs" t="Include" />
+                <e p="UpdateResourcesStruct.cs" t="Include" />
+                <e p="UpdateShopStruct.cs" t="Include" />
+              </e>
             </e>
           </e>
           <e p="WorldResources" t="Include">

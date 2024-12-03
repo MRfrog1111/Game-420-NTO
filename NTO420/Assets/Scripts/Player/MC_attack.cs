@@ -27,7 +27,7 @@ public class MC_attack : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
 
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+       // Cursor.visible = false;
     }
 
     void Update()
@@ -126,14 +126,14 @@ public class MC_attack : MonoBehaviour
         } 
     }
 
-    void HitTarget(Vector3 pos)
+    /*void HitTarget(Vector3 pos)
     {
         audioSource.pitch = 1;
         audioSource.PlayOneShot(hitSound);
 
         GameObject GO = Instantiate(hitEffect, pos, Quaternion.identity);
         Destroy(GO, 20);
-    }
+    }*/
 
     public void Death()
     {
