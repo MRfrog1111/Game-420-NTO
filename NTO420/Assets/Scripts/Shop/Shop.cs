@@ -39,11 +39,12 @@ public class Shop : MonoBehaviour
         {
             case "quantum_beacon_of_return":
                // print(shop.resources.quantum_beacon_of_return);
-                if (shop.resources.quantum_beacon_of_return == 1)
+                if (shop.resources.quantum_beacon_of_return == 1 && stats.resources.honey_esence >= 15)
                 {
                     //print("you can buy it");
                     shop.resources.quantum_beacon_of_return = 0;
                     stats.resources.quantum_beacon_of_return = 1;
+                    stats.resources.honey_esence -= 15;
                     stats.UpdateRes();
                     ShopChangesLogs sc = new ShopChangesLogs()
                     {
