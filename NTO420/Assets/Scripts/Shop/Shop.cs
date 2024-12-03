@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DefaultNamespace;
-
+using DefaultNamespace;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine.UI;
