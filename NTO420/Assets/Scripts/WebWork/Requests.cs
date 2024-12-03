@@ -27,7 +27,7 @@ public class Requests : MonoBehaviour
         };
         UpdateResourcesStruct upd = new UpdateResourcesStruct()
         {
-            resources = JsonUtility.ToJson(new_r)
+           // resources = JsonUtility.ToJson(new_r)
         };
         string json = JsonUtility.ToJson(upd);
         print(json);

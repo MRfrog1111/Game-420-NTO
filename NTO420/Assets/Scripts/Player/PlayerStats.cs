@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,35 +6,42 @@ using UnityEngine.Networking;
 using DefaultNamespace;
 public class PlayerStats : MonoBehaviour
 {
-    [SerializeField] private PlayerRequests webAsker; // отправляет запросы на сервер
+    public PlayerRequests webAsker; // отправляет запросы на сервер
     public int golod = 1;
-    private PlayerResources resources; // объект, где хранится всяинофрмация игрока
+    public  PlayerResources resources; // объект, где хранится всяинофрмация игрока
     [SerializeField] private float hungerTime; //время за которое персонаж проголодается
     [SerializeField] private float oxygenTime; //время за которое персонаж потеряет кислород
     
     private void Awake()
     {
-        PlayerResources test1 = new PlayerResources()
+        resources = new PlayerResources()
         {
             hp = 100,
             oxygen = 100,
             food = 100
         };
-        StartCoroutine(webAsker.UpdatePlayerResources(test1));
-        PlayerResources test = new PlayerResources()
-        {
-            hp = 100,
-            oxygen = 100,
-            food = 100
-        };// меняет статы на значения в test
+        StartCoroutine(webAsker.UpdatePlayerResources(resources));
         StartCoroutine(webAsker.GetPlayerResources(GetRes)); //обновляет статы в соответствии со значением на сервере
+
+    }
+
+    private void Start()
+    {
+        print("resouces" + resources.hp);
         StartCoroutine(rashodOxygen());
         StartCoroutine(rashodFood());
     }
+
     public void GetRes(PlayerResources res)
     {
         resources = res;
     }
+
+    public void UpdateRes()
+    {
+        StartCoroutine(webAsker.UpdatePlayerResources(resources));
+    }
+    
     
     private void FixedUpdate()
     {

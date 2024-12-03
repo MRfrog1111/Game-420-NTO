@@ -2,6 +2,7 @@ using UnityEngine.UIElements;
 
 namespace DefaultNamespace
 {
+    [System.Serializable]
     public struct PlayerResources
     {
         public int hp;
