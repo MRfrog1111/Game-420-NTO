@@ -19,7 +19,7 @@ public class ManagerUI : MonoBehaviour
     private bool canOpen = true;
     private void Awake()
     {
-        //Inventory.SetActive(true);
+        Inventory.SetActive(true);
         Inventory.SetActive(false);
         Setings.SetActive(false);
         PauseMenu.SetActive(false);

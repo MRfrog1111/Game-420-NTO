@@ -6,14 +6,18 @@ public class Build : MonoBehaviour
 {
     public GameObject[] buildings;
     public Transform playerCamera;
-    private float hitRange = 3;
+    public LayerMask buidLayer;
+    private float hitRange = 10;
     RaycastHit hit;
 
     private void Update()
     {
-        if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, hitRange))
+        if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, hitRange,buidLayer))
         {
-            if (Input.GetKeyDown(KeyCode.E)) AddBase(hit.collider.gameObject, buildings);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                AddBase(hit.collider.gameObject, buildings);
+            }
                 
         }
     }
@@ -21,11 +25,11 @@ public class Build : MonoBehaviour
     public void AddBase(GameObject _base,GameObject[] builds)
     {
         int canBuild = 0;
-        
+  
         int l =0;
         for (int i = 0; i < builds.Length; i++)
         {
-            if(_base.tag == builds[i].tag)
+            if(_base.CompareTag(builds[i].tag))
             {
 
                 for (int j = 0; j < builds[i].GetComponent<BuildItem>().buildItem.buildResurses.Count; j++)
@@ -52,6 +56,7 @@ public class Build : MonoBehaviour
         if (canBuild == builds[l].GetComponent<BuildItem>().buildItem.buildResurses.Count)
         {
             _base.SetActive(false);
+            print("build");
             buildings[l].gameObject.SetActive(true);
         }
     }
