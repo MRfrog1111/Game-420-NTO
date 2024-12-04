@@ -24,10 +24,27 @@ public class PlayerStats : MonoBehaviour
         StartCoroutine(webAsker.GetPlayerResources(GetRes)); //обновляет статы в соответствии со значением на сервере
 
     }
+    
+    /*private void OnEnable()
+    {
 
+        CollectResource.onResourcesChange += CheckUpdates;
+        //print("check2 "+resources.honey);
+
+    }
+
+    private void OnDisable() {
+
+        CollectResource.onResourcesChange -= CheckUpdates;
+
+    }*/
+
+    public  void CheckUpdates()
+    {
+        StartCoroutine(webAsker.GetPlayerResources(GetRes));
+    }
     private void Start()
     {
-        print("resouces" + resources.hp);
         StartCoroutine(rashodOxygen());
         StartCoroutine(rashodFood());
     }

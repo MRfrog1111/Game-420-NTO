@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,14 @@ using DefaultNamespace;
 public class PlayerRequests : MonoBehaviour
 {
     public string currentPlayerName;
+
+    private void Awake()
+    {
+        currentPlayerName = PlayerPrefs.GetString("PlayerName");
+    }
+    
+    
+
     public IEnumerator GetPlayerResources(System.Action<PlayerResources> returnResources)
     {
         string url = "https://2025.nti-gamedev.ru/api/games/c94756a8-d518-48fa-90ca-3bb7c23fd1a2/players/"+currentPlayerName+"/";
@@ -36,7 +45,7 @@ public class PlayerRequests : MonoBehaviour
         }
     }
 
-    private IEnumerator AddPlayer(string p_name)
+    public IEnumerator AddPlayer(string p_name)
     {
         //WWWForm form = new WWWForm();
         string url = "https://2025.nti-gamedev.ru/api/games/c94756a8-d518-48fa-90ca-3bb7c23fd1a2/players/";
@@ -52,7 +61,7 @@ public class PlayerRequests : MonoBehaviour
         
     }
 
-    private IEnumerator GetPlayers()
+    public IEnumerator GetPlayers(System.Action<PlayersStruct> returnPlayers)
     {
         string url = "https://2025.nti-gamedev.ru/api/games/c94756a8-d518-48fa-90ca-3bb7c23fd1a2/players/";
         UnityWebRequest req = UnityWebRequest.Get(url);
@@ -62,6 +71,7 @@ public class PlayerRequests : MonoBehaviour
         //то, что мы делаем после получения запроса
         string json = "{\"players\":" + req.downloadHandler.text+ "}";
         PlayersStruct response = JsonUtility.FromJson<PlayersStruct>(json);
+        returnPlayers(response);
         //print(req.downloadHandler.text);
         //return response;
     }
