@@ -22,7 +22,7 @@ public class Build : MonoBehaviour
     {
         int canBuild = 0;
         
-        int l =0;
+        int l = 0;
         for (int i = 0; i < builds.Length; i++)
         {
             if(_base.tag == builds[i].tag)
