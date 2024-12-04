@@ -6,18 +6,14 @@ public class Build : MonoBehaviour
 {
     public GameObject[] buildings;
     public Transform playerCamera;
-    public LayerMask buidLayer;
-    private float hitRange = 10;
+    private float hitRange = 3;
     RaycastHit hit;
 
     private void Update()
     {
-        if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, hitRange,buidLayer))
+        if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, hitRange))
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                AddBase(hit.collider.gameObject, buildings);
-            }
+            if (Input.GetKeyDown(KeyCode.E)) AddBase(hit.collider.gameObject, buildings);
                 
         }
     }
@@ -25,11 +21,11 @@ public class Build : MonoBehaviour
     public void AddBase(GameObject _base,GameObject[] builds)
     {
         int canBuild = 0;
-  
-        int l =0;
+        
+        int l = 0;
         for (int i = 0; i < builds.Length; i++)
         {
-            if(_base.CompareTag(builds[i].tag))
+            if(_base.tag == builds[i].tag)
             {
 
                 for (int j = 0; j < builds[i].GetComponent<BuildItem>().buildItem.buildResurses.Count; j++)
@@ -42,7 +38,7 @@ public class Build : MonoBehaviour
                         {
                             resursesCount += slot.count;
                             l = i;
-                            Debug.Log(builds[i].GetComponent<BuildItem>().buildItem.buildResurses[j].buildObject);
+                            
                         }
                         if (resursesCount >= builds[i].GetComponent<BuildItem>().buildItem.buildResurses[j].buildObjectCount) canBuild++;
                         
@@ -56,8 +52,24 @@ public class Build : MonoBehaviour
         if (canBuild == builds[l].GetComponent<BuildItem>().buildItem.buildResurses.Count)
         {
             _base.SetActive(false);
-            print("build");
             buildings[l].gameObject.SetActive(true);
+            for (int j = 0; j < builds[l].GetComponent<BuildItem>().buildItem.buildResurses.Count; j++)
+            {
+                foreach (SlotInventory slot in FindObjectsOfType<CollectResource>()[0].slots)
+                {
+                   
+                   
+                    if (slot.item == builds[l].GetComponent<BuildItem>().buildItem.buildResurses[j].buildObject)
+                    {
+                        slot.count -= builds[l].GetComponent<BuildItem>().buildItem.buildResurses[j].buildObjectCount;
+                        if(slot.count == 0)
+                        {
+                           
+                        }
+                    }
+                    
+                }
+            }
         }
     }
 }
