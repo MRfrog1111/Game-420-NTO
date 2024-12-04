@@ -35,6 +35,7 @@ public class Shop : MonoBehaviour
 
     public void BuyItem(string shopItemName)
     {
+        stats.CheckUpdates();
         switch (shopItemName)
         {
             case "quantum_beacon_of_return":
@@ -77,8 +78,7 @@ public class Shop : MonoBehaviour
         }
         
         StartCoroutine(shopReq.UpdateShopResources(shop.resources));
-        
-        //StartCoroutine(shopReq.GetShop(GetShopRes));
+        StartCoroutine(shopReq.GetShop(GetShopRes));
         //print(shopItemName);
     }
     public void GetShopRes(ShopStruct s)
