@@ -21,6 +21,7 @@ public class Controller : MonoBehaviour
         else run = 1;
         characterController.Move(move * speed * run * Time.deltaTime);
 
+
     }
 
     

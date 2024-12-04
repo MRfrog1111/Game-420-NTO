@@ -38,7 +38,7 @@ public class Build : MonoBehaviour
                         {
                             resursesCount += slot.count;
                             l = i;
-                            Debug.Log(builds[i].GetComponent<BuildItem>().buildItem.buildResurses[j].buildObject);
+                            
                         }
                         if (resursesCount >= builds[i].GetComponent<BuildItem>().buildItem.buildResurses[j].buildObjectCount) canBuild++;
                         
@@ -53,6 +53,23 @@ public class Build : MonoBehaviour
         {
             _base.SetActive(false);
             buildings[l].gameObject.SetActive(true);
+            for (int j = 0; j < builds[l].GetComponent<BuildItem>().buildItem.buildResurses.Count; j++)
+            {
+                foreach (SlotInventory slot in FindObjectsOfType<CollectResource>()[0].slots)
+                {
+                   
+                   
+                    if (slot.item == builds[l].GetComponent<BuildItem>().buildItem.buildResurses[j].buildObject)
+                    {
+                        slot.count -= builds[l].GetComponent<BuildItem>().buildItem.buildResurses[j].buildObjectCount;
+                        if(slot.count == 0)
+                        {
+                           
+                        }
+                    }
+                    
+                }
+            }
         }
     }
 }

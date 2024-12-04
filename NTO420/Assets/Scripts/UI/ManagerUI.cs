@@ -73,12 +73,14 @@ public class ManagerUI : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             PauseMenu.SetActive(true);
             Time.timeScale = 0f;
+            Debug.Log(PauseMenuOpen);
         }
         else
         {
             Cursor.lockState = CursorLockMode.Locked;
             PauseMenu.SetActive(false);
             Time.timeScale = 1f;
+            Debug.Log(PauseMenuOpen);
         }
     }
 
