@@ -8,7 +8,7 @@ public class MouseCameraRotation : MonoBehaviour
     public float sensetivity;
 
     public Transform player;
-    //public Transform arms;
+    public Transform arms;
     
     private float xRotation;
     private float yRotation;
@@ -31,7 +31,7 @@ public class MouseCameraRotation : MonoBehaviour
 
         transform.localRotation = Quaternion.Euler(x, 0f, 0f);
         player.Rotate(Vector3.up * xRotation);
-       // arms.localRotation = Quaternion.Euler(x, 0f, 0f);
+        arms.localRotation = Quaternion.Euler(x*0.5f, 0f, 0f);
     }   
     
 }
