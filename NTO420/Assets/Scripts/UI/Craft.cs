@@ -1,22 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Build : MonoBehaviour
+using DefaultNamespace;
+public class Craft : MonoBehaviour
 {
-    public GameObject[] buildings;
-    public Transform playerCamera;
-    private float hitRange = 3;
-    RaycastHit hit;
+    [SerializeField] private Build build;
 
-   /* private void Update()
+    [SerializeField] private PlayerStats stats;
+    public GameObject[] buildings;
+
+    public GameObject[] bases;
+    public void CraftBuilding(int buildingNum)
     {
-        if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, hitRange))
-        {
-            if (Input.GetKeyDown(KeyCode.E)) AddBase(hit.collider.gameObject, buildings);
-                
-        }
-    }*/
+        AddBase(bases[buildingNum], buildings);
+    }
 
     public void AddBase(GameObject _base,GameObject[] builds)
     {
@@ -74,3 +71,5 @@ public class Build : MonoBehaviour
         }
     }
 }
+
+
