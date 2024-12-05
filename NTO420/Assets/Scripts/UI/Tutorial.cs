@@ -14,6 +14,7 @@ public class Tutorial: MonoBehaviour
     [SerializeField] private string [] tasks;
     private PlayerResources currentRes;
     private bool isCompleted = false;
+    [SerializeField] private string [] quests;
     private void OnEnable()
     {
 

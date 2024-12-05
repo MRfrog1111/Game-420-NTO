@@ -21,9 +21,6 @@
               <e p="Environment" t="Include" />
               <e p="Props" t="Include" />
             </e>
-            <e p="Scenes" t="Include">
-              <e p="Demo" t="Include" />
-            </e>
             <e p="Shaders" t="Include" />
             <e p="Terrain" t="Include">
               <e p="Layers" t="Include" />
@@ -47,9 +44,72 @@
         </e>
         <e p="Materials" t="Include">
           <e p="1person_animation" t="Include" />
+          <e p="Enviroment" t="Include" />
           <e p="juk" t="Include" />
+          <e p="mishka" t="Include" />
+          <e p="Render" t="Include" />
+          <e p="Resources" t="Include" />
           <e p="Ship parts" t="Include" />
+          <e p="Textures" t="Include">
+            <e p="1 деталь" t="Include" />
+            <e p="3D Принтер" t="Include" />
+            <e p="Генератор" t="Include" />
+            <e p="деталь 2" t="Include" />
+            <e p="Лист металла" t="Include" />
+            <e p="Модуль дома" t="Include" />
+            <e p="Модуль лаборатории" t="Include" />
+            <e p="Модуль пасеки" t="Include" />
+            <e p="Модуль Склада" t="Include" />
+            <e p="Прибор для улучшения семян" t="Include" />
+            <e p="Сундук" t="Include" />
+            <e p="текстура песка" t="Include" />
+            <e p="Текстура усилителя" t="Include" />
+            <e p="Улей" t="Include" />
+          </e>
+          <e p="Детали космического корабля" t="Include">
+            <e p="1" t="Include">
+              <e p="1 деталь" t="Include" />
+            </e>
+            <e p="2" t="Include">
+              <e p="деталь 2" t="Include" />
+            </e>
+          </e>
+          <e p="Иконки крафта" t="Include" />
+          <e p="Интерьер" t="Include">
+            <e p="Лампа" t="Include" />
+            <e p="Стол и стул" t="Include" />
+            <e p="Сундук" t="Include">
+              <e p="Сундук" t="Include" />
+            </e>
+          </e>
+          <e p="Модули" t="Include">
+            <e p="Модуль дома" t="Include" />
+            <e p="Модуль лаборатории" t="Include" />
+            <e p="Модуль пасеки" t="Include" />
+            <e p="Модуль Склада" t="Include" />
+          </e>
+          <e p="нож" t="Include" />
+          <e p="Прибор для улучшения семян" t="Include">
+            <e p="Прибор для улучшения семян" t="Include" />
+          </e>
+          <e p="Принтер" t="Include">
+            <e p="3D Принтер" t="Include" />
+          </e>
+          <e p="Ресурсы" t="Include">
+            <e p="Бумага" t="Include" />
+            <e p="Камень" t="Include" />
+            <e p="Кристал смаллы" t="Include" />
+            <e p="Лист металла" t="Include">
+              <e p="Лист металла" t="Include" />
+            </e>
+            <e p="Материал для улучшения" t="Include" />
+            <e p="Песок" t="Include">
+              <e p="текстура песка" t="Include" />
+            </e>
+          </e>
           <e p="Сундук" t="Include" />
+          <e p="Улей" t="Include" />
+          <e p="эффекты" t="Include" />
         </e>
         <e p="Prefabs" t="Include">
           <e p="2D Texture" t="Include">
@@ -57,6 +117,7 @@
             <e p="InventoryUI" t="Include" />
             <e p="PauseMenuUI" t="Include" />
           </e>
+          <e p="BuildingPrefabs" t="Include" />
           <e p="Builds" t="Include" />
           <e p="Enemies" t="Include" />
           <e p="GiveYouDamage" t="Include" />
@@ -64,7 +125,9 @@
           <e p="Moduls" t="Include" />
           <e p="Resurses" t="Include" />
         </e>
-        <e p="Scenes" t="Include" />
+        <e p="Scenes" t="Include">
+          <e p="TestScene_Profiles" t="Include" />
+        </e>
         <e p="Scripts" t="Include">
           <e p="Bug" t="Include">
             <e p="Bite.cs" t="Include" />
@@ -77,6 +140,7 @@
             <e p="BuildingScriptableObject.cs" t="Include" />
             <e p="BuildItem.cs" t="Include" />
           </e>
+          <e p="DayTime.cs" t="Include" />
           <e p="HP.cs" t="Include" />
           <e p="Inventory" t="Include">
             <e p="CollectResource.cs" t="Include" />
@@ -87,9 +151,11 @@
             <e p="OpenInventory.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
+            <e p="Controller.cs" t="Include" />
             <e p="MC_attack.cs" t="Include" />
             <e p="MC_movement.cs" t="Include" />
             <e p="MouseCameraRotation.cs" t="Include" />
+            <e p="MouseLook.cs" t="Include" />
             <e p="PlayerStats.cs" t="Include" />
           </e>
           <e p="Resourses" t="Include">
@@ -112,8 +178,10 @@
             <e p="ShopUI.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
+            <e p="Craft.cs" t="Include" />
             <e p="ManagerUI.cs" t="Include" />
             <e p="PrintOxygen.cs" t="Include" />
+            <e p="QueatManager.cs" t="Include" />
             <e p="SubmitPlayerName.cs" t="Include" />
             <e p="Tutorial.cs" t="Include" />
           </e>

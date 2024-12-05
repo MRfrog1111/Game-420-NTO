@@ -9,14 +9,14 @@ public class Build : MonoBehaviour
     private float hitRange = 3;
     RaycastHit hit;
 
-    private void Update()
+   /* private void Update()
     {
         if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, hitRange))
         {
             if (Input.GetKeyDown(KeyCode.E)) AddBase(hit.collider.gameObject, buildings);
                 
         }
-    }
+    }*/
 
     public void AddBase(GameObject _base,GameObject[] builds)
     {
