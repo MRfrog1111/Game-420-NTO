@@ -20,6 +20,7 @@ public class Build : MonoBehaviour
 
     public void AddBase(GameObject _base,GameObject[] builds)
     {
+        print("build1");
         int canBuild = 0;
         
         int l = 0;
@@ -27,7 +28,7 @@ public class Build : MonoBehaviour
         {
             if(_base.tag == builds[i].tag)
             {
-
+                print(i + " " +  builds[i].GetComponent<BuildItem>().buildItem.buildResurses.Count);
                 for (int j = 0; j < builds[i].GetComponent<BuildItem>().buildItem.buildResurses.Count; j++)
                 {
                     foreach (SlotInventory slot in FindObjectsOfType<CollectResource>()[0].slots)
@@ -49,7 +50,7 @@ public class Build : MonoBehaviour
 
             }
         }
-        if (canBuild == builds[l].GetComponent<BuildItem>().buildItem.buildResurses.Count)
+        if (canBuild >= builds[l].GetComponent<BuildItem>().buildItem.buildResurses.Count)
         {
             _base.SetActive(false);
             buildings[l].gameObject.SetActive(true);
