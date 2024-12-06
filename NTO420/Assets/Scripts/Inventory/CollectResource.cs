@@ -48,6 +48,10 @@ public class CollectResource : MonoBehaviour
         {
             AddFirstItem(2,stats.resources.minerals);
         }
+        if (stats.resources.silicon_sand > 0)
+        {
+            AddFirstItem(3,stats.resources.silicon_sand);
+        }
     }
 
     private void AddFirstItem(int n, int _count)
@@ -142,10 +146,15 @@ public class CollectResource : MonoBehaviour
                         changes.vosk_change = "+"+_count.ToString();
                         StartCoroutine(webAsker.SendLog("collected wax",changes));
                         break;
-                    case "Minerals":
+                    case "Minerals 1":
                         stats.resources.minerals += slot.count;
                         changes.minerals_change = "+"+_count.ToString();
                         StartCoroutine(webAsker.SendLog("collected minerals after killing bug",changes));
+                        break;
+                    case "SiliconSand":
+                        stats.resources.silicon_sand += slot.count;
+                        changes.silicon_sand_change = "+"+_count.ToString();
+                        StartCoroutine(webAsker.SendLog("collected dilicon sand",changes));
                         break;
                     default:
                         print("there's no such resource");

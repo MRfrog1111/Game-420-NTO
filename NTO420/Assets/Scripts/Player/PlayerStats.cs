@@ -12,6 +12,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float hungerTime; //время за которое персонаж проголодается
     [SerializeField] private float oxygenTime; //время за которое персонаж потеряет кислород
     public static event Action onResourcesChange;
+    public static event Action ChangeInventory;
     private bool isFirst = true;
     private void Awake()
     {
@@ -48,7 +49,7 @@ public class PlayerStats : MonoBehaviour
     }
     private void Start()
     {
-        StartCoroutine(rashodOxygen());
+        //StartCoroutine(rashodOxygen());
         StartCoroutine(rashodFood());
     }
 
@@ -60,7 +61,9 @@ public class PlayerStats : MonoBehaviour
 
     public void UpdateRes()
     {
+        
         StartCoroutine(webAsker.UpdatePlayerResources(resources));
+        ChangeInventory?.Invoke();
        // print("got it" + resources.stage);
     }
     
@@ -90,7 +93,7 @@ public class PlayerStats : MonoBehaviour
            // StartCoroutine(webAsker.GetPlayerResources(GetRes));
             if (resources.food > 0)
             {
-                print("stage" + resources.stage);
+                
                 if (isFirst)
                 {
                     onResourcesChange?.Invoke();
@@ -102,6 +105,7 @@ public class PlayerStats : MonoBehaviour
                 {
                     food_change = "-" + golod.ToString()
                 };
+                print("stage" + resources.stage);
                 StartCoroutine(webAsker.SendLog("player got more hungry", changes));
                 StartCoroutine(webAsker.UpdatePlayerResources(resources));
                 StartCoroutine(webAsker.GetPlayerResources(GetRes));
