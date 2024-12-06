@@ -31,7 +31,11 @@ public class Tutorial: MonoBehaviour
 
    private void Update()
    {
-       print("stage " + stats.resources.stage);
+       if (stats.resources.stage == 1 && Input.GetKey(KeyCode.C))
+       {
+           isCompleted = true;
+           CheckStage();
+       }
    }
 
    private void OnEnable()
@@ -60,11 +64,9 @@ public class Tutorial: MonoBehaviour
                 isCompleted = true;
             }
         }
-        if (stats.resources.stage == 1)
+       if (stats.resources.stage == 2)
         {
-            /*print("check " + stats.resources.honey);
-            print("check wax " + stats.resources.wax);*/
-            if (stats.resources.honey >= neededRes[1].honey)
+            if (stats.resources.living_module >= neededRes[2].living_module)
             {
                 isCompleted = true;
             }

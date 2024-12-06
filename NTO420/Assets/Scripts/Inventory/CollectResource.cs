@@ -20,6 +20,7 @@ public class CollectResource : MonoBehaviour
     private float hitRange = 3f;
     RaycastHit hit;
 
+    [SerializeField] private ItemScriptableObject[] startObjects;
     public static event Action onResourcesChange;
     private void Start()
     {
@@ -31,6 +32,40 @@ public class CollectResource : MonoBehaviour
 
             }
         }
+    }
+
+    public void FirstUpdate()
+    {
+        if (stats.resources.honey > 0)
+        {
+          AddFirstItem(0,stats.resources.honey);
+        }
+        if (stats.resources.wax > 0)
+        {
+            AddFirstItem(1,stats.resources.wax);
+        }
+        if (stats.resources.minerals > 0)
+        {
+            AddFirstItem(2,stats.resources.minerals);
+        }
+    }
+
+    private void AddFirstItem(int n, int _count)
+    {
+        slots[n].item = startObjects[n];;
+        slots[n].count = _count;
+        slots[n].isEmpty = false;
+        slots[n].SetIcon(startObjects[n].icon);
+        slots[n].itemCountText.text = _count.ToString();
+    }
+    private void OnEnable()
+    {
+        PlayerStats.onResourcesChange += FirstUpdate;
+
+    }
+
+    private void OnDisable() {
+        PlayerStats.onResourcesChange -= FirstUpdate;
     }
     private void Update()
     {
