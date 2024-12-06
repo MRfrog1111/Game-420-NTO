@@ -31,7 +31,7 @@ public class ManagerUI : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Tab)) InventoryShow();
         if(Input.GetKeyDown(KeyCode.Escape)) PauseMenuShow();
-        if(Input.GetKeyDown(KeyCode.Q)) CraftMenuShow();
+        if(!CraftMenuOpen && Input.GetKeyDown(KeyCode.E)) CraftMenuClose();
         if (Input.GetKeyDown(KeyCode.T)) OpenShop();
         if (Input.GetKeyDown(KeyCode.C)) OpenTasks();
     }
@@ -39,6 +39,7 @@ public class ManagerUI : MonoBehaviour
     public void OpenTasks()
     {
         tasksOpen = !tasksOpen;
+        Cursor.visible = tasksOpen;
         if(tasksOpen && canOpen)
         {
             Cursor.lockState = CursorLockMode.None;
@@ -57,6 +58,7 @@ public class ManagerUI : MonoBehaviour
     public void OpenShop()
     {
         ShopUIOpen = !ShopUIOpen;
+        Cursor.visible = ShopUIOpen;
         if(ShopUIOpen && canOpen)
         {
             Cursor.lockState = CursorLockMode.None;
@@ -75,6 +77,7 @@ public class ManagerUI : MonoBehaviour
     public void InventoryShow()
     {
         InventoryOpen = !InventoryOpen;
+        Cursor.visible = InventoryOpen;
         if(InventoryOpen && canOpen)
         {
             Cursor.lockState = CursorLockMode.None;
@@ -92,6 +95,7 @@ public class ManagerUI : MonoBehaviour
     public void SetingsShow()
     {
         SetingsOpen = !SetingsOpen;
+        Cursor.visible = SetingsOpen;
         if (SetingsOpen && canOpen)
         {
             Cursor.lockState = CursorLockMode.None;
@@ -112,6 +116,7 @@ public class ManagerUI : MonoBehaviour
     public void PauseMenuShow()
     {
         PauseMenuOpen = !PauseMenuOpen;
+        Cursor.visible = PauseMenuOpen;
         if (PauseMenuOpen && canOpen)
         {
             Cursor.lockState = CursorLockMode.None;
@@ -128,21 +133,32 @@ public class ManagerUI : MonoBehaviour
 
     }
 
-    public void CraftMenuShow()
+    public void CraftMenuClose()
     {
-        CraftMenuOpen = !CraftMenuOpen;
-        if (CraftMenuOpen && canOpen)
+        
+        if (CraftMenuOpen)
         {
-            Cursor.lockState = CursorLockMode.None;
-            CraftMenu.SetActive(true);
-            Time.timeScale = 0f;
-        }
-        else
-        {
+            Cursor.visible = false;
+            CraftMenuOpen = !CraftMenuOpen;
             Cursor.lockState = CursorLockMode.Locked;
             CraftMenu.SetActive(false);
             Time.timeScale = 1f;
+            canOpen = !canOpen;
         }
-        canOpen = !canOpen;
+       
+    }
+    public void OpenCraftMenu()
+    {
+        
+        if (!CraftMenuOpen)
+        {
+            Cursor.visible = true;
+            CraftMenuOpen = !CraftMenuOpen;
+            Cursor.lockState = CursorLockMode.None;
+            CraftMenu.SetActive(true);
+            Time.timeScale = 0f;
+            canOpen = !canOpen;
+        }
+        
     }
 }
