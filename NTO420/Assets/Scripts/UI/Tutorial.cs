@@ -19,7 +19,11 @@ public class Tutorial: MonoBehaviour
    public void FirstUpdate()
    {
        print("updated");
-       tutorialText.text = tasks[stats.resources.stage];
+       if (stats.resources.stage < tasks.Length)
+       {
+           tutorialText.text = tasks[stats.resources.stage];
+       }
+
        for (int i = 0; i < completedTasks.Length; i++)
        {
            if (stats.resources.stage > i)
@@ -64,14 +68,14 @@ public class Tutorial: MonoBehaviour
                 isCompleted = true;
             }
         }
-       if (stats.resources.stage == 2)
+        if (stats.resources.stage == 2)
         {
             if (stats.resources.living_module >= neededRes[2].living_module)
             {
                 isCompleted = true;
             }
         }
-        if (isCompleted)
+        if (isCompleted && stats.resources.stage < tasks.Length)
         {
             stats.CheckUpdates();
             completedTasks[stats.resources.stage].text = "Выполнено!";

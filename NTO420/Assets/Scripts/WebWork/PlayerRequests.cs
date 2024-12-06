@@ -40,7 +40,7 @@ public class PlayerRequests : MonoBehaviour
                 resources = new_res
             };
             string json = JsonUtility.ToJson(upd);
-            print(json);
+            //print(json);
             byte[] data = System.Text.Encoding.UTF8.GetBytes(json);
             UnityWebRequest req = UnityWebRequest.Put(url, data);
             req.SetRequestHeader("Content-Type", "application/json");

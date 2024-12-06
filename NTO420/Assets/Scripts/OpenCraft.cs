@@ -33,6 +33,7 @@ public class OpenCraft : MonoBehaviour
             hit.collider.GetComponent<Highlight>()?.ToggleHightLight(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
+              
                 ui.OpenCraftMenu();
             }
             
