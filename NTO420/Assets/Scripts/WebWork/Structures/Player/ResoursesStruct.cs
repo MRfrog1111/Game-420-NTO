@@ -10,7 +10,7 @@ namespace DefaultNamespace
         public int wax;
         public int minerals;
         public int seeds;
-        public int send;
+        public int silicon_sand;
         public int metal;
         public int electronics;
         public int resin;
