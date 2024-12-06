@@ -7,7 +7,7 @@ public class Paseka : MonoBehaviour
     public int maxHoney = 100;
     public int HoneyInSecond = 5;
     public int HoneyNow = 0;
-    public float _time;
+    public float _time = 5f;
 
     public Transform Camera;
     public LayerMask layerMask;
@@ -18,27 +18,30 @@ public class Paseka : MonoBehaviour
     private void Start()
     {
         StartCoroutine(Pasek());
+        
     }
 
     private void Update()
     {
         
-        print("HoneyInPaseka " + HoneyNow);
-
-        StartCoroutine(Pasek());
-        if (Physics.Raycast(Camera.position, Camera.forward, out hit, hitRange, layerMask))
+        /*if (Physics.Raycast(Camera.position, Camera.forward, out hit, hitRange, layerMask))
         {
 
-        }
+        }*/
     }
 
     private IEnumerator Pasek()
     {
-        if (HoneyNow < maxHoney)
-            HoneyNow += HoneyInSecond;
-        else
-            HoneyNow = 100;
-        yield return new WaitForSeconds(_time);   
+        while (true)
+        {
+            yield return new WaitForSeconds(_time);
+            if (HoneyNow < maxHoney)
+                HoneyNow += HoneyInSecond;
+            else
+                HoneyNow = 100;
+            print("HoneyInPaseka " + HoneyNow);
+        }
+         
     }
 
 }
