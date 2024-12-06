@@ -24,10 +24,10 @@ public class Paseka : MonoBehaviour
     private void Update()
     {
         
-        /*if (Physics.Raycast(Camera.position, Camera.forward, out hit, hitRange, layerMask))
+        if (Physics.Raycast(Camera.position, Camera.forward, out hit, hitRange, layerMask))
         {
-
-        }*/
+            
+        }
     }
 
     private IEnumerator Pasek()
@@ -43,5 +43,6 @@ public class Paseka : MonoBehaviour
         }
          
     }
+
 
 }
