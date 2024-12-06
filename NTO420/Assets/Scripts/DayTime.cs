@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[ExecuteInEditMode]
+
 public class DayCycleManager : MonoBehaviour
 {
     [Range(0, 1)]
