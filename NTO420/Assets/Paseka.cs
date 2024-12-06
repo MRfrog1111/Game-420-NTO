@@ -13,7 +13,7 @@ public class Paseka : MonoBehaviour
 
     public Transform Camera;
     public LayerMask layerMask;
-    public ItemScriptableObject Honey;
+    public Items Honey;
     [SerializeField] private PlayerStats stats;
     [SerializeField] private CollectResource slots;
 
@@ -28,6 +28,7 @@ public class Paseka : MonoBehaviour
 
     private void Update()
     {
+        Honey.count = HoneyNow;
         if(Input.GetKeyDown(KeyCode.E))
         {
             if (Physics.Raycast(Camera.position, Camera.forward, out hit, hitRange, layerMask))
@@ -56,21 +57,23 @@ public class Paseka : MonoBehaviour
     {
         stats.resources.honey += HoneyNow;
         HoneyNow = 0;
-        
+        int temporary = 0;
         foreach (SlotInventory slot in slots.slots)
         {
             if (slot.item == Honey)
             {
                
-                if (slot.count + HoneyNow <= Honey.maxCount)
+                if (slot.count + HoneyNow <= Honey.Item.maxCount)
                 {
-                    slot.count += HoneyNow;
+                    slot.count += Honey.count;
                     slot.itemCountText.text = slot.count.ToString();
                     
                 }
                 else
                 {
+                    temporary = (slot.count + HoneyNow) - Honey.Item.maxCount;
                     return;
+                    
                 }
                 break;
             }
@@ -81,12 +84,12 @@ public class Paseka : MonoBehaviour
             if (slot.isEmpty == true)
             {
                 //print(_item.name + _count);
-                slot.item = Honey;
-                slot.count = HoneyNow;
+                slot.item = Honey.Item;
+                slot.count = Honey.count;
                 slot.isEmpty = false;
-                slot.SetIcon(Honey.icon);
-                slot.itemCountText.text = HoneyNow.ToString();
-
+                slot.SetIcon(Honey.Item.icon);
+                slot.itemCountText.text = slot.count.ToString();
+                break;
             }
         }
     }
