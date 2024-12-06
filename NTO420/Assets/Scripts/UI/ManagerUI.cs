@@ -9,13 +9,13 @@ public class ManagerUI : MonoBehaviour
     public GameObject PauseMenu;
     public GameObject CraftMenu;
     public GameObject ShopUI;
-    
+    public GameObject Tasks;
     private bool InventoryOpen = false;
     private bool SetingsOpen = false;
     private bool PauseMenuOpen = false;
     private bool CraftMenuOpen = false;
     private bool ShopUIOpen = false;
-
+    private bool tasksOpen = false;
     private bool canOpen = true;
     private void Awake()
     {
@@ -24,6 +24,7 @@ public class ManagerUI : MonoBehaviour
         Setings.SetActive(false);
         PauseMenu.SetActive(false);
         CraftMenu.SetActive(false);
+        Tasks.SetActive(false);
     }
 
     private void Update()
@@ -32,8 +33,27 @@ public class ManagerUI : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape)) PauseMenuShow();
         if(Input.GetKeyDown(KeyCode.Q)) CraftMenuShow();
         if (Input.GetKeyDown(KeyCode.T)) OpenShop();
+        if (Input.GetKeyDown(KeyCode.C)) OpenTasks();
     }
 
+    public void OpenTasks()
+    {
+        tasksOpen = !tasksOpen;
+        if(tasksOpen && canOpen)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            // Cursor.visible = tr
+            Tasks.SetActive(true);
+            Time.timeScale = 0f;
+        }
+        else 
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Tasks.SetActive(false);
+            Time.timeScale = 1f;
+        }
+        canOpen = !canOpen;
+    }
     public void OpenShop()
     {
         ShopUIOpen = !ShopUIOpen;

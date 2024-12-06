@@ -1,5 +1,3 @@
-using UnityEngine.UIElements;
-
 namespace DefaultNamespace
 {
     [System.Serializable]
@@ -25,6 +23,7 @@ namespace DefaultNamespace
         public int atmospheric_filter;
         public int living_module;
         public int apiary_module; // пасека
+        public int stage;
 
     }
 }

@@ -60,7 +60,7 @@ public class CollectResource : MonoBehaviour
     private void AddItem(ItemScriptableObject _item, int _count)
     {
         //StartCoroutine(stats.webAsker.GetPlayerResources(stats.GetRes));
-        stats.UpdateRes();
+        stats.CheckUpdates();
         print("item" + _item.name);
         PlayerChangesLogs changes = new PlayerChangesLogs();
         foreach (SlotInventory slot in slots)
@@ -121,6 +121,7 @@ public class CollectResource : MonoBehaviour
         }
         //print("chekck3 " + stats.resources.honey);
         stats.UpdateRes();
+        stats.CheckUpdates();
         //StartCoroutine(webAsker.UpdatePlayerResources(stats.resources));
         //StartCoroutine(webAsker.GetPlayerResources(stats.GetRes));
         onResourcesChange?.Invoke();
