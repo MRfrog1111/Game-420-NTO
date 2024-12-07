@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DefaultNamespace;
-using UnityEditor.iOS.Xcode;
+//using UnityEditor.iOS.Xcode;
 
 public class Craft : MonoBehaviour
 {
