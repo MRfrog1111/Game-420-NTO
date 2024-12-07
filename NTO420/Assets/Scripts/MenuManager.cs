@@ -8,6 +8,7 @@ public class MenuManager : MonoBehaviour
 {
     
     public GameObject Settings;
+    public GameObject MeinMenu;
 
     private void Awake()
     {
@@ -21,10 +22,12 @@ public class MenuManager : MonoBehaviour
     public void ShowSettings()
     {
         Settings.SetActive(true);
+        MeinMenu.SetActive(false);
     }
     public void CloseSettings()
     {
         Settings.SetActive(false);
+        MeinMenu.SetActive(true);
     }
     public void Exit()
     {
