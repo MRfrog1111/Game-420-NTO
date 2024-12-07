@@ -100,7 +100,7 @@ public class CollectResource : MonoBehaviour
     {
         //StartCoroutine(stats.webAsker.GetPlayerResources(stats.GetRes));
         stats.CheckUpdates();
-        print("item" + _item.name);
+        //print("item" + _item.name);
         PlayerChangesLogs changes = new PlayerChangesLogs();
         foreach (SlotInventory slot in slots)
         {
@@ -125,7 +125,7 @@ public class CollectResource : MonoBehaviour
         {
             if (slot.isEmpty == true)
             {
-                print(_item.name + _count);
+               // print(_item.name + _count);
                 slot.item = _item;
                 slot.count = _count;
                 slot.isEmpty = false;
@@ -137,7 +137,7 @@ public class CollectResource : MonoBehaviour
                     case "Honey":
                         print("axaxaxaxa");
                         stats.resources.honey += slot.count;
-                        print("inside " + stats.resources.honey);
+                        //print("inside " + stats.resources.honey);
                         changes.honey_change = "+"+_count.ToString();
                         StartCoroutine(webAsker.SendLog("collected honey",changes));
                         break;

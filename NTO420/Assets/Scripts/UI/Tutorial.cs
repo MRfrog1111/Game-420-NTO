@@ -18,7 +18,7 @@ public class Tutorial: MonoBehaviour
 
    public void FirstUpdate()
    {
-       print("updated");
+      // print("updated");
        if (stats.resources.stage < tasks.Length)
        {
            tutorialText.text = tasks[stats.resources.stage];
@@ -38,6 +38,9 @@ public class Tutorial: MonoBehaviour
        if (stats.resources.stage == 1 && Input.GetKey(KeyCode.C))
        {
            isCompleted = true;
+           stats.CheckUpdates();
+           stats.resources.stage ++;
+           stats.UpdateRes();
            CheckStage();
        }
    }
@@ -45,20 +48,22 @@ public class Tutorial: MonoBehaviour
    private void OnEnable()
     {
 
-        CollectResource.onResourcesChange += CheckStage;
+      //  CollectResource.onResourcesChange += CheckStage;
+        PlayerStats.ChangeInventory += CheckStage;
         PlayerStats.onResourcesChange += FirstUpdate;
 
     }
 
     private void OnDisable() {
 
-        CollectResource.onResourcesChange -= CheckStage;
+       // CollectResource.onResourcesChange -= CheckStage;
+        PlayerStats.ChangeInventory -= CheckStage;
         PlayerStats.onResourcesChange -= FirstUpdate;
     }
     
     public void CheckStage()
     {
-        //print("check");
+       // print("check");
         if (stats.resources.stage == 0)
         {
             /*print("check " + stats.resources.honey);
@@ -66,25 +71,27 @@ public class Tutorial: MonoBehaviour
             if (stats.resources.honey >= neededRes[0].honey)
             {
                 isCompleted = true;
+                stats.CheckUpdates();
+                stats.resources.stage ++;
+                stats.UpdateRes();
             }
         }
-        if (stats.resources.stage == 2)
+        else if (stats.resources.stage == 2)
         {
             if (stats.resources.living_module >= neededRes[2].living_module)
             {
                 isCompleted = true;
+                stats.CheckUpdates();
+                stats.resources.stage ++;
+                stats.UpdateRes();
             }
         }
-        if (isCompleted && stats.resources.stage < tasks.Length)
+        if (stats.resources.stage < tasks.Length)
         {
-            stats.CheckUpdates();
             completedTasks[stats.resources.stage].text = "Выполнено!";
-            stats.resources.stage ++;
-            stats.UpdateRes();
             tutorialText.text = tasks[stats.resources.stage];
             isCompleted = false;
-            
-           
+
         }
     }
 }

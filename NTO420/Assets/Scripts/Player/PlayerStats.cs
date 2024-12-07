@@ -61,9 +61,10 @@ public class PlayerStats : MonoBehaviour
 
     public void UpdateRes()
     {
-        
         StartCoroutine(webAsker.UpdatePlayerResources(resources));
         ChangeInventory?.Invoke();
+        StartCoroutine(webAsker.GetPlayerResources(GetRes));
+
        // print("got it" + resources.stage);
     }
     
@@ -91,6 +92,7 @@ public class PlayerStats : MonoBehaviour
         {
             yield return new WaitForSeconds(hungerTime);
            // StartCoroutine(webAsker.GetPlayerResources(GetRes));
+           StartCoroutine(webAsker.GetPlayerResources(GetRes));
             if (resources.food > 0)
             {
                 
@@ -105,7 +107,7 @@ public class PlayerStats : MonoBehaviour
                 {
                     food_change = "-" + golod.ToString()
                 };
-                print("stage" + resources.stage);
+                //print("stage" + resources.stage);
                 StartCoroutine(webAsker.SendLog("player got more hungry", changes));
                 StartCoroutine(webAsker.UpdatePlayerResources(resources));
                 StartCoroutine(webAsker.GetPlayerResources(GetRes));

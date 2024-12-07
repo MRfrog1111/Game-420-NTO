@@ -6,12 +6,38 @@ using UnityEditor.iOS.Xcode;
 
 public class Craft : MonoBehaviour
 {
-    [SerializeField] private Build build;
+   // [SerializeField] private Build build;
 
     [SerializeField] private PlayerStats stats;
     public GameObject[] buildings;
 
     public GameObject[] bases;
+    public void FirstUpdate()
+    {
+        print("updated");
+        if (stats.resources.living_module > 0)
+        {
+            buildings[0].SetActive(true);
+            bases[0].SetActive(false);
+        }
+        if (stats.resources.apiary_module > 0)
+        {
+            buildings[1].SetActive(true);
+            bases[1].SetActive(false);
+        }
+    }
+
+    private void OnEnable()
+    {
+        PlayerStats.onResourcesChange += FirstUpdate;
+
+    }
+
+    private void OnDisable() {
+        
+        PlayerStats.onResourcesChange -= FirstUpdate;
+    }
+
     public void CraftBuilding(int buildingNum)
     {
         AddBase(bases[buildingNum], buildings);

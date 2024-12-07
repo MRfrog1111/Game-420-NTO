@@ -1869,6 +1869,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2077461927098759143, guid: 3a2be76d04591704aab12a4d45860024, type: 3}
+      propertyPath: completedTasks.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077461927098759143, guid: 3a2be76d04591704aab12a4d45860024, type: 3}
       propertyPath: neededRes.Array.data[0].wax
       value: 0
       objectReference: {fileID: 0}
@@ -1890,6 +1894,10 @@ PrefabInstance:
       objectReference: {fileID: 6724428173801031262}
     - target: {fileID: 2077461927098759143, guid: 3a2be76d04591704aab12a4d45860024, type: 3}
       propertyPath: completedTasks.Array.data[2]
+      value: 
+      objectReference: {fileID: 2867351569864114927}
+    - target: {fileID: 2077461927098759143, guid: 3a2be76d04591704aab12a4d45860024, type: 3}
+      propertyPath: completedTasks.Array.data[3]
       value: 
       objectReference: {fileID: 2867351569864114927}
     - target: {fileID: 2077461927098759143, guid: 3a2be76d04591704aab12a4d45860024, type: 3}
@@ -14208,7 +14216,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3774608251129298554}
+      - m_Target: {fileID: 8637711204920134267}
         m_TargetAssemblyTypeName: Craft, Assembly-CSharp
         m_MethodName: CraftBuilding
         m_Mode: 3
@@ -15664,6 +15672,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8637711204920134266}
+  - component: {fileID: 8637711204920134267}
   m_Layer: 0
   m_Name: AllModules
   m_TagString: Untagged
@@ -19587,24 +19596,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.000015258789, y: 9.642692}
   m_SizeDelta: {x: 100, y: 30.6985}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3774608251129298554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7976064639382557298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31b3ba9c44b7e994684f13c505fccf24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  build: {fileID: 0}
-  stats: {fileID: 485949659}
-  buildings:
-  - {fileID: 3130398179030982718}
-  bases:
-  - {fileID: 285945899}
 --- !u!114 &3786725348436397842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23962,7 +23953,7 @@ GameObject:
   - component: {fileID: 1842800552877922271}
   - component: {fileID: 288298546588251418}
   m_Layer: 0
-  m_Name: Button
+  m_Name: LivingModule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26793,7 +26784,6 @@ GameObject:
   - component: {fileID: 4143412927948240970}
   - component: {fileID: 713856676698999478}
   - component: {fileID: 343239376326625417}
-  - component: {fileID: 3774608251129298554}
   m_Layer: 0
   m_Name: Craft
   m_TagString: Untagged
@@ -28041,6 +28031,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8637711204920134267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198616455412316424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b3ba9c44b7e994684f13c505fccf24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats: {fileID: 485949659}
+  buildings:
+  - {fileID: 3130398179030982718}
+  - {fileID: 3130398179030982718}
+  bases:
+  - {fileID: 285945899}
+  - {fileID: 285945899}
 --- !u!114 &8650185231746633774
 MonoBehaviour:
   m_ObjectHideFlags: 0
