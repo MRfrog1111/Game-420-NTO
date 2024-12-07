@@ -15,8 +15,12 @@ public class CraftHoneyEssence : MonoBehaviour
     
     public void CraftEssence()
     {
+        stats.resources.minerals -= essence.buildItem.buildResurses[0].buildObjectCount;
+        stats.resources.honey -= essence.buildItem.buildResurses[0].buildObjectCount;
+        stats.resources.honey_esence += 1;
+        stats.UpdateRes();
         int canBuild = 0;
-        stats.CheckUpdates();
+        //stats.CheckUpdates();
         int l = 0;
         for (int j = 0; j < essence.buildItem.buildResurses.Count; j++)
         {
@@ -68,11 +72,7 @@ public class CraftHoneyEssence : MonoBehaviour
 
                 //stats.resources.honey_esence += 1;
             }
-
             AddItem(honeyEssence, 1);
-            stats.resources.minerals -= essence.buildItem.buildResurses[0].buildObjectCount;
-            stats.resources.honey -= essence.buildItem.buildResurses[0].buildObjectCount;
-            stats.UpdateRes();
         }
     }
 
@@ -116,7 +116,7 @@ public class CraftHoneyEssence : MonoBehaviour
                     slot.isEmpty = false;
                     slot.SetIcon(_item.icon);
                     slot.itemCountText.text = _count.ToString();
-                    stats.resources.honey_esence += slot.count;
+                    //stats.resources.honey_esence += slot.count;
                     changes.honey_esence_change = "+" + _count.ToString();
                     StartCoroutine(collectRes.webAsker.SendLog("crafted honey essence", changes));
                     stats.UpdateRes();
