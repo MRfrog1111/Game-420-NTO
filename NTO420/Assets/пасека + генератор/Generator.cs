@@ -1,11 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro.EditorUtilities;
 using Unity.VisualScripting;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using static UnityEditor.Progress;
 using UnityEngine.UI;
+using TMPro;
 public class Generator : MonoBehaviour
 {
     public Transform camera;
@@ -15,7 +17,8 @@ public class Generator : MonoBehaviour
     public Tutorial tutor;
     private float hitRange = 3f;
     private RaycastHit hit;
-
+    public TextMeshProUGUI generatortext;
+    
     public int MaxHoney = 100;
     public int rashodHoney = 100;
     public int timeInSecond = 100;
@@ -30,6 +33,7 @@ public class Generator : MonoBehaviour
 
     private void Update()
     {
+        generatortext.text = honeyNow.ToString() + "%";
         if (hit.collider != null)
         {
             hit.collider.GetComponent<Highlight>()?.ToggleHightLight(false);

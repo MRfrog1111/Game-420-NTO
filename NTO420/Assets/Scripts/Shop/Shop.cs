@@ -89,9 +89,10 @@ public class Shop : MonoBehaviour
                         bug_plush_change = "-1"
                     };
                     StartCoroutine(shopReq.SendLog("player bought bug_plush",sc));
+                    decoratives[0].SetActive(true);
                     shopText[1].text = "Продать";
                 }
-                else if (stats.resources.atmospheric_filter == 1)
+                else if (stats.resources.bug_plush == 1)
                 {
                     //print("here");
                     shop.resources.bug_plush = 1;
@@ -107,10 +108,48 @@ public class Shop : MonoBehaviour
                         honey_esence_change = "+5"
                     };
                     StartCoroutine(shopReq.SendLog("player sold bug plush",sc));
-                    StartCoroutine(stats.webAsker.SendLog("player sold atmospheric filter",pc));
+                    StartCoroutine(stats.webAsker.SendLog("player sold bug plush",pc));
+                    decoratives[0].SetActive(false);
                     shopText[1].text = "Купить";
+                } 
+                break;
+            case "bee_plush":
+                if (shop.resources.bee_plush == 1 && stats.resources.honey_esence >= 5)
+                {
+                    //print("you can buy it");
+                    shop.resources.bee_plush = 0;
+                    stats.resources.bee_plush = 1;
+                    stats.resources.honey_esence -= 5;
+                    stats.UpdateRes();
+                    ShopChangesLogs sc = new ShopChangesLogs()
+                    {
+                        bee_plush_change = "-1"
+                    };
+                    StartCoroutine(shopReq.SendLog("player bought bee_plush",sc));
+                    decoratives[1].SetActive(true);
+                    shopText[2].text = "Продать";
                 }
-                decoratives[0].SetActive(!decoratives[0].activeSelf);
+                else if (stats.resources.bee_plush == 1)
+                {
+                    //print("here");
+                    shop.resources.bee_plush = 1;
+                    stats.resources.bee_plush = 0;
+                    stats.resources.honey_esence += 5;
+                    stats.UpdateRes();
+                    ShopChangesLogs sc = new ShopChangesLogs()
+                    {
+                        bee_plush_change = "+1"
+                    };
+                    PlayerChangesLogs pc = new PlayerChangesLogs()
+                    {
+                        honey_esence_change = "+5"
+                    };
+                    StartCoroutine(shopReq.SendLog("player sold bee plush",sc));
+                    StartCoroutine(stats.webAsker.SendLog("player sold bee plush",pc));
+                    decoratives[1].SetActive(false);
+                    shopText[2].text = "Купить";
+                }
+                
                 break;
             default:
                 break;
