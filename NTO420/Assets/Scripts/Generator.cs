@@ -4,83 +4,81 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class Generator : MonoBehaviour
 {
-    public int maxHoney = 100;
-    public int rashodHoney = 1;
-    
-    public float timeRashodHoney = 1f;
-
-    public SlotInventory slot;
-    
-    public GameObject panelGenerator;
     public Transform camera;
-    public LayerMask layerMask;
-
-    public ManagerUI managerUI;
-    private bool generatorOpen = false;
+    public LayerMask pickableLayerMask;
+    public CollectResource slots;
+    
 
     private float hitRange = 3f;
-    RaycastHit hit;
+    private RaycastHit hit;
 
-    private void Awake()
-    {
-        panelGenerator.SetActive(false);
-        slot.gameObject.SetActive(false);
-    }
+    public int MaxHoney = 100;
+    public int rashodHoney = 100;
+    public int timeInSecond = 100;
+    public int honeyNow;
+
     private void Start()
     {
-        StartCoroutine(GeneratorOfHoney());
+        StartCoroutine(GeneratorRashod());
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Physics.Raycast(camera.position, camera.forward, out hit, hitRange, pickableLayerMask))
         {
-            if (Physics.Raycast(camera.position, camera.forward, out hit, hitRange, layerMask))
+           if(Input.GetKey(KeyCode.E))
             {
-                OpenPanel();
                 GeneratorOfHoney();
             }
-        }
-
-    }
-
-    private IEnumerator GeneratorOfHoney()
-    {
-        while (true)
-        {
-            if (slot.count > 0)
-            {
-                yield return new WaitForSeconds(timeRashodHoney);
-                slot.count -= rashodHoney;
-                slot.itemCountText.text = slot.count.ToString();
-            }
-                
-            
         }
         
     }
 
-    private void OpenPanel()
+    private void GeneratorOfHoney()
     {
-        generatorOpen = !generatorOpen;
-        if (generatorOpen)
+        foreach (SlotInventory slot in slots.slots)
         {
-            panelGenerator.SetActive(true);
-            slot.gameObject.SetActive(true);
-            managerUI.InventoryShow();
-            managerUI.OpenResurses();
-            Time.timeScale = 1f;
+            if (slot.item.itemType == ItemType.Honey)
+            {
+                StartCoroutine(HoneyFull(slot));
+                if (slot.count == 0)
+                {
+                    //обновление слота
+                    break;
+                }
+
+            }
         }
-        else
+    }
+
+    private IEnumerator GeneratorRashod()
+    {
+        while (true)
         {
-            panelGenerator.SetActive(false);
-            slot.gameObject.SetActive(false);
-            managerUI.InventoryShow();
-            managerUI.OpenResurses();
+            yield return new WaitForSeconds(timeInSecond);
+            if(honeyNow > 0)
+            {
+                honeyNow--;
+                print(honeyNow);
+            }
         }
+    }
+
+    private IEnumerator HoneyFull(SlotInventory _slot)
+    {
+        while(true)
+        {
+            yield return new WaitForSeconds(0.1f);
             
+            if(honeyNow < MaxHoney)
+            {
+                _slot.count--;
+                honeyNow++;
+            }
+        }
     }
 }

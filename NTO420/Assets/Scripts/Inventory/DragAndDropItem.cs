@@ -65,16 +65,8 @@ public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         else if (eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.GetComponent<SlotInventory>() != null)
         {
             //Перемещаем данные из одного слота в другой
-
-            if (eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.GetComponent<SlotInventory>() != generatorSlot)
-            {
-                ExchangeSlotData(eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.GetComponent<SlotInventory>());
-            }
-            else if(eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.GetComponent<SlotInventory>() == generatorSlot)
-            {
-                if (oldSlot.item.itemType == ItemType.Honey)
-                    ExchangeSlotData(eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.GetComponent<SlotInventory>());
-            }
+             ExchangeSlotData(eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.GetComponent<SlotInventory>());
+            
 
         }
     }

@@ -10,7 +10,7 @@ public class ManagerUI : MonoBehaviour
     public GameObject CraftMenu;
     public GameObject ShopUI;
     public GameObject Tasks;
-    public GameObject Resurses;
+
     
 
 
@@ -21,9 +21,7 @@ public class ManagerUI : MonoBehaviour
     private bool ShopUIOpen = false;
     private bool tasksOpen = false;
     private bool canOpen = true;
-    public bool resursesOpen = false;
     
-
 
     private void Awake()
     {
@@ -33,7 +31,7 @@ public class ManagerUI : MonoBehaviour
         PauseMenu.SetActive(false);
         CraftMenu.SetActive(false);
         Tasks.SetActive(false);
-        Resurses.SetActive(false);
+        
     }
 
     private void Update()
@@ -41,7 +39,7 @@ public class ManagerUI : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             InventoryShow();
-            OpenResurses();
+           
         }
         
         if (Input.GetKeyDown(KeyCode.Escape)) PauseMenuShow();
@@ -176,20 +174,5 @@ public class ManagerUI : MonoBehaviour
         
     }
 
-    public void OpenResurses()
-    {
-        resursesOpen = !resursesOpen;
-        if (resursesOpen)
-        {
-            Resurses.SetActive(true);
-            Cursor.lockState = CursorLockMode.Confined;
-            Time.timeScale = 0f;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Time.timeScale = 1f;
-            Resurses.SetActive(false);
-        }
-    }
+    
 }

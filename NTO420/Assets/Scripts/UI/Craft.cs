@@ -77,7 +77,7 @@ public class Craft : MonoBehaviour
                             .buildObjectCount;
                         break;
                     case "SiliconSand":
-                        stats.resources.silicon_sand -= builds[l].GetComponent<BuildItem>().buildItem.buildResurses[j]
+                        stats.resources.send -= builds[l].GetComponent<BuildItem>().buildItem.buildResurses[j]
                             .buildObjectCount;
                         break;
                     case "Minerals":
