@@ -12,7 +12,7 @@ public class ManagerUI : MonoBehaviour
     public GameObject Tasks;
     private GameObject currentWindow;
     private bool canOpen = true;
-
+    public bool isWorking = true;
     private void Awake()
     {
         Inventory.SetActive(true);
@@ -27,7 +27,7 @@ public class ManagerUI : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            if (canOpen)
+            if (canOpen && isWorking)
             {
                 Open(Inventory);
             }
@@ -48,7 +48,7 @@ public class ManagerUI : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.T) && isWorking)
         {
             if (canOpen)
             {
@@ -60,7 +60,7 @@ public class ManagerUI : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C)&& isWorking)
         {
             if (canOpen)
             {
@@ -232,7 +232,7 @@ public class ManagerUI : MonoBehaviour
                 Time.timeScale = 0f;
                 //canOpen = !canOpen;
             }*/
-            if (canOpen)
+            if (canOpen && isWorking)
             {
                 Open(CraftMenu);
             }

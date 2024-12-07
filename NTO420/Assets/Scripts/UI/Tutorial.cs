@@ -16,7 +16,7 @@ public class Tutorial: MonoBehaviour
     [SerializeField] private TextMeshProUGUI [] completedTasks;
     private bool isPressedC = false;
     public bool isGotHoney;
-
+    public bool isUsedGenerator;
    public void FirstUpdate()
    {
        print("updated");
@@ -41,7 +41,7 @@ public class Tutorial: MonoBehaviour
            isCompleted = true;
            CheckStage();
        }
-       else if (stats.resources.stage == 3 && Input.GetKeyDown(KeyCode.E))
+       else if (stats.resources.stage == 3 && isUsedGenerator)
        {
            isCompleted = true;
            CheckStage();

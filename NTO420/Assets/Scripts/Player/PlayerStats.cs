@@ -14,6 +14,7 @@ public class PlayerStats : MonoBehaviour
     public static event Action onResourcesChange;
     public static event Action ChangeInventory;
     private bool isFirst = true;
+    public bool isWorking = true;
     private void Awake()
     {
         //
@@ -128,7 +129,7 @@ public class PlayerStats : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Home")
+        if (other.tag == "Home" && isWorking)
         {
             resources.oxygen = 100;
             StartCoroutine(webAsker.UpdatePlayerResources(resources));

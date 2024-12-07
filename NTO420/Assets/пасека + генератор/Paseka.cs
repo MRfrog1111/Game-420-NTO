@@ -19,7 +19,7 @@ public class Paseka : MonoBehaviour
     [SerializeField] private Tutorial tutor;
     private float hitRange = 3f;
     RaycastHit hit;
-
+    public bool isWorking = true;
     private void Start()
     {
         StartCoroutine(Pasek());
@@ -48,16 +48,15 @@ public class Paseka : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(_time);
-            if (HoneyNow < maxHoney)
-                HoneyNow += HoneyInSecond;
-            else
-                HoneyNow = 100;
-            print("HoneyInPaseka " + HoneyNow);
+            if (isWorking)
+                if (HoneyNow < maxHoney)
+                    HoneyNow += HoneyInSecond;
+                else
+                    HoneyNow = 100;
         }
     }
-
-   
-
+        //print("HoneyInPaseka " + HoneyNow);
+        
     public void TakeHoney()
     {
         stats.CheckUpdates();
