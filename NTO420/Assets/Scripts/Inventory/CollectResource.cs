@@ -146,7 +146,7 @@ public class CollectResource : MonoBehaviour
                         changes.vosk_change = "+"+_count.ToString();
                         StartCoroutine(webAsker.SendLog("collected wax",changes));
                         break;
-                    case "Minerals 1":
+                    case "Minerals":
                         stats.resources.minerals += slot.count;
                         changes.minerals_change = "+"+_count.ToString();
                         StartCoroutine(webAsker.SendLog("collected minerals after killing bug",changes));

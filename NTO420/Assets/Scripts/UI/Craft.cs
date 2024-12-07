@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DefaultNamespace;
 using UnityEditor.iOS.Xcode;
-
+using UnityEngine.UI;
 public class Craft : MonoBehaviour
 {
    // [SerializeField] private Build build;
@@ -12,6 +12,7 @@ public class Craft : MonoBehaviour
     public GameObject[] buildings;
 
     public GameObject[] bases;
+    private int minus;
     public void FirstUpdate()
     {
         print("updated");
@@ -79,23 +80,41 @@ public class Craft : MonoBehaviour
         {
             _base.SetActive(false);
             buildings[l].gameObject.SetActive(true);
-            print("a");
+            //print("a");
             for (int j = 0; j < builds[l].GetComponent<BuildItem>().buildItem.buildResurses.Count; j++)
             {
-                /*foreach (SlotInventory slot in FindObjectsOfType<CollectResource>()[0].slots)
+                minus = builds[l].GetComponent<BuildItem>().buildItem.buildResurses[j].buildObjectCount;
+                foreach (SlotInventory slot in FindObjectsOfType<CollectResource>()[0].slots)
                 {
-                   
-                   
-                    if (slot.item == builds[l].GetComponent<BuildItem>().buildItem.buildResurses[j].buildObject)
+                    if (minus > 0 && slot.item == builds[l].GetComponent<BuildItem>().buildItem.buildResurses[j].buildObject)
                     {
-                        slot.count -= builds[l].GetComponent<BuildItem>().buildItem.buildResurses[j].buildObjectCount;
-                       /* if(slot.count == 0)
+                        if (minus < slot.count)
                         {
-                           
-                        }*
+                           /* slot.count -= builds[l].GetComponent<BuildItem>().buildItem.buildResurses[j]
+                                .buildObjectCount;*/
+                            slot.count -= minus;
+                            slot.itemCountText.text = slot.count.ToString();
+                        }
+                        else
+                        {
+                            minus -= slot.count;
+                           // slot.count = 0;
+                           slot.itemCountText.text = "";
+                            slot._icon.GetComponent<Image>().color = new Color(1, 1, 1, 0);
+                            slot._icon.GetComponent<Image>().sprite = null;
+                            slot.item = null;
+                            slot._icon = null;
+                            slot.isEmpty = true;
+                            slot._icon = null;
+                        }
+
+                        /* if(slot.count == 0)
+                         {
+                            
+                         }*/
                     }
                     
-                }*/
+                }
                 switch (builds[l].GetComponent<BuildItem>().buildItem.buildResurses[j].buildObject.name)
                 {
                     case "Wax":
@@ -118,6 +137,9 @@ public class Craft : MonoBehaviour
                 {
                     case "Home":
                         stats.resources.living_module = 1; 
+                        break;
+                    case "Honey":
+                        stats.resources.apiary_module = 1; 
                         break;
                     default:
                         break;

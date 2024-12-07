@@ -34,6 +34,9 @@ public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHan
             gameObject.GetComponentInParent<SlotInventory>().stats.CheckUpdates();
             gameObject.GetComponentInParent<SlotInventory>().stats.resources.honey -= 1;
             gameObject.GetComponentInParent<SlotInventory>().stats.resources.food += 5;
+            gameObject.GetComponentInParent<SlotInventory>().count -= 1;
+            gameObject.GetComponentInParent<SlotInventory>().itemCountText.text =
+                gameObject.GetComponentInParent<SlotInventory>().count.ToString();
             /*gameObject.GetComponentInParent<SlotInventory>().count -= 1;
             gameObject.GetComponentInParent<SlotInventory>().itemCountText.text = gameObject.GetComponentInParent<SlotInventory>().count.ToString();*/
             gameObject.GetComponentInParent<SlotInventory>().stats.UpdateRes();

@@ -86,6 +86,23 @@ public class Tutorial: MonoBehaviour
                 stats.UpdateRes();
             }
         }
+        else if (stats.resources.stage == 3)
+        {
+            isCompleted = true;
+            stats.CheckUpdates();
+            stats.resources.stage ++;
+            stats.UpdateRes();
+        }
+        else if (stats.resources.stage == 4)
+        {
+            if (stats.resources.apiary_module >= neededRes[2].apiary_module)
+            {
+                isCompleted = true;
+                stats.CheckUpdates();
+                stats.resources.stage ++;
+                stats.UpdateRes();
+            }
+        }
         if (stats.resources.stage < tasks.Length)
         {
             completedTasks[stats.resources.stage].text = "Выполнено!";

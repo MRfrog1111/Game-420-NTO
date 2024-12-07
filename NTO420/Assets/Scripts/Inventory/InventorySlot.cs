@@ -13,12 +13,12 @@ public class SlotInventory : MonoBehaviour
     public TMP_Text itemCountText;
     public PlayerStats stats;
     
-    void ChangeText(){
+    /*void ChangeText(){
         if (item != null)
         {
             switch (item.name)
             {
-                case "Honey":
+               case "Honey":
                     count = stats.resources.honey;
                     break;
                 case "Minerals":
@@ -41,11 +41,11 @@ public class SlotInventory : MonoBehaviour
     {
         PlayerStats.ChangeInventory += ChangeText;
 
-    }
+    }*
 
     private void OnDisable() {
         PlayerStats.ChangeInventory -= ChangeText;
-    }
+    }*/
     private void Awake()
     {
         _icon = transform.GetChild(0).GetChild(0).gameObject;
