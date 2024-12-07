@@ -24,6 +24,7 @@ public class MenuManager : MonoBehaviour
     public TMP_Text _resolutions;
 
     int currentResolutionIndex = 0;
+    int _resolution = 0;
 
     private void Awake()
     {
@@ -57,25 +58,25 @@ public class MenuManager : MonoBehaviour
 
     private void Update()
     {
-        _resolutions.text = options[currentResolutionIndex].ToString();
-        Resolution resolution = resolutions[currentResolutionIndex];
+        _resolutions.text = options[_resolution].ToString();
+        Resolution resolution = resolutions[_resolution];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
-    public void SetResolutionPlus(int _resolution)
+    public void SetResolutionPlus()
     {
-        currentResolutionIndex = _resolution;
-        if (currentResolutionIndex++ < resolutions.Length - 1)
-            currentResolutionIndex++;
+        
+        if (_resolution++ < resolutions.Length - 1)
+            _resolution++;
         else
-            currentResolutionIndex = 0;
+            _resolution = 0;
     }
-    public void SetResolutionMines(int _resolution)
+    public void SetResolutionMines()
     {
-        currentResolutionIndex = _resolution;
-        if (currentResolutionIndex-- > 0)
-            currentResolutionIndex--;
+        
+        if (_resolution-- > 0)
+            _resolution--;
         else
-            currentResolutionIndex = resolutions.Length - 1;
+            _resolution = resolutions.Length - 1;
     }
 
     public void PlayGame()
