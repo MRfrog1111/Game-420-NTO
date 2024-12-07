@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.8
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.411711, g: 0.4180936, b: 0.41261137, a: 0.8}
+  m_IndirectSpecularColor: {r: 0.41171172, g: 0.41809443, b: 0.4126123, a: 0.8}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7898,7 +7898,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7659041432681460540, guid: d0a2c0e3220338f439a7270282f9efca, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2080994596}
   m_SourcePrefab: {fileID: 100100000, guid: d0a2c0e3220338f439a7270282f9efca, type: 3}
 --- !u!1 &836750622
 GameObject:
@@ -12831,6 +12834,11 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5002652539513901180, guid: 5c6de469e450c044193810cc732f31bb, type: 3}
+--- !u!1 &1382754746 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7659041432681460540, guid: d0a2c0e3220338f439a7270282f9efca, type: 3}
+  m_PrefabInstance: {fileID: 832266095}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1416710548 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5c6de469e450c044193810cc732f31bb, type: 3}
@@ -13372,7 +13380,7 @@ PrefabInstance:
     - target: {fileID: 2957641145624461158, guid: 2fc564477d742874b8a130e89a95d47d, type: 3}
       propertyPath: paseka
       value: 
-      objectReference: {fileID: 4600447543959733064}
+      objectReference: {fileID: 0}
     - target: {fileID: 2957641145624461158, guid: 2fc564477d742874b8a130e89a95d47d, type: 3}
       propertyPath: pickableLayerMask.m_Bits
       value: 2048
@@ -17497,11 +17505,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6462666935584297745, guid: 3cc7d7c672c37e041b9409b582ecc240, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 364
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7388737505739026006, guid: 3cc7d7c672c37e041b9409b582ecc240, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -71
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7646470885451682730, guid: 3cc7d7c672c37e041b9409b582ecc240, type: 3}
       propertyPath: m_AnchorMax.x
@@ -18119,6 +18127,102 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 1132861418886924909, guid: d0a2c0e3220338f439a7270282f9efca, type: 3}
   m_PrefabInstance: {fileID: 832266095}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &2080994596
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382754746}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: dfaccd89f7588e447a9304c44d1b5c48, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2088636171 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5c6de469e450c044193810cc732f31bb, type: 3}
@@ -25871,7 +25975,7 @@ GameObject:
   - component: {fileID: 8161294160464849449}
   - component: {fileID: 2932393230427360795}
   - component: {fileID: 9135784730453151564}
-  - component: {fileID: 9135784730453151563}
+  - component: {fileID: 9135784730453151566}
   - component: {fileID: 9135784730453151565}
   m_Layer: 11
   m_Name: Generator
@@ -27301,7 +27405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4028a3cdc8b626a4b903c8bc70af4dbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildItem: {fileID: 11400000, guid: 26ed03092795ca3468b3dbf66ea770e5, type: 2}
+  buildItem: {fileID: 11400000, guid: 711b51d3a12dc82479b05c898fc71621, type: 2}
 --- !u!114 &3534670949526996886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28047,8 +28151,8 @@ GameObject:
   - component: {fileID: 3428152419724703787}
   - component: {fileID: 4600447543959733061}
   - component: {fileID: 4600447543959733062}
-  - component: {fileID: 4600447543959733064}
   - component: {fileID: 4600447543959733063}
+  - component: {fileID: 4600447543959733064}
   m_Layer: 10
   m_Name: Ulei
   m_TagString: Untagged
@@ -30385,7 +30489,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3788585044104813054}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d6b0fcd87de22b49a09781b6d85151c, type: 3}
+  m_Script: {fileID: 11500000, guid: 5578d7e4af674664cbf22faa790ce1e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHoney: 100
@@ -42418,32 +42522,6 @@ Transform:
   m_Father: {fileID: 2322371015912176260}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &9135784730453151563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2986645503443889742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97d2305057ca7bf4390763785d174679, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera: {fileID: 1460615841}
-  pickableLayerMask:
-    serializedVersion: 2
-    m_Bits: 2048
-  slots: {fileID: 1176525034}
-  stats: {fileID: 485949659}
-  tutor: {fileID: 97213648}
-  generatortext: {fileID: 1714160650}
-  MaxHoney: 100
-  rashodHoney: 1
-  timeInSecond: 1
-  honeyNow: 0
-  ui: {fileID: 4168514250579827241}
-  paseka: {fileID: 4600447543959733064}
 --- !u!136 &9135784730453151564
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -42482,6 +42560,32 @@ MonoBehaviour:
   renderers:
   - {fileID: 2932393230427360795}
   color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &9135784730453151566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2986645503443889742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9652e209811a77a4d8e02728b0fde940, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 1460615841}
+  pickableLayerMask:
+    serializedVersion: 2
+    m_Bits: 2048
+  slots: {fileID: 1176525034}
+  stats: {fileID: 485949659}
+  tutor: {fileID: 97213648}
+  generatortext: {fileID: 1714160650}
+  MaxHoney: 100
+  rashodHoney: 100
+  timeInSecond: 100
+  honeyNow: 0
+  ui: {fileID: 4168514250579827241}
+  paseka: {fileID: 4600447543959733064}
 --- !u!114 &9139988755697647444
 MonoBehaviour:
   m_ObjectHideFlags: 0
