@@ -58,27 +58,24 @@ public class MenuManager : MonoBehaviour
     private void Update()
     {
         _resolutions.text = options[currentResolutionIndex].ToString();
-        
+        Resolution resolution = resolutions[currentResolutionIndex];
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
     public void SetResolutionPlus(int _resolution)
     {
-        if (_resolution++ > resolutions.Length - 1)
-            _resolution = 0;
+        currentResolutionIndex = _resolution;
+        if (currentResolutionIndex++ < resolutions.Length - 1)
+            currentResolutionIndex++;
         else
-            _resolution++;
-
-        Resolution resolution = resolutions[_resolution];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+            currentResolutionIndex = 0;
     }
     public void SetResolutionMines(int _resolution)
     {
-        if (_resolution-- < 0)
-            _resolution = resolutions.Length - 1;
+        currentResolutionIndex = _resolution;
+        if (currentResolutionIndex-- > 0)
+            currentResolutionIndex--;
         else
-            _resolution--;
-
-        Resolution resolution = resolutions[_resolution];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+            currentResolutionIndex = resolutions.Length - 1;
     }
 
     public void PlayGame()
@@ -113,18 +110,6 @@ public class MenuManager : MonoBehaviour
         _Start = true;
     }
 
-    public void PlusIndex()
-    {
-        if(currentResolutionIndex++ < resolutions.Length - 1)
-            currentResolutionIndex++;
-        else 
-            currentResolutionIndex = 0;
-    }
-    public void MinesIndex()
-    {
-        if(currentResolutionIndex-- > 0)
-            currentResolutionIndex--;
-        else
-            currentResolutionIndex = resolutions.Length - 1;
-    }
+    
+   
 }
