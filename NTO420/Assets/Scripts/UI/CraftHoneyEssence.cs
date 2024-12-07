@@ -15,10 +15,6 @@ public class CraftHoneyEssence : MonoBehaviour
     
     public void CraftEssence()
     {
-        stats.resources.minerals -= essence.buildItem.buildResurses[0].buildObjectCount;
-        stats.resources.honey -= essence.buildItem.buildResurses[0].buildObjectCount;
-        stats.resources.honey_esence += 1;
-        stats.UpdateRes();
         int canBuild = 0;
         //stats.CheckUpdates();
         int l = 0;
@@ -64,14 +60,17 @@ public class CraftHoneyEssence : MonoBehaviour
                             slot.item = null;
                             slot._icon = null;
                             slot.isEmpty = true;
-                            slot._icon = null;
+                            //slot._icon = null;
                         }
                     }
 
                 }
-
-                //stats.resources.honey_esence += 1;
+            //stats.resources.honey_esence += 1;
             }
+            stats.resources.minerals -= essence.buildItem.buildResurses[0].buildObjectCount;
+            stats.resources.honey -= essence.buildItem.buildResurses[0].buildObjectCount;
+            stats.resources.honey_esence += 1;
+            stats.UpdateRes();
             AddItem(honeyEssence, 1);
         }
     }
@@ -104,8 +103,8 @@ public class CraftHoneyEssence : MonoBehaviour
             }
         }
 
-        if (!isIn)
-        {
+        /*if (!isIn)
+        {*/
             foreach (SlotInventory slot in collectRes.slots)
             {
                 if (slot.isEmpty == true)
@@ -124,7 +123,7 @@ public class CraftHoneyEssence : MonoBehaviour
                     break;
                 }
             }
-        }
+       // }
     }
 
 }

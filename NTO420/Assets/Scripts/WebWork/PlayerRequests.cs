@@ -56,7 +56,8 @@ public class PlayerRequests : MonoBehaviour
         {
             hp = 100,
             food = 100,
-            oxygen = 100
+            oxygen = 100,
+            //honey_esence = 1
         };
         PlayerStruct p = new PlayerStruct()
         {
