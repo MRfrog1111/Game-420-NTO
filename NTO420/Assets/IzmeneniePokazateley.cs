@@ -8,6 +8,7 @@ public class IzmeneniePokazateley : MonoBehaviour
     [SerializeField] private PlayerStats stats;
     public Scrollbar oxygen;
     public Scrollbar food;
+    
 
     private void Start()
     {
@@ -25,5 +26,5 @@ public class IzmeneniePokazateley : MonoBehaviour
     {
         food.size = stats.resources.food / 100f;
     }
-
+    
 }
