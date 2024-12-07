@@ -48,7 +48,7 @@ public class Requests : MonoBehaviour
         PlayerStruct p = new PlayerStruct()
         {
             name = "test3",
-           // resources = JsonUtility.ToJson(r)
+            resources = JsonUtility.ToJson(r)
         };
         string json = JsonUtility.ToJson(p);
         print(json);

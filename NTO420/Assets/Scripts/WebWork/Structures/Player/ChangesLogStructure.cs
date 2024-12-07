@@ -10,7 +10,7 @@ namespace DefaultNamespace
         public string vosk_change;
         public string minerals_change;
         public string seeds_change;
-        public string silicon_sand_change;
+        public string send_change;
         public string metal_change;
         public string electronics_change;
         public string resin_change;
