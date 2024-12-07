@@ -1,38 +1,53 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteInEditMode]
-public class DayTime : MonoBehaviour
+
+public class DayCycleManager : MonoBehaviour
 {
-    
-    [SerializeField] Gradient directionLightGradient;
-    [SerializeField] Gradient dambientLightGradient;
+    [Range(0, 1)]
+    public float TimeOfDay;
+    public float DayDuration = 30f;
 
-    [SerializeField, Range(1, 3600)] float timeDayInSeconds;
-    [SerializeField, Range(0f, 1f)] float timeProgress;
+    public AnimationCurve SunCurve;
+    public AnimationCurve MoonCurve;
+    public AnimationCurve SkyboxCurve;
 
-    [SerializeField] Light dirLight;
+    public Material DaySkybox;
+    public Material NightSkybox;
 
-    Vector3 defaultAngels;
-    void Start()
+    public ParticleSystem Stars;
+
+    public Light Sun;
+    public Light Moon;
+
+    private float sunIntensity;
+    private float moonIntensity;
+
+    private void Start()
     {
-        defaultAngels = dirLight.transform.localEulerAngles;
+        sunIntensity = Sun.intensity;
+        moonIntensity = Moon.intensity;
     }
 
-   
-    void Update()
+    private void Update()
     {
-        if(Application.isPlaying)
-            timeProgress += Time.deltaTime / timeDayInSeconds; 
+        TimeOfDay += Time.deltaTime / DayDuration;
+        if (TimeOfDay >= 1) TimeOfDay -= 1;
 
-        if(timeProgress > 1f) 
-            timeProgress = 0f;
+        // Настройки освещения (skybox и основное солнце)
+        RenderSettings.skybox.Lerp(NightSkybox, DaySkybox, SkyboxCurve.Evaluate(TimeOfDay));
+        RenderSettings.sun = SkyboxCurve.Evaluate(TimeOfDay) > 0.1f ? Sun : Moon;
+        DynamicGI.UpdateEnvironment();
 
-        dirLight.color = directionLightGradient.Evaluate(timeProgress);
-        RenderSettings.ambientEquatorColor = directionLightGradient.Evaluate(timeProgress);
+        // Прозрачность звёзд
+        var mainModule = Stars.main;
+        //mainModule.startColor = new Color(1, 1, 1, 1 - SkyboxCurve.Evaluate(TimeOfDay));
 
-        dirLight.transform.localEulerAngles = new Vector3(360f * timeProgress - 90, defaultAngels.x, defaultAngels.z);
+        // Поворот луны и солнца
+        Sun.transform.localRotation = Quaternion.Euler(TimeOfDay * 360f, 180, 0);
+        Moon.transform.localRotation = Quaternion.Euler(TimeOfDay * 360f + 180f, 180, 0);
 
+        // Интенсивность свечения луны и солнца
+        Sun.intensity = sunIntensity * SunCurve.Evaluate(TimeOfDay);
+        Moon.intensity = moonIntensity * MoonCurve.Evaluate(TimeOfDay);
     }
 }
