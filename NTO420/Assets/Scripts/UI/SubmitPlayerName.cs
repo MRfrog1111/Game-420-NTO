@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DefaultNamespace;
 using TMPro;
-using TMPro.EditorUtilities;
+//using TMPro.EditorUtilities;
 using UnityEditor;
 using UnityEngine.SceneManagement;
 public class SubmitPlayerName : MonoBehaviour
