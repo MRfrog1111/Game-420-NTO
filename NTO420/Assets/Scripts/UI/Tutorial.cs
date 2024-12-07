@@ -51,6 +51,7 @@ public class Tutorial: MonoBehaviour
            if (stats.resources.apiary_module >= neededRes[0].apiary_module)
            {
                isCompleted = true;
+               CheckStage();
            }
        }
        else if (stats.resources.stage == 5 && isGotHoney)
