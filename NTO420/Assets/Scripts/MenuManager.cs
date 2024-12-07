@@ -41,6 +41,7 @@ public class MenuManager : MonoBehaviour
     private void Start()
     {
         resolutions = Screen.resolutions;
+        MeinMenu.SetActive(true);
         
 
         for (int i = 0; i < resolutions.Length; i++)
@@ -57,7 +58,26 @@ public class MenuManager : MonoBehaviour
     private void Update()
     {
         _resolutions.text = options[currentResolutionIndex].ToString();
-        Resolution resolution = resolutions[currentResolutionIndex];
+        
+    }
+    public void SetResolutionPlus(int _resolution)
+    {
+        if (_resolution++ > resolutions.Length - 1)
+            _resolution = 0;
+        else
+            _resolution++;
+
+        Resolution resolution = resolutions[_resolution];
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+    }
+    public void SetResolutionMines(int _resolution)
+    {
+        if (_resolution-- < 0)
+            _resolution = resolutions.Length - 1;
+        else
+            _resolution--;
+
+        Resolution resolution = resolutions[_resolution];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
 
