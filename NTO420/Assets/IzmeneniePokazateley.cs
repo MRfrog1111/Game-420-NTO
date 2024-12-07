@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +15,13 @@ public class IzmeneniePokazateley : MonoBehaviour
         oxygen.size = 1;
         food.size = 1;
     }
-    
+
+    private void Update()
+    {
+        oxygen.size = stats.resources.oxygen / 100f;
+        food.size = stats.resources.food / 100f;
+    }
+
     public void Oxygen()
     {
         oxygen.size = stats.resources.oxygen / 100f;
@@ -23,7 +30,7 @@ public class IzmeneniePokazateley : MonoBehaviour
 
     public void Food()
     {
-        food.size = stats.resources.food / 100f;
+       
     }
 
 }
