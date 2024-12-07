@@ -9,7 +9,7 @@ using Unity.VisualScripting;
 
 public class CollectResource : MonoBehaviour
 {
-    [SerializeField] private PlayerRequests webAsker;
+    public PlayerRequests webAsker;
    // private PlayerResources resources;
     [SerializeField] private PlayerStats stats;
     [SerializeField] private LayerMask pickableLayerMask;
@@ -52,6 +52,10 @@ public class CollectResource : MonoBehaviour
         {
             AddFirstItem(3,stats.resources.silicon_sand);
         }
+        if (stats.resources.honey_esence > 0)
+        {
+            AddFirstItem(4,stats.resources.honey_esence);
+        }
     }
 
     private void AddFirstItem(int n, int _count)
@@ -80,7 +84,7 @@ public class CollectResource : MonoBehaviour
         if(Physics.Raycast(playerCameraTransform.position,playerCameraTransform.forward,out hit,hitRange,pickableLayerMask))
         {
             hit.collider.GetComponent<Highlight>()?.ToggleHightLight(true);
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyUp(KeyCode.E))
             {
                 AddItem(hit.collider.GetComponent<Items>().Item, hit.collider.GetComponent<Items>().count);
                 //print(hit.collider.gameObject.name);
@@ -166,9 +170,10 @@ public class CollectResource : MonoBehaviour
         //print("chekck3 " + stats.resources.honey);
         stats.UpdateRes();
         stats.CheckUpdates();
+        onResourcesChange?.Invoke();
         //StartCoroutine(webAsker.UpdatePlayerResources(stats.resources));
         //StartCoroutine(webAsker.GetPlayerResources(stats.GetRes));
-        onResourcesChange?.Invoke();
+        
     }
 
 }

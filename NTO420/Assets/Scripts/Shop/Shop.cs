@@ -11,20 +11,21 @@ public class Shop : MonoBehaviour
 {
     [SerializeField] private ShopRequests shopReq;
     [SerializeField] private PlayerStats stats;
-    public TextMeshProUGUI[] shopText; // 0 -мяак
+    public TextMeshProUGUI[] shopText;
+    public GameObject[] decoratives;
     private ShopStruct shop;
     void Start()
     {
         shop = new ShopStruct()
         {
-            name = "shop_norm",
+            name = "shop1",
             resources = new ShopResources()
             {
-                quantum_beacon_of_return = 1,
-                bee_plush = 1,
-                bug_plush = 1,
+                flower = 1,
                 atmospheric_filter = 1,
-                protective_dome = 1
+                bear_figure = 1,
+                bee_plush = 1,
+                bug_plush = 1
                 
             }
         };
@@ -38,41 +39,80 @@ public class Shop : MonoBehaviour
         stats.CheckUpdates();
         switch (shopItemName)
         {
-            case "quantum_beacon_of_return":
+            case "atmosferic_filter":
                // print(shop.resources.quantum_beacon_of_return);
-                if (shop.resources.quantum_beacon_of_return == 1 && stats.resources.honey_esence >= 15)
+                if (shop.resources.atmospheric_filter == 1 && stats.resources.honey_esence >= 15)
                 {
                     //print("you can buy it");
-                    shop.resources.quantum_beacon_of_return = 0;
-                    stats.resources.quantum_beacon_of_return = 1;
+                    shop.resources.atmospheric_filter = 0;
+                    stats.resources.atmospheric_filter = 1;
+                    stats.resources.oxygen = 100;
                     stats.resources.honey_esence -= 15;
                     stats.UpdateRes();
                     ShopChangesLogs sc = new ShopChangesLogs()
                     {
-                        quantum_beacon_of_return_change = "-1"
+                        atmospheric_filter_change = "-1"
                     };
-                    StartCoroutine(shopReq.SendLog("player bought quantum beacon of return",sc));
+                    StartCoroutine(shopReq.SendLog("player bought atmospheric filter",sc));
                     shopText[0].text = "Продать";
                 }
-                else if (stats.resources.quantum_beacon_of_return == 1)
+                else if (stats.resources.atmospheric_filter == 1)
                 {
                     //print("here");
-                    shop.resources.quantum_beacon_of_return = 1;
-                    stats.resources.quantum_beacon_of_return = 0;
+                    shop.resources.atmospheric_filter = 1;
+                    stats.resources.atmospheric_filter = 0;
                     stats.resources.honey_esence += 15;
                     stats.UpdateRes();
                     ShopChangesLogs sc = new ShopChangesLogs()
                     {
-                        quantum_beacon_of_return_change = "+1"
+                        atmospheric_filter_change = "+1"
                     };
                     PlayerChangesLogs pc = new PlayerChangesLogs()
                     {
                         honey_esence_change = "+15"
                     };
-                    StartCoroutine(shopReq.SendLog("player sold quantum beacon of return",sc));
-                    StartCoroutine(stats.webAsker.SendLog("player sold quantum beacon of return",pc));
+                    StartCoroutine(shopReq.SendLog("player sold atmospheric filter",sc));
+                    StartCoroutine(stats.webAsker.SendLog("player sold atmospheric filter",pc));
                     shopText[0].text = "Купить";
                 }
+                break;
+            case "bug_plush":
+                if (shop.resources.bug_plush == 1 && stats.resources.honey_esence >= 5)
+                {
+                    //print("you can buy it");
+                    shop.resources.bug_plush = 0;
+                    stats.resources.bug_plush = 1;
+                    stats.resources.honey_esence -= 5;
+                    stats.UpdateRes();
+                    ShopChangesLogs sc = new ShopChangesLogs()
+                    {
+                        bug_plush_change = "-1"
+                    };
+                    StartCoroutine(shopReq.SendLog("player bought bug_plush",sc));
+                    shopText[1].text = "Продать";
+                }
+                else if (stats.resources.atmospheric_filter == 1)
+                {
+                    //print("here");
+                    shop.resources.bug_plush = 1;
+                    stats.resources.bug_plush = 0;
+                    stats.resources.honey_esence += 5;
+                    stats.UpdateRes();
+                    ShopChangesLogs sc = new ShopChangesLogs()
+                    {
+                        bug_plush_change = "+1"
+                    };
+                    PlayerChangesLogs pc = new PlayerChangesLogs()
+                    {
+                        honey_esence_change = "+5"
+                    };
+                    StartCoroutine(shopReq.SendLog("player sold bug plush",sc));
+                    StartCoroutine(stats.webAsker.SendLog("player sold atmospheric filter",pc));
+                    shopText[1].text = "Купить";
+                }
+                decoratives[0].SetActive(!decoratives[0].activeSelf);
+                break;
+            default:
                 break;
 
         }
@@ -86,11 +126,9 @@ public class Shop : MonoBehaviour
         shop = s;
         //print("test " + s.resources.quantum_beacon_of_return);
     }
-    // Start is called before the first frame update
 
-    // Update is called once per frame
-    void Update()
+    private void spawnPlush(GameObject plush)
     {
-        
+        plush.SetActive(true);
     }
 }

@@ -16,7 +16,7 @@ public class Paseka : MonoBehaviour
     public Items Honey;
     [SerializeField] private PlayerStats stats;
     [SerializeField] private CollectResource slots;
-
+    [SerializeField] private Tutorial tutor;
     private float hitRange = 3f;
     RaycastHit hit;
 
@@ -64,6 +64,8 @@ public class Paseka : MonoBehaviour
         stats.resources.honey += HoneyNow;
         stats.UpdateRes();
         HoneyNow = 0;
+        tutor.isGotHoney = true;
+        tutor.CheckStage();
         int temporary = 0;
         foreach (SlotInventory slot in slots.slots)
         {

@@ -10,7 +10,7 @@ public class Craft : MonoBehaviour
 
     [SerializeField] private PlayerStats stats;
     public GameObject[] buildings;
-
+    [SerializeField] private Tutorial tutor;
     public GameObject[] bases;
     private int minus;
     public void FirstUpdate()
@@ -100,7 +100,7 @@ public class Craft : MonoBehaviour
                             minus -= slot.count;
                            // slot.count = 0;
                            slot.itemCountText.text = "";
-                            slot._icon.GetComponent<Image>().color = new Color(1, 1, 1, 0);
+                           // slot._icon.GetComponent<Image>().color = new Color(1, 1, 1, 0);
                             slot._icon.GetComponent<Image>().sprite = null;
                             slot.item = null;
                             slot._icon = null;
@@ -146,6 +146,7 @@ public class Craft : MonoBehaviour
                 }
                 stats.UpdateRes();
             }
+            tutor.CheckStage();
         }
     }
 }

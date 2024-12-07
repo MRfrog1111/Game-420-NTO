@@ -9,8 +9,9 @@ public class ShopRequests : MonoBehaviour
     public string shopName;
     void Start()
     {
-        //StartCoroutine(AddShop(currentPlayerName));
-        
+        currentPlayerName = PlayerPrefs.GetString("PlayerName");
+        shopName = "shop1";
+        StartCoroutine(AddShop(currentPlayerName));
     }
     public IEnumerator AddShop(string p_name)
     {
@@ -19,15 +20,15 @@ public class ShopRequests : MonoBehaviour
         string url = "https://2025.nti-gamedev.ru/api/games/c94756a8-d518-48fa-90ca-3bb7c23fd1a2/players/"+currentPlayerName+"/shops/";
         ShopResources res = new ShopResources()
         {
-            quantum_beacon_of_return = 1,
+            flower = 1,
             atmospheric_filter = 1,
-            protective_dome = 1,
+            bear_figure = 1,
             bee_plush = 1,
             bug_plush = 1
         };
         ShopStruct sh = new  ShopStruct()
         {
-            name = "shop_norm",
+            name = "shop1",
             resources = res
         };
         UnityWebRequest www = UnityWebRequest.Post(url,JsonUtility.ToJson(sh),"application/json");

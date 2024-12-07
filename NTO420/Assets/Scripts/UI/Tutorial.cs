@@ -15,10 +15,11 @@ public class Tutorial: MonoBehaviour
     private bool isCompleted = false;
     [SerializeField] private TextMeshProUGUI [] completedTasks;
     private bool isPressedC = false;
+    public bool isGotHoney;
 
    public void FirstUpdate()
    {
-      // print("updated");
+       print("updated");
        if (stats.resources.stage < tasks.Length)
        {
            tutorialText.text = tasks[stats.resources.stage];
@@ -35,12 +36,26 @@ public class Tutorial: MonoBehaviour
 
    private void Update()
    {
-       if (stats.resources.stage == 1 && Input.GetKey(KeyCode.C))
+       if (stats.resources.stage == 1 && Input.GetKeyDown(KeyCode.C))
        {
            isCompleted = true;
-           stats.CheckUpdates();
-           stats.resources.stage ++;
-           stats.UpdateRes();
+           CheckStage();
+       }
+       else if (stats.resources.stage == 3 && Input.GetKeyDown(KeyCode.E))
+       {
+           isCompleted = true;
+           CheckStage();
+       }
+       else if (stats.resources.stage == 4)
+       {
+           if (stats.resources.apiary_module >= neededRes[0].apiary_module)
+           {
+               isCompleted = true;
+           }
+       }
+       else if (stats.resources.stage == 5 && isGotHoney)
+       {
+           isCompleted = true;
            CheckStage();
        }
    }
@@ -48,16 +63,16 @@ public class Tutorial: MonoBehaviour
    private void OnEnable()
     {
 
-      //  CollectResource.onResourcesChange += CheckStage;
-        PlayerStats.ChangeInventory += CheckStage;
+       CollectResource.onResourcesChange += CheckStage;
+        //PlayerStats.ChangeInventory += CheckStage;
         PlayerStats.onResourcesChange += FirstUpdate;
 
     }
 
     private void OnDisable() {
 
-       // CollectResource.onResourcesChange -= CheckStage;
-        PlayerStats.ChangeInventory -= CheckStage;
+        CollectResource.onResourcesChange -= CheckStage;
+        //PlayerStats.ChangeInventory -= CheckStage;
         PlayerStats.onResourcesChange -= FirstUpdate;
     }
     
@@ -71,42 +86,34 @@ public class Tutorial: MonoBehaviour
             if (stats.resources.honey >= neededRes[0].honey)
             {
                 isCompleted = true;
-                stats.CheckUpdates();
-                stats.resources.stage ++;
-                stats.UpdateRes();
             }
         }
         else if (stats.resources.stage == 2)
         {
-            if (stats.resources.living_module >= neededRes[2].living_module)
+            if (stats.resources.living_module >= neededRes[0].living_module)
             {
                 isCompleted = true;
-                stats.CheckUpdates();
-                stats.resources.stage ++;
-                stats.UpdateRes();
             }
         }
         else if (stats.resources.stage == 3)
         {
             isCompleted = true;
-            stats.CheckUpdates();
-            stats.resources.stage ++;
-            stats.UpdateRes();
         }
         else if (stats.resources.stage == 4)
         {
-            if (stats.resources.apiary_module >= neededRes[2].apiary_module)
+            if (stats.resources.apiary_module >= neededRes[0].apiary_module)
             {
                 isCompleted = true;
-                stats.CheckUpdates();
-                stats.resources.stage ++;
-                stats.UpdateRes();
             }
         }
-        if (stats.resources.stage < tasks.Length)
+      
+        if (isCompleted && stats.resources.stage < tasks.Length)
         {
             completedTasks[stats.resources.stage].text = "Выполнено!";
+            stats.resources.stage ++;
+            stats.UpdateRes();
             tutorialText.text = tasks[stats.resources.stage];
+            //stats.CheckUpdates();
             isCompleted = false;
 
         }

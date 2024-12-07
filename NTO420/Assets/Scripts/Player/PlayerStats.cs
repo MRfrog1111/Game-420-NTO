@@ -27,6 +27,7 @@ public class PlayerStats : MonoBehaviour
         };
         StartCoroutine(webAsker.UpdatePlayerResources(resources));*/
        StartCoroutine(webAsker.GetPlayerResources(GetRes));
+       print("awake");
     }
     
     /*private void OnEnable()
@@ -45,11 +46,11 @@ public class PlayerStats : MonoBehaviour
 
     public  void CheckUpdates()
     {
-        StartCoroutine(webAsker.GetPlayerResources(GetRes));
+        //StartCoroutine(webAsker.GetPlayerResources(GetRes));
     }
     private void Start()
     {
-        //StartCoroutine(rashodOxygen());
+        StartCoroutine(rashodOxygen());
         StartCoroutine(rashodFood());
     }
 
@@ -62,27 +63,24 @@ public class PlayerStats : MonoBehaviour
     public void UpdateRes()
     {
         StartCoroutine(webAsker.UpdatePlayerResources(resources));
-        ChangeInventory?.Invoke();
-        StartCoroutine(webAsker.GetPlayerResources(GetRes));
+        //ChangeInventory?.Invoke();
+        //StartCoroutine(webAsker.GetPlayerResources(GetRes));
 
        // print("got it" + resources.stage);
     }
     
     
     private void FixedUpdate()
-    {/*
-        print("hp " + resources.hp);
-        print("oxygen " + resources.oxygen);
-        print("food " + resources.food);
-        
-     /*if (Input.GetKey(KeyCode.LeftShift))
-        {
-            if (x != 0 || z != 0) golod = 3;
-        }
-        else
-        {
-            golod = 1;
-        }*/
+    {
+
+        /*if (Input.GetKey(KeyCode.LeftShift))
+           {
+               if (x != 0 || z != 0) golod = 3;
+           }
+           else
+           {
+               golod = 1;
+           }*/
 
     }
    
@@ -92,16 +90,14 @@ public class PlayerStats : MonoBehaviour
         {
             yield return new WaitForSeconds(hungerTime);
            // StartCoroutine(webAsker.GetPlayerResources(GetRes));
-           StartCoroutine(webAsker.GetPlayerResources(GetRes));
-            if (resources.food > 0)
+           if (resources.food > 0)
             {
-                
                 if (isFirst)
                 {
                     onResourcesChange?.Invoke();
                     isFirst = false;
                 }
-                
+               // StartCoroutine(webAsker.GetPlayerResources(GetRes));
                 resources.food -= golod;
                 PlayerChangesLogs changes = new PlayerChangesLogs()
                 {
@@ -110,28 +106,29 @@ public class PlayerStats : MonoBehaviour
                 //print("stage" + resources.stage);
                 StartCoroutine(webAsker.SendLog("player got more hungry", changes));
                 StartCoroutine(webAsker.UpdatePlayerResources(resources));
-                StartCoroutine(webAsker.GetPlayerResources(GetRes));
+               // StartCoroutine(webAsker.GetPlayerResources(GetRes));
             }
         }
     }
-    private IEnumerator rashodOxygen()
+   private IEnumerator rashodOxygen()
     {
         while (resources.oxygen >= 0)
         {
             yield return new WaitForSeconds(oxygenTime);
-            StartCoroutine(webAsker.GetPlayerResources(GetRes));
-            if (resources.oxygen > 0)
+          
+            if (resources.oxygen > 0 && resources.atmospheric_filter == 0)
             {
+                //StartCoroutine(webAsker.GetPlayerResources(GetRes));
                 --resources.oxygen;
                 StartCoroutine(webAsker.UpdatePlayerResources(resources));
-                StartCoroutine(webAsker.GetPlayerResources(GetRes));
+                //StartCoroutine(webAsker.GetPlayerResources(GetRes));
             }
         }
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Base")
+        if (other.tag == "Home")
         {
             resources.oxygen = 100;
             StartCoroutine(webAsker.UpdatePlayerResources(resources));

@@ -18,12 +18,14 @@ namespace DefaultNamespace
         public int printer_templates;
         public int energy_crystal;
         public int honey_esence;
-        public int quantum_beacon_of_return;
-        public int protective_dome;
         public int atmospheric_filter;
         public int living_module;
         public int apiary_module; // пасека
         public int stage;
+        public int bee_plush;
+        public int bug_plush;
+        public int bear_figure;
+        public int flower;
 
     }
 }

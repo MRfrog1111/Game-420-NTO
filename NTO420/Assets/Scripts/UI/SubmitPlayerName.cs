@@ -11,6 +11,7 @@ using UnityEngine.SceneManagement;
 public class SubmitPlayerName : MonoBehaviour
 {
     [SerializeField] private PlayerRequests webAsker;
+    [SerializeField] private ShopRequests shopReq;
     //[SerializeField] private TextMeshProUGUI textUI;
     [SerializeField] private GameObject inputField;
     private PlayersStruct players;
@@ -37,7 +38,6 @@ public class SubmitPlayerName : MonoBehaviour
                 break;
             }
         }
-
         if (canCreate)
         {
             print("yes");

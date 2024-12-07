@@ -11,7 +11,7 @@ public class PlayerRequests : MonoBehaviour
     private void Awake()
     {
         currentPlayerName = PlayerPrefs.GetString("PlayerName");
-        print(currentPlayerName);
+       // print(currentPlayerName);
     }
     
     
