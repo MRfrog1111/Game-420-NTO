@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class Build : MonoBehaviour
 {
     public GameObject[] buildings;
+    public PlayerStats stats;
     public Transform playerCamera;
     private float hitRange = 3;
     RaycastHit hit;
@@ -22,7 +24,7 @@ public class Build : MonoBehaviour
     {
         print("build1");
         int canBuild = 0;
-        
+        stats.CheckUpdates();
         int l = 0;
         for (int i = 0; i < builds.Length; i++)
         {
@@ -56,20 +58,38 @@ public class Build : MonoBehaviour
             buildings[l].gameObject.SetActive(true);
             for (int j = 0; j < builds[l].GetComponent<BuildItem>().buildItem.buildResurses.Count; j++)
             {
-                foreach (SlotInventory slot in FindObjectsOfType<CollectResource>()[0].slots)
+                /*foreach (SlotInventory slot in FindObjectsOfType<CollectResource>()[0].slots)
                 {
                    
                    
                     if (slot.item == builds[l].GetComponent<BuildItem>().buildItem.buildResurses[j].buildObject)
                     {
                         slot.count -= builds[l].GetComponent<BuildItem>().buildItem.buildResurses[j].buildObjectCount;
-                        if(slot.count == 0)
+                       /* if(slot.count == 0)
                         {
                            
-                        }
+                        }*
                     }
                     
+                }*/
+                switch (builds[l].GetComponent<BuildItem>().buildItem.buildResurses[j].buildObject.name)
+                {
+                    case "Wax":
+                        stats.resources.wax -= builds[l].GetComponent<BuildItem>().buildItem.buildResurses[j]
+                            .buildObjectCount;
+                        break;
+                    case "SiliconSand":
+                        stats.resources.silicon_sand -= builds[l].GetComponent<BuildItem>().buildItem.buildResurses[j]
+                            .buildObjectCount;
+                        break;
+                    case "Minerals":
+                        stats.resources.minerals -= builds[l].GetComponent<BuildItem>().buildItem.buildResurses[j]
+                            .buildObjectCount;
+                        break;
+                    default:
+                        break;
                 }
+                stats.UpdateRes();
             }
         }
     }

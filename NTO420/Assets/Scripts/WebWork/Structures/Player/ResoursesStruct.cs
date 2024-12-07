@@ -1,5 +1,3 @@
-using UnityEngine.UIElements;
-
 namespace DefaultNamespace
 {
     [System.Serializable]
@@ -12,7 +10,7 @@ namespace DefaultNamespace
         public int wax;
         public int minerals;
         public int seeds;
-        public int send;
+        public int silicon_sand;
         public int metal;
         public int electronics;
         public int resin;
@@ -25,6 +23,7 @@ namespace DefaultNamespace
         public int atmospheric_filter;
         public int living_module;
         public int apiary_module; // пасека
+        public int stage;
 
     }
 }

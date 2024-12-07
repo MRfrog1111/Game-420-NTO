@@ -11,6 +11,7 @@ public class PlayerRequests : MonoBehaviour
     private void Awake()
     {
         currentPlayerName = PlayerPrefs.GetString("PlayerName");
+        print(currentPlayerName);
     }
     
     
@@ -25,7 +26,9 @@ public class PlayerRequests : MonoBehaviour
         //то, что мы делаем после получения запроса
         string json = req.downloadHandler.text;
         PlayerStruct response = JsonUtility.FromJson<PlayerStruct>(json);
-        returnResources(JsonUtility.FromJson<PlayerResources>(response.resources));
+        /*print("start "  + json);
+        print("starthp "  + response.resources.hp);*/
+        returnResources(response.resources);
     }
 
     public IEnumerator UpdatePlayerResources(PlayerResources new_res)
@@ -37,7 +40,7 @@ public class PlayerRequests : MonoBehaviour
                 resources = new_res
             };
             string json = JsonUtility.ToJson(upd);
-           // print(json);
+            //print(json);
             byte[] data = System.Text.Encoding.UTF8.GetBytes(json);
             UnityWebRequest req = UnityWebRequest.Put(url, data);
             req.SetRequestHeader("Content-Type", "application/json");
@@ -49,9 +52,16 @@ public class PlayerRequests : MonoBehaviour
     {
         //WWWForm form = new WWWForm();
         string url = "https://2025.nti-gamedev.ru/api/games/c94756a8-d518-48fa-90ca-3bb7c23fd1a2/players/";
+        PlayerResources res = new PlayerResources()
+        {
+            hp = 100,
+            food = 100,
+            oxygen = 100
+        };
         PlayerStruct p = new PlayerStruct()
         {
             name = p_name,
+            resources = res
         };
         string json = JsonUtility.ToJson(p);
        // print(json);

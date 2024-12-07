@@ -4,6 +4,6 @@ namespace DefaultNamespace
     public struct PlayerStruct
     {
         public string name;
-        public string resources;
+        public PlayerResources resources;
     }
 }
