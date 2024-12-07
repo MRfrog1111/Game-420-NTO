@@ -6,24 +6,24 @@ using UnityEngine.UI;
 public class IzmeneniePokazateley : MonoBehaviour
 {
     [SerializeField] private PlayerStats stats;
-    public Scrollbar oxygen;
-    public Scrollbar food;
+    public Image oxygen;
+    public Image food;
 
     private void Start()
     {
-        oxygen.size = 1;
-        food.size = 1;
+        oxygen.fillAmount = 1;
+        food.fillAmount = 1;
     }
     
     public void Oxygen()
     {
-        oxygen.size = stats.resources.oxygen / 100f;
+        oxygen.fillAmount = stats.resources.oxygen / 100;
         print(stats.resources.oxygen);
     }
 
     public void Food()
     {
-        food.size = stats.resources.food / 100f;
+        food.fillAmount = stats.resources.food / 100;
     }
 
 }
