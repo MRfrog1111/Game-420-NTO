@@ -182,7 +182,7 @@ public class ManagerUI : MonoBehaviour
         if (resursesOpen)
         {
             Resurses.SetActive(true);
-            Cursor.lockState = CursorLockMode.None;
+            Cursor.lockState = CursorLockMode.Confined;
             Time.timeScale = 0f;
         }
         else

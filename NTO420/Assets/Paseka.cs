@@ -29,7 +29,7 @@ public class Paseka : MonoBehaviour
     private void Update()
     {
         Honey.count = HoneyNow;
-        if(Input.GetKeyDown(KeyCode.E))
+        if(Input.GetKeyDown(KeyCode.E) && HoneyNow > 0)
         {
             if (Physics.Raycast(Camera.position, Camera.forward, out hit, hitRange, layerMask))
             {

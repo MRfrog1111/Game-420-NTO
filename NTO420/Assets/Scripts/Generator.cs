@@ -8,12 +8,12 @@ using UnityEngine;
 public class Generator : MonoBehaviour
 {
     public int maxHoney = 100;
-    public int rashodHoney = 100;
-    public int HoneyNow = 100;
+    public int rashodHoney = 1;
     
     public float timeRashodHoney = 1f;
 
-
+    public SlotInventory slot;
+    
     public GameObject panelGenerator;
     public Transform camera;
     public LayerMask layerMask;
@@ -27,6 +27,7 @@ public class Generator : MonoBehaviour
     private void Awake()
     {
         panelGenerator.SetActive(false);
+        slot.gameObject.SetActive(false);
     }
     private void Start()
     {
@@ -35,7 +36,6 @@ public class Generator : MonoBehaviour
 
     private void Update()
     {
-       
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (Physics.Raycast(camera.position, camera.forward, out hit, hitRange, layerMask))
@@ -45,16 +45,20 @@ public class Generator : MonoBehaviour
             }
         }
 
-
     }
 
     private IEnumerator GeneratorOfHoney()
     {
         while (true)
         {
-            yield return new WaitForSeconds(timeRashodHoney);
-            if (HoneyNow > 0)
-                HoneyNow -= rashodHoney;
+            if (slot.count > 0)
+            {
+                yield return new WaitForSeconds(timeRashodHoney);
+                slot.count -= rashodHoney;
+                slot.itemCountText.text = slot.count.ToString();
+            }
+                
+            
         }
         
     }
@@ -65,13 +69,16 @@ public class Generator : MonoBehaviour
         if (generatorOpen)
         {
             panelGenerator.SetActive(true);
-            
+            slot.gameObject.SetActive(true);
+            managerUI.InventoryShow();
             managerUI.OpenResurses();
+            Time.timeScale = 1f;
         }
         else
         {
             panelGenerator.SetActive(false);
-            
+            slot.gameObject.SetActive(false);
+            managerUI.InventoryShow();
             managerUI.OpenResurses();
         }
             

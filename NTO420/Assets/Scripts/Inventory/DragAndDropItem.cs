@@ -10,6 +10,7 @@ using TMPro;
 public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
 {
     public SlotInventory oldSlot;
+    public SlotInventory generatorSlot;
     private Transform player;
     
     private void Start()
@@ -29,57 +30,52 @@ public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHan
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (gameObject.GetComponentInParent<SlotInventory>().item.name == "Honey")
-        {
-            gameObject.GetComponentInParent<SlotInventory>().stats.CheckUpdates();
-            gameObject.GetComponentInParent<SlotInventory>().stats.resources.honey -= 1;
-            gameObject.GetComponentInParent<SlotInventory>().stats.resources.food += 5;
-            /*gameObject.GetComponentInParent<SlotInventory>().count -= 1;
-            gameObject.GetComponentInParent<SlotInventory>().itemCountText.text = gameObject.GetComponentInParent<SlotInventory>().count.ToString();*/
-            gameObject.GetComponentInParent<SlotInventory>().stats.UpdateRes();
-        }
-        else
-        {
-            if (oldSlot.isEmpty)
-                return;
-            //Делаем картинку прозрачнее
-            GetComponentInChildren<Image>().color = new Color(1, 1, 1, 0.75f);
-            // Делаем так чтобы нажатия мышкой не игнорировали эту картинку
-            GetComponentInChildren<Image>().raycastTarget = false;
-            // Делаем наш DraggableObject ребенком InventoryPanel чтобы DraggableObject был над другими слотами инвенторя
-            transform.SetParent(transform.parent.parent);
-        }
+        if (oldSlot.isEmpty)
+            return;
+        //Делаем картинку прозрачнее
+        GetComponentInChildren<Image>().color = new Color(1, 1, 1, 0.75f);
+        // Делаем так чтобы нажатия мышкой не игнорировали эту картинку
+        GetComponentInChildren<Image>().raycastTarget = false;
+        // Делаем наш DraggableObject ребенком InventoryPanel чтобы DraggableObject был над другими слотами инвенторя
+        transform.SetParent(transform.parent.parent);
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        if (gameObject.GetComponentInParent<SlotInventory>().item.name != "Honey")
-        {
-            if (oldSlot.isEmpty)
-                return;
-            // Делаем картинку опять не прозрачной
-            GetComponentInChildren<Image>().color = new Color(1, 1, 1, 1f);
-            // И чтобы мышка опять могла ее засечь
-            GetComponentInChildren<Image>().raycastTarget = true;
+        if (oldSlot.isEmpty)
+            return;
+        // Делаем картинку опять не прозрачной
+        GetComponentInChildren<Image>().color = new Color(1, 1, 1, 1f);
+        // И чтобы мышка опять могла ее засечь
+        GetComponentInChildren<Image>().raycastTarget = true;
 
-            //Поставить DraggableObject обратно в свой старый слот
-            transform.SetParent(oldSlot.transform);
-            transform.position = oldSlot.transform.position;
-            //Если мышка отпущена над объектом по имени UIPanel, то...
-            if (eventData.pointerCurrentRaycast.gameObject.name == "UIPanel")
+        //Поставить DraggableObject обратно в свой старый слот
+        transform.SetParent(oldSlot.transform);
+        transform.position = oldSlot.transform.position;
+        //Если мышка отпущена над объектом по имени UIPanel, то...
+        if (eventData.pointerCurrentRaycast.gameObject.name == "UIPanel")
+        {
+            // Выброс объектов из инвентаря - Спавним префаб обекта перед персонажем
+            GameObject itemObject = Instantiate(oldSlot.item.itemPrefab, player.position + Vector3.up + player.forward, Quaternion.identity);
+            // Устанавливаем количество объектов такое какое было в слоте
+            itemObject.GetComponent<Items>().count = oldSlot.count;
+            // убираем значения InventorySlot
+            NullifySlotData();
+        }
+        else if (eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.GetComponent<SlotInventory>() != null)
+        {
+            //Перемещаем данные из одного слота в другой
+
+            if (eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.GetComponent<SlotInventory>() != generatorSlot)
             {
-                // Выброс объектов из инвентаря - Спавним префаб обекта перед персонажем
-                GameObject itemObject = Instantiate(oldSlot.item.itemPrefab, player.position + Vector3.up + player.forward, Quaternion.identity);
-                // Устанавливаем количество объектов такое какое было в слоте
-                itemObject.GetComponent<Items>().count = oldSlot.count;
-                // убираем значения InventorySlot
-                NullifySlotData();
-            }
-            else if(eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.GetComponent<SlotInventory>() != null)
-            {
-                //Перемещаем данные из одного слота в другой
                 ExchangeSlotData(eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.GetComponent<SlotInventory>());
             }
+            else if(eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.GetComponent<SlotInventory>() == generatorSlot)
+            {
+                if (oldSlot.item.itemType == ItemType.Honey)
+                    ExchangeSlotData(eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.GetComponent<SlotInventory>());
+            }
+
         }
     }
     void NullifySlotData()
