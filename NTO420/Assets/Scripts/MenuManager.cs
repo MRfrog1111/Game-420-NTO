@@ -61,11 +61,6 @@ public class MenuManager : MonoBehaviour
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
 
-    public void SetResolution()
-    {
-        
-    }
-
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -100,7 +95,7 @@ public class MenuManager : MonoBehaviour
 
     public void PlusIndex()
     {
-        if(currentResolutionIndex++ < resolutions.Length)
+        if(currentResolutionIndex++ < resolutions.Length - 1)
             currentResolutionIndex++;
         else 
             currentResolutionIndex = 0;
@@ -110,6 +105,6 @@ public class MenuManager : MonoBehaviour
         if(currentResolutionIndex-- > 0)
             currentResolutionIndex--;
         else
-            currentResolutionIndex = resolutions.Length;
+            currentResolutionIndex = resolutions.Length - 1;
     }
 }
