@@ -20,6 +20,7 @@ public class CollectResource : MonoBehaviour
     private float hitRange = 3f;
     RaycastHit hit;
 
+    [SerializeField] private ItemScriptableObject[] startObjects;
     public static event Action onResourcesChange;
     private void Start()
     {
@@ -31,6 +32,44 @@ public class CollectResource : MonoBehaviour
 
             }
         }
+    }
+
+    public void FirstUpdate()
+    {
+        if (stats.resources.honey > 0)
+        {
+          AddFirstItem(0,stats.resources.honey);
+        }
+        if (stats.resources.wax > 0)
+        {
+            AddFirstItem(1,stats.resources.wax);
+        }
+        if (stats.resources.minerals > 0)
+        {
+            AddFirstItem(2,stats.resources.minerals);
+        }
+        if (stats.resources.silicon_sand > 0)
+        {
+            AddFirstItem(3,stats.resources.silicon_sand);
+        }
+    }
+
+    private void AddFirstItem(int n, int _count)
+    {
+        slots[n].item = startObjects[n];;
+        slots[n].count = _count;
+        slots[n].isEmpty = false;
+        slots[n].SetIcon(startObjects[n].icon);
+        slots[n].itemCountText.text = _count.ToString();
+    }
+    private void OnEnable()
+    {
+        PlayerStats.onResourcesChange += FirstUpdate;
+
+    }
+
+    private void OnDisable() {
+        PlayerStats.onResourcesChange -= FirstUpdate;
     }
     private void Update()
     {
@@ -60,7 +99,7 @@ public class CollectResource : MonoBehaviour
     private void AddItem(ItemScriptableObject _item, int _count)
     {
         //StartCoroutine(stats.webAsker.GetPlayerResources(stats.GetRes));
-        stats.UpdateRes();
+        stats.CheckUpdates();
         print("item" + _item.name);
         PlayerChangesLogs changes = new PlayerChangesLogs();
         foreach (SlotInventory slot in slots)
@@ -107,10 +146,15 @@ public class CollectResource : MonoBehaviour
                         changes.vosk_change = "+"+_count.ToString();
                         StartCoroutine(webAsker.SendLog("collected wax",changes));
                         break;
-                    case "Minerals":
+                    case "Minerals 1":
                         stats.resources.minerals += slot.count;
                         changes.minerals_change = "+"+_count.ToString();
                         StartCoroutine(webAsker.SendLog("collected minerals after killing bug",changes));
+                        break;
+                    case "SiliconSand":
+                        stats.resources.silicon_sand += slot.count;
+                        changes.silicon_sand_change = "+"+_count.ToString();
+                        StartCoroutine(webAsker.SendLog("collected dilicon sand",changes));
                         break;
                     default:
                         print("there's no such resource");
@@ -121,6 +165,7 @@ public class CollectResource : MonoBehaviour
         }
         //print("chekck3 " + stats.resources.honey);
         stats.UpdateRes();
+        stats.CheckUpdates();
         //StartCoroutine(webAsker.UpdatePlayerResources(stats.resources));
         //StartCoroutine(webAsker.GetPlayerResources(stats.GetRes));
         onResourcesChange?.Invoke();
