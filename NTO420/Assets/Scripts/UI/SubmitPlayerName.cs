@@ -14,9 +14,6 @@ public class SubmitPlayerName : MonoBehaviour
     [SerializeField] private ShopRequests shopReq;
     //[SerializeField] private TextMeshProUGUI textUI;
     [SerializeField] private GameObject inputField;
-    [SerializeField] private GameObject panel;
-    private Animator anim;
-
     private PlayersStruct players;
     private string inputName;
     private bool canCreate = true;
@@ -30,10 +27,6 @@ public class SubmitPlayerName : MonoBehaviour
     private void Awake()
     {
         StartCoroutine(webAsker.GetPlayers(GetPlrs));
-    }
-    private void Start()
-    {
-        anim = panel.GetComponent<Animator>();
     }
 
     public void SubmitName()
@@ -62,8 +55,6 @@ public class SubmitPlayerName : MonoBehaviour
         }
 
         PlayerPrefs.SetString("PlayerName",inputName);
-        anim.Play("Zatemnenie");
-        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
