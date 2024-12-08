@@ -16,6 +16,7 @@ public class Controller : MonoBehaviour
 
     private PlayerResources resources;
     public CharacterController characterController;
+    public AudioSource walk;
 
     private void Update()
     {
@@ -25,8 +26,8 @@ public class Controller : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
         if (Input.GetKey(KeyCode.LeftShift) || resources.food > 0) run = 2;
         else run = 1;
-        characterController.Move(move * speed * run * Time.deltaTime);
 
+        Walk(move);
         if (Input.GetKey(KeyCode.Space) && characterController.isGrounded)
             Jump();
 
@@ -48,5 +49,9 @@ public class Controller : MonoBehaviour
     {
         velocity.y = jumpForse;
     }
-
+    private void Walk(Vector3 move)
+    {
+        characterController.Move(move * speed * run * Time.deltaTime);
+        walk.Play();
+    }
 }

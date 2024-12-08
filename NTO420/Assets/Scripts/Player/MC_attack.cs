@@ -34,7 +34,10 @@ public class MC_attack : MonoBehaviour
     {
         // Repeat Inputs
         if(Input.GetMouseButtonDown(0))
-        { Attack(); }
+        { 
+            Attack();
+            swordSwing.Play();
+        }
 
         SetAnimations();
     }
@@ -75,8 +78,8 @@ public class MC_attack : MonoBehaviour
     public LayerMask attackLayer;
     public float attackForce;
     public GameObject hitEffect;
-    public AudioClip swordSwing;
-    public AudioClip hitSound;
+    public AudioSource swordSwing;
+    public AudioSource hitSound;
 
     bool attacking = false;
     bool readyToAttack = true;
@@ -122,7 +125,10 @@ public class MC_attack : MonoBehaviour
            GameObject enemy = hit.collider.gameObject;
            enemy.GetComponent<Rigidbody>().AddForce(transform.forward*attackForce,ForceMode.Impulse);
              if(enemy.TryGetComponent<HP>(out HP enemy_hp))
-            { enemy_hp.GiveDamage(attackDamage); }                         
+                { 
+                    enemy_hp.GiveDamage(attackDamage);
+                    hitSound.Play();
+                }                         
         } 
     }
 
