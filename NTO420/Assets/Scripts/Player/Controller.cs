@@ -52,6 +52,9 @@ public class Controller : MonoBehaviour
     private void Walk(Vector3 move)
     {
         characterController.Move(move * speed * run * Time.deltaTime);
-        walk.Play();
+        if((move.x != 0 || move.z != 0)&&!walk.isPlaying)
+        {
+            walk.Play();
+        }
     }
 }

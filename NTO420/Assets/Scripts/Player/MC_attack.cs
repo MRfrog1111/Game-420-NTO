@@ -12,17 +12,19 @@ public class MC_attack : MonoBehaviour
     AudioSource audioSource;
 
     Vector3 _PlayerVelocity;
-    
 
+    public Transform spawn;
+    
     [Header("Camera")]
     public Camera cam;
     public float sensitivity;
 
     float xRotation = 0f;
+    
 
     void Awake()
-    { 
-       // controller = GetComponent<CharacterController>();
+    {
+        // controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
         audioSource = GetComponent<AudioSource>();
 
@@ -95,8 +97,8 @@ public class MC_attack : MonoBehaviour
         Invoke(nameof(ResetAttack), attackSpeed);
         Invoke(nameof(AttackRaycast), attackDelay);
 
-      /*  audioSource.pitch = Random.Range(0.9f, 1.1f);
-        audioSource.PlayOneShot(swordSwing);*/
+        audioSource.pitch = Random.Range(0.9f, 1.1f);
+        //audioSource.PlayOneShot();
 
         if(attackCount == 0)
         {
@@ -121,14 +123,14 @@ public class MC_attack : MonoBehaviour
         //print("abc");
         if(Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hit, attackDistance, attackLayer))
         { 
-           // HitTarget(hit.point);
+           //HitTarget(hit.point);
            GameObject enemy = hit.collider.gameObject;
            enemy.GetComponent<Rigidbody>().AddForce(transform.forward*attackForce,ForceMode.Impulse);
              if(enemy.TryGetComponent<HP>(out HP enemy_hp))
-                { 
+             { 
                     enemy_hp.GiveDamage(attackDamage);
                     hitSound.Play();
-                }                         
+             }                         
         } 
     }
 
@@ -143,6 +145,12 @@ public class MC_attack : MonoBehaviour
 
     public void Death()
     {
+        gameObject.GetComponent<Controller>().enabled = false;
+        gameObject.GetComponent<CharacterController>().enabled = false;
+        gameObject.transform.position = spawn.transform.position;
+        gameObject.GetComponent<Controller>().enabled = true;
+        gameObject.GetComponent<CharacterController>().enabled = true;
+        //gameObject.SetActive(true);
         print("Lox umer");
     }
 }
