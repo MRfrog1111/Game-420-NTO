@@ -17,9 +17,11 @@ public class SubmitPlayerName : MonoBehaviour
     private PlayersStruct players;
     private string inputName;
     private bool canCreate = true;
+    private bool isConnected = false;
     public void GetPlrs(PlayersStruct ps)
     {
         players = ps;
+        isConnected = true;
     }
     
     private void Awake()
@@ -30,19 +32,28 @@ public class SubmitPlayerName : MonoBehaviour
     public void SubmitName()
     {
         inputName = inputField.GetComponent<TMP_InputField>().text;
-        for (int i = 0; i < players.players.Length; i++)
+        if (isConnected)
         {
-            if (inputName == players.players[i].name)
+            for (int i = 0; i < players.players.Length; i++)
             {
-                canCreate = false;
-                break;
+                if (inputName == players.players[i].name)
+                {
+                    canCreate = false;
+                    break;
+                }
             }
+            if (canCreate)
+            {
+                print("yes");
+                StartCoroutine(webAsker.AddPlayer(inputName));
+            }
+            PlayerPrefs.SetInt("Connection", 1);
         }
-        if (canCreate)
+        else
         {
-            print("yes");
-            StartCoroutine(webAsker.AddPlayer(inputName));
+            PlayerPrefs.SetInt("Connection", 0);
         }
+
         PlayerPrefs.SetString("PlayerName",inputName);
         SceneManager.LoadScene("StartLocation");
     }

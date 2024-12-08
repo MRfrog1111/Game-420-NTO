@@ -50,10 +50,10 @@ public class CraftHoneyEssence : MonoBehaviour
                             slot.count -= minus;
                             slot.itemCountText.text = slot.count.ToString();
                         }
-                        else
+                        else 
                         {
-                            minus -= slot.count;
-                            // slot.count = 0;
+                            minus -= slot.count; 
+                            slot.count = 0;
                             slot.itemCountText.text = "";
                             // slot._icon.GetComponent<Image>().color = new Color(1, 1, 1, 0);
                             slot._icon.GetComponent<Image>().sprite = null;
@@ -67,11 +67,13 @@ public class CraftHoneyEssence : MonoBehaviour
                 }
             //stats.resources.honey_esence += 1;
             }
+            print("a");
             stats.resources.minerals -= essence.buildItem.buildResurses[0].buildObjectCount;
             stats.resources.honey -= essence.buildItem.buildResurses[0].buildObjectCount;
             stats.resources.honey_esence += 1;
-            stats.UpdateRes();
+            
             AddItem(honeyEssence, 1);
+            stats.UpdateRes();
         }
     }
 

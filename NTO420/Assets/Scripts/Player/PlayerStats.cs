@@ -15,6 +15,7 @@ public class PlayerStats : MonoBehaviour
     public static event Action ChangeInventory;
     private bool isFirst = true;
     public bool isWorking = true;
+    private int connection = 1;
     private void Awake()
     {
         //
@@ -27,8 +28,22 @@ public class PlayerStats : MonoBehaviour
             food = 100
         };
         StartCoroutine(webAsker.UpdatePlayerResources(resources));*/
-       StartCoroutine(webAsker.GetPlayerResources(GetRes));
-       print("awake");
+      connection = PlayerPrefs.GetInt("Connection");
+      if (connection == 0)
+      {
+          resources = new PlayerResources()
+          {
+              hp = 100,
+              food = 100,
+              oxygen = 100
+          };
+      }
+      else
+      {
+          StartCoroutine(webAsker.GetPlayerResources(GetRes));
+      }
+
+      print("awake");
     }
     
     /*private void OnEnable()
@@ -63,7 +78,10 @@ public class PlayerStats : MonoBehaviour
 
     public void UpdateRes()
     {
-        StartCoroutine(webAsker.UpdatePlayerResources(resources));
+        if (connection == 1)
+        {
+            StartCoroutine(webAsker.UpdatePlayerResources(resources));
+        }
         //ChangeInventory?.Invoke();
         //StartCoroutine(webAsker.GetPlayerResources(GetRes));
 
