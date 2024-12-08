@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ManagerUI : MonoBehaviour
 {
     public GameObject Inventory;
-    public GameObject Setings;
+    //public GameObject Setings;
     public GameObject PauseMenu;
     public GameObject CraftMenu;
     public GameObject ShopUI;
@@ -22,7 +22,7 @@ public class ManagerUI : MonoBehaviour
     {
         Inventory.SetActive(true);
         Inventory.SetActive(false);
-        Setings.SetActive(false);
+        //Setings.SetActive(false);
         PauseMenu.SetActive(false);
         CraftMenu.SetActive(false);
         Tasks.SetActive(false);
