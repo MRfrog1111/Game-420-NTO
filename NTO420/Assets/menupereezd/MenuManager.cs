@@ -5,6 +5,7 @@ using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Video;
 
 
 public class MenuManager : MonoBehaviour
@@ -20,7 +21,9 @@ public class MenuManager : MonoBehaviour
     public GameObject MeinMenu;
     public Slider volume;
     public Slider sensetivity;
-    
+    public VideoPlayer videoPlayer;
+   
+
     public TMP_Text _resolutions;
 
     int currentResolutionIndex = 0;
@@ -44,8 +47,6 @@ public class MenuManager : MonoBehaviour
         resolutions = Screen.resolutions;
         MeinMenu.SetActive(true);
         
-       
-
         for (int i = 0; i < resolutions.Length; i++)
         {
             string option = resolutions[i].width + "x" + resolutions[i].height + " " + resolutions[i].refreshRateRatio + "Hz";
@@ -81,9 +82,10 @@ public class MenuManager : MonoBehaviour
         else
             _resolution = resolutions.Length - 1;
     }
-
+    
     public void PlayGame()
     {
+            
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void ShowSettings()
