@@ -80,7 +80,7 @@ public class ManagerUI : MonoBehaviour
     }
 
    
-        public void Open(GameObject window)
+    public void Open(GameObject window)
         {
             if (window != null && canOpen)
             {
@@ -110,7 +110,19 @@ public class ManagerUI : MonoBehaviour
             }
         }
 
-        public void OpenCraftMenu()
+        public void OpenSettings()
+        {
+            Setings.SetActive(true);
+            PauseMenu.SetActive(false);
+        }
+        public void CloseSettings()
+        {
+            Setings.SetActive(false);
+            PauseMenu.SetActive(true);
+        }    
+
+
+    public void OpenCraftMenu()
         {
 
             /*if (!CraftMenuOpen)
