@@ -29,7 +29,7 @@ public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHan
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if ( gameObject.GetComponentInParent<SlotInventory>().count > 0 && gameObject.GetComponentInParent<SlotInventory>().item.name == "Honey")
+        if ( gameObject.GetComponentInParent<SlotInventory>().stats.resources.food <= 95 && gameObject.GetComponentInParent<SlotInventory>().count > 1 && gameObject.GetComponentInParent<SlotInventory>().item.name == "Honey")
         {
             gameObject.GetComponentInParent<SlotInventory>().stats.CheckUpdates();
             gameObject.GetComponentInParent<SlotInventory>().stats.resources.honey -= 1;
