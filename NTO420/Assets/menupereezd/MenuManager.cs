@@ -20,7 +20,7 @@ public class MenuManager : MonoBehaviour
     public GameObject MeinMenu;
     public Slider volume;
     public Slider sensetivity;
-    public MouseLook mouseLook;
+    
     public TMP_Text _resolutions;
 
     int currentResolutionIndex = 0;
@@ -34,7 +34,7 @@ public class MenuManager : MonoBehaviour
             AudioListener.volume = soundVolume;
             volume.value = soundVolume;
 
-            mouseLook.rotationSpeed = sensetivityVolume;
+            MouseLook.rotationSpeed = sensetivityVolume;
             sensetivity.value = sensetivityVolume;
         }
     }
@@ -44,6 +44,7 @@ public class MenuManager : MonoBehaviour
         resolutions = Screen.resolutions;
         MeinMenu.SetActive(true);
         
+       
 
         for (int i = 0; i < resolutions.Length; i++)
         {
@@ -61,6 +62,8 @@ public class MenuManager : MonoBehaviour
         _resolutions.text = options[_resolution].ToString();
         Resolution resolution = resolutions[_resolution];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+
+        
     }
     public void SetResolutionPlus()
     {
@@ -106,7 +109,7 @@ public class MenuManager : MonoBehaviour
 
     public void Sensetivity()
     {
-        mouseLook.rotationSpeed *= sensetivity.value;
+        MouseLook.rotationSpeed = sensetivity.value * 100f;
         sensetivityVolume = sensetivity.value;
         _Start = true;
     }
