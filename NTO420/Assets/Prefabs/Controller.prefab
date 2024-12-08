@@ -148,7 +148,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4304730486625152427
 Transform:
   m_ObjectHideFlags: 0
@@ -164,7 +164,7 @@ Transform:
   - {fileID: 3939660466590534278}
   - {fileID: 5681802499349638205}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!143 &408813956362080224
 CharacterController:
@@ -205,8 +205,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  gravity: 5
-  jumpForse: 2
+  gravity: 9.8
+  jumpForse: 4
   characterController: {fileID: 408813956362080224}
   walk: {fileID: 641420420020447912}
 --- !u!114 &9176428234906514806
@@ -234,6 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd80295d2f5176646a0019bf96aa5b68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawn: {fileID: 0}
   cam: {fileID: 1132861418886924909}
   sensitivity: 0
   attackDistance: 5
@@ -633,7 +634,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 4304730486625152427}
-  rotationSpeed: 10
 --- !u!114 &7497693639542064224
 MonoBehaviour:
   m_ObjectHideFlags: 0
