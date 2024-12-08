@@ -55,7 +55,7 @@ public class SubmitPlayerName : MonoBehaviour
         }
 
         PlayerPrefs.SetString("PlayerName",inputName);
-        SceneManager.LoadScene("StartLocation");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
 }
