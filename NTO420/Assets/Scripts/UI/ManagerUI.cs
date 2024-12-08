@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ManagerUI : MonoBehaviour
 {
@@ -11,8 +12,12 @@ public class ManagerUI : MonoBehaviour
     public GameObject ShopUI;
     public GameObject Tasks;
     private GameObject currentWindow;
+
+
     private bool canOpen = true;
     public bool isWorking = true;
+
+
     private void Awake()
     {
         Inventory.SetActive(true);
@@ -74,122 +79,8 @@ public class ManagerUI : MonoBehaviour
         
     }
 
-    //if(CraftMenuOpen && Input.GetKeyDown(KeyCode.E)) CraftMenuClose();
-
-
-        /* public void OpenTasks()
-         {
-             tasksOpen = !tasksOpen;
-             Cursor.visible = tasksOpen;
-             if(tasksOpen && canOpen)
-             {
-                 Cursor.lockState = CursorLockMode.None;
-                 // Cursor.visible = tr
-                 Tasks.SetActive(true);
-                 Time.timeScale = 0f;
-             }
-             else 
-             {
-                 Cursor.lockState = CursorLockMode.Locked;
-                 Tasks.SetActive(false);
-                 Time.timeScale = 1f;
-             }
-             canOpen = !canOpen;
-         }
-         public void OpenShop()
-         {
-             ShopUIOpen = !ShopUIOpen;
-             Cursor.visible = ShopUIOpen;
-             if(ShopUIOpen && canOpen)
-             {
-                 Cursor.lockState = CursorLockMode.None;
-                // Cursor.visible = tr
-                 ShopUI.SetActive(true);
-                 Time.timeScale = 0f;
-             }
-             else 
-             {
-                 Cursor.lockState = CursorLockMode.Locked;
-                 ShopUI.SetActive(false);
-                 Time.timeScale = 1f;
-             }
-             canOpen = !canOpen;
-         }
-         public void InventoryShow()
-         {
-             InventoryOpen = !InventoryOpen;
-             Cursor.visible = InventoryOpen;
-             if(InventoryOpen && canOpen)
-             {
-                 Cursor.lockState = CursorLockMode.None;
-                 Inventory.SetActive(true);
-                 Time.timeScale = 0f;
-             }
-             else 
-             {
-                 Cursor.lockState = CursorLockMode.Locked;
-                 Inventory.SetActive(false);
-                 Time.timeScale = 1f;
-             }
-             canOpen = !canOpen;
-         }
-         public void SetingsShow()
-         {
-             SetingsOpen = !SetingsOpen;
-             Cursor.visible = SetingsOpen;
-             if (SetingsOpen && canOpen)
-             {
-                 Cursor.lockState = CursorLockMode.None;
-                 Setings.SetActive(true);
-                 PauseMenu.SetActive(false);
-                 Time.timeScale = 0f;
-             }
-             else
-             {
-                 Cursor.lockState = CursorLockMode.Locked;
-                 Setings.SetActive(false);
-                 PauseMenu.SetActive(true);
-                 Time.timeScale = 1f;
-             }
-     
-             canOpen = !canOpen;
-         }
-         public void PauseMenuShow()
-         {
-             PauseMenuOpen = !PauseMenuOpen;
-             Cursor.visible = PauseMenuOpen;
-             if (PauseMenuOpen && canOpen)
-             {
-                 Cursor.lockState = CursorLockMode.None;
-                 PauseMenu.SetActive(true);
-                 Time.timeScale = 0f;
-             }
-             else
-             {
-                 Cursor.lockState = CursorLockMode.Locked;
-                 PauseMenu.SetActive(false);
-                 Time.timeScale = 1f;
-             }
-             canOpen = !canOpen;
-     
-         }
-     
-         public void CraftMenuClose()
-         {
-             
-             if (CraftMenuOpen)
-             {
-                 print("close");
-                 Cursor.visible = false;
-                 CraftMenuOpen = !CraftMenuOpen;
-                 Cursor.lockState = CursorLockMode.Locked;
-                 CraftMenu.SetActive(false);
-                 Time.timeScale = 1f;
-                 //canOpen = !canOpen;
-             }
-            
-         }*/
-        private void Open(GameObject window)
+   
+        public void Open(GameObject window)
         {
             if (window != null && canOpen)
             {
@@ -204,7 +95,7 @@ public class ManagerUI : MonoBehaviour
             }
         }
 
-        private void Close(GameObject window)
+        public void Close(GameObject window)
         {
             if (window != null && !canOpen)
             {
@@ -237,4 +128,9 @@ public class ManagerUI : MonoBehaviour
                 Open(CraftMenu);
             }
         }
+
+    public void ExitInMenu()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
+}
