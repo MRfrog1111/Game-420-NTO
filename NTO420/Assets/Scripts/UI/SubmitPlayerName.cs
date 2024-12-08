@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DefaultNamespace;
 using TMPro;
-
+//using TMPro.EditorUtilities;
 using UnityEditor;
 using UnityEngine.SceneManagement;
 public class SubmitPlayerName : MonoBehaviour
@@ -27,6 +27,7 @@ public class SubmitPlayerName : MonoBehaviour
     private void Awake()
     {
         StartCoroutine(webAsker.GetPlayers(GetPlrs));
+        PlayerPrefs.DeleteAll();
     }
 
     public void SubmitName()

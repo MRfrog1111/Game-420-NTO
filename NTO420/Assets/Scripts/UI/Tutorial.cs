@@ -17,6 +17,8 @@ public class Tutorial: MonoBehaviour
     private bool isPressedC = false;
     public bool isGotHoney;
     public bool isUsedGenerator;
+    public GameObject essenceButton;
+    public GameObject pasekaButton;
    public void FirstUpdate()
    {
        print("updated");
@@ -44,6 +46,7 @@ public class Tutorial: MonoBehaviour
        else if (stats.resources.stage == 3 && isUsedGenerator)
        {
            isCompleted = true;
+           pasekaButton.SetActive(true);
            CheckStage();
        }
        else if (stats.resources.stage == 4)
@@ -57,6 +60,7 @@ public class Tutorial: MonoBehaviour
        else if (stats.resources.stage == 5 && isGotHoney)
        {
            isCompleted = true;
+           essenceButton.SetActive(true);
            CheckStage();
        }
    }
