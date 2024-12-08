@@ -56,8 +56,8 @@ public class CraftHoneyEssence : MonoBehaviour
                             slot.count = 0;
                             slot.itemCountText.text = "";
                             // slot._icon.GetComponent<Image>().color = new Color(1, 1, 1, 0);
-                            slot._icon.GetComponent<Image>().sprite = null;
                             slot.item = null;
+                            slot._icon.GetComponent<Image>().sprite = null;
                             slot._icon = null;
                             slot.isEmpty = true;
                             //slot._icon = null;
