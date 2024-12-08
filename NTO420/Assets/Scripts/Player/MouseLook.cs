@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MouseLook : MonoBehaviour
 {
     public Transform player;
-    public static float rotationSpeed = 50f;
+    public static float rotationSpeed = 100f;
     private float xRotaition = 0f;
     
     private void Start()
