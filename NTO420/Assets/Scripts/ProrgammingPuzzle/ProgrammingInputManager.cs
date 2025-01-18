@@ -18,7 +18,7 @@ public class ProgrammingInputManager : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 100, placementLayerMask))
         {
-            lastpos = hit.point;
+            lastpos = new Vector3(hit.point.x,0,hit.point.z);
         }
         return lastpos;
     }
