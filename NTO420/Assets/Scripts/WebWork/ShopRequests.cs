@@ -17,7 +17,7 @@ public class ShopRequests : MonoBehaviour
     {
         //WWWForm form = new WWWForm();
         //print("start");
-        string url = "https://2025.nti-gamedev.ru/api/games/c94756a8-d518-48fa-90ca-3bb7c23fd1a2/players/"+currentPlayerName+"/shops/";
+        string url = "https://2025.nti-gamedev.ru/api/games/36930e60-d1e4-4dfc-8d54-d90f343d9f81/players/"+currentPlayerName+"/shops/";
         ShopResources res = new ShopResources()
         {
             flower = 1,
