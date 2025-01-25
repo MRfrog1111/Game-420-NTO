@@ -10,13 +10,27 @@ public class GridObjectsMoving : MonoBehaviour
     private ProgrammingInputManager inputManager;
     [SerializeField]
     private Grid grid;
-    // Start is called before the first frame update
+   
+    [SerializeField] private ProgrammingBlocksDatabase database;
+    private int selectedObject = -1;
+
     void Start()
     {
-        
+        StopPlacement();
     }
 
-    // Update is called once per frame
+    public void StartPlacement(int ID)
+    {
+        selectedObject = database.blockData.FindIndex(data => data.ID == ID); //находит объект в базе с нужным ID
+        
+    }
+    
+    private void StopPlacement()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    //[SerializeField] private GameObje
     void Update()
     {
         Vector3 mousePosition = inputManager.GetSelectedMapPosition();

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DraggingBlocks : MonoBehaviour
+public class IndicatorMoving : MonoBehaviour
 {
     [SerializeField] private GameObject mouseIndicator;
     [SerializeField] private ProgrammingInputManager inputManager;
