@@ -28,8 +28,7 @@ public class ProgrammingInputManager : MonoBehaviour
         }
     }
 
-    public bool isPointerOverUI()
-    => EventSystem.current.IsPointerOverGameObject(); // то эе самое, что return
+    public bool IsPointerOverUI() => EventSystem.current.IsPointerOverGameObject(); // то эе самое, что return
     
     
     public Vector3 GetSelectedMapPosition()
