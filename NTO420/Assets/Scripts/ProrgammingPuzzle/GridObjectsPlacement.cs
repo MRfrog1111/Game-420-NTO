@@ -34,6 +34,14 @@ public class GridObjectsPlacement : MonoBehaviour
             return;
         }
         cellIndicator.SetActive(true);
+        if (cellIndicator.transform.childCount>0)
+        {
+            Destroy(cellIndicator.transform.GetChild(0).gameObject);
+        }
+        Vector3 mousePosition = inputManager.GetSelectedMapPosition();
+        GameObject newBlock = Instantiate(database.blockData[selectedObjectIndex].Prefab, cellIndicator.transform);
+        newBlock.transform.localPosition = new Vector3(0, 0, 0);
+        previewRenderer = newBlock.GetComponentInChildren<Renderer>();
         inputManager.OnClicked += PlaceBlock;
         inputManager.OnExit += StopPlacement;
 
@@ -54,8 +62,12 @@ public class GridObjectsPlacement : MonoBehaviour
             return;
         }
         
+
+        
         GameObject newBlock = Instantiate(database.blockData[selectedObjectIndex].Prefab);
         newBlock.transform.position = grid.CellToWorld(gridPosition);
+        newBlock.transform.position = new Vector3(newBlock.transform.position.x, newBlock.transform.position.y-0.1f, newBlock.transform.position.z);
+        
         
         placedBlocks.Add(newBlock);
         GridData selectedData = blockData;
