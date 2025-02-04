@@ -26,6 +26,8 @@ public class GridObjectsPlacement : MonoBehaviour
         previewRenderer = cellIndicator.GetComponentInChildren<Renderer>();
     }
 
+
+
     public void StartPlacement(int ID)
     {
         selectedObjectIndex = database.blockData.FindIndex(data => data.ID == ID); //находит объект в базе с нужным ID
@@ -75,12 +77,24 @@ public class GridObjectsPlacement : MonoBehaviour
             database.blockData[selectedObjectIndex].ID,placedBlocks.Count-1);
     }
 
+    public void DeleteBlock()
+    {
+        Vector3 mousePosition = inputManager.GetSelectedMapPosition();
+        Vector3Int gridPosition = grid.WorldToCell(mousePosition);
+        if (!blockData.CanPlaceObjectAt(gridPosition,new Vector2Int(1,1)))
+        {
+            int idx = blockData.DeleteBlockAt(gridPosition);
+            Destroy(placedBlocks[idx]);
+            placedBlocks.RemoveAt(idx);
+        }
+    }
+
     private bool CheckPlacementValidity(Vector3Int gridPosition, int selectedBlockIndex)
     {
         GridData selectedData = blockData;
         return selectedData.CanPlaceObjectAt(gridPosition, database.blockData[selectedBlockIndex].Size);
     }
-
+    
 
     private void StopPlacement()
     {
@@ -93,6 +107,10 @@ public class GridObjectsPlacement : MonoBehaviour
     //[SerializeField] private GameObje
     void Update()
     {
+        if (Input.GetMouseButtonDown(1))
+        {
+            DeleteBlock();
+        }
         if (selectedObjectIndex < 0)
         {
             return;

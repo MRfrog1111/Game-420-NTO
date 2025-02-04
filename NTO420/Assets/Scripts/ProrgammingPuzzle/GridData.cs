@@ -21,6 +21,12 @@ public class GridData : MonoBehaviour
         }
     }
 
+    public int DeleteBlockAt(Vector3Int gridPosition)
+    {
+        int r = placedBlocks[gridPosition].PlacedObjectIndex;
+        placedBlocks.Remove(gridPosition);
+        return r;
+    }
     private List<Vector3Int> CalculatePositions(Vector3Int gridPosition, Vector2 blockSize)
     {
         List<Vector3Int> returnedValues = new();
