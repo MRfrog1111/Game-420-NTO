@@ -75,6 +75,7 @@ public class GridObjectsPlacement : MonoBehaviour
         GridData selectedData = blockData;
         selectedData.AddBlockAt(gridPosition,database.blockData[selectedObjectIndex].Size,
             database.blockData[selectedObjectIndex].ID,placedBlocks.Count-1);
+        StopPlacement();
     }
 
     public void DeleteBlock()
