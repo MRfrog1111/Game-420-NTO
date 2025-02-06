@@ -6,19 +6,27 @@ using UnityEngine;
 
 public class BlockBehavior : MonoBehaviour
 {
-    public GameObject robot;
+    private GameObject robot;
     private Vector3 target;
     public bool isRobotMoving = false;
     public float plusPos;
+    public float speed;
+
+    void Start()
+    {
+        robot = GameObject.Find("Robot");
+        transform.position = new Vector3(transform.position.x, transform.position.y+5f, transform.position.z);
+    }
     private void Update()
     {
         if (isRobotMoving)
         {
-            robot.transform.position = Vector3.MoveTowards(robot.transform.position, target, 0.01f);
-           /* if (robot.transform.position.x - target.x <= 0.1f)
+            robot.transform.position = Vector3.MoveTowards(robot.transform.position, target, speed * Time.deltaTime);
+            if (Vector3.Distance(transform.position,target)<= 0.01f)
             {
                 isRobotMoving = false;
-            }*/
+            }
+           
         }
         if (Input.GetMouseButtonDown(0))
         {
