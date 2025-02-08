@@ -6,28 +6,15 @@ using UnityEngine;
 
 public class BlockBehavior : MonoBehaviour
 {
-    private GameObject robot;
-    private Vector3 target;
-    public bool isRobotMoving = false;
-    public float plusPos;
-    public float speed;
-
+    private RobotMoving robotMoving;
     void Start()
     {
-        robot = GameObject.Find("Robot");
+        //robot = GameObject.Find("Robot");
+        robotMoving = GameObject.FindObjectOfType<RobotMoving>();
         transform.position = new Vector3(transform.position.x, transform.position.y+5f, transform.position.z);
     }
     private void Update()
     {
-        if (isRobotMoving)
-        {
-            robot.transform.position = Vector3.MoveTowards(robot.transform.position, target, speed * Time.deltaTime);
-            if (Vector3.Distance(transform.position,target)<= 0.01f)
-            {
-                isRobotMoving = false;
-            }
-           
-        }
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
@@ -37,10 +24,24 @@ public class BlockBehavior : MonoBehaviour
                 if (hit.collider.gameObject.name == gameObject.name)
                 {
                     print(hit.collider.gameObject.name);
-                    target = new Vector3(robot.transform.position.x+plusPos, robot.transform.position.y, robot.transform.position.z);
-                    isRobotMoving = true;
+                    OnClicked();
                 }
             }
+        }
+    }
+
+    void OnClicked()
+    {
+        //
+        if (gameObject.name == "R")
+        {
+            robotMoving.RotateRobot();
+            
+        }
+        else
+        {
+            print('A');
+            robotMoving.MoveRobot();
         }
     }
 }
