@@ -93,6 +93,7 @@ public class CollectResource : MonoBehaviour
             }
             
         }
+        
     }
   /*  public void GetRes(PlayerResources res)
     {

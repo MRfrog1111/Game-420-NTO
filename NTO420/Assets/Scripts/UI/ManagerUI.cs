@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class ManagerUI : MonoBehaviour
 {
-    public GameObject Inventory;
+    public GameObject InventorySlots;
+    public GameObject InventoryInterface;
+
     //public GameObject Setings;
     public GameObject PauseMenu;
     public GameObject CraftMenu;
@@ -20,8 +22,10 @@ public class ManagerUI : MonoBehaviour
 
     private void Awake()
     {
-        Inventory.SetActive(true);
-        Inventory.SetActive(false);
+        InventorySlots.SetActive(true);
+        InventoryInterface.SetActive(true);
+        InventorySlots.SetActive(false);
+        InventoryInterface.SetActive(false);
         //Setings.SetActive(false);
         PauseMenu.SetActive(false);
         CraftMenu.SetActive(false);
@@ -34,7 +38,8 @@ public class ManagerUI : MonoBehaviour
         {
             if (canOpen && isWorking)
             {
-                Open(Inventory);
+               
+                Open(InventorySlots);
             }
             else
             {
@@ -92,7 +97,9 @@ public class ManagerUI : MonoBehaviour
                 //CraftMenu.SetActive(true);
                 Time.timeScale = 0f;
                 currentWindow = window;
-            }
+                if(window == InventorySlots)
+                    InventoryInterface.SetActive(true);
+        }
         }
 
         public void Close(GameObject window)
@@ -107,6 +114,8 @@ public class ManagerUI : MonoBehaviour
                 //CraftMenu.SetActive(true);
                 Time.timeScale = 1f;
                 currentWindow = null;
+                if (window == InventorySlots)
+                    InventoryInterface.SetActive(false);
             }
         }
 
