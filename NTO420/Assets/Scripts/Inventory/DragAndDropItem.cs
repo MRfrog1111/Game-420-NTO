@@ -68,7 +68,7 @@ public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHan
             ExchangeSlotData(eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.GetComponent<SlotInventory>());
         }
     }
-    void NullifySlotData()
+    public void NullifySlotData()
     {
         // убираем значения InventorySlot
         oldSlot.item = null;

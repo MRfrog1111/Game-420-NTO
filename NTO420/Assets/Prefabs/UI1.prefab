@@ -1547,6 +1547,7 @@ MonoBehaviour:
   CraftMenu: {fileID: 6272219792813560450}
   ShopUI: {fileID: 8397608716425313064}
   Tasks: {fileID: 6191656260926355846}
+  canOpen: 1
   isWorking: 1
 --- !u!1 &972444605211964865
 GameObject:
@@ -11778,6 +11779,7 @@ GameObject:
   - component: {fileID: 969572734504651558}
   - component: {fileID: 1721491155115935503}
   - component: {fileID: 4056451018671232357}
+  - component: {fileID: 1981477653234625634}
   m_Layer: 0
   m_Name: FastSlots
   m_TagString: Untagged
@@ -11873,6 +11875,23 @@ MonoBehaviour:
   m_Spacing: {x: -137.56, y: -10.27}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &1981477653234625634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6813033995869453104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ece0a09400880e48bbd3e310a5ace01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quickslotParent: {fileID: 7968036198303287273}
+  inventoryManager: {fileID: 3450404664052158264}
+  currentQuickslotID: 0
+  selectedSprite: {fileID: -1948177059, guid: e6971dc6a8a24914c99242c9bb5847b7, type: 3}
+  notSelectedSprite: {fileID: 1413134711, guid: 08188082fa7e0074f9b06f12b81fd897, type: 3}
 --- !u!1 &6843162196733072701
 GameObject:
   m_ObjectHideFlags: 0

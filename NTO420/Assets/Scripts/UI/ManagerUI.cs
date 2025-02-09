@@ -16,7 +16,7 @@ public class ManagerUI : MonoBehaviour
     private GameObject currentWindow;
 
 
-    private bool canOpen = true;
+    public bool canOpen = true;
     public bool isWorking = true;
 
 

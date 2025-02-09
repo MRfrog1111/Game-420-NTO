@@ -12,5 +12,7 @@ public class ItemScriptableObject : ScriptableObject
     public string itemName;
     public string itemDescription;
     public int maxCount;
-    
+    public bool isConsumeable;
+
+    public int changeHealth;
 }
