@@ -12,7 +12,7 @@ public class RobotMoving : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        isRobotMoving = false;
     }
 
     // Update is called once per frame
@@ -26,6 +26,22 @@ public class RobotMoving : MonoBehaviour
         //target = new Vector3(robot.transform.position.x+plusPos, robot.transform.position.y, robot.transform.position.z);
     }
 
+   public  void StartProgramm(string algorithm)
+    {
+        //isRobotMoving = true;
+        foreach (char i in algorithm)
+        {
+            if (i == '1')
+            {
+                RotateRobot();
+            }
+            else if (i == '0')
+            {
+                MoveRobot();
+            }
+        }
+    }
+    
     public void MoveRobot()
     {
         switch (transform.eulerAngles.y)
@@ -48,6 +64,7 @@ public class RobotMoving : MonoBehaviour
 
     public void RotateRobot()
     {
+        isRobotMoving = false;
         robot.transform.eulerAngles = new Vector3(90, robot.transform.eulerAngles.y + 90, 0);
     }
 }

@@ -40,7 +40,6 @@ public class GridData : MonoBehaviour
 
         return returnedValues;
     }
-
     public bool CanPlaceObjectAt(Vector3Int gridPosition, Vector2 blockSize)
     {
         List<Vector3Int> positionsToOccupy = CalculatePositions(gridPosition, blockSize);
@@ -53,6 +52,11 @@ public class GridData : MonoBehaviour
         }
 
         return true;
+    }
+
+    public int GetBlockIndex(Vector3Int gridPosition)
+    {
+        return placedBlocks[gridPosition].ID;
     }
 }
 

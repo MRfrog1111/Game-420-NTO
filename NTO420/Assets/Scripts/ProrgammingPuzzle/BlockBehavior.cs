@@ -7,11 +7,16 @@ using UnityEngine;
 public class BlockBehavior : MonoBehaviour
 {
     private RobotMoving robotMoving;
+    public string commandLine = "";
+    private GridObjectsPlacement placementSystem;
+    private float  down = 2.02f;
     void Start()
     {
         //robot = GameObject.Find("Robot");
         robotMoving = GameObject.FindObjectOfType<RobotMoving>();
         transform.position = new Vector3(transform.position.x, transform.position.y+5f, transform.position.z);
+        //grid = GameObject.FindObjectOfType<Grid>();
+        placementSystem = GameObject.FindObjectOfType<GridObjectsPlacement>();
     }
     private void Update()
     {
@@ -19,7 +24,7 @@ public class BlockBehavior : MonoBehaviour
         {
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit, 100f))
+            if (Physics.Raycast(ray, out hit, 1000f))
             {
                 if (hit.collider.gameObject.name == gameObject.name)
                 {
@@ -32,16 +37,16 @@ public class BlockBehavior : MonoBehaviour
 
     void OnClicked()
     {
-        //
-        if (gameObject.name == "R")
+        print(placementSystem.name);
+        Vector3 checkedPosition = GetComponentInParent<Transform>().position;
+        //checkedPosition = 
+        while (placementSystem.GetLowerBlock(checkedPosition) != -1)
         {
-            robotMoving.RotateRobot();
-            
+            commandLine += placementSystem.GetLowerBlock(checkedPosition);
+            checkedPosition.y -= down;
+            break;
         }
-        else
-        {
-            print('A');
-            robotMoving.MoveRobot();
-        }
+        robotMoving.StartProgramm("RRM");
     }
+    
 }
