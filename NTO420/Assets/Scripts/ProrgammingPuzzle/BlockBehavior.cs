@@ -13,7 +13,7 @@ public class BlockBehavior : MonoBehaviour
     void Start()
     {
         //robot = GameObject.Find("Robot");
-        robotMoving = GameObject.FindObjectOfType<RobotMoving>();
+        robotMoving = GameObject.Find("Robot").GetComponent<RobotMoving>();
         transform.position = new Vector3(transform.position.x, transform.position.y+5f, transform.position.z);
         //grid = GameObject.FindObjectOfType<Grid>();
         placementSystem = GameObject.FindObjectOfType<GridObjectsPlacement>();
@@ -37,16 +37,24 @@ public class BlockBehavior : MonoBehaviour
 
     void OnClicked()
     {
-        print(placementSystem.name);
+        //print(placementSystem.name);
         Vector3 checkedPosition = GetComponentInParent<Transform>().position;
         //checkedPosition = 
+        /*for (int i = 0; i < 3; i++)
+        {
+            print("chekedPos " + placementSystem.GetLowerBlock(checkedPosition));
+            checkedPosition.z -= down;
+        }*/
+        commandLine = "";
         while (placementSystem.GetLowerBlock(checkedPosition) != -1)
         {
             commandLine += placementSystem.GetLowerBlock(checkedPosition);
-            checkedPosition.y -= down;
-            break;
+           // print(placementSystem.GetLowerBlock(checkedPosition));
+            checkedPosition.z -= down;
+            //break;
         }
-        robotMoving.StartProgramm("RRM");
+        robotMoving.StartProgramm(commandLine);
+        print("AAA");
     }
     
 }

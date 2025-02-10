@@ -21,6 +21,10 @@ public class RobotMoving : MonoBehaviour
         if (isRobotMoving)
         {
             robot.transform.position = Vector3.MoveTowards(robot.transform.position, target, speed * Time.deltaTime);
+            if (Vector3.Distance(robot.transform.position, target) <= 0.01)
+            {
+                isRobotMoving = false;
+            };
         }
 
         //target = new Vector3(robot.transform.position.x+plusPos, robot.transform.position.y, robot.transform.position.z);
@@ -29,13 +33,14 @@ public class RobotMoving : MonoBehaviour
    public  void StartProgramm(string algorithm)
     {
         //isRobotMoving = true;
+        //print("got it");
         foreach (char i in algorithm)
         {
-            if (i == '1')
+            if (i == '0')
             {
                 RotateRobot();
             }
-            else if (i == '0')
+            else if (i == '1')
             {
                 MoveRobot();
             }

@@ -72,9 +72,9 @@ public class GridObjectsPlacement : MonoBehaviour
         //gridPosition = grid.WorldToCell(newBlock.transform.position);
         //print("gridPos "+gridPosition);
         gridPosition.y = 0;
+       // print("p" + gridPosition);
         placedBlocks.Add(newBlock);
-        GridData selectedData = blockData;
-        selectedData.AddBlockAt(gridPosition,database.blockData[selectedObjectIndex].Size,
+        blockData.AddBlockAt(gridPosition,database.blockData[selectedObjectIndex].Size,
             database.blockData[selectedObjectIndex].ID,placedBlocks.Count-1);
         StopPlacement();
     }
@@ -93,15 +93,17 @@ public class GridObjectsPlacement : MonoBehaviour
 
     private bool CheckPlacementValidity(Vector3Int gridPosition, int selectedBlockIndex)
     {
-        GridData selectedData = blockData;
-        return selectedData.CanPlaceObjectAt(gridPosition, database.blockData[selectedBlockIndex].Size);
+        return blockData.CanPlaceObjectAt(gridPosition, database.blockData[selectedBlockIndex].Size);
     }
     
     public int GetLowerBlock (Vector3 position)
     {
         Vector3Int gridPos = grid.WorldToCell(position);
         gridPos.y = 0;
-        print(blockData.GetBlockIndex(gridPos));
+       //print("p1" + gridPos);
+       /// print("pos"+position);
+        //print(blockData.GetBlockIndex(gridPos));
+        //print(CheckPlacementValidity(gridPos,0));
         if (!CheckPlacementValidity(gridPos, 0))
         {
             return blockData.GetBlockIndex(gridPos);
