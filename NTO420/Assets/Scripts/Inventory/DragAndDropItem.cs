@@ -11,9 +11,11 @@ public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHan
 {
     public SlotInventory oldSlot;
     private Transform player;
+    private QuickslotInventory quickslotInventory;
     
     private void Start()
     {
+        quickslotInventory = FindAnyObjectByType<QuickslotInventory>();
         //ПОСТАВЬТЕ ТЭГ "PLAYER" НА ОБЪЕКТЕ ПЕРСОНАЖА!
         player = GameObject.FindGameObjectWithTag("Player").transform;
         // Находим скрипт InventorySlot в слоте в иерархии
@@ -61,11 +63,13 @@ public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHan
             itemObject.GetComponent<Items>().count = oldSlot.count;
             // убираем значения InventorySlot
             NullifySlotData();
+            quickslotInventory.CheckItemInHand();
         }
         else if (eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.GetComponent<SlotInventory>() != null)
         {
             //Перемещаем данные из одного слота в другой
             ExchangeSlotData(eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.GetComponent<SlotInventory>());
+            quickslotInventory.CheckItemInHand();
         }
     }
     public void NullifySlotData()
@@ -93,7 +97,11 @@ public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         if (oldSlot.isEmpty == false)
         {
             newSlot.SetIcon(oldSlot._icon.GetComponent<Image>().sprite);
-            newSlot.itemCountText.text = oldSlot.count.ToString();
+            if (oldSlot.item.maxCount != 1)
+                newSlot.itemCountText.text = oldSlot.count.ToString();
+            else
+                newSlot.itemCountText.text = "";
+            
         }
         else
         {
@@ -110,7 +118,10 @@ public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         if (isEmpty == false)
         {
             oldSlot.SetIcon(item.icon);
-            oldSlot.itemCountText.text = amount.ToString();
+            if (oldSlot.item.maxCount != 1)
+                oldSlot.itemCountText.text = amount.ToString();
+            else
+                oldSlot.itemCountText.text = "";
         }
         else
         {

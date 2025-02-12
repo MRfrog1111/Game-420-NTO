@@ -17,6 +17,7 @@ public class CollectResource : MonoBehaviour
     
     public List<SlotInventory> slots = new List<SlotInventory>();
     public Transform inventoryPanel;
+    public Transform quickslotPanel;
     private float hitRange = 3f;
     RaycastHit hit;
 
@@ -29,6 +30,14 @@ public class CollectResource : MonoBehaviour
             if (inventoryPanel.GetChild(i).GetComponent<SlotInventory>() != null)
             {
                 slots.Add((inventoryPanel.GetChild(i).GetComponent<SlotInventory>()));
+
+            }
+        }
+        for (int i = 0; i < quickslotPanel.childCount; i++)
+        {
+            if (quickslotPanel.GetChild(i).GetComponent<SlotInventory>() != null)
+            {
+                slots.Add((quickslotPanel.GetChild(i).GetComponent<SlotInventory>()));
 
             }
         }
@@ -135,7 +144,8 @@ public class CollectResource : MonoBehaviour
                 slot.count = _count;
                 slot.isEmpty = false;
                 slot.SetIcon(_item.icon);
-                slot.itemCountText.text = _count.ToString();
+                if(slot.item.maxCount != 1)
+                    slot.itemCountText.text = _count.ToString();
                
                 switch (_item.name)
                 {

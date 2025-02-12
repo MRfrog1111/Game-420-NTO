@@ -158,4 +158,15 @@ public class QuickslotInventory : MonoBehaviour
             allWeapons.GetChild(i).gameObject.SetActive(false);
         }
     }
+    public void CheckItemInHand()
+    {
+        if(activeSlot != null)
+        {
+            ShowItemInHand();
+        }
+        else
+        {
+            HideInHade();
+        }
+    }
 }
