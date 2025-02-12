@@ -14,6 +14,8 @@ public class MC_attack : MonoBehaviour
     Vector3 _PlayerVelocity;
 
     public Transform spawn;
+    public ManagerUI invetory;
+    public QuickslotInventory fastSlots;
     
     [Header("Camera")]
     public Camera cam;
@@ -32,13 +34,22 @@ public class MC_attack : MonoBehaviour
        // Cursor.visible = false;
     }
 
-    void Update()
+    private void Update()
     {
         // Repeat Inputs
         if(Input.GetMouseButtonDown(0))
-        { 
-            Attack();
-            swordSwing.Play();
+        {
+            if(fastSlots.activeSlot != null)
+            {
+                if (!invetory.InventorySlots.activeSelf)
+                {
+                    if (fastSlots.activeSlot.item.itemType == ItemType.Weapon)
+                    {
+                        Attack();
+                        ChangeAnimationState(ATTACK1);
+                    }
+                }
+            }
         }
 
         SetAnimations();

@@ -161,6 +161,12 @@ public class CollectResource : MonoBehaviour
                         changes.silicon_sand_change = "+"+_count.ToString();
                         StartCoroutine(webAsker.SendLog("collected dilicon sand",changes));
                         break;
+                    case "Axe":
+                        stats.resources.weapon += slot.count;
+                        changes.silicon_sand_change = "+" + _count.ToString();
+                        StartCoroutine(webAsker.SendLog("collected weapon", changes));
+                        break;
+
                     default:
                         print("there's no such resource");
                         break;

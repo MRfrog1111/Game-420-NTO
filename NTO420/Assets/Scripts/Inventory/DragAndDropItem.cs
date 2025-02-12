@@ -70,7 +70,7 @@ public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     }
     public void NullifySlotData()
     {
-        // убираем значения InventorySlot
+        // убираем значения InventorySlots
         oldSlot.item = null;
         oldSlot.count = 0;
         oldSlot.isEmpty = true;
@@ -109,7 +109,7 @@ public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         oldSlot.count = amount;
         if (isEmpty == false)
         {
-            oldSlot.SetIcon(iconGO.GetComponent<Image>().sprite);
+            oldSlot.SetIcon(item.icon);
             oldSlot.itemCountText.text = amount.ToString();
         }
         else

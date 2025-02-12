@@ -26,6 +26,7 @@ namespace DefaultNamespace
         public int bug_plush;
         public int bear_figure;
         public int flower;
+        public int weapon;
 
     }
 }

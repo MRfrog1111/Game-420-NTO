@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum ItemType {Honey, Wax, SiliconSand, Seeds, Electricals, Minerals, HoneyEssence,
-                      EnergyCrystal, MetallFragments, CrystallizedResin, OnyxAlloy, PrinterTemplate }
+                      EnergyCrystal, MetallFragments, CrystallizedResin, OnyxAlloy, PrinterTemplate, Weapon }
 public class ItemScriptableObject : ScriptableObject
 {
     public ItemType itemType;
