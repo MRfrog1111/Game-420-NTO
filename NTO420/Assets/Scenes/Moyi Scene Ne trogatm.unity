@@ -307,6 +307,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1981477653234625634, guid: 955ddaab7393d4847be81c75bc4aa679, type: 3}
+      propertyPath: allWeapons
+      value: 
+      objectReference: {fileID: 762757431}
     - target: {fileID: 2295642653417095277, guid: 955ddaab7393d4847be81c75bc4aa679, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1119,6 +1123,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &565305167 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6322236554182239084, guid: 955ddaab7393d4847be81c75bc4aa679, type: 3}
+  m_PrefabInstance: {fileID: 135942960}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c9f2305cdbf54b4e81cac75261a88cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &691916319
 GameObject:
   m_ObjectHideFlags: 0
@@ -1215,6 +1230,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 161340531785927639, guid: 739e36eb7a436d245a20fe751ff04d1b, type: 3}
   m_PrefabInstance: {fileID: 310192653}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &762757431 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2607927503733801768, guid: d0a2c0e3220338f439a7270282f9efca, type: 3}
+  m_PrefabInstance: {fileID: 1414639202}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &829058409
 PrefabInstance:
@@ -6128,15 +6148,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 474679369}
     - target: {fileID: 977623915119536990, guid: d0a2c0e3220338f439a7270282f9efca, type: 3}
+      propertyPath: invetory
+      value: 
+      objectReference: {fileID: 565305167}
+    - target: {fileID: 977623915119536990, guid: d0a2c0e3220338f439a7270282f9efca, type: 3}
+      propertyPath: fastSlots
+      value: 
+      objectReference: {fileID: 1728952408}
+    - target: {fileID: 977623915119536990, guid: d0a2c0e3220338f439a7270282f9efca, type: 3}
       propertyPath: hitEffect
       value: 
       objectReference: {fileID: 1050927920}
-    - target: {fileID: 4120662657960130867, guid: d0a2c0e3220338f439a7270282f9efca, type: 3}
-      propertyPath: Loop
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4254113818363969988, guid: d0a2c0e3220338f439a7270282f9efca, type: 3}
-      propertyPath: m_Enabled
+    - target: {fileID: 2691897338360353057, guid: d0a2c0e3220338f439a7270282f9efca, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4304730486625152427, guid: d0a2c0e3220338f439a7270282f9efca, type: 3}
@@ -6187,8 +6211,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Controller
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4120662657960130867, guid: d0a2c0e3220338f439a7270282f9efca, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -6353,6 +6376,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4092788796391132964, guid: b52b7e87efca75e4f9745cbbd70ac4a8, type: 3}
   m_PrefabInstance: {fileID: 1475474811}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1728952408 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1981477653234625634, guid: 955ddaab7393d4847be81c75bc4aa679, type: 3}
+  m_PrefabInstance: {fileID: 135942960}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ece0a09400880e48bbd3e310a5ace01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1809097618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6477,7 +6511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5755508346862156840, guid: e93aab2804472a44c89281539d2d795b, type: 3}
       propertyPath: m_Name
-      value: Axe
+      value: Knife
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

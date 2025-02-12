@@ -36,17 +36,20 @@ public class MC_attack : MonoBehaviour
 
     private void Update()
     {
-        // Repeat Inputs
+        
         if(Input.GetMouseButtonDown(0))
         {
-            if(fastSlots.activeSlot != null)
+            if(!invetory.InventorySlots.activeSelf)
             {
-                if (!invetory.InventorySlots.activeSelf)
+                if (fastSlots.activeSlot != null)
                 {
                     if (fastSlots.activeSlot.item.itemType == ItemType.Weapon)
                     {
-                        Attack();
-                        ChangeAnimationState(ATTACK1);
+                        if (fastSlots.activeSlot.item != null)
+                        {
+                            Attack();
+                            swordSwing.Play();
+                        }
                     }
                 }
             }
@@ -108,7 +111,7 @@ public class MC_attack : MonoBehaviour
         Invoke(nameof(ResetAttack), attackSpeed);
         Invoke(nameof(AttackRaycast), attackDelay);
 
-        audioSource.pitch = Random.Range(0.9f, 1.1f);
+        //audioSource.pitch = Random.Range(0.9f, 1.1f);
         //audioSource.PlayOneShot();
 
         if(attackCount == 0)

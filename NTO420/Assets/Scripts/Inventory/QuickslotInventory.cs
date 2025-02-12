@@ -1,6 +1,7 @@
 ﻿using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +14,7 @@ public class QuickslotInventory : MonoBehaviour
     public Sprite selectedSprite;
     public Sprite notSelectedSprite;
     public SlotInventory activeSlot = null;
+    public Transform allWeapons;
     
 
     // Update is called once per frame
@@ -37,6 +39,7 @@ public class QuickslotInventory : MonoBehaviour
             // Берем предыдущий слот и меняем его картинку на "выбранную"
             quickslotParent.GetChild(currentQuickslotID).GetComponent<Image>().sprite = selectedSprite;
             activeSlot = quickslotParent.GetChild(currentQuickslotID).GetComponent<SlotInventory>();
+            ShowItemInHand();
             // Что то делаем с предметом:
 
         }
@@ -57,6 +60,7 @@ public class QuickslotInventory : MonoBehaviour
             // Берем предыдущий слот и меняем его картинку на "выбранную"
             quickslotParent.GetChild(currentQuickslotID).GetComponent<Image>().sprite = selectedSprite;
             activeSlot = quickslotParent.GetChild(currentQuickslotID).GetComponent<SlotInventory>();
+            ShowItemInHand();
             // Что то делаем с предметом:
 
         }
@@ -73,11 +77,13 @@ public class QuickslotInventory : MonoBehaviour
                     {
                         quickslotParent.GetChild(currentQuickslotID).GetComponent<Image>().sprite = selectedSprite;
                         activeSlot = quickslotParent.GetChild(currentQuickslotID).GetComponent<SlotInventory>();
+                        ShowItemInHand();
                     }
                     else
                     {
                         quickslotParent.GetChild(currentQuickslotID).GetComponent<Image>().sprite = notSelectedSprite;
                         activeSlot = null;
+                        HideInHade();
                     }
                 }
                 // Иначе мы убираем свечение с предыдущего слота и светим слот который мы выбираем
@@ -87,6 +93,7 @@ public class QuickslotInventory : MonoBehaviour
                     currentQuickslotID = i;
                     quickslotParent.GetChild(currentQuickslotID).GetComponent<Image>().sprite = selectedSprite;
                     activeSlot = quickslotParent.GetChild(currentQuickslotID).GetComponent<SlotInventory>();
+                    ShowItemInHand();
                 }
             }
         }
@@ -126,6 +133,29 @@ public class QuickslotInventory : MonoBehaviour
         else
         {
            
+        }
+    }
+
+    private void ShowItemInHand()
+    {
+        HideInHade();
+        if(activeSlot.item == null) return;
+
+        for (int i = 0; i < allWeapons.childCount; i++)
+        {
+            if (activeSlot.item.inHandName == allWeapons.GetChild(i).name)
+            {
+                allWeapons.GetChild(i).gameObject.SetActive(true);
+            }
+        }
+        
+    }
+
+    private void HideInHade()
+    {
+        for (int i = 0; i < allWeapons.childCount; i++)
+        {
+            allWeapons.GetChild(i).gameObject.SetActive(false);
         }
     }
 }
