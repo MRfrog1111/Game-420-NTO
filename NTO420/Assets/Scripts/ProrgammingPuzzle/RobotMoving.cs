@@ -9,6 +9,10 @@ public class RobotMoving : MonoBehaviour
     public float plusPos;
     public float speed;
     public GameObject robot;
+    private bool IsProgrammRunning = false;
+    private string algo = "";
+
+    private int currentCommand = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,13 +22,19 @@ public class RobotMoving : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isRobotMoving)
+        if (IsProgrammRunning)
         {
-            robot.transform.position = Vector3.MoveTowards(robot.transform.position, target, speed * Time.deltaTime);
-            if (Vector3.Distance(robot.transform.position, target) <= 0.01)
+            if (isRobotMoving)
             {
-                isRobotMoving = false;
-            };
+                robot.transform.position =
+                    Vector3.MoveTowards(robot.transform.position, target, speed * Time.deltaTime);
+                if (Vector3.Distance(robot.transform.position, target) <= 0.01)
+                {
+                    print("target");
+                    isRobotMoving = false;
+                    ChangeState();
+                }
+            }
         }
 
         //target = new Vector3(robot.transform.position.x+plusPos, robot.transform.position.y, robot.transform.position.z);
@@ -32,18 +42,33 @@ public class RobotMoving : MonoBehaviour
 
    public  void StartProgramm(string algorithm)
     {
+        IsProgrammRunning = true;
         //isRobotMoving = true;
         //print("got it");
-        foreach (char i in algorithm)
+        algo = algorithm;
+        print(algo.Length);
+        ChangeState();
+    }
+
+    private void ChangeState()
+    {
+        currentCommand++;
+        if (currentCommand < algo.Length)
         {
-            if (i == '0')
+            print("Test"+currentCommand+" "+algo[currentCommand]);
+            if (algo[currentCommand] == '0')
             {
                 RotateRobot();
             }
-            else if (i == '1')
+            else if(algo[currentCommand] == '1')
             {
                 MoveRobot();
             }
+        }
+        else
+        {
+            IsProgrammRunning = false;
+            print("END");
         }
     }
     
@@ -64,6 +89,7 @@ public class RobotMoving : MonoBehaviour
                 target = new Vector3(robot.transform.position.x, robot.transform.position.y, robot.transform.position.z+plusPos);
                 break;
         }
+        print("target" + target);
         isRobotMoving = true;
     }
 
@@ -71,5 +97,6 @@ public class RobotMoving : MonoBehaviour
     {
         isRobotMoving = false;
         robot.transform.eulerAngles = new Vector3(90, robot.transform.eulerAngles.y + 90, 0);
+        ChangeState();
     }
 }
