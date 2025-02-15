@@ -1,4 +1,5 @@
-﻿using JetBrains.Annotations;
+﻿using DefaultNamespace;
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -15,6 +16,8 @@ public class QuickslotInventory : MonoBehaviour
     public Sprite notSelectedSprite;
     public SlotInventory activeSlot = null;
     public Transform allWeapons;
+
+    private PlayerStats playerStats;
     
 
     // Update is called once per frame
@@ -125,14 +128,14 @@ public class QuickslotInventory : MonoBehaviour
     private void ChangeCharacteristics()
     {
         // Если здоровье + добавленное здоровье от предмета меньше или равно 100, то делаем вычисления... 
-        if( + quickslotParent.GetChild(currentQuickslotID).GetComponent<SlotInventory>().item.changeHealth <= 100)
+        if(playerStats.resources.hp + quickslotParent.GetChild(currentQuickslotID).GetComponent<SlotInventory>().item.changeHealth <= 100)
         {
-            
+            playerStats.resources.hp += quickslotParent.GetChild(currentQuickslotID).GetComponent<SlotInventory>().item.changeHealth;
         }
         // Иначе, просто ставим здоровье на 100
         else
         {
-           
+            playerStats.resources.hp = 100;
         }
     }
 
