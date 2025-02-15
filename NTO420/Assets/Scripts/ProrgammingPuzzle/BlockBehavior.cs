@@ -10,7 +10,7 @@ public class BlockBehavior : MonoBehaviour
     public string commandLine = "";
     private GridObjectsPlacement placementSystem;
     private float  down = 2.02f;
-    private float hitrange = 2f;
+    private int hitrange = 50;
     void Start()
     {
         //robot = GameObject.Find("Robot");
@@ -24,20 +24,21 @@ public class BlockBehavior : MonoBehaviour
         
         if (Input.GetMouseButtonDown(0))
         {
-            print("mouse"+Input.mousePosition);
+            //print("mouse"+Input.mousePosition);
             //print(transform.);
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            print("qqq"+mousePos);
-            if (mousePos.x <= transform.position.x + hitrange && mousePos.x >= transform.position.x - hitrange && mousePos.z <= transform.position.z + hitrange && mousePos.z >= mousePos.z - hitrange)
+            //RaycastHit hit;
+            //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            //Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            //print("qqq"+mousePos);
+            Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
+            if (Input.mousePosition.x <= screenPos.x + hitrange && Input.mousePosition.x >= screenPos.x - hitrange && Input.mousePosition.y <= screenPos.y + hitrange && Input.mousePosition.y >= screenPos.y - hitrange)
             {
                 /*if (hit.collider.gameObject.name == gameObject.name)
                 {
                     print(hit.collider.gameObject.name);
                     OnClicked();
                 }*/
-                print("abc");
+                //print("abc");
                 OnClicked();
             }
         }
@@ -62,7 +63,7 @@ public class BlockBehavior : MonoBehaviour
             //break;
         }
         robotMoving.StartProgramm(commandLine);
-        print("AAA");
+        //print("AAA");
     }
     
 }
