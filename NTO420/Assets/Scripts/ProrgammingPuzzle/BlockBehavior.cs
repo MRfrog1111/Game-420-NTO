@@ -10,27 +10,35 @@ public class BlockBehavior : MonoBehaviour
     public string commandLine = "";
     private GridObjectsPlacement placementSystem;
     private float  down = 2.02f;
+    private float hitrange = 2f;
     void Start()
     {
         //robot = GameObject.Find("Robot");
         robotMoving = GameObject.Find("Robot").GetComponent<RobotMoving>();
-        transform.position = new Vector3(transform.position.x, transform.position.y+5f, transform.position.z);
+        //transform.position = new Vector3(transform.position.x, transform.position.y+5f, transform.position.z);
         //grid = GameObject.FindObjectOfType<Grid>();
         placementSystem = GameObject.FindObjectOfType<GridObjectsPlacement>();
     }
     private void Update()
     {
+        
         if (Input.GetMouseButtonDown(0))
         {
+            print("mouse"+Input.mousePosition);
+            //print(transform.);
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit, 1000f))
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            print("qqq"+mousePos);
+            if (mousePos.x <= transform.position.x + hitrange && mousePos.x >= transform.position.x - hitrange && mousePos.z <= transform.position.z + hitrange && mousePos.z >= mousePos.z - hitrange)
             {
-                if (hit.collider.gameObject.name == gameObject.name)
+                /*if (hit.collider.gameObject.name == gameObject.name)
                 {
                     print(hit.collider.gameObject.name);
                     OnClicked();
-                }
+                }*/
+                print("abc");
+                OnClicked();
             }
         }
     }

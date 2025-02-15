@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GridObjectsPlacement : MonoBehaviour
@@ -49,6 +50,12 @@ public class GridObjectsPlacement : MonoBehaviour
 
     }
 
+    private IEnumerator enableSript(GameObject block)
+    {
+        yield return new WaitForSecondsRealtime(1f);
+        block.GetComponentInChildren<BlockBehavior>().enabled = true;
+    }
+    
     private void PlaceBlock()
     {
         if (inputManager.IsPointerOverUI())
@@ -69,6 +76,10 @@ public class GridObjectsPlacement : MonoBehaviour
         GameObject newBlock = Instantiate(database.blockData[selectedObjectIndex].Prefab);
         newBlock.transform.position = grid.CellToWorld(gridPosition);
         newBlock.transform.position = new Vector3(newBlock.transform.position.x, newBlock.transform.position.y-0.1f, newBlock.transform.position.z);
+        if (newBlock.GetComponentInChildren<BlockBehavior>())
+        {
+            StartCoroutine(enableSript(newBlock));
+        }
         //gridPosition = grid.WorldToCell(newBlock.transform.position);
         //print("gridPos "+gridPosition);
         gridPosition.y = 0;
