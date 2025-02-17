@@ -46,6 +46,7 @@ public class RobotMoving : MonoBehaviour
         //isRobotMoving = true;
         //print("got it");
         algo = algorithm;
+        currentCommand = 0;
         print(algo.Length);
         ChangeState();
     }
@@ -98,5 +99,20 @@ public class RobotMoving : MonoBehaviour
         isRobotMoving = false;
         robot.transform.eulerAngles = new Vector3(90, robot.transform.eulerAngles.y + 90, 0);
         ChangeState();
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        print("coll");
+    }
+    void OnTriggerEnter(Collider coll)
+    {
+        print("onTrigger");
+        if (coll.CompareTag("StopRobot"))
+        {
+            IsProgrammRunning = false;
+            isRobotMoving = false;
+            print("gameOver");
+        }
     }
 }
