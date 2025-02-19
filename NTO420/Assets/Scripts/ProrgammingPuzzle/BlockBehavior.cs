@@ -13,32 +13,16 @@ public class BlockBehavior : MonoBehaviour
     private int hitrange = 50;
     void Start()
     {
-        //robot = GameObject.Find("Robot");
         robotMoving = GameObject.Find("Robot").GetComponent<RobotMoving>();
-        //transform.position = new Vector3(transform.position.x, transform.position.y+5f, transform.position.z);
-        //grid = GameObject.FindObjectOfType<Grid>();
         placementSystem = GameObject.FindObjectOfType<GridObjectsPlacement>();
     }
     private void Update()
     {
-        
         if (Input.GetMouseButtonDown(0))
         {
-            //print("mouse"+Input.mousePosition);
-            //print(transform.);
-            //RaycastHit hit;
-            //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            //Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            //print("qqq"+mousePos);
             Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
             if (Input.mousePosition.x <= screenPos.x + hitrange && Input.mousePosition.x >= screenPos.x - hitrange && Input.mousePosition.y <= screenPos.y + hitrange && Input.mousePosition.y >= screenPos.y - hitrange)
             {
-                /*if (hit.collider.gameObject.name == gameObject.name)
-                {
-                    print(hit.collider.gameObject.name);
-                    OnClicked();
-                }*/
-                //print("abc");
                 OnClicked();
             }
         }
@@ -46,24 +30,14 @@ public class BlockBehavior : MonoBehaviour
 
     void OnClicked()
     {
-        //print(placementSystem.name);
         Vector3 checkedPosition = GetComponentInParent<Transform>().position;
-        //checkedPosition = 
-        /*for (int i = 0; i < 3; i++)
-        {
-            print("chekedPos " + placementSystem.GetLowerBlock(checkedPosition));
-            checkedPosition.z -= down;
-        }*/
         commandLine = "";
         while (placementSystem.GetLowerBlock(checkedPosition) != -1)
         {
             commandLine += placementSystem.GetLowerBlock(checkedPosition);
-           // print(placementSystem.GetLowerBlock(checkedPosition));
             checkedPosition.z -= down;
-            //break;
         }
         robotMoving.StartProgramm(commandLine);
-        //print("AAA");
     }
     
 }

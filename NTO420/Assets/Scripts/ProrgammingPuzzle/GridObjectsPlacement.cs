@@ -53,7 +53,10 @@ public class GridObjectsPlacement : MonoBehaviour
     private IEnumerator enableSript(GameObject block)
     {
         yield return new WaitForSecondsRealtime(1f);
-        block.GetComponentInChildren<BlockBehavior>().enabled = true;
+        if (block!= null && block.GetComponentInChildren<BlockBehavior>())
+        {
+            block.GetComponentInChildren<BlockBehavior>().enabled = true;
+        }
     }
     
     private void PlaceBlock()

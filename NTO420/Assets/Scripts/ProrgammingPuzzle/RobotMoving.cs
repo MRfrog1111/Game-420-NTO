@@ -13,10 +13,13 @@ public class RobotMoving : MonoBehaviour
     private string algo = "";
 
     private int currentCommand = 0;
+
+    private Vector3 startPosition;
     // Start is called before the first frame update
     void Start()
     {
         isRobotMoving = false;
+        startPosition = transform.position;
     }
 
     // Update is called once per frame
@@ -41,10 +44,10 @@ public class RobotMoving : MonoBehaviour
     }
 
    public  void StartProgramm(string algorithm)
-    {
+   {
+       transform.position = startPosition;
+       transform.eulerAngles = new Vector3(90, 0, 0);
         IsProgrammRunning = true;
-        //isRobotMoving = true;
-        //print("got it");
         algo = algorithm;
         currentCommand = 0;
         print(algo.Length);
@@ -100,19 +103,19 @@ public class RobotMoving : MonoBehaviour
         robot.transform.eulerAngles = new Vector3(90, robot.transform.eulerAngles.y + 90, 0);
         ChangeState();
     }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        print("coll");
-    }
     void OnTriggerEnter(Collider coll)
     {
-        print("onTrigger");
         if (coll.CompareTag("StopRobot"))
         {
             IsProgrammRunning = false;
             isRobotMoving = false;
             print("gameOver");
+        }
+        else if (coll.gameObject.name == "Finish")
+        {
+            print("you won!");
+            IsProgrammRunning = false;
+            isRobotMoving = false;
         }
     }
 }
