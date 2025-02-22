@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RobotMoving : MonoBehaviour
 {
@@ -15,11 +16,14 @@ public class RobotMoving : MonoBehaviour
     private int currentCommand = 0;
 
     private Vector3 startPosition;
+
+    private string returnToScene;
     // Start is called before the first frame update
     void Start()
     {
         isRobotMoving = false;
         startPosition = transform.position;
+        returnToScene = PlayerPrefs.GetString("ReturnToSceneName");
     }
 
     // Update is called once per frame
@@ -113,9 +117,9 @@ public class RobotMoving : MonoBehaviour
         }
         else if (coll.gameObject.name == "Finish")
         {
-            print("you won!");
             IsProgrammRunning = false;
             isRobotMoving = false;
+            SceneManager.LoadScene(returnToScene);
         }
     }
 }

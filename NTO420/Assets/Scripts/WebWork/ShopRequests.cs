@@ -7,6 +7,7 @@ public class ShopRequests : MonoBehaviour
 {
     public string currentPlayerName;
     public string shopName;
+    private string uuid = "36930e60-d1e4-4dfc-8d54-d90f343d9f81";
     void Start()
     {
         currentPlayerName = PlayerPrefs.GetString("PlayerName");
