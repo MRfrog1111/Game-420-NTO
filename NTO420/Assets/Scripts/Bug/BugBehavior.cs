@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ using UnityEngine.Timeline;
 public class BugBehavior : Enemy
 {
     // public int _waypointNum = 0;
+    public int bug_number;
     [SerializeField] private GameObject player;
     [SerializeField] private float speed;
     public int movingState = 0; //0 - ходит, 1 - идет к игроку , 2 - стоит 
@@ -22,6 +24,9 @@ public class BugBehavior : Enemy
     string currentAnimationState;
 
     public GameObject deathSpawner;
+    
+    public static event Action<int> OnDeath;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -34,7 +39,7 @@ public class BugBehavior : Enemy
     {
         if (movingState == 0)
         {
-            EnemyMoving();
+            //EnemyMoving();
         }
         else if (movingState == 1)
         {
@@ -106,7 +111,7 @@ public class BugBehavior : Enemy
     {
         movingState = 2;
         ChangeAnimationState("Apperance");
-        print("bug is dead");
+        OnDeath?.Invoke(bug_number);
         GameObject spw = GameObject.Instantiate(deathSpawner);
         spw.transform.position = gameObject.transform.position;
         Destroy(this.gameObject,1f);
