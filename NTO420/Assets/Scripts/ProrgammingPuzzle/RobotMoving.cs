@@ -18,6 +18,8 @@ public class RobotMoving : MonoBehaviour
     private Vector3 startPosition;
 
     private string returnToScene;
+
+    [SerializeField] private Sprite gameOverSprite;
     // Start is called before the first frame update
     void Start()
     {
@@ -113,12 +115,14 @@ public class RobotMoving : MonoBehaviour
         {
             IsProgrammRunning = false;
             isRobotMoving = false;
+            gameObject.GetComponent<SpriteRenderer>().sprite = gameOverSprite;
             print("gameOver");
         }
         else if (coll.gameObject.name == "Finish")
         {
             IsProgrammRunning = false;
             isRobotMoving = false;
+            
             SceneManager.LoadScene(returnToScene);
         }
     }

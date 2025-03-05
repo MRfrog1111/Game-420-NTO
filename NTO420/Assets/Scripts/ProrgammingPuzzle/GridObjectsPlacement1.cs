@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class GridObjectsPlacement : MonoBehaviour
+public class GridObjectsPlacement1 : MonoBehaviour
 {
     [SerializeField]
     private GameObject mouseIndicator, cellIndicator;
@@ -15,12 +14,11 @@ public class GridObjectsPlacement : MonoBehaviour
     [SerializeField] private ProgrammingBlocksDatabase database;
     private int selectedObjectIndex = -1;
 
-    private  GridData blockData;
+    private GridData blockData;
 
     private Renderer previewRenderer;
 
     private List<GameObject> placedBlocks = new();
-    private bool canPlace = false;
     void Start()
     {
         StopPlacement();
@@ -51,15 +49,6 @@ public class GridObjectsPlacement : MonoBehaviour
 
     }
 
-    private IEnumerator enableSript(GameObject block)
-    {
-        yield return new WaitForSecondsRealtime(1f);
-        if (block!= null && block.GetComponentInChildren<BlockBehavior>())
-        {
-            block.GetComponentInChildren<BlockBehavior>().enabled = true;
-        }
-    }
-    
     private void PlaceBlock()
     {
         if (inputManager.IsPointerOverUI())
@@ -68,7 +57,7 @@ public class GridObjectsPlacement : MonoBehaviour
         }
         Vector3 mousePosition = inputManager.GetSelectedMapPosition();
         Vector3Int gridPosition = grid.WorldToCell(mousePosition);
-        
+
         bool placementValidity = CheckPlacementValidity(gridPosition, selectedObjectIndex);
         if (!placementValidity)
         {
@@ -80,27 +69,18 @@ public class GridObjectsPlacement : MonoBehaviour
         GameObject newBlock = Instantiate(database.blockData[selectedObjectIndex].Prefab);
         newBlock.transform.position = grid.CellToWorld(gridPosition);
         newBlock.transform.position = new Vector3(newBlock.transform.position.x, newBlock.transform.position.y-0.1f, newBlock.transform.position.z);
-       /* if (newBlock.GetComponentInChildren<BlockBehavior>())
-        {
-            StartCoroutine(enableSript(newBlock));
-        }*/
-        //gridPosition = grid.WorldToCell(newBlock.transform.position);
-        //print("gridPos "+gridPosition);
-        gridPosition.y = 0;
-        print("p" + gridPosition);
+        
+        
         placedBlocks.Add(newBlock);
-        blockData.AddBlockAt(gridPosition,database.blockData[selectedObjectIndex].Size,
+        GridData selectedData = blockData;
+        selectedData.AddBlockAt(gridPosition,database.blockData[selectedObjectIndex].Size,
             database.blockData[selectedObjectIndex].ID,placedBlocks.Count-1);
-        selectedObjectIndex = -1;
-        cellIndicator.SetActive(false);
-       // StopPlacement();
     }
 
     public void DeleteBlock()
     {
         Vector3 mousePosition = inputManager.GetSelectedMapPosition();
         Vector3Int gridPosition = grid.WorldToCell(mousePosition);
-        print(gridPosition);
         if (!blockData.CanPlaceObjectAt(gridPosition,new Vector2Int(1,1)))
         {
             int idx = blockData.DeleteBlockAt(gridPosition);
@@ -111,24 +91,11 @@ public class GridObjectsPlacement : MonoBehaviour
 
     private bool CheckPlacementValidity(Vector3Int gridPosition, int selectedBlockIndex)
     {
-        return blockData.CanPlaceObjectAt(gridPosition, database.blockData[selectedBlockIndex].Size);
+        GridData selectedData = blockData;
+        return selectedData.CanPlaceObjectAt(gridPosition, database.blockData[selectedBlockIndex].Size);
     }
     
-    public int GetLowerBlock (Vector3 position)
-    {
-        Vector3Int gridPos = grid.WorldToCell(position);
-        gridPos.y = 0;
-       //print("p1" + gridPos);
-       /// print("pos"+position);
-        //print(blockData.GetBlockIndex(gridPos));
-        //print(CheckPlacementValidity(gridPos,0));
-        if (!CheckPlacementValidity(gridPos, 0))
-        {
-            return blockData.GetBlockIndex(gridPos);
-        }
-        return -1;
-    }
-    
+
     private void StopPlacement()
     {
         selectedObjectIndex = -1;
