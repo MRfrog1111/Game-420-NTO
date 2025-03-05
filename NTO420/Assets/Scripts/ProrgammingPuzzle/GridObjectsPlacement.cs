@@ -79,14 +79,14 @@ public class GridObjectsPlacement : MonoBehaviour
         GameObject newBlock = Instantiate(database.blockData[selectedObjectIndex].Prefab);
         newBlock.transform.position = grid.CellToWorld(gridPosition);
         newBlock.transform.position = new Vector3(newBlock.transform.position.x, newBlock.transform.position.y-0.1f, newBlock.transform.position.z);
-        if (newBlock.GetComponentInChildren<BlockBehavior>())
+       /* if (newBlock.GetComponentInChildren<BlockBehavior>())
         {
             StartCoroutine(enableSript(newBlock));
-        }
+        }*/
         //gridPosition = grid.WorldToCell(newBlock.transform.position);
         //print("gridPos "+gridPosition);
-        gridPosition.y = 0;
-       // print("p" + gridPosition);
+        //gridPosition.y = 0;
+        print("p" + gridPosition);
         placedBlocks.Add(newBlock);
         blockData.AddBlockAt(gridPosition,database.blockData[selectedObjectIndex].Size,
             database.blockData[selectedObjectIndex].ID,placedBlocks.Count-1);
@@ -97,6 +97,7 @@ public class GridObjectsPlacement : MonoBehaviour
     {
         Vector3 mousePosition = inputManager.GetSelectedMapPosition();
         Vector3Int gridPosition = grid.WorldToCell(mousePosition);
+        print(gridPosition);
         if (!blockData.CanPlaceObjectAt(gridPosition,new Vector2Int(1,1)))
         {
             int idx = blockData.DeleteBlockAt(gridPosition);
