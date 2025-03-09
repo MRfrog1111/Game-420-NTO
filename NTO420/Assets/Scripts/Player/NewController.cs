@@ -5,52 +5,49 @@ using UnityEngine;
 
 public class NewController : MonoBehaviour
 {
-    [SerializeField] private Rigidbody _rigidbody; 
-    [SerializeField] private Transform head;
-    [SerializeField] private Transform body;
-    [SerializeField] private GameObject groundChek;
-    [SerializeField] private LayerMask ground;
+    public float MoveSpeed = 6f;
+    public float movementMultiply = 10f;
 
-    private Vector3 _movement;
-    private float _xRotaition;
-    private float _yRotaition;
-    private bool _isGrounded;
+    private float horzintalMovement;
+    private float verticalMovement;
+    private float drag = 6f;
 
-    public float speedRotaition;
+    private Vector3 moveDirection;
+    private Rigidbody rb;
 
-
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+        rb.freezeRotation = true;
+    }
 
     private void Update()
     {
-        Look();
+        MyInput();
+        ControllDrag();
     }
 
-    private void Look()
+    private void FixedUpdate()
     {
-        float x = Input.GetAxis("Horizontal") * speedRotaition * Time.deltaTime;
-        float y = Input.GetAxis("Vertical") * speedRotaition * Time.deltaTime;
-
-        _xRotaition += x;
-        _yRotaition -= y;
-
-        _yRotaition = Mathf.Clamp(_yRotaition, -80f, 90f);
-        _xRotaition = Mathf.Repeat(_xRotaition, 360f);
-
-        head.localRotation = Quaternion.Euler(_yRotaition, 0f, 0f);
-        body.localRotation = Quaternion.Euler(0f, _xRotaition, 0f);
-
+        MovePlayer();
     }
 
-    private void Move()
+    private void MyInput()
     {
-        //Vector3 direction = ;
+        horzintalMovement = Input.GetAxisRaw("Horizontal");
+        verticalMovement = Input.GetAxisRaw("Vertical");
+
+        moveDirection = transform.forward * verticalMovement + transform.right * horzintalMovement;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void MovePlayer()
     {
-        if(other.gameObject.layer == ground)
-            _isGrounded = true;
-        else 
-            _isGrounded = false;
+        rb.AddForce(moveDirection.normalized * MoveSpeed * movementMultiply, ForceMode.Acceleration);
     }
+
+    private void ControllDrag()
+    {
+        rb.drag = drag;
+    }
+
 }
