@@ -86,7 +86,7 @@ public class GridObjectsPlacement : MonoBehaviour
         }*/
         //gridPosition = grid.WorldToCell(newBlock.transform.position);
         //print("gridPos "+gridPosition);
-        gridPosition.y = 0;
+        //gridPosition.y = 0;
         print("p" + gridPosition);
         placedBlocks.Add(newBlock);
         blockData.AddBlockAt(gridPosition,database.blockData[selectedObjectIndex].Size,
@@ -117,7 +117,7 @@ public class GridObjectsPlacement : MonoBehaviour
     public int GetLowerBlock (Vector3 position)
     {
         Vector3Int gridPos = grid.WorldToCell(position);
-        gridPos.y = 0;
+        gridPos.y = -4;
        //print("p1" + gridPos);
        /// print("pos"+position);
         //print(blockData.GetBlockIndex(gridPos));

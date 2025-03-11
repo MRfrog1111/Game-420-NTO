@@ -8,10 +8,10 @@ using UnityEngine.UI;
 using TMPro;
 public class Generator1 : MonoBehaviour
 {
-    public Transform camera;
+    private  Transform camera;
     public LayerMask pickableLayerMask;
-    public CollectResource slots;
-    public PlayerStats stats;
+    private CollectResource slots;
+    private PlayerStats stats;
     public Tutorial tutor;
     private float hitRange = 3f;
     private RaycastHit hit;
@@ -22,10 +22,15 @@ public class Generator1 : MonoBehaviour
     public int timeInSecond = 100;
     public int honeyNow;
 
-    public ManagerUI ui;
+    private  ManagerUI ui;
     public Paseka paseka;
     private void Start()
     {
+        camera = GameObject.Find("Camera").transform;
+        slots = GameObject.FindObjectOfType<CollectResource>();
+        stats = GameObject.FindObjectOfType<PlayerStats>();
+        ui = GameObject.FindObjectOfType<ManagerUI>();
+        tutor = GameObject.FindObjectOfType<Tutorial>();
         StartCoroutine(GeneratorRashod());
     }
 

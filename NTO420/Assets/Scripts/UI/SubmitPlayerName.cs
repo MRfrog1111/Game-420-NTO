@@ -53,6 +53,7 @@ public class SubmitPlayerName : MonoBehaviour
         else
         {
             PlayerPrefs.SetInt("Connection", 0);
+           // PlayerPrefs.SetInt("Stage");
         }
 
         PlayerPrefs.SetString("PlayerName",inputName);

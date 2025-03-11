@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using DefaultNamespace;
+using UnityEngine.SceneManagement;
+
 public class PlayerStats : MonoBehaviour
 {
     public PlayerRequests webAsker; // отправляет запросы на сервер
@@ -16,6 +18,7 @@ public class PlayerStats : MonoBehaviour
     private bool isFirst = true;
     public bool isWorking = true;
     private int connection = 1;
+    public bool isActive;
     private void Awake()
     {
         //
@@ -28,6 +31,14 @@ public class PlayerStats : MonoBehaviour
             food = 100
         };
         StartCoroutine(webAsker.UpdatePlayerResources(resources));*/
+      GameObject[] objs = GameObject.FindGameObjectsWithTag("Player");
+
+      if (objs.Length > 1)
+      {
+          Destroy(this.gameObject);
+      }
+      
+      DontDestroyOnLoad(this.gameObject);
       connection = PlayerPrefs.GetInt("Connection");
       if (connection == 0)
       {
@@ -43,6 +54,7 @@ public class PlayerStats : MonoBehaviour
           StartCoroutine(webAsker.GetPlayerResources(GetRes));
       }
 
+      isActive = true;
       print("awake");
     }
     
@@ -109,24 +121,28 @@ public class PlayerStats : MonoBehaviour
         {
             yield return new WaitForSeconds(hungerTime);
            // StartCoroutine(webAsker.GetPlayerResources(GetRes));
-           if (resources.food > 0)
-            {
-                if (isFirst)
-                {
-                    onResourcesChange?.Invoke();
-                    isFirst = false;
-                }
-               // StartCoroutine(webAsker.GetPlayerResources(GetRes));
-                resources.food -= golod;
-                PlayerChangesLogs changes = new PlayerChangesLogs()
-                {
-                    food_change = "-" + golod.ToString()
-                };
-                //print("stage" + resources.stage);
-                StartCoroutine(webAsker.SendLog("player got more hungry", changes));
-                StartCoroutine(webAsker.UpdatePlayerResources(resources));
-               // StartCoroutine(webAsker.GetPlayerResources(GetRes));
-            }
+           if (isActive)
+           {
+               if (resources.food > 0)
+               {
+                   if (isFirst)
+                   {
+                       onResourcesChange?.Invoke();
+                       isFirst = false;
+                   }
+
+                   // StartCoroutine(webAsker.GetPlayerResources(GetRes));
+                   resources.food -= golod;
+                   PlayerChangesLogs changes = new PlayerChangesLogs()
+                   {
+                       food_change = "-" + golod.ToString()
+                   };
+                   //print("stage" + resources.stage);
+                   StartCoroutine(webAsker.SendLog("player got more hungry", changes));
+                   StartCoroutine(webAsker.UpdatePlayerResources(resources));
+                   // StartCoroutine(webAsker.GetPlayerResources(GetRes));
+               }
+           }
         }
     }
    private IEnumerator rashodOxygen()
@@ -135,7 +151,7 @@ public class PlayerStats : MonoBehaviour
         {
             yield return new WaitForSeconds(oxygenTime);
           
-            if (resources.oxygen > 0 && resources.atmospheric_filter == 0)
+            if (isActive && resources.oxygen > 0 && resources.atmospheric_filter == 0)
             {
                 //StartCoroutine(webAsker.GetPlayerResources(GetRes));
                 --resources.oxygen;

@@ -8,7 +8,7 @@ public class BugBehavior : Enemy
 {
     // public int _waypointNum = 0;
     public int bug_number;
-    [SerializeField] private GameObject player;
+    private GameObject player;
     [SerializeField] private float speed;
     public int movingState = 0; //0 - ходит, 1 - идет к игроку , 2 - стоит 
     private Rigidbody rb;
@@ -94,6 +94,7 @@ public class BugBehavior : Enemy
     {
         if (coll.tag == "Player")
         {
+            player = coll.gameObject;
             movingState = 1;
         }
     }

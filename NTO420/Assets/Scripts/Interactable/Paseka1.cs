@@ -11,19 +11,22 @@ public class Paseka : MonoBehaviour
     public int HoneyNow = 0;
     public float _time = 5f;
 
-    public Transform Camera;
+    private Transform Camera;
     public LayerMask layerMask;
     public Items Honey;
-    [SerializeField] private PlayerStats stats;
-    [SerializeField] private CollectResource slots;
+     private PlayerStats stats;
+     private CollectResource slots;
     [SerializeField] private Tutorial tutor;
     private float hitRange = 3f;
     RaycastHit hit;
     public bool isWorking = true;
     private void Start()
     {
+        Camera = GameObject.Find("Camera").transform;
+        slots = GameObject.FindObjectOfType<CollectResource>();
+        stats = GameObject.FindObjectOfType<PlayerStats>();
+        tutor = GameObject.FindObjectOfType<Tutorial>();
         StartCoroutine(Pasek());
-        
     }
 
     private void Update()

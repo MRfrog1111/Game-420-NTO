@@ -20,12 +20,17 @@ public class RobotMoving : MonoBehaviour
     private string returnToScene;
 
     [SerializeField] private Sprite gameOverSprite;
+    private Sprite defaultSprite;
+
+    private Vector3 startRotation;
     // Start is called before the first frame update
     void Start()
     {
         isRobotMoving = false;
         startPosition = transform.position;
+        defaultSprite = gameObject.GetComponent<SpriteRenderer>().sprite;
         returnToScene = PlayerPrefs.GetString("ReturnToSceneName");
+        startRotation = transform.eulerAngles;
     }
 
     // Update is called once per frame
@@ -37,7 +42,7 @@ public class RobotMoving : MonoBehaviour
             {
                 robot.transform.position =
                     Vector3.MoveTowards(robot.transform.position, target, speed * Time.deltaTime);
-                if (Vector3.Distance(robot.transform.position, target) <= 0.01)
+                if (Vector3.Distance(robot.transform.position, target) <= 0.0001)
                 {
                     print("target");
                     isRobotMoving = false;
@@ -52,10 +57,11 @@ public class RobotMoving : MonoBehaviour
    public  void StartProgramm(string algorithm)
    {
        transform.position = startPosition;
-       transform.eulerAngles = new Vector3(90, 0, 0);
+       transform.eulerAngles = startRotation;
         IsProgrammRunning = true;
         algo = algorithm;
         currentCommand = 0;
+        gameObject.GetComponent<SpriteRenderer>().sprite = defaultSprite;
         print(algo.Length);
         ChangeState();
     }
@@ -122,7 +128,9 @@ public class RobotMoving : MonoBehaviour
         {
             IsProgrammRunning = false;
             isRobotMoving = false;
-            
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            player.GetComponent<PlayerStats>().resources.stage++;
+            player.GetComponent<CharacterEnabler>().ChangeState(true);
             SceneManager.LoadScene(returnToScene);
         }
     }

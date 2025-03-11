@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
@@ -6,12 +7,16 @@ using UnityEngine;
 public class Build : MonoBehaviour
 {
     public GameObject[] buildings;
-    public PlayerStats stats;
+    private PlayerStats stats;
     public Transform playerCamera;
     private float hitRange = 3;
     RaycastHit hit;
 
-   /* private void Update()
+    private void Start()
+    {
+        stats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
+    }
+    /* private void Update()
     {
         if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, hitRange))
         {

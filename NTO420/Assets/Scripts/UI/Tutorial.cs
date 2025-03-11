@@ -19,6 +19,7 @@ public class Tutorial: MonoBehaviour
     public bool isUsedGenerator;
     public GameObject essenceButton;
     public GameObject pasekaButton;
+    
    public void FirstUpdate()
    {
        print("updated");
