@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DefaultNamespace;
+using UnityEngine.SceneManagement;
 //using UnityEditor.iOS.Xcode;
 using UnityEngine.UI;
 public class Craft : MonoBehaviour
@@ -9,10 +10,17 @@ public class Craft : MonoBehaviour
    // [SerializeField] private Build build;
 
     [SerializeField] private PlayerStats stats;
+     private GameObject player;
     public GameObject[] buildings;
     [SerializeField] private Tutorial tutor;
     public GameObject[] bases;
     private int minus;
+
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        stats = player.GetComponent<PlayerStats>();
+    }
     public void FirstUpdate()
     {
         print("updated");
@@ -42,6 +50,7 @@ public class Craft : MonoBehaviour
     public void CraftBuilding(int buildingNum)
     {
         AddBase(bases[buildingNum], buildings);
+        print("srtep2");
     }
 
     public void AddBase(GameObject _base, GameObject[] builds)
@@ -68,13 +77,9 @@ public class Craft : MonoBehaviour
                             
                         }
                         if (resursesCount >= builds[i].GetComponent<BuildItem>().buildItem.buildResurses[j].buildObjectCount) canBuild++;
-                        
-
                     }
                 }
-
-
-            }
+                }
         }
         if (canBuild >= builds[l].GetComponent<BuildItem>().buildItem.buildResurses.Count)
         {
@@ -136,7 +141,8 @@ public class Craft : MonoBehaviour
                 switch (_base.tag)
                 {
                     case "Home":
-                        stats.resources.living_module = 1; 
+                        stats.resources.living_module = 1;
+                        GoToPuzzle();
                         break;
                     case "Honey":
                         stats.resources.apiary_module = 1; 
@@ -149,6 +155,13 @@ public class Craft : MonoBehaviour
             tutor.CheckStage();
         }
     }
+
+    void GoToPuzzle()
+    {
+        player.GetComponent<CharacterEnabler>().ChangeState(false);
+        SceneManager.LoadScene("ProgrammingTest");
+    }
 }
+
 
 

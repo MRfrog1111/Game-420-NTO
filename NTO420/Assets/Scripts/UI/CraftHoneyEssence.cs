@@ -5,14 +5,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using DefaultNamespace;
 public class CraftHoneyEssence : MonoBehaviour
-{
-    [SerializeField] private PlayerStats stats;
-    [SerializeField] private Tutorial tutor;
+{ 
+    private PlayerStats stats; 
+    private Tutorial tutor;
     [SerializeField] private BuildItem essence;
     [SerializeField] private CollectResource collectRes;
     [SerializeField] private ItemScriptableObject honeyEssence;
     private int minus;
-    
+
+    private void Start()
+    {
+        stats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
+        tutor = GameObject.Find("TutorialGleb (1)").GetComponent<Tutorial>();
+    }
+
     public void CraftEssence()
     {
         int canBuild = 0;
