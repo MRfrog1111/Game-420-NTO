@@ -9,6 +9,7 @@ public class CameraController : MonoBehaviour
 
     [SerializeField] private Transform cam;
     [SerializeField] private Transform orientaition;
+    
 
     private float mouseX;
     private float mouseY;
@@ -20,10 +21,7 @@ public class CameraController : MonoBehaviour
 
     private void Start()
     {
-        
-
         Cursor.lockState = CursorLockMode.Locked;
-
     }
 
     private void Update()
@@ -32,6 +30,7 @@ public class CameraController : MonoBehaviour
 
         cam.transform.localRotation = Quaternion.Euler(xRotaition, yRotaition, 0);
         orientaition.transform.rotation = Quaternion.Euler(0, yRotaition, 0);
+        
     }
 
     private void MyInput()
