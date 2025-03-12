@@ -10,12 +10,13 @@ using UnityEngine.UI;
 public class Shop : MonoBehaviour
 {
     [SerializeField] private ShopRequests shopReq;
-    [SerializeField] private PlayerStats stats;
+    private PlayerStats stats;
     public TextMeshProUGUI[] shopText;
     public GameObject[] decoratives;
     private ShopStruct shop;
     void Start()
     {
+        stats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
         shop = new ShopStruct()
         {
             name = "shop1",

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class CharacterEnabler : MonoBehaviour
 {
+    [SerializeField] private ManagerUI ui;
     public void ChangeState(bool isActive)
     {
        // gameObject.GetComponent<MeshRenderer>().enabled = isActive;
@@ -16,5 +17,16 @@ public class CharacterEnabler : MonoBehaviour
         {
             transform.GetChild(i).gameObject.SetActive(isActive);
         }
+    }
+    public void GotoPuzzle(int puzzleNum)
+    {
+        ui.Close(ui.CraftMenu);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        string sceneName = SceneManager.GetActiveScene().name;
+        PlayerPrefs.SetString("ReturnToSceneName", sceneName);
+        gameObject.GetComponent<CharacterEnabler>().ChangeState(false);
+        PlayerPrefs.SetInt("RobotMap", puzzleNum);
+        SceneManager.LoadScene("ProgrammingTest");
     }
 }

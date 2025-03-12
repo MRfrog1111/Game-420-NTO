@@ -9,21 +9,23 @@ public class Craft : MonoBehaviour
 {
    // [SerializeField] private Build build;
 
-    [SerializeField] private PlayerStats stats;
+     private PlayerStats stats;
      private GameObject player;
     public GameObject[] buildings;
-    [SerializeField] private Tutorial tutor;
+     private Tutorial tutor;
     public GameObject[] bases;
     private int minus;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        stats = player.GetComponent<PlayerStats>();
+        
     }
     public void FirstUpdate()
     {
         print("updated");
+        player = GameObject.FindGameObjectWithTag("Player");
+        tutor = GameObject.FindObjectOfType<Tutorial>();
+        stats = player.GetComponent<PlayerStats>();
         if (stats.resources.living_module > 0)
         {
             buildings[0].SetActive(true);
@@ -50,7 +52,6 @@ public class Craft : MonoBehaviour
     public void CraftBuilding(int buildingNum)
     {
         AddBase(bases[buildingNum], buildings);
-        print("srtep2");
     }
 
     public void AddBase(GameObject _base, GameObject[] builds)
@@ -158,8 +159,7 @@ public class Craft : MonoBehaviour
 
     void GoToPuzzle()
     {
-        player.GetComponent<CharacterEnabler>().ChangeState(false);
-        SceneManager.LoadScene("ProgrammingTest");
+      player.GetComponent<CharacterEnabler>().GotoPuzzle(1);
     }
 }
 

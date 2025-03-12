@@ -93,7 +93,7 @@ public class GridObjectsPlacement : MonoBehaviour
             database.blockData[selectedObjectIndex].ID,placedBlocks.Count-1);
         selectedObjectIndex = -1;
         cellIndicator.SetActive(false);
-       // StopPlacement();
+        StopPlacement();
     }
 
     public void DeleteBlock()

@@ -41,7 +41,8 @@ public class RobotMoving : MonoBehaviour
             if (isRobotMoving)
             {
                 robot.transform.position =
-                    Vector3.MoveTowards(robot.transform.position, target, speed * Time.deltaTime);
+                    Vector3.MoveTowards(robot.transform.position, target, speed *Time.deltaTime);
+                print("time"+Time.deltaTime);
                 if (Vector3.Distance(robot.transform.position, target) <= 0.0001)
                 {
                     print("target");

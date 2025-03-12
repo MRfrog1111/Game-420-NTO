@@ -34,13 +34,7 @@ public class Door : MonoBehaviour
     {
         if (canPressButton && Input.GetKeyDown(KeyCode.E)&&playerStats.resources.stage<openStage)
         {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            string sceneName = SceneManager.GetActiveScene().name;
-            PlayerPrefs.SetString("ReturnToSceneName", sceneName);
-            player.GetComponent<CharacterEnabler>().ChangeState(false);
-            PlayerPrefs.SetInt("RobotMap", 0);
-            SceneManager.LoadScene("ProgrammingTest");
+            player.GetComponent<CharacterEnabler>().GotoPuzzle(1);
         }
     }
 
