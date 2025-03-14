@@ -1,0 +1,1801 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.4f1 (35713cd46cd7) revision 3502396'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22631) 64bit Professional' Language: 'ru' Physical Memory: 32608 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.3.4f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker4
+-projectPath
+D:/Новая папка/Game-420-NTO/NTO420
+-logFile
+Logs/AssetImportWorker4.log
+-srvPort
+50245
+Successfully changed project path to: D:/Новая папка/Game-420-NTO/NTO420
+D:/Новая папка/Game-420-NTO/NTO420
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [14936] Host "[IP] 192.168.0.15 [Port] 0 [Flags] 2 [Guid] 843812334 [EditorId] 843812334 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-E8C2CGB) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [14936] Host "[IP] 192.168.0.15 [Port] 0 [Flags] 2 [Guid] 843812334 [EditorId] 843812334 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-E8C2CGB) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 11.86 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.4f1 (35713cd46cd7)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Новая папка/Game-420-NTO/NTO420/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3050 (ID=0x2507)
+    Vendor:   NVIDIA
+    VRAM:     8042 MB
+    Driver:   32.0.15.7242
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56628
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.010267 seconds.
+- Loaded All Assemblies, in  0.554 seconds
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.424 seconds
+Domain Reload Profiling: 977ms
+	BeginReloadAssembly (137ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (65ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (90ms)
+	LoadAllAssembliesAndSetupDomain (242ms)
+		LoadAssemblies (134ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (233ms)
+			TypeCache.Refresh (232ms)
+				TypeCache.ScanAssembly (213ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (425ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (332ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (15ms)
+			SetLoadedEditorAssemblies (8ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (3ms)
+			ProcessInitializeOnLoadAttributes (230ms)
+			ProcessInitializeOnLoadMethodAttributes (76ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Новая папка\Game-420-NTO\NTO420\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Новая папка\Game-420-NTO\NTO420\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.297 seconds
+Refreshing native plugins compatible for Editor in 2.61 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.179 seconds
+Domain Reload Profiling: 2473ms
+	BeginReloadAssembly (226ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (9ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (32ms)
+	RebuildCommonClasses (54ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (64ms)
+	LoadAllAssembliesAndSetupDomain (933ms)
+		LoadAssemblies (402ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (654ms)
+			TypeCache.Refresh (606ms)
+				TypeCache.ScanAssembly (578ms)
+			ScanForSourceGeneratedMonoScriptInfo (39ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (1179ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (898ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (15ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (101ms)
+			ProcessInitializeOnLoadAttributes (606ms)
+			ProcessInitializeOnLoadMethodAttributes (156ms)
+			AfterProcessingInitializeOnLoad (13ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 4.65 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4564 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (1.6 MB). Loaded Objects now: 5040.
+Memory consumption went from 180.6 MB to 179.0 MB.
+Total: 9.603600 ms (FindLiveObjects: 0.742200 ms CreateObjectMapping: 0.405100 ms MarkObjects: 7.449500 ms  DeleteObjects: 1.005200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2593.364468 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Panels
+  artifactKey: Guid(d772515091efed0449581310cf437724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Panels using Guid(d772515091efed0449581310cf437724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c412fbe668baf1dbc2232e7ca8746e32') in 0.005430 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.062929 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Panels/Badge6Sided.png
+  artifactKey: Guid(07503a9d1581cba43a4893656d2b9218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Panels/Badge6Sided.png using Guid(07503a9d1581cba43a4893656d2b9218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98d8524793e0ead04a9c5f5dea05d7b1') in 0.159777 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Panels/Stroke3px.png
+  artifactKey: Guid(d672e09c517e5c344b450f23f345958d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Panels/Stroke3px.png using Guid(d672e09c517e5c344b450f23f345958d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9a284ac1c3cb73b4faea7413ddf542b') in 0.025086 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Panels/DropdownMask.png
+  artifactKey: Guid(e8f105d9c3a1b544ca845f56ed927a6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Panels/DropdownMask.png using Guid(e8f105d9c3a1b544ca845f56ed927a6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04921b1ed9b06090e02bd4be5cb07394') in 0.019821 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Panels/BottomBar.png
+  artifactKey: Guid(057a7fa6857340c42823b4583cd3a842) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Panels/BottomBar.png using Guid(057a7fa6857340c42823b4583cd3a842) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34400c381164ab03e61d00b2f5ac2a76') in 0.028268 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Panels/Ellipse60pxStroke3px.png
+  artifactKey: Guid(d1ddc59eac20fca49922a493c3fa0c8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Panels/Ellipse60pxStroke3px.png using Guid(d1ddc59eac20fca49922a493c3fa0c8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7bf4724ddf645a3691a4cfd3f46bd7b') in 0.029525 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Panels/SlantedBarSmallRight2.png
+  artifactKey: Guid(2eafebb3c50123d4b99a0053d231aa17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Panels/SlantedBarSmallRight2.png using Guid(2eafebb3c50123d4b99a0053d231aa17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b8159fa97f1a3f8cd80f943058aef6b') in 0.025453 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Panels/SlantedBar.png
+  artifactKey: Guid(2824515d5f7d9dd44ba114c8a814c443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Panels/SlantedBar.png using Guid(2824515d5f7d9dd44ba114c8a814c443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1554361704137749bacbc6e6cb94098d') in 0.025824 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Panels/InputFiledHighlighted.png
+  artifactKey: Guid(8bfcfd306ddc7a242a9c9617a7981d1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Panels/InputFiledHighlighted.png using Guid(8bfcfd306ddc7a242a9c9617a7981d1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '640c6cfd1e5a2e40319de2a864036c2a') in 0.020434 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Panels/SeparatorVertical.png
+  artifactKey: Guid(fa392717e11a24848897b278f006fdf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Panels/SeparatorVertical.png using Guid(fa392717e11a24848897b278f006fdf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95838b27d77d86b655a7a4a8ecbfd2e7') in 0.015498 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Panels/PanelOpacity30.png
+  artifactKey: Guid(328b7b324b3554348abbc0a8aec492ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Panels/PanelOpacity30.png using Guid(328b7b324b3554348abbc0a8aec492ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d4574ec69f17ba58e74013cb0577c5e') in 0.018929 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Panels/Ellipse90px.png
+  artifactKey: Guid(02ff2bdbdbc1ee0479afae8c3df80f7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Panels/Ellipse90px.png using Guid(02ff2bdbdbc1ee0479afae8c3df80f7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d82f0f20aacdd926ac0a7899b190fda') in 0.021403 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Panels/TitleBarMedium.png
+  artifactKey: Guid(5dcbc517cff0802408e0de10fcf9fb6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Panels/TitleBarMedium.png using Guid(5dcbc517cff0802408e0de10fcf9fb6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da4331a867e465ba6a14a27e38bce4ea') in 0.021780 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Panels/SlantedBarSmall.png
+  artifactKey: Guid(e139be5aca44bd04d9cc9eeca6609fa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Panels/SlantedBarSmall.png using Guid(e139be5aca44bd04d9cc9eeca6609fa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51722e58e22cd4b8ce09b266cc9b7bea') in 0.020955 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Panels/GameBarsBgRight.png
+  artifactKey: Guid(cb9fb2f5a7e4c9540be500b2ff706625) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Panels/GameBarsBgRight.png using Guid(cb9fb2f5a7e4c9540be500b2ff706625) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd05d656f60c22904cc6a6e4205cc3e01') in 0.022347 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Panels/Separator.png
+  artifactKey: Guid(ed95254836e44cd4eb17bd5bab7c9d04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Panels/Separator.png using Guid(ed95254836e44cd4eb17bd5bab7c9d04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd10381ebe39b5c8e6336d8454f24813') in 0.020281 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Panels/BubbleHolderLeft.png
+  artifactKey: Guid(237478c7d1b50a646bbfefe62ff64760) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Panels/BubbleHolderLeft.png using Guid(237478c7d1b50a646bbfefe62ff64760) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df73d1841df8491af600636c6f56f1c9') in 0.020990 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Panels/SlantedBarBigRight2.png
+  artifactKey: Guid(a36e533df0068ba478e788a9e9dfac49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Panels/SlantedBarBigRight2.png using Guid(a36e533df0068ba478e788a9e9dfac49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fffb76b805c1c3bde89694509c2bc525') in 0.022522 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Panels/GameBarBgRight.png
+  artifactKey: Guid(490e8994f1403674fbad00aa47a7a589) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Panels/GameBarBgRight.png using Guid(490e8994f1403674fbad00aa47a7a589) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a3a8e60537a20f34271e529f98d2018') in 0.021455 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 7.679011 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Misc
+  artifactKey: Guid(ffad275c225c5174eb118e9220a97521) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Misc using Guid(ffad275c225c5174eb118e9220a97521) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2576543a39ce3a587935f60716aa636') in 0.000664 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.620604 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Buttons
+  artifactKey: Guid(18fee542a119b3e438b4d9332dee875e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Buttons using Guid(18fee542a119b3e438b4d9332dee875e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8ae384a767552ad5f99b9bcd3933723') in 0.000981 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 10.829490 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Misc/ActionBarLineLeft.png
+  artifactKey: Guid(e7b4017f42fbb4e408e3fe70150d510f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Misc/ActionBarLineLeft.png using Guid(e7b4017f42fbb4e408e3fe70150d510f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1469c738b75ae14f5be9cd502437176b') in 0.024847 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Misc/LevelsStarBig.png
+  artifactKey: Guid(8e99dae2a4c862d47813dc064e38df43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Misc/LevelsStarBig.png using Guid(8e99dae2a4c862d47813dc064e38df43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bd71cfd297f99e4b0fe4c98e79f713a') in 0.029810 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Misc/ChatStatusInvisible.png
+  artifactKey: Guid(a208376ae203ef64387b43f014325ffe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Misc/ChatStatusInvisible.png using Guid(a208376ae203ef64387b43f014325ffe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f01ed6ad4ce0a0c676fc08d5ae1a1318') in 0.029818 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Misc/LineSlantedLeft.png
+  artifactKey: Guid(ea0d933502197674fb80e4620f5efbe0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Misc/LineSlantedLeft.png using Guid(ea0d933502197674fb80e4620f5efbe0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcba639ce84c28347b5515e4934c655f') in 0.024494 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Misc/LineSlantedRight.png
+  artifactKey: Guid(2f536a74da1e08c4aa58feda6a3a6463) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Misc/LineSlantedRight.png using Guid(2f536a74da1e08c4aa58feda6a3a6463) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e771e694a2c6d4a181e4fb6468d843ea') in 0.024285 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Misc/LevelsStarSmall.png
+  artifactKey: Guid(a33b40a3548296b4baad2fc978f6ccb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Misc/LevelsStarSmall.png using Guid(a33b40a3548296b4baad2fc978f6ccb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f40e09f1d4c3b28ca43c131a1d22f11e') in 0.029821 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Misc/ChatStatusBg.png
+  artifactKey: Guid(c5b88df84040b90408722daae4be5984) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Misc/ChatStatusBg.png using Guid(c5b88df84040b90408722daae4be5984) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '198f63da2c35d46abeca1a4820152e94') in 0.029173 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 26.425208 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons
+  artifactKey: Guid(0d279369eae289243afd729759aff0c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons using Guid(0d279369eae289243afd729759aff0c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1c44c4dd66755bd368c44d41e056e73') in 0.000746 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 3.493368 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128
+  artifactKey: Guid(4e2f03a14b8a88d4da02b955d057ddae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128 using Guid(4e2f03a14b8a88d4da02b955d057ddae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4146b0576ddb881cb5fae8cc53a76149') in 0.001327 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.065455 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Aid.png
+  artifactKey: Guid(a955e99b59d86704c8932cf11c606f25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Aid.png using Guid(a955e99b59d86704c8932cf11c606f25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e689525ea55f48cb143016183045e8ea') in 0.026170 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.001010 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Apple.png
+  artifactKey: Guid(82ea2551c75d53a4ba26985825f08afa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Apple.png using Guid(82ea2551c75d53a4ba26985825f08afa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63a82ac13dfbbb27ff30d3ce197ab627') in 0.028334 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.005932 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/ArrowLeft.png
+  artifactKey: Guid(5ad7d04da7a99484bbad08ebfe66a5f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/ArrowLeft.png using Guid(5ad7d04da7a99484bbad08ebfe66a5f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b4575d18d434cd8edfa0b7a1b7097a2') in 0.019102 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.004567 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/ArrowRight02.png
+  artifactKey: Guid(78ba5d09a7170d64781a6840c59d8521) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/ArrowRight02.png using Guid(78ba5d09a7170d64781a6840c59d8521) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af6c3a74a1083b28ec8155b9c918e7c0') in 0.020371 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.004781 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Ax02.png
+  artifactKey: Guid(21b86d4f90e176641952bb3e46c20678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Ax02.png using Guid(21b86d4f90e176641952bb3e46c20678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '151942cfb4180f50bf211563e24a62ba') in 0.020354 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.004264 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Belt.png
+  artifactKey: Guid(fbfaed21cbd152b41b197bca330389d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Belt.png using Guid(fbfaed21cbd152b41b197bca330389d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aefa2cd9758e8c8795623ac16fd52cea') in 0.017732 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.007527 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Bones.png
+  artifactKey: Guid(c4c0a605a3ff69e48adcd7a2da342216) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Bones.png using Guid(c4c0a605a3ff69e48adcd7a2da342216) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59ea4f439e67227934db3862e190575f') in 0.020807 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.002171 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Candy02.png
+  artifactKey: Guid(100d6269e855f354ab0f472a3dcdf9bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Candy02.png using Guid(100d6269e855f354ab0f472a3dcdf9bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d82272ec6c1b3892aa3af7507d31bec') in 0.018418 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.005909 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Checkmark02.png
+  artifactKey: Guid(f6a2009b85dab2c4ca9c87d874ed2305) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Checkmark02.png using Guid(f6a2009b85dab2c4ca9c87d874ed2305) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '867b1297ecb724b2b8db1f4dd0d9eda5') in 0.017573 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.003746 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Clock.png
+  artifactKey: Guid(685c6eabb90eb824cb819c59f4cbbc82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Clock.png using Guid(685c6eabb90eb824cb819c59f4cbbc82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '685e603070102d90137c8b3c82751ff8') in 0.017211 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.006934 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Crosshair.png
+  artifactKey: Guid(89c494ecfcbb8e749b577f4e1d4f85ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Crosshair.png using Guid(89c494ecfcbb8e749b577f4e1d4f85ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c5ede452f9d5ec8d824aac919943878') in 0.019572 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.002351 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/DogTag.png
+  artifactKey: Guid(0223b994f816f404bbb2c480d8f3bd2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/DogTag.png using Guid(0223b994f816f404bbb2c480d8f3bd2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5494d033bc729f888fdc1aad87397c90') in 0.018275 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.004012 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/EmojiSerious.png
+  artifactKey: Guid(a1290c4b00ba65c4780a09112140538a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/EmojiSerious.png using Guid(a1290c4b00ba65c4780a09112140538a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3370842f847e927fd04be315e1d90815') in 0.019261 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.002960 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/EmojiWow.png
+  artifactKey: Guid(89e24f9953b287344944c3e79e3c2df6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/EmojiWow.png using Guid(89e24f9953b287344944c3e79e3c2df6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd40a96ddcf1a392bfd814e56365649eb') in 0.017573 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.006545 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/EnvelopeGem.png
+  artifactKey: Guid(cf5f5a8ef68cd6a4a9e8aa2a9cb1b855) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/EnvelopeGem.png using Guid(cf5f5a8ef68cd6a4a9e8aa2a9cb1b855) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de0a5997ae6ea09989d0eba219bb27dd') in 0.020656 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Flag.png
+  artifactKey: Guid(5bfa811a85a55314e8c445b10737d578) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Flag.png using Guid(5bfa811a85a55314e8c445b10737d578) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e04fc1e7fd7c7565abdf379399263d5') in 0.017920 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.002156 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/GunAmmo.png
+  artifactKey: Guid(8417fa50a4ee135499d1e2b47c63eefe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/GunAmmo.png using Guid(8417fa50a4ee135499d1e2b47c63eefe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4aefd3eedf064f4b6984abb5c94124c') in 0.024891 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 1.081935 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/HandLeft.png
+  artifactKey: Guid(a4a79219becbe06449fade110b94323c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/HandLeft.png using Guid(a4a79219becbe06449fade110b94323c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4579d1b383d20d5136e3373d7d63c43e') in 0.024320 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.001109 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Heart.png
+  artifactKey: Guid(f2e2aa8f7d21a1f47b3cf5f38288e57e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Heart.png using Guid(f2e2aa8f7d21a1f47b3cf5f38288e57e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43c1dad15d0984bc6d86a9f19a84f23c') in 0.018842 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.006660 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Home.png
+  artifactKey: Guid(ee8c5ed6417261644b7ced13b4b41afb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Home.png using Guid(ee8c5ed6417261644b7ced13b4b41afb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a7578387bfb51764875c160c5b6321b') in 0.018917 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.005997 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/KneeArmor.png
+  artifactKey: Guid(4320bc96c296c994faaa3e03af90f94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/KneeArmor.png using Guid(4320bc96c296c994faaa3e03af90f94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2466737a3523f7f16ce8d13c103e1da7') in 0.029522 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.433403 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Mars.png
+  artifactKey: Guid(804092e271b41434499bb8946e7c1b8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Mars.png using Guid(804092e271b41434499bb8946e7c1b8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7055075c77eb0fb7dd17a40b6497b1aa') in 0.023850 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.003829 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Minus.png
+  artifactKey: Guid(6a3b27a4303638c49a5ef6b879a0ad86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Minus.png using Guid(6a3b27a4303638c49a5ef6b879a0ad86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afa115a264e6e99dd92190c31650b3e4') in 0.030294 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000839 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Pill01.png
+  artifactKey: Guid(77195dbc57d261141971b823701f5128) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Pill01.png using Guid(77195dbc57d261141971b823701f5128) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e862ecb12377e96ec07b2247163d7e43') in 0.022119 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.003606 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Potion01.png
+  artifactKey: Guid(c83983355c753304cb62441ae97f8d37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Potion01.png using Guid(c83983355c753304cb62441ae97f8d37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a495fff57e461cb44b0c1d7e59492852') in 0.020632 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.002077 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Potion04.png
+  artifactKey: Guid(dacd25dfe30795341afa559fb0d45715) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Potion04.png using Guid(dacd25dfe30795341afa559fb0d45715) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '688e7d7c047db1c253a60a751bf44d96') in 0.019633 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.010161 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Potion05.png
+  artifactKey: Guid(311ab6e6565178246b23ba0697e4d287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Potion05.png using Guid(311ab6e6565178246b23ba0697e4d287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe95eb11896a0d4827ddcf7f68e54876') in 0.027021 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000964 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/PotionBolt.png
+  artifactKey: Guid(5578d682cb5136e41951f5a41205b210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/PotionBolt.png using Guid(5578d682cb5136e41951f5a41205b210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcb558b8e4161374a03fb2efb9ca96db') in 0.020773 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/PotionHeart.png
+  artifactKey: Guid(03d4315fbcf23c94db260102b08865fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/PotionHeart.png using Guid(03d4315fbcf23c94db260102b08865fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cbcc6bda03ab875aeb11262be5828f6') in 0.021178 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.012712 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Quiver.png
+  artifactKey: Guid(ab7c8ef91dbe8a444be5f5ddfee23ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Quiver.png using Guid(ab7c8ef91dbe8a444be5f5ddfee23ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96ae34d8d64d9b64263b677a418918ce') in 0.019302 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Ring.png
+  artifactKey: Guid(af5209f1fd5dc41409cfb025b5258762) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Ring.png using Guid(af5209f1fd5dc41409cfb025b5258762) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36a6b46f57bcc6d1dee1697f33305e5e') in 0.017778 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.006192 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Settings.png
+  artifactKey: Guid(b4d4f4a7abd99374f89a190ec42a7a13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Settings.png using Guid(b4d4f4a7abd99374f89a190ec42a7a13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27b12b792e936b5cdba799bf5697b55f') in 0.019033 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.005292 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Shield02.png
+  artifactKey: Guid(051eda548d46a404ea95e7ec0d3e85c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Shield02.png using Guid(051eda548d46a404ea95e7ec0d3e85c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '150a36f8c0c75f043bd107c5d991465f') in 0.018063 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.006204 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/ShieldFire.png
+  artifactKey: Guid(2317d9230d04a2343ab8e3c97c538e4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/ShieldFire.png using Guid(2317d9230d04a2343ab8e3c97c538e4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73061c8d42b36a9a5a73b1077f04625c') in 0.017512 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.005941 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/ShinArmor.png
+  artifactKey: Guid(6435f69dbfc39824a88613bfdd5a1c7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/ShinArmor.png using Guid(6435f69dbfc39824a88613bfdd5a1c7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1ccb96cd556ed7d7df7e53443f41e1d') in 0.017743 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.034005 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Slingshot.png
+  artifactKey: Guid(cbade0f83e3d2504caa5e66750329247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Slingshot.png using Guid(cbade0f83e3d2504caa5e66750329247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2a5be057c7dc82fe16e9a24cbe4a502') in 0.021772 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.002763 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/SoundLow.png
+  artifactKey: Guid(96df636a2a851164ab0378a8784c255e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/SoundLow.png using Guid(96df636a2a851164ab0378a8784c255e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cecc6ec060563ca9f93fc832f95e08a1') in 0.017866 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.005030 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Stats.png
+  artifactKey: Guid(778b750b4c9dbff4d8e6794e367eeb97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Stats.png using Guid(778b750b4c9dbff4d8e6794e367eeb97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d195f35525fe72a024e3b7ec2818723') in 0.018505 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.004920 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Swords.png
+  artifactKey: Guid(be94d4c57b4f4124ca0053ae3eab9f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Swords.png using Guid(be94d4c57b4f4124ca0053ae3eab9f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca9d1ff89a0ee91fb928280822d9b526') in 0.021696 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.002766 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Venus.png
+  artifactKey: Guid(6e6640f6a8123954096b2f5e64c20918) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Venus.png using Guid(6e6640f6a8123954096b2f5e64c20918) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50ca068ac43073eed2722c0ff4f66ebc') in 0.017328 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.030190 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Water.png
+  artifactKey: Guid(12a446066fec7b64f82a8db0639fc9c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/128/Water.png using Guid(12a446066fec7b64f82a8db0639fc9c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad25a0b2dab7d302d9405c9e1f90f119') in 0.025329 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 389.702292 seconds.
+  path: Assets/Prefabs/НУ где же ручки, ну где же ваши ручшки/1person_animation
+  artifactKey: Guid(1c87b07c4366c13409a712bfb3fefff4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/НУ где же ручки, ну где же ваши ручшки/1person_animation using Guid(1c87b07c4366c13409a712bfb3fefff4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd21254077a5916e95f286dd7adb3b84') in 0.001202 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.079607 seconds.
+  path: Assets/Prefabs/НУ где же ручки, ну где же ваши ручшки/1person_animation/doubleAttack Variant.mat
+  artifactKey: Guid(e6c7d9a6269146649b43f315ad9a642d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/НУ где же ручки, ну где же ваши ручшки/1person_animation/doubleAttack Variant.mat using Guid(e6c7d9a6269146649b43f315ad9a642d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96474871e33873d8776239dbf3f750bd') in 0.287768 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 125
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Prefabs/НУ где же ручки, ну где же ваши ручшки/1person_animation/doubleAttack Variant 2.mat
+  artifactKey: Guid(2b631d2c6e8c8ca499ac6d6196280584) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/НУ где же ручки, ну где же ваши ручшки/1person_animation/doubleAttack Variant 2.mat using Guid(2b631d2c6e8c8ca499ac6d6196280584) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd564721538da04e0a8b74f64022b044c') in 0.166284 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 125
+========================================================================
+Received Import Request.
+  Time since last request: 72.986304 seconds.
+  path: Assets/Prefabs/UI
+  artifactKey: Guid(13583061f684033419170c4cd9d74297) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI using Guid(13583061f684033419170c4cd9d74297) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f10d50d643f2464c757cda1966d30a13') in 0.001219 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 6.512301 seconds.
+  path: Assets/Prefabs/UI/Settings.prefab
+  artifactKey: Guid(251001b8da8123f42b8acb12b4feced5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/Settings.prefab using Guid(251001b8da8123f42b8acb12b4feced5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a341a743c88fb213c4edf60c09897642') in 0.056919 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 329
+========================================================================
+Received Import Request.
+  Time since last request: 17.436380 seconds.
+  path: Assets/Scenes/UI.unity
+  artifactKey: Guid(96a7c9d5d97c4ad4f9ff086d7d3880de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/UI.unity using Guid(96a7c9d5d97c4ad4f9ff086d7d3880de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58fc04ca5974359db952033aa489f5e0') in 0.000812 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 159.376219 seconds.
+  path: Assets/Prefabs/UI/Settings.prefab
+  artifactKey: Guid(251001b8da8123f42b8acb12b4feced5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/Settings.prefab using Guid(251001b8da8123f42b8acb12b4feced5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '952d288daeb8ca2d12bce288d0e1706f') in 0.030690 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 329
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Новая папка\Game-420-NTO\NTO420\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Новая папка\Game-420-NTO\NTO420\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.111 seconds
+Refreshing native plugins compatible for Editor in 2.90 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.572 seconds
+Domain Reload Profiling: 2681ms
+	BeginReloadAssembly (227ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (9ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (80ms)
+	RebuildCommonClasses (50ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (42ms)
+	LoadAllAssembliesAndSetupDomain (771ms)
+		LoadAssemblies (370ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (492ms)
+			TypeCache.Refresh (482ms)
+				TypeCache.ScanAssembly (464ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (1572ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (767ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (13ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (102ms)
+			ProcessInitializeOnLoadAttributes (540ms)
+			ProcessInitializeOnLoadMethodAttributes (98ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Refreshing native plugins compatible for Editor in 5.03 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4505 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 46 unused Assets / (1.5 MB). Loaded Objects now: 5128.
+Memory consumption went from 171.4 MB to 169.9 MB.
+Total: 8.368200 ms (FindLiveObjects: 0.773100 ms CreateObjectMapping: 0.385100 ms MarkObjects: 6.723200 ms  DeleteObjects: 0.485400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Новая папка\Game-420-NTO\NTO420\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Новая папка\Game-420-NTO\NTO420\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.132 seconds
+Refreshing native plugins compatible for Editor in 2.69 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.624 seconds
+Domain Reload Profiling: 2753ms
+	BeginReloadAssembly (237ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (10ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (81ms)
+	RebuildCommonClasses (53ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (44ms)
+	LoadAllAssembliesAndSetupDomain (778ms)
+		LoadAssemblies (382ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (493ms)
+			TypeCache.Refresh (482ms)
+				TypeCache.ScanAssembly (467ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (1625ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (812ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (103ms)
+			ProcessInitializeOnLoadAttributes (577ms)
+			ProcessInitializeOnLoadMethodAttributes (107ms)
+			AfterProcessingInitializeOnLoad (10ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Refreshing native plugins compatible for Editor in 5.18 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4506 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 45 unused Assets / (1.5 MB). Loaded Objects now: 5131.
+Memory consumption went from 171.7 MB to 170.1 MB.
+Total: 8.745200 ms (FindLiveObjects: 0.747100 ms CreateObjectMapping: 0.356200 ms MarkObjects: 7.133300 ms  DeleteObjects: 0.507300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Новая папка\Game-420-NTO\NTO420\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Новая папка\Game-420-NTO\NTO420\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.142 seconds
+Refreshing native plugins compatible for Editor in 2.87 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.520 seconds
+Domain Reload Profiling: 2660ms
+	BeginReloadAssembly (216ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (9ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (70ms)
+	RebuildCommonClasses (50ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (41ms)
+	LoadAllAssembliesAndSetupDomain (814ms)
+		LoadAssemblies (394ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (508ms)
+			TypeCache.Refresh (498ms)
+				TypeCache.ScanAssembly (482ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (1521ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (758ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (15ms)
+			SetLoadedEditorAssemblies (8ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (126ms)
+			ProcessInitializeOnLoadAttributes (504ms)
+			ProcessInitializeOnLoadMethodAttributes (96ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Refreshing native plugins compatible for Editor in 4.59 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4506 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 45 unused Assets / (1.5 MB). Loaded Objects now: 5134.
+Memory consumption went from 171.7 MB to 170.1 MB.
+Total: 8.924200 ms (FindLiveObjects: 0.695400 ms CreateObjectMapping: 0.515900 ms MarkObjects: 7.170700 ms  DeleteObjects: 0.540600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Новая папка\Game-420-NTO\NTO420\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Новая папка\Game-420-NTO\NTO420\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.061 seconds
+Refreshing native plugins compatible for Editor in 5.59 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.541 seconds
+Domain Reload Profiling: 2600ms
+	BeginReloadAssembly (201ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (10ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (56ms)
+	RebuildCommonClasses (49ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (42ms)
+	LoadAllAssembliesAndSetupDomain (749ms)
+		LoadAssemblies (368ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (469ms)
+			TypeCache.Refresh (457ms)
+				TypeCache.ScanAssembly (440ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (1541ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (759ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (117ms)
+			ProcessInitializeOnLoadAttributes (522ms)
+			ProcessInitializeOnLoadMethodAttributes (96ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Refreshing native plugins compatible for Editor in 5.10 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4506 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 45 unused Assets / (1.5 MB). Loaded Objects now: 5137.
+Memory consumption went from 171.7 MB to 170.2 MB.
+Total: 8.835400 ms (FindLiveObjects: 0.726600 ms CreateObjectMapping: 0.390100 ms MarkObjects: 7.111400 ms  DeleteObjects: 0.604000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 258.198249 seconds.
+  path: Assets/Prefabs/UI/Settings.prefab
+  artifactKey: Guid(251001b8da8123f42b8acb12b4feced5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/Settings.prefab using Guid(251001b8da8123f42b8acb12b4feced5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adf18890f0750c90e90eb010d40d7c3a') in 0.083357 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 329
+========================================================================
+Received Import Request.
+  Time since last request: 20.301983 seconds.
+  path: Assets/Prefabs/UI/Settings.prefab
+  artifactKey: Guid(251001b8da8123f42b8acb12b4feced5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/Settings.prefab using Guid(251001b8da8123f42b8acb12b4feced5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff57e30189792598ff45fbc11bd1b56b') in 0.014622 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 263
+========================================================================
+Received Import Request.
+  Time since last request: 3.584063 seconds.
+  path: Assets/Prefabs/UI/Settings.prefab
+  artifactKey: Guid(251001b8da8123f42b8acb12b4feced5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/Settings.prefab using Guid(251001b8da8123f42b8acb12b4feced5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f172a7a3ef1196bfe2095116ea393d46') in 0.012736 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 214
+========================================================================
+Received Import Request.
+  Time since last request: 0.586651 seconds.
+  path: Assets/Prefabs/UI/Settings.prefab
+  artifactKey: Guid(251001b8da8123f42b8acb12b4feced5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/Settings.prefab using Guid(251001b8da8123f42b8acb12b4feced5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7576040e1eaccb9678f8af3a0f6ced62') in 0.013997 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 210
+========================================================================
+Received Import Request.
+  Time since last request: 13.039004 seconds.
+  path: Assets/Prefabs/UI/Settings.prefab
+  artifactKey: Guid(251001b8da8123f42b8acb12b4feced5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/Settings.prefab using Guid(251001b8da8123f42b8acb12b4feced5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '715354e7fa754f9db726c2a02700f1ca') in 0.012384 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 210
+========================================================================
+Received Import Request.
+  Time since last request: 7.915450 seconds.
+  path: Assets/Prefabs/UI/Settings.prefab
+  artifactKey: Guid(251001b8da8123f42b8acb12b4feced5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/Settings.prefab using Guid(251001b8da8123f42b8acb12b4feced5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e3f728848a3f1b08b6a90c2faaaf4bd') in 0.018319 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 210
+========================================================================
+Received Import Request.
+  Time since last request: 47.576900 seconds.
+  path: Assets/Prefabs/UI/Settings.prefab
+  artifactKey: Guid(251001b8da8123f42b8acb12b4feced5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/Settings.prefab using Guid(251001b8da8123f42b8acb12b4feced5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cdcd93d901c1b4513686d187d15d38a') in 0.015655 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 210
+========================================================================
+Received Import Request.
+  Time since last request: 4.630891 seconds.
+  path: Assets/Prefabs/UI/Settings.prefab
+  artifactKey: Guid(251001b8da8123f42b8acb12b4feced5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/Settings.prefab using Guid(251001b8da8123f42b8acb12b4feced5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86079bceb852022397b049fb8a360eb3') in 0.020018 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 210
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Новая папка\Game-420-NTO\NTO420\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Новая папка\Game-420-NTO\NTO420\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.054 seconds
+Refreshing native plugins compatible for Editor in 2.93 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.512 seconds
+Domain Reload Profiling: 2563ms
+	BeginReloadAssembly (212ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (10ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (65ms)
+	RebuildCommonClasses (51ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (43ms)
+	LoadAllAssembliesAndSetupDomain (727ms)
+		LoadAssemblies (360ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (457ms)
+			TypeCache.Refresh (447ms)
+				TypeCache.ScanAssembly (429ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (1513ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (755ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (101ms)
+			ProcessInitializeOnLoadAttributes (534ms)
+			ProcessInitializeOnLoadMethodAttributes (96ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Refreshing native plugins compatible for Editor in 5.99 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4505 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 46 unused Assets / (1.5 MB). Loaded Objects now: 5140.
+Memory consumption went from 171.4 MB to 169.9 MB.
+Total: 10.407100 ms (FindLiveObjects: 0.768300 ms CreateObjectMapping: 0.446200 ms MarkObjects: 8.458200 ms  DeleteObjects: 0.732500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 136.734465 seconds.
+  path: Assets/Prefabs/UI/Settings.prefab
+  artifactKey: Guid(251001b8da8123f42b8acb12b4feced5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/Settings.prefab using Guid(251001b8da8123f42b8acb12b4feced5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26dd03919feac65b2ba60fed16705c65') in 0.065340 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 167
+========================================================================
+Received Import Request.
+  Time since last request: 14.697781 seconds.
+  path: Assets/Prefabs/UI/Settings.prefab
+  artifactKey: Guid(251001b8da8123f42b8acb12b4feced5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/Settings.prefab using Guid(251001b8da8123f42b8acb12b4feced5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cb59317a095ca0aef5c6852fd3003dd') in 0.011174 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 167
+========================================================================
+Received Import Request.
+  Time since last request: 89.964770 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Buttons/Button.png
+  artifactKey: Guid(d9930249f50191542989a82a2014f4c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Buttons/Button.png using Guid(d9930249f50191542989a82a2014f4c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '382e1714576d2781a1f270d06ac43703') in 0.089493 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000119 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Buttons/Checkbox.png
+  artifactKey: Guid(53009f5dab627b647b67cf3d4672f070) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Buttons/Checkbox.png using Guid(53009f5dab627b647b67cf3d4672f070) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12e2245e3e3dfddf0ce701dee8634af8') in 0.022773 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 193.642589 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Scenes/SampleScene.unity
+  artifactKey: Guid(33656ab01662c0149bcaed312453a15b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Scenes/SampleScene.unity using Guid(33656ab01662c0149bcaed312453a15b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84a5e68b6c16601cb099792d2c9923b7') in 0.001244 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 85.572721 seconds.
+  path: Assets/Scenes/UI.unity
+  artifactKey: Guid(96a7c9d5d97c4ad4f9ff086d7d3880de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/UI.unity using Guid(96a7c9d5d97c4ad4f9ff086d7d3880de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f595c87f018fa6d4b1e9e1f8532fd973') in 0.001162 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 68.140872 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/32/HandLeft.png
+  artifactKey: Guid(7d5c045e76d75c74495412cc7e303dd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/32/HandLeft.png using Guid(7d5c045e76d75c74495412cc7e303dd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cb6310ec522a133abe461f30b6f14c4') in 0.034567 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/32/HandRight.png
+  artifactKey: Guid(d7366c3f3f8133445b9c6b506acb50c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/32/HandRight.png using Guid(d7366c3f3f8133445b9c6b506acb50c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee5fa3ae387a1abf834fbbe9e4c76a62') in 0.027524 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.003306 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/32/HealthKit.png
+  artifactKey: Guid(7ac361c16299f1040911044341f40191) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/32/HealthKit.png using Guid(7ac361c16299f1040911044341f40191) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6ce2a86b1b1b2371647d3cdbdd137e8') in 0.019325 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.005889 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Heart.png
+  artifactKey: Guid(841499f705bef574fa12a1d0c3e55e61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Heart.png using Guid(841499f705bef574fa12a1d0c3e55e61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbbb0089e28f881becc9c2eceafeca59') in 0.028074 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Helmet.png
+  artifactKey: Guid(6fbae09c8d3c9eb48b7d0008a313717e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Helmet.png using Guid(6fbae09c8d3c9eb48b7d0008a313717e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31c08b9003e5b4aa5d9e6869d804c705') in 0.027259 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Help.png
+  artifactKey: Guid(cb1f4befc21bd3541a335b8ef23971a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Help.png using Guid(cb1f4befc21bd3541a335b8ef23971a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f14fa69e80362694b56ba3e993752562') in 0.025972 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.303277 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Home.png
+  artifactKey: Guid(328aad3bf6bffac469240ebc2562e19e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Home.png using Guid(328aad3bf6bffac469240ebc2562e19e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6872c378c82616a1f3b0fe374dc76ce') in 0.030774 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.013214 seconds.
+  path: Assets/Prefabs/2D Texture/InventoryUI/IMG_2607.PNG
+  artifactKey: Guid(231c303a027bc3c45859c7a500174352) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/2D Texture/InventoryUI/IMG_2607.PNG using Guid(231c303a027bc3c45859c7a500174352) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6df7f428a7115c85aa4d77d49c2dbc4c') in 0.032711 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Prefabs/2D Texture/PauseMenuUI/IMG_2612.PNG
+  artifactKey: Guid(e4a8c7838b4ec9542a791c9b430f6da9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/2D Texture/PauseMenuUI/IMG_2612.PNG using Guid(e4a8c7838b4ec9542a791c9b430f6da9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3386ffb57112499ca5cc9e33998e4f0') in 0.033968 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 1.049289 seconds.
+  path: Assets/Prefabs/2D Texture/InventoryUI/IMG_2646.PNG
+  artifactKey: Guid(e6971dc6a8a24914c99242c9bb5847b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/2D Texture/InventoryUI/IMG_2646.PNG using Guid(e6971dc6a8a24914c99242c9bb5847b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0a6328b7a44dc700c846913cccbbee7') in 0.024273 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.118412 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Info.png
+  artifactKey: Guid(5961afc0ccfec0d43867c7192e2098f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Info.png using Guid(5961afc0ccfec0d43867c7192e2098f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25a613a7240b7476449017e6dd115ab8') in 0.031020 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Key.png
+  artifactKey: Guid(7559a134a2c2b2649989e8ff6294065a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Key.png using Guid(7559a134a2c2b2649989e8ff6294065a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c03729e5cd9c4c133f0c06ecf5653c0') in 0.018958 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.964432 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/KneeArmor.png
+  artifactKey: Guid(4caaf1aa9a4cc4742ba7609af4fb09a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/KneeArmor.png using Guid(4caaf1aa9a4cc4742ba7609af4fb09a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ca4cbccf1c4da65d6c4989efeecca35') in 0.026174 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Location.png
+  artifactKey: Guid(4d6111123996c41499be1ac097008d3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Location.png using Guid(4d6111123996c41499be1ac097008d3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '169e1fe3e413b9a467eb5e59dd70a4b3') in 0.018146 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Lock.png
+  artifactKey: Guid(f68a5f91d1f34be42be24a43e5e2e00f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Lock.png using Guid(f68a5f91d1f34be42be24a43e5e2e00f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5dec1e8eec0cfb66f8bb87e53c188d6') in 0.022231 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Leaf.png
+  artifactKey: Guid(f0e90b8611290e84dbcec02964603528) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Leaf.png using Guid(f0e90b8611290e84dbcec02964603528) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c6d05de84e7b8f83270084e5507e38b') in 0.019493 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.024034 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Lock.png
+  artifactKey: Guid(b61696c71e1988243baca86bc27875cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Lock.png using Guid(b61696c71e1988243baca86bc27875cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '205f9cf569a8017445c89f3153792afc') in 0.018145 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000551 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Magnet.png
+  artifactKey: Guid(7b527556c2cf6a44b8745fc3f1660e3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Magnet.png using Guid(7b527556c2cf6a44b8745fc3f1660e3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec311282492facd2c2c084a1db2b0a67') in 0.016869 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Magnet.png
+  artifactKey: Guid(22cb8390c8b19e94baa0e5bce748d465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Magnet.png using Guid(22cb8390c8b19e94baa0e5bce748d465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eda3ef17c1968d1546f4237e0f4d6ed8') in 0.017254 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Mars.png
+  artifactKey: Guid(63ebb8e2b73098643bc9fac4d6bc7d53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Mars.png using Guid(63ebb8e2b73098643bc9fac4d6bc7d53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6672fbe20079b7c54fe98337ce5381e8') in 0.018347 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Medal.png
+  artifactKey: Guid(5ea925f2c4bcd244b9ee919c9cb81c8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Medal.png using Guid(5ea925f2c4bcd244b9ee919c9cb81c8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '699ad8bf647bdbe8716dab8eda4cbab8') in 0.025170 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.003131 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Menu.png
+  artifactKey: Guid(f7959e9592b54d84f8c0cc4a8073d4e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Menu.png using Guid(f7959e9592b54d84f8c0cc4a8073d4e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4d3c61b29e5d01c8ebd063f51525c85') in 0.018074 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Minus.png
+  artifactKey: Guid(2ee97b32ddc85dd4b92091004229c10f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Minus.png using Guid(2ee97b32ddc85dd4b92091004229c10f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d5c34cec3f11197c934702e694ee8e1') in 0.014891 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Pants.png
+  artifactKey: Guid(94d377bfdf584d8498e8198446ce7a6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Pants.png using Guid(94d377bfdf584d8498e8198446ce7a6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9acb5de1669c0abd2e024e6038679c44') in 0.022704 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/32/PaperPlane.png
+  artifactKey: Guid(8f3ef7f4400ca8944bfe05284431b3ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/32/PaperPlane.png using Guid(8f3ef7f4400ca8944bfe05284431b3ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8f26b380a2506d27c62e0761db08af9') in 0.019766 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 52.809445 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Pause.png
+  artifactKey: Guid(5abdcf56c7c1a6a4e9e98b9a089853f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Pause.png using Guid(5abdcf56c7c1a6a4e9e98b9a089853f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95b475aa966cdb2e12ffb12e9269b70e') in 0.036116 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.014769 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Pill02.png
+  artifactKey: Guid(122b95ec3091f4549b26f5bd2ea3c60a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Pill02.png using Guid(122b95ec3091f4549b26f5bd2ea3c60a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10d99927ae81e8e6e5a1e283e2bc6de8') in 0.023004 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.008674 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Play.png
+  artifactKey: Guid(b4fc0af9c9f0b2d4e96c2649d5c70527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Play.png using Guid(b4fc0af9c9f0b2d4e96c2649d5c70527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1963f8195b753c5f4a0a0db288d8e7a9') in 0.030801 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.675366 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Play.png
+  artifactKey: Guid(3aec2ca513b458049b7de233c8f4af0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Play.png using Guid(3aec2ca513b458049b7de233c8f4af0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a2aabaa04970d42a3e9ede25a17ac57') in 0.030490 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.002651 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Potion01.png
+  artifactKey: Guid(598c91c7eb4741049b74a33989430ef3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Potion01.png using Guid(598c91c7eb4741049b74a33989430ef3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d1ce7ff52b707b18708934a9f8ead74') in 0.023876 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Potion02.png
+  artifactKey: Guid(6ceb33fdc2164e34e9835e2629386229) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Potion02.png using Guid(6ceb33fdc2164e34e9835e2629386229) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13b9b63a7f4dcf69d87153ae1dc8c5c2') in 0.027426 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.080390 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Potion03.png
+  artifactKey: Guid(d19931672b29892478cec2c00dde18d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Potion03.png using Guid(d19931672b29892478cec2c00dde18d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96f3c8b8f930f5f2076f2efd0cf4a6cd') in 0.031167 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Potion05.png
+  artifactKey: Guid(edfa5eb523f436a4fbdca78d42af22a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Potion05.png using Guid(edfa5eb523f436a4fbdca78d42af22a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d2efe470473ae1f8501a8818b7141c7') in 0.025046 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.005331 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Potion06.png
+  artifactKey: Guid(4eda937c9d0ffe14382a3828069e7b75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Potion06.png using Guid(4eda937c9d0ffe14382a3828069e7b75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '801d9eea2eadfc25902f4763fc4b5212') in 0.018880 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.001845 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/32/PotionAir.png
+  artifactKey: Guid(e09db12459736ec48a2fe9d32563a4a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/32/PotionAir.png using Guid(e09db12459736ec48a2fe9d32563a4a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96dc78d54a65d297f8dd36143dc216a2') in 0.021289 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.935108 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/PotionBolt.png
+  artifactKey: Guid(aa29217b6e79901409d5e48e86cdd3bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/PotionBolt.png using Guid(aa29217b6e79901409d5e48e86cdd3bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7820ed153af153a40f04a4f1b82eebf') in 0.040949 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/32/PotionFire.png
+  artifactKey: Guid(3074bac27447cc4438fea15df78c134e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/32/PotionFire.png using Guid(3074bac27447cc4438fea15df78c134e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7331a2078ea076752e3ccfc7e8573ec6') in 0.024413 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.004028 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/PotionHeart.png
+  artifactKey: Guid(44f8f2d99cb698c4eac297be7391128a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/PotionHeart.png using Guid(44f8f2d99cb698c4eac297be7391128a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30ea65284d05c7def8afa784a0169329') in 0.022910 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.178443 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/PotionStrength.png
+  artifactKey: Guid(4c6176f1e5b7b1442a94d8cd3992ceb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/PotionStrength.png using Guid(4c6176f1e5b7b1442a94d8cd3992ceb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fcd203f16ab9875a77e788884bfb70d') in 0.030584 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.001258 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/32/PotionWater.png
+  artifactKey: Guid(9c88588864524974d94a1c3b76104c31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/32/PotionWater.png using Guid(9c88588864524974d94a1c3b76104c31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd04602146e02952019ca1c8f87a04950') in 0.025296 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.004214 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Quiver.png
+  artifactKey: Guid(2aa62ecd25e44824798e93b58a319775) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Quiver.png using Guid(2aa62ecd25e44824798e93b58a319775) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa408ac68dfa3e99a832a9015c6c3551') in 0.020486 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Buttons/RadioOn.png
+  artifactKey: Guid(39854e522dbe0694a9a63141eda51623) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Buttons/RadioOn.png using Guid(39854e522dbe0694a9a63141eda51623) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '118432bb00e28f950a426ff89614738d') in 0.036239 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.415985 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Repeat.png
+  artifactKey: Guid(77a12bacb10bbfa4d8cb3c5edce61887) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Repeat.png using Guid(77a12bacb10bbfa4d8cb3c5edce61887) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3068220f1bc91828cbe9929a75b5dec4') in 0.025886 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.003368 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Ring.png
+  artifactKey: Guid(039dbbdfbef2ee6409dfd2fd42f2843e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Ring.png using Guid(039dbbdfbef2ee6409dfd2fd42f2843e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c85cef9280a442dcaf4e24546af914af') in 0.021837 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.003692 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Scroll.png
+  artifactKey: Guid(8da14946afdd3594c86c200b407d54fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Scroll.png using Guid(8da14946afdd3594c86c200b407d54fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07984893becb0ed1f2a0dd42c7a3f319') in 0.017041 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.669715 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Settings.png
+  artifactKey: Guid(61c88d5dfde98e24fac08814d93647c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Settings.png using Guid(61c88d5dfde98e24fac08814d93647c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'feed274527b0741d7eb1b1674afcc6e5') in 0.029276 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.001714 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Shield.png
+  artifactKey: Guid(0b04d3360359d164d8ca12cd7c20b557) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Shield.png using Guid(0b04d3360359d164d8ca12cd7c20b557) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5bbcf826874508f17c59ae52bfaf15a') in 0.025798 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.002353 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Shield02.png
+  artifactKey: Guid(7bcbdfe83be02a54f8b9cb09bdcfe114) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Shield02.png using Guid(7bcbdfe83be02a54f8b9cb09bdcfe114) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34f36f5a4e23d2009ef1bb18782abe88') in 0.018678 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.717172 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/ShieldAir.png
+  artifactKey: Guid(2c7b2e35bc73c9549891ed7ed3537036) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/ShieldAir.png using Guid(2c7b2e35bc73c9549891ed7ed3537036) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '091213e09baacb95579a1d9953aedd46') in 0.031043 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.003328 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/32/ShieldCold.png
+  artifactKey: Guid(9a0931e2b7a10ce4f85af1f9fe8b123b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/32/ShieldCold.png using Guid(9a0931e2b7a10ce4f85af1f9fe8b123b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a4f71eafc7292ad8cafe9f810b8f4b9') in 0.022936 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.001165 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/ShieldFire.png
+  artifactKey: Guid(3b7b02daa327f2c4c9210e1152c16b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/ShieldFire.png using Guid(3b7b02daa327f2c4c9210e1152c16b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '479b80e3d9d8f3d5e9676998f8765bbe') in 0.026702 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.004833 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/32/ShieldLeaf.png
+  artifactKey: Guid(bbaca3ddeb718544d8fa38d7ff45104d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/32/ShieldLeaf.png using Guid(bbaca3ddeb718544d8fa38d7ff45104d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6c931d684e11bbe1fa04ab763fe33c3') in 0.019693 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.042977 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/ShieldWater.png
+  artifactKey: Guid(091e794ed80d8cc44bccb6dbe0cf2b3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/ShieldWater.png using Guid(091e794ed80d8cc44bccb6dbe0cf2b3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b87fe418cf4e1fb9f788bd333bff32c') in 0.026765 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.003370 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/ShinArmor.png
+  artifactKey: Guid(2fe7dd815ba69704ca7a07e4f8731591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/ShinArmor.png using Guid(2fe7dd815ba69704ca7a07e4f8731591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd114007a112c2ab8f7d1a7db472d562a') in 0.024899 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.009668 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Shovel.png
+  artifactKey: Guid(5660ee6df34876c4dbd33b03d0202002) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Shovel.png using Guid(5660ee6df34876c4dbd33b03d0202002) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f72d46e76f45fdf59d5c717c5b4dbd9') in 0.026966 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.911706 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Skull.png
+  artifactKey: Guid(86a21b98ae8bc41408fc2ce9a6bbddce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Skull.png using Guid(86a21b98ae8bc41408fc2ce9a6bbddce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81efa5e6f76a50f0fd314aca2a023d68') in 0.026875 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.011767 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/SlingshotAmmo.png
+  artifactKey: Guid(27228ce0aed2b1d48ba00dabd5e28900) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/SlingshotAmmo.png using Guid(27228ce0aed2b1d48ba00dabd5e28900) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46ecfa75e4722ceec3e931c1a9c0f236') in 0.024134 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 1.456197 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/SoundHigh.png
+  artifactKey: Guid(655024a8f02025c4fb5c6323c55e765e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/SoundHigh.png using Guid(655024a8f02025c4fb5c6323c55e765e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3cb2e43bb3ec299f70ac546cd9753a2') in 0.034239 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/SoundMute.png
+  artifactKey: Guid(e4a76e8764440e0479a221d0027b75c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/SoundMute.png using Guid(e4a76e8764440e0479a221d0027b75c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd510efd9a3a9e1d99bc7eed809fc802d') in 0.026171 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Stats.png
+  artifactKey: Guid(804ef6c62fea8014c82c1d8a37d3ab91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Stats.png using Guid(804ef6c62fea8014c82c1d8a37d3ab91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61fccb1115c52d0bf75c2505b25fd6ad') in 0.023125 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.082223 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Strength.png
+  artifactKey: Guid(6701daf6ae16f2547a25558e3149fa39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/32/Strength.png using Guid(6701daf6ae16f2547a25558e3149fa39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e43b888a81612cc34bdc38d0633e420c') in 0.026569 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.003479 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Sword.png
+  artifactKey: Guid(9e4e64ce101fb8349b31b184700f2ece) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Sword.png using Guid(9e4e64ce101fb8349b31b184700f2ece) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4d362fef70276e136c1d1823185446e') in 0.026949 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.004860 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Tiles.png
+  artifactKey: Guid(cb0383348ddd81342823cf50a0afc877) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Tiles.png using Guid(cb0383348ddd81342823cf50a0afc877) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c952d9aec81ebc14aa1258ce5e62e25d') in 0.024914 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 2.727226 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/32/User.png
+  artifactKey: Guid(5fb0f213ad43a5e4785db2d28bc9c6a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/32/User.png using Guid(5fb0f213ad43a5e4785db2d28bc9c6a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44bdbbd598c3b0a40201967eb9d255d2') in 0.042786 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Venus.png
+  artifactKey: Guid(880bf3fc3ad44b14bbcfe13fe17a260c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Venus.png using Guid(880bf3fc3ad44b14bbcfe13fe17a260c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0a3019c8135ae5a446e4e09a43d46da') in 0.024026 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.005657 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Warning.png
+  artifactKey: Guid(0fb2a14ac305e4a49af8d4afbb6964a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Warning.png using Guid(0fb2a14ac305e4a49af8d4afbb6964a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77544ad5e57b168313b0a747a3c78c4f') in 0.022660 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.097079 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Water.png
+  artifactKey: Guid(5171b84dda0626840a896f5861274678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Icons/512/Water.png using Guid(5171b84dda0626840a896f5861274678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37f3b68d5db603badd4a9a68f290e9a5') in 0.030571 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: �������� �����/������ ���� �������� ��-�� ���������� ������ ������ ��� �� ������� ����������.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
