@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Timeline;
 
-public class BugBehavior : Enemy
+public class BugBehavior : MonoBehaviour
 {
     // public int _waypointNum = 0;
     public int bug_number;
@@ -35,13 +35,9 @@ public class BugBehavior : Enemy
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+   /* void FixedUpdate()
     {
-        if (movingState == 0)
-        {
-            //EnemyMoving();
-        }
-        else if (movingState == 1)
+        if (movingState == 1)
         {
             movingState = 1;
             transform.LookAt(player.transform);
@@ -52,7 +48,7 @@ public class BugBehavior : Enemy
                 print("attack");
             }
         }
-    }
+    }*/
 
     public void ChangeAnimationState(string newState)
     {
