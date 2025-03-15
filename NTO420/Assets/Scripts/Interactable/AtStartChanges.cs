@@ -19,6 +19,7 @@ public class AtStartChanges : MonoBehaviour
          player.GetComponent<CharacterController>().enabled = true;
          player.GetComponent<Controller>().enabled = true;
          craft.FirstUpdate();
+         player.GetComponentInChildren<Tutorial>().FirstUpdate();
         /* if (player.GetComponent<PlayerStats>().resources.stage > 0)
          {
              tutor = GameObject.FindObjectOfType<Tutorial>();

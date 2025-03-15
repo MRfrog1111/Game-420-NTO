@@ -145,11 +145,11 @@ public class MC_attack : MonoBehaviour
 
     public void Death()
     {
-        gameObject.GetComponent<Controller>().enabled = false;
-        gameObject.GetComponent<CharacterController>().enabled = false;
+        /*gameObject.GetComponent<Controller>().enabled = false;
+        gameObject.GetComponent<CharacterController>().enabled = false;*/
         gameObject.transform.position = spawn.transform.position;
-        gameObject.GetComponent<Controller>().enabled = true;
-        gameObject.GetComponent<CharacterController>().enabled = true;
+       /* gameObject.GetComponent<Controller>().enabled = true;
+        gameObject.GetComponent<CharacterController>().enabled = true;*/
         //gameObject.SetActive(true);
         print("Lox umer");
     }

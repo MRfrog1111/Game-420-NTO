@@ -95,7 +95,7 @@ public class Generator1 : MonoBehaviour
                     stats.isWorking = true;
                 }
 
-                print(honeyNow);
+                //print(honeyNow);
             }
             else
             {

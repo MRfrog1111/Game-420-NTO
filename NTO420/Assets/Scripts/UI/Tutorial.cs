@@ -39,6 +39,7 @@ public class Tutorial: MonoBehaviour
 
    private void Update()
    {
+       print("stats" + stats.resources.stage.ToString());
        if (stats.resources.stage == 1 && Input.GetKeyDown(KeyCode.C))
        {
            isCompleted = true;
@@ -54,6 +55,7 @@ public class Tutorial: MonoBehaviour
        {
            if (stats.resources.apiary_module >= neededRes[0].apiary_module)
            {
+               
                isCompleted = true;
                CheckStage();
            }
@@ -87,8 +89,6 @@ public class Tutorial: MonoBehaviour
        // print("check");
         if (stats.resources.stage == 0)
         {
-            /*print("check " + stats.resources.honey);
-            print("check wax " + stats.resources.wax);*/
             if (stats.resources.honey >= neededRes[0].honey)
             {
                 isCompleted = true;
@@ -101,10 +101,10 @@ public class Tutorial: MonoBehaviour
                 isCompleted = true;
             }
         }
-        else if (stats.resources.stage == 3)
+     /*   else if (stats.resources.stage == 3)
         {
             isCompleted = true;
-        }
+        }*/
         else if (stats.resources.stage == 4)
         {
             if (stats.resources.apiary_module >= neededRes[0].apiary_module)
@@ -121,7 +121,6 @@ public class Tutorial: MonoBehaviour
             tutorialText.text = tasks[stats.resources.stage];
             //stats.CheckUpdates();
             isCompleted = false;
-
         }
     }
 }
