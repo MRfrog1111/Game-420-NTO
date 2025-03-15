@@ -8,7 +8,7 @@ public class ManagerUI : MonoBehaviour
     public GameObject InventorySlots;
     public GameObject InventoryInterface;
 
-    //public GameObject Setings;
+    public GameObject Setings;
     public GameObject PauseMenu;
     public GameObject CraftMenu;
     public GameObject ShopUI;
@@ -26,7 +26,7 @@ public class ManagerUI : MonoBehaviour
         InventoryInterface.SetActive(true);
         InventorySlots.SetActive(false);
         InventoryInterface.SetActive(false);
-        //Setings.SetActive(false);
+        Setings.SetActive(false);
         PauseMenu.SetActive(false);
         CraftMenu.SetActive(false);
         Tasks.SetActive(false);
@@ -81,13 +81,24 @@ public class ManagerUI : MonoBehaviour
                 Close(currentWindow);
             }
         }
-        
+        if (Input.GetKeyDown(KeyCode.Q) && isWorking)
+        {
+            if (canOpen)
+            {
+                Open(Setings);
+            }
+            else
+            {
+                Close(currentWindow);
+            }
+        }
+
     }
 
    
         public void Open(GameObject window)
         {
-            if (window != null && canOpen)
+            if (window != null && canOpen )
             {
                 window.SetActive(true);
                 canOpen = false;
@@ -99,7 +110,7 @@ public class ManagerUI : MonoBehaviour
                 currentWindow = window;
                 if(window == InventorySlots)
                     InventoryInterface.SetActive(true);
-        }
+            }
         }
 
         public void Close(GameObject window)

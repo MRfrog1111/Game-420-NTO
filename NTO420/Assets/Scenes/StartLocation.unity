@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.8
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.411711, g: 0.4180936, b: 0.41261137, a: 0.8}
+  m_IndirectSpecularColor: {r: 0.41171172, g: 0.41809443, b: 0.4126123, a: 0.8}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -482,7 +482,7 @@ RectTransform:
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.763, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5128,7 +5128,7 @@ RectTransform:
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -7.5, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -12005,6 +12005,7 @@ MonoBehaviour:
   playerCameraTransform: {fileID: 1460615841}
   slots: []
   inventoryPanel: {fileID: 8353436125559557184}
+  quickslotPanel: {fileID: 0}
   startObjects:
   - {fileID: 11400000, guid: 1a4f2a4f859601c41b53a1b9709bf373, type: 2}
   - {fileID: 11400000, guid: f11f993f62c5b2d41b3249cfd2522e1b, type: 2}
@@ -26480,7 +26481,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &2537723389151351900
 GameObject:
   m_ObjectHideFlags: 0
@@ -30806,12 +30807,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9f2305cdbf54b4e81cac75261a88cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Inventory: {fileID: 908143193038803899}
+  InventorySlots: {fileID: 0}
+  InventoryInterface: {fileID: 0}
   Setings: {fileID: 0}
   PauseMenu: {fileID: 1464528663}
   CraftMenu: {fileID: 7976064639382557298}
   ShopUI: {fileID: 1907419349}
   Tasks: {fileID: 7806678501070125430}
+  canOpen: 1
   isWorking: 1
 --- !u!114 &4178106108212312297
 MonoBehaviour:

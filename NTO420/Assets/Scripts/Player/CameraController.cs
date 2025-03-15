@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] private float sensX;
-    [SerializeField] private float sensY;
+    [Range(1f, 50f)] public static float sens;
 
     [SerializeField] private Transform cam;
     [SerializeField] private Transform orientaition;
@@ -38,8 +38,8 @@ public class CameraController : MonoBehaviour
         mouseX = Input.GetAxisRaw("Mouse X");
         mouseY = Input.GetAxisRaw("Mouse Y");
 
-        yRotaition += mouseX * sensX * multiplayer;
-        xRotaition -= mouseY * sensY * multiplayer;
+        yRotaition += mouseX * sens * multiplayer;
+        xRotaition -= mouseY * sens * multiplayer;
 
         xRotaition = Mathf.Clamp(xRotaition, -90f, 90f);   
     }
