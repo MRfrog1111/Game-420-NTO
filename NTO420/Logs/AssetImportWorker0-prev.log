@@ -15,7 +15,7 @@ D:/РќРѕРІР°СЏ РїР°РїРєР°/Game-420-NTO/NTO420
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50245
+49830
 Successfully changed project path to: D:/РќРѕРІР°СЏ РїР°РїРєР°/Game-420-NTO/NTO420
 D:/РќРѕРІР°СЏ РїР°РїРєР°/Game-420-NTO/NTO420
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,11 +49,11 @@ D:/РќРѕРІР°СЏ РїР°РїРєР°/Game-420-NTO/NTO420
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [11624] Host "[IP] 192.168.0.15 [Port] 0 [Flags] 2 [Guid] 1231374231 [EditorId] 1231374231 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-E8C2CGB) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [9028] Host "[IP] 192.168.0.15 [Port] 0 [Flags] 2 [Guid] 3582786221 [EditorId] 3582786221 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-E8C2CGB) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [11624] Host "[IP] 192.168.0.15 [Port] 0 [Flags] 2 [Guid] 1231374231 [EditorId] 1231374231 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-E8C2CGB) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [9028] Host "[IP] 192.168.0.15 [Port] 0 [Flags] 2 [Guid] 3582786221 [EditorId] 3582786221 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-E8C2CGB) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 8.83 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 8.29 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.4f1 (35713cd46cd7)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/Resources/UnitySubsystems
@@ -69,46 +69,46 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56464
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56628
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.010431 seconds.
-- Loaded All Assemblies, in  0.503 seconds
+Registered in 0.013050 seconds.
+- Loaded All Assemblies, in  0.692 seconds
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.409 seconds
-Domain Reload Profiling: 910ms
-	BeginReloadAssembly (123ms)
+- Finished resetting the current domain, in  0.506 seconds
+Domain Reload Profiling: 1196ms
+	BeginReloadAssembly (194ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (53ms)
-	RebuildNativeTypeToScriptingClass (18ms)
-	initialDomainReloadingComplete (88ms)
-	LoadAllAssembliesAndSetupDomain (218ms)
-		LoadAssemblies (120ms)
+	RebuildCommonClasses (66ms)
+	RebuildNativeTypeToScriptingClass (19ms)
+	initialDomainReloadingComplete (107ms)
+	LoadAllAssembliesAndSetupDomain (304ms)
+		LoadAssemblies (191ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (210ms)
-			TypeCache.Refresh (209ms)
-				TypeCache.ScanAssembly (192ms)
+		AnalyzeDomain (295ms)
+			TypeCache.Refresh (294ms)
+				TypeCache.ScanAssembly (270ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (409ms)
+	FinalizeReload (507ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (318ms)
+		SetupLoadedEditorAssemblies (395ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (15ms)
-			SetLoadedEditorAssemblies (8ms)
+			InitializePlatformSupportModulesInManaged (18ms)
+			SetLoadedEditorAssemblies (9ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (3ms)
-			ProcessInitializeOnLoadAttributes (219ms)
-			ProcessInitializeOnLoadMethodAttributes (73ms)
+			BeforeProcessingInitializeOnLoad (4ms)
+			ProcessInitializeOnLoadAttributes (275ms)
+			ProcessInitializeOnLoadMethodAttributes (90ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -118,8 +118,8 @@ Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\РќРѕРІР°СЏ РїР°РїРєР°\Game-420-NTO\NTO420\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image D:\РќРѕРІР°СЏ РїР°РїРєР°\Game-420-NTO\NTO420\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  1.124 seconds
-Refreshing native plugins compatible for Editor in 2.76 ms, found 3 plugins.
+- Loaded All Assemblies, in  1.497 seconds
+Refreshing native plugins compatible for Editor in 3.22 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Package Manager log level set to [2]
@@ -127,102 +127,48 @@ Package Manager log level set to [2]
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.029 seconds
-Domain Reload Profiling: 2151ms
-	BeginReloadAssembly (191ms)
+- Finished resetting the current domain, in  1.148 seconds
+Domain Reload Profiling: 2642ms
+	BeginReloadAssembly (226ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (9ms)
+		DisableScriptedObjects (10ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (34ms)
-	RebuildCommonClasses (52ms)
-	RebuildNativeTypeToScriptingClass (18ms)
-	initialDomainReloadingComplete (62ms)
-	LoadAllAssembliesAndSetupDomain (799ms)
-		LoadAssemblies (369ms)
+		CreateAndSetChildDomain (37ms)
+	RebuildCommonClasses (56ms)
+	RebuildNativeTypeToScriptingClass (20ms)
+	initialDomainReloadingComplete (70ms)
+	LoadAllAssembliesAndSetupDomain (1121ms)
+		LoadAssemblies (482ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (517ms)
-			TypeCache.Refresh (475ms)
-				TypeCache.ScanAssembly (456ms)
-			ScanForSourceGeneratedMonoScriptInfo (32ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (1029ms)
+		AnalyzeDomain (747ms)
+			TypeCache.Refresh (686ms)
+				TypeCache.ScanAssembly (662ms)
+			ScanForSourceGeneratedMonoScriptInfo (48ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (1148ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (782ms)
+		SetupLoadedEditorAssemblies (846ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (10ms)
-			SetLoadedEditorAssemblies (5ms)
+			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (101ms)
-			ProcessInitializeOnLoadAttributes (549ms)
-			ProcessInitializeOnLoadMethodAttributes (108ms)
-			AfterProcessingInitializeOnLoad (10ms)
+			BeforeProcessingInitializeOnLoad (120ms)
+			ProcessInitializeOnLoadAttributes (583ms)
+			ProcessInitializeOnLoadMethodAttributes (118ms)
+			AfterProcessingInitializeOnLoad (9ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (10ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 4.61 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
+Refreshing native plugins compatible for Editor in 6.20 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4564 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 61 unused Assets / (1.6 MB). Loaded Objects now: 5040.
-Memory consumption went from 180.7 MB to 179.1 MB.
-Total: 9.398400 ms (FindLiveObjects: 0.747700 ms CreateObjectMapping: 0.356900 ms MarkObjects: 7.452200 ms  DeleteObjects: 0.839200 ms)
+Memory consumption went from 180.6 MB to 179.1 MB.
+Total: 12.197800 ms (FindLiveObjects: 0.739300 ms CreateObjectMapping: 0.421400 ms MarkObjects: 10.224200 ms  DeleteObjects: 0.811300 ms)
 
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 2255.178138 seconds.
-  path: Assets/Prefabs/Knife.prefab
-  artifactKey: Guid(e93aab2804472a44c89281539d2d795b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Knife.prefab using Guid(e93aab2804472a44c89281539d2d795b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bd6998f143967e9244e87b6a3610396') in 0.283197 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 132
-========================================================================
-Received Import Request.
-  Time since last request: 0.000048 seconds.
-  path: Assets/Prefabs/UI1.prefab
-  artifactKey: Guid(955ddaab7393d4847be81c75bc4aa679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UI1.prefab using Guid(955ddaab7393d4847be81c75bc4aa679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9a5fddec6eeec0e505c83bef5477c88') in 0.206220 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 742
-========================================================================
-Received Import Request.
-  Time since last request: 1.421425 seconds.
-  path: Assets/PlayerMaterial.physicMaterial
-  artifactKey: Guid(c4fd1676ef25956418ae310dc84c6f33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PlayerMaterial.physicMaterial using Guid(c4fd1676ef25956418ae310dc84c6f33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5318489b05a54f7a348d79daf69ce002') in 0.001323 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 1.655323 seconds.
-  path: Assets/Honeti
-  artifactKey: Guid(0eb90534b230a4049ac0c93324ebb6fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Honeti using Guid(0eb90534b230a4049ac0c93324ebb6fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1a879c36bd1ae8529bf6b552337fe6f') in 0.000970 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 4.72 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 17 unused Assets / (1.5 MB). Loaded Objects now: 5049.
-Memory consumption went from 103.0 MB to 101.5 MB.
-Total: 9.366100 ms (FindLiveObjects: 0.917100 ms CreateObjectMapping: 0.367600 ms MarkObjects: 7.633700 ms  DeleteObjects: 0.446100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
@@ -238,113 +184,137 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.078739 seconds.
-  path: Assets/Scenes/Location1.unity
-  artifactKey: Guid(b929251cdef0ee646b8fa090c8dcc09b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Location1.unity using Guid(b929251cdef0ee646b8fa090c8dcc09b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3b07c69713274871644eed88d5551e5') in 0.008068 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.952767 seconds.
+  Time since last request: 437.657955 seconds.
   path: Assets/Scenes/Moyi Scene Ne trogatm.unity
   artifactKey: Guid(fa52c18d3e4ff6448bec4f87224da1a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Moyi Scene Ne trogatm.unity using Guid(fa52c18d3e4ff6448bec4f87224da1a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '951fa3c5924be77df3fd75a9c074f3d5') in 0.000665 seconds
+Start importing Assets/Scenes/Moyi Scene Ne trogatm.unity using Guid(fa52c18d3e4ff6448bec4f87224da1a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7781a83c7d118b168bc0de81f6a95a7a') in 0.004896 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 0.285218 seconds.
-  path: Assets/Scenes/ProgrammingTest.unity
-  artifactKey: Guid(2c9438877f21ff946bc86c0837ea6a18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/ProgrammingTest.unity using Guid(2c9438877f21ff946bc86c0837ea6a18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5720b632bbc94aba5839575fa90699b') in 0.000591 seconds
+  Time since last request: 0.000038 seconds.
+  path: Assets/Scenes/StartLocation.unity
+  artifactKey: Guid(9e6f033ba0d2ebf47854613762c94dc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/StartLocation.unity using Guid(9e6f033ba0d2ebf47854613762c94dc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1a8e225cafb30cbb756ff43d984732c') in 0.000936 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 20.301360 seconds.
-  path: Assets/Prefabs/PlayerCompleteEdition.prefab
-  artifactKey: Guid(b5abb5ab6d16dd844b6556e8314979ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/PlayerCompleteEdition.prefab using Guid(b5abb5ab6d16dd844b6556e8314979ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b71f1cd437fa0b7d38eaacdf252e4782') in 0.035301 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 28
-========================================================================
-Received Import Request.
-  Time since last request: 26.649715 seconds.
-  path: Assets/Honeti/FlatScifiGUI
-  artifactKey: Guid(268630aa8d9f3534ca95cd4f0a4286f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Honeti/FlatScifiGUI using Guid(268630aa8d9f3534ca95cd4f0a4286f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3890c6be3380909323eb970ed14f393e') in 0.000660 seconds
+  Time since last request: 643.637327 seconds.
+  path: Assets/Scenes/UI.unity
+  artifactKey: Guid(96a7c9d5d97c4ad4f9ff086d7d3880de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/UI.unity using Guid(96a7c9d5d97c4ad4f9ff086d7d3880de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22bd61eeb05db0271d8ff20f81a4b4aa') in 0.001184 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 1.551256 seconds.
-  path: Assets/Honeti/FlatScifiGUI/Scenes
-  artifactKey: Guid(330d3122e97181f4a81c6daace55650c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Honeti/FlatScifiGUI/Scenes using Guid(330d3122e97181f4a81c6daace55650c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f1629ecfd3ffb1d1983d0560775675a') in 0.000613 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.646000 seconds.
+  Time since last request: 471.937053 seconds.
   path: Assets/Honeti/FlatScifiGUI/Scenes/SampleScene.unity
   artifactKey: Guid(33656ab01662c0149bcaed312453a15b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Honeti/FlatScifiGUI/Scenes/SampleScene.unity using Guid(33656ab01662c0149bcaed312453a15b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '939bb1c0dcd8c92b29330666a842b3f3') in 0.000633 seconds
+Start importing Assets/Honeti/FlatScifiGUI/Scenes/SampleScene.unity using Guid(33656ab01662c0149bcaed312453a15b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae40139846a449675dd7e9b19f4262d2') in 0.001170 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 31.817653 seconds.
+  path: Assets/Prefabs/PlayerCompleteEdition.prefab
+  artifactKey: Guid(b5abb5ab6d16dd844b6556e8314979ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PlayerCompleteEdition.prefab using Guid(b5abb5ab6d16dd844b6556e8314979ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3b2909d42eedad91ddc3c15304dbed5') in 0.171550 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 31
+========================================================================
+Received Import Request.
+  Time since last request: 44.394101 seconds.
+  path: Assets/Prefabs/UI/Pause.prefab
+  artifactKey: Guid(b64204bac47182c4fadaf47ed46518d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/Pause.prefab using Guid(b64204bac47182c4fadaf47ed46518d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33304245766f2a38cb2fe59d73a2fd7c') in 0.016634 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 59
+========================================================================
+Received Import Request.
+  Time since last request: 62.227902 seconds.
+  path: Assets/Scenes/UI.unity
+  artifactKey: Guid(96a7c9d5d97c4ad4f9ff086d7d3880de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/UI.unity using Guid(96a7c9d5d97c4ad4f9ff086d7d3880de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de134770df6d1ad8f2ecd66745ceb429') in 0.001265 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 280.096355 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Fonts/Prompt-Bold.ttf
+  artifactKey: Guid(e82a4dcdfbec7aa4dbdef5cd494b1c2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Fonts/Prompt-Bold.ttf using Guid(e82a4dcdfbec7aa4dbdef5cd494b1c2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e06a67cf4761d11485542f401e714756') in 0.103657 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Fonts/Prompt-SemiBold.ttf
+  artifactKey: Guid(677e41e2e69807140a46ed464e3624cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Fonts/Prompt-SemiBold.ttf using Guid(677e41e2e69807140a46ed464e3624cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5be3c2e3b9e9a1e2d907b2784a6a3368') in 0.020428 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Fonts/Prompt-Regular.ttf
+  artifactKey: Guid(2f9fd0bd14ec08e499d58582d74bd8a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Fonts/Prompt-Regular.ttf using Guid(2f9fd0bd14ec08e499d58582d74bd8a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11d45bd6a53336e854b89a050a2f2b3e') in 0.033502 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\РќРѕРІР°СЏ РїР°РїРєР°\Game-420-NTO\NTO420\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image D:\РќРѕРІР°СЏ РїР°РїРєР°\Game-420-NTO\NTO420\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  1.079 seconds
-Refreshing native plugins compatible for Editor in 2.57 ms, found 3 plugins.
+- Loaded All Assemblies, in  6.112 seconds
+Refreshing native plugins compatible for Editor in 3.32 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.501 seconds
-Domain Reload Profiling: 2578ms
-	BeginReloadAssembly (218ms)
+- Finished resetting the current domain, in 21.393 seconds
+Domain Reload Profiling: 27504ms
+	BeginReloadAssembly (224ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (11ms)
+		DisableScriptedObjects (9ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (64ms)
-	RebuildCommonClasses (52ms)
+		CreateAndSetChildDomain (79ms)
+	RebuildCommonClasses (49ms)
 	RebuildNativeTypeToScriptingClass (18ms)
-	initialDomainReloadingComplete (46ms)
-	LoadAllAssembliesAndSetupDomain (743ms)
-		LoadAssemblies (375ms)
+	initialDomainReloadingComplete (45ms)
+	LoadAllAssembliesAndSetupDomain (5773ms)
+		LoadAssemblies (4478ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (461ms)
-			TypeCache.Refresh (451ms)
-				TypeCache.ScanAssembly (433ms)
+		AnalyzeDomain (1385ms)
+			TypeCache.Refresh (1363ms)
+				TypeCache.ScanAssembly (1256ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (1502ms)
+			ResolveRequiredComponents (21ms)
+	FinalizeReload (21394ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (733ms)
+		SetupLoadedEditorAssemblies (844ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (10ms)
+			InitializePlatformSupportModulesInManaged (13ms)
 			SetLoadedEditorAssemblies (5ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (105ms)
-			ProcessInitializeOnLoadAttributes (506ms)
-			ProcessInitializeOnLoadMethodAttributes (98ms)
-			AfterProcessingInitializeOnLoad (9ms)
+			BeforeProcessingInitializeOnLoad (116ms)
+			ProcessInitializeOnLoadAttributes (593ms)
+			ProcessInitializeOnLoadMethodAttributes (107ms)
+			AfterProcessingInitializeOnLoad (10ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (11ms)
-Refreshing native plugins compatible for Editor in 4.48 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (12ms)
+Refreshing native plugins compatible for Editor in 3.35 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4505 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 45 unused Assets / (1.5 MB). Loaded Objects now: 5052.
-Memory consumption went from 171.4 MB to 169.9 MB.
-Total: 8.884900 ms (FindLiveObjects: 0.817300 ms CreateObjectMapping: 0.456500 ms MarkObjects: 7.033600 ms  DeleteObjects: 0.576000 ms)
+Unloading 45 unused Assets / (1.5 MB). Loaded Objects now: 5089.
+Memory consumption went from 171.2 MB to 169.7 MB.
+Total: 5.581100 ms (FindLiveObjects: 0.646400 ms CreateObjectMapping: 0.332700 ms MarkObjects: 4.216600 ms  DeleteObjects: 0.383500 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -362,108 +332,156 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 73.327124 seconds.
-  path: Assets/Honeti/FlatScifiGUI/Sources
-  artifactKey: Guid(fbe1bacfd208a194aa743ecd9dee2783) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Honeti/FlatScifiGUI/Sources using Guid(fbe1bacfd208a194aa743ecd9dee2783) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47556115b6d39c63076999e406af8fdd') in 0.002430 seconds
+  Time since last request: 453.547782 seconds.
+  path: Assets/Prefabs/UI1.prefab
+  artifactKey: Guid(955ddaab7393d4847be81c75bc4aa679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI1.prefab using Guid(955ddaab7393d4847be81c75bc4aa679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0d8370b8f83d2a961bbbabb8e1e6b7f') in 0.174379 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 751
+========================================================================
+Received Import Request.
+  Time since last request: 5.015176 seconds.
+  path: Assets/Prefabs/Canvas.prefab
+  artifactKey: Guid(ea88e91831635d64ab97e97a364840bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Canvas.prefab using Guid(ea88e91831635d64ab97e97a364840bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77b2c2480277d7c33f3ceb7f5e33d905') in 0.005065 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 45
+========================================================================
+Received Import Request.
+  Time since last request: 17.775166 seconds.
+  path: Assets/Prefabs/Slot.prefab
+  artifactKey: Guid(3f6a2c7e3fecbdc4c92a74eca41cf49e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Slot.prefab using Guid(3f6a2c7e3fecbdc4c92a74eca41cf49e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fc86007845f07342be0f3a29b5f7510') in 0.045432 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 28
+========================================================================
+Received Import Request.
+  Time since last request: 28.339499 seconds.
+  path: Assets/Prefabs/Slot.prefab
+  artifactKey: Guid(3f6a2c7e3fecbdc4c92a74eca41cf49e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Slot.prefab using Guid(3f6a2c7e3fecbdc4c92a74eca41cf49e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44e9b3f4cadfcabe486c51a451c1f106') in 0.039334 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 28
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Prefabs/UI1.prefab
+  artifactKey: Guid(955ddaab7393d4847be81c75bc4aa679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI1.prefab using Guid(955ddaab7393d4847be81c75bc4aa679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b844908e14a12daf9f8bb77af5367fbe') in 0.069220 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 750
+========================================================================
+Received Import Request.
+  Time since last request: 10.276674 seconds.
+  path: Assets/Prefabs/UI1.prefab
+  artifactKey: Guid(955ddaab7393d4847be81c75bc4aa679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI1.prefab using Guid(955ddaab7393d4847be81c75bc4aa679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9c0367e8ec939ebd51364e25b2e950e') in 0.071854 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 750
+========================================================================
+Received Import Request.
+  Time since last request: 10.534755 seconds.
+  path: Assets/Prefabs/UI1.prefab
+  artifactKey: Guid(955ddaab7393d4847be81c75bc4aa679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI1.prefab using Guid(955ddaab7393d4847be81c75bc4aa679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2598be6d14c42ad4ee70ad1b8d6213b5') in 0.067274 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 750
+========================================================================
+Received Import Request.
+  Time since last request: 60.497831 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Scenes/SampleScene.unity
+  artifactKey: Guid(33656ab01662c0149bcaed312453a15b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Scenes/SampleScene.unity using Guid(33656ab01662c0149bcaed312453a15b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd915b2510c44aa267ac0846c6bf6c9b3') in 0.000927 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 0.062630 seconds.
-  path: Assets/Honeti/FlatScifiGUI/Sources/flat_scifi_gui_blue.psd
-  artifactKey: Guid(a44fcf0a1be4ff64ca98cccbb6f65e1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Honeti/FlatScifiGUI/Sources/flat_scifi_gui_blue.psd using Guid(a44fcf0a1be4ff64ca98cccbb6f65e1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90fdbce386419ba1833879ed4dfba40c') in 0.103157 seconds
+  Time since last request: 3356.452246 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Bars/BarFillParts 1.png
+  artifactKey: Guid(fc8efc09f0f071c48a7b4f5ed3259c2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Bars/BarFillParts 1.png using Guid(fc8efc09f0f071c48a7b4f5ed3259c2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40f9d8cd650cd7ce91d32f2e3846a459') in 0.088173 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Honeti/FlatScifiGUI/Sources/flat_scifi_gui_pink.psd
-  artifactKey: Guid(403e1381c82f135419be30626da1766e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Honeti/FlatScifiGUI/Sources/flat_scifi_gui_pink.psd using Guid(403e1381c82f135419be30626da1766e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e4a54f325d1542dac39f3a880eb5ad1') in 0.025358 seconds
+  Time since last request: 5.810750 seconds.
+  path: Assets/Honeti/FlatScifiGUI/Textures/Bars/BarFillParts 1.png
+  artifactKey: Guid(fc8efc09f0f071c48a7b4f5ed3259c2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Honeti/FlatScifiGUI/Textures/Bars/BarFillParts 1.png using Guid(fc8efc09f0f071c48a7b4f5ed3259c2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b8c4fc39bb8fe713340a998236c6012') in 0.022247 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000111 seconds.
-  path: Assets/Honeti/FlatScifiGUI/Sources/flat_scifi_gui_purple.psd
-  artifactKey: Guid(2bd057fabe4f2394a941f4f18824feb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Honeti/FlatScifiGUI/Sources/flat_scifi_gui_purple.psd using Guid(2bd057fabe4f2394a941f4f18824feb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1a9e7eeee4ed66b25f3d2a92f6839b3') in 0.025536 seconds
+  Time since last request: 877.938236 seconds.
+  path: Assets/Prefabs/UI1.prefab
+  artifactKey: Guid(955ddaab7393d4847be81c75bc4aa679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI1.prefab using Guid(955ddaab7393d4847be81c75bc4aa679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '669e1c34e6406bb1b57c22a49b9878a7') in 0.088960 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 780
 ========================================================================
 Received Import Request.
-  Time since last request: 5.574964 seconds.
-  path: Assets/Honeti/FlatScifiGUI/Textures
-  artifactKey: Guid(4968637f79c3883418c97c8514414362) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Honeti/FlatScifiGUI/Textures using Guid(4968637f79c3883418c97c8514414362) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b71b8327821aee2c43f8e73df8a3c2fd') in 0.000744 seconds
+  Time since last request: 17.294955 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF.asset
+  artifactKey: Guid(895482c262ae1b8468cf531d46d79c3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF.asset using Guid(895482c262ae1b8468cf531d46d79c3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1370744e7690b01c4e7d67a9f319b483') in 0.076350 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 4
 ========================================================================
 Received Import Request.
-  Time since last request: 6.652815 seconds.
-  path: Assets/Honeti/FlatScifiGUI/Textures/Bars/BarBackLightSlanted.png
-  artifactKey: Guid(0bc6c16603db87c42a9af1640391f623) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Honeti/FlatScifiGUI/Textures/Bars/BarBackLightSlanted.png using Guid(0bc6c16603db87c42a9af1640391f623) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '071247e1c1ccab60b5710c4721944f46') in 0.035141 seconds
+  Time since last request: 0.043145 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+  artifactKey: Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset using Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f974ca49b0d87ecbcf4cc0583e45cdfa') in 0.033445 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.009439 seconds.
-  path: Assets/Honeti/FlatScifiGUI/Textures/Bars/BarBgLeft.png
-  artifactKey: Guid(b2a7efdf53894824186d4449938e9798) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Honeti/FlatScifiGUI/Textures/Bars/BarBgLeft.png using Guid(b2a7efdf53894824186d4449938e9798) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d87bf2222bdd6ada1802378d83d3fae') in 0.027913 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 6
 ========================================================================
 Received Import Request.
   Time since last request: 0.000019 seconds.
-  path: Assets/Honeti/FlatScifiGUI/Textures/Bars/BarBgBigRight.png
-  artifactKey: Guid(fa25c0deca0d53b44b5b74fa713aacb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Honeti/FlatScifiGUI/Textures/Bars/BarBgBigRight.png using Guid(fa25c0deca0d53b44b5b74fa713aacb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2f40586fa370302f4347633fd162991') in 0.024727 seconds
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Electronic Highway Sign SDF.asset
+  artifactKey: Guid(815a5b69b0f01774cad7df30ce1d8c3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Electronic Highway Sign SDF.asset using Guid(815a5b69b0f01774cad7df30ce1d8c3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16d7d27a0b6e3d1bd440e5c1cbb6c87d') in 0.020661 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 4
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Honeti/FlatScifiGUI/Textures/Bars/BubbleShadow.png
-  artifactKey: Guid(4f92a202e83abaf4dae22b20d626db1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Honeti/FlatScifiGUI/Textures/Bars/BubbleShadow.png using Guid(4f92a202e83abaf4dae22b20d626db1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b414875b151583251791b3af371ad15') in 0.024082 seconds
+  Time since last request: 12.740444 seconds.
+  path: Assets/Prefabs/UI.prefab
+  artifactKey: Guid(157de687148d4fd4fb0ed432d9a08bcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI.prefab using Guid(157de687148d4fd4fb0ed432d9a08bcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45cbbab8b10b5a3796dfe8c8befb80c3') in 0.045512 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 504
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Honeti/FlatScifiGUI/Textures/Bars/BarBgBigSlanted.png
-  artifactKey: Guid(6b76c39363635a24db78bd4e81842861) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Honeti/FlatScifiGUI/Textures/Bars/BarBgBigSlanted.png using Guid(6b76c39363635a24db78bd4e81842861) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8db4996f97c1daa9acd543a872f83bfb') in 0.023566 seconds
+  Time since last request: 1.527619 seconds.
+  path: Assets/Prefabs/UI.prefab
+  artifactKey: Guid(157de687148d4fd4fb0ed432d9a08bcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI.prefab using Guid(157de687148d4fd4fb0ed432d9a08bcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2dbd6106880b97d558203a58447a5898') in 0.044429 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 504
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Honeti/FlatScifiGUI/Textures/Bars/BubbleStroke.png
-  artifactKey: Guid(aff103b020be84b48a6fba42f5987915) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Honeti/FlatScifiGUI/Textures/Bars/BubbleStroke.png using Guid(aff103b020be84b48a6fba42f5987915) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd331424caf095f93c64711cc69ee3bc') in 0.025436 seconds
+  Time since last request: 2.113916 seconds.
+  path: Assets/Prefabs/UI.prefab
+  artifactKey: Guid(157de687148d4fd4fb0ed432d9a08bcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI.prefab using Guid(157de687148d4fd4fb0ed432d9a08bcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '157a23d57cf26a90da430394b3b2ca59') in 0.058432 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 506
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Honeti/FlatScifiGUI/Textures/Bars/BubbleInnerGlow.png
-  artifactKey: Guid(13dfb5f08ffb11f4ab458bbc13e71f5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Honeti/FlatScifiGUI/Textures/Bars/BubbleInnerGlow.png using Guid(13dfb5f08ffb11f4ab458bbc13e71f5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da7cc5141c2e30f348f44d1a153803cc') in 0.024248 seconds
+  Time since last request: 0.707846 seconds.
+  path: Assets/Prefabs/UI.prefab
+  artifactKey: Guid(157de687148d4fd4fb0ed432d9a08bcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI.prefab using Guid(157de687148d4fd4fb0ed432d9a08bcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5ff46f8a7fa65d5772f105124d26f76') in 0.050207 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 504
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Honeti/FlatScifiGUI/Textures/Bars/BarFillPartsSlanted.png
-  artifactKey: Guid(1c7ade90f065447448b8b10f3c68c692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Honeti/FlatScifiGUI/Textures/Bars/BarFillPartsSlanted.png using Guid(1c7ade90f065447448b8b10f3c68c692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ed2f3f8bafe2d99bdd009cf410561b6') in 0.021709 seconds
+  Time since last request: 0.503055 seconds.
+  path: Assets/Prefabs/UI.prefab
+  artifactKey: Guid(157de687148d4fd4fb0ed432d9a08bcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI.prefab using Guid(157de687148d4fd4fb0ed432d9a08bcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9471754c0c531a047d565c3b1dc17ddd') in 0.055432 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 501
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: Операция ввода/вывода была прервана из-за завершения потока команд или по запросу приложения.
 AssetImportWorker is now disconnected from the server

@@ -43,6 +43,9 @@ GameObject:
   - component: {fileID: 5906943337231372612}
   - component: {fileID: 7914583216301155861}
   - component: {fileID: 5220055771455196279}
+  - component: {fileID: 9004090178198172159}
+  - component: {fileID: 6209393415231548800}
+  - component: {fileID: 1738916994798749956}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -136,6 +139,89 @@ MonoBehaviour:
   sensY: 10
   cam: {fileID: 683078231057609023}
   orientaition: {fileID: 5441462097190647004}
+--- !u!114 &9004090178198172159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925039179236981521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc2e7ad1fbb5ff54099ada5625092fad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPlayerName: sdf
+--- !u!114 &6209393415231548800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925039179236981521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4017c5f9886563a4bb0118a6ce6ef9fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  webAsker: {fileID: 9004090178198172159}
+  golod: 1
+  resources:
+    hp: 0
+    oxygen: 0
+    food: 0
+    honey: 0
+    wax: 0
+    minerals: 0
+    seeds: 0
+    silicon_sand: 0
+    metal: 0
+    electronics: 0
+    resin: 0
+    onyx_alloy: 0
+    printer_templates: 0
+    energy_crystal: 0
+    honey_esence: 0
+    atmospheric_filter: 0
+    living_module: 0
+    apiary_module: 0
+    stage: 0
+    bee_plush: 0
+    bug_plush: 0
+    bear_figure: 0
+    flower: 0
+    weapon: 0
+  hungerTime: 0
+  oxygenTime: 0
+  isWorking: 1
+--- !u!114 &1738916994798749956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925039179236981521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd80295d2f5176646a0019bf96aa5b68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawn: {fileID: 0}
+  invetory: {fileID: 0}
+  fastSlots: {fileID: 0}
+  cam: {fileID: 0}
+  sensitivity: 0
+  attackDistance: 0
+  attackDelay: 0
+  attackSpeed: 0
+  attackDamage: 0
+  attackLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  attackForce: 0
+  hitEffect: {fileID: 0}
+  swordSwing: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1 &2799702510219215549
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,7 +345,7 @@ Transform:
   - {fileID: 8696641907284048314}
   - {fileID: 683078231057609023}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3061550900853366052
 GameObject:
