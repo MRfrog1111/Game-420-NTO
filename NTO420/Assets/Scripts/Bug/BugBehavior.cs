@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Timeline;
+using UnityEngine.AI; 
 
 public class BugBehavior : MonoBehaviour
 {
@@ -25,6 +26,10 @@ public class BugBehavior : MonoBehaviour
 
     public GameObject deathSpawner;
     
+    public NavMeshAgent agent;
+    [SerializeField] private  float range; 
+
+    private Transform centrePoint; 
     public static event Action<int> OnDeath;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -32,14 +37,61 @@ public class BugBehavior : MonoBehaviour
     {
         animator = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody>();
+        agent = GetComponent<NavMeshAgent>();
+        centrePoint = transform;
     }
 
-    // Update is called once per frame
-   /* void FixedUpdate()
+    // Update is called once per fram
+
+    
+    void Update()
     {
-        if (movingState == 1)
+        if(agent.remainingDistance <= agent.stoppingDistance) 
         {
-            movingState = 1;
+            if (movingState == 0)
+            {
+                Vector3 point;
+                if (RandomPoint(centrePoint.position, range, out point))
+                {
+                    Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
+                    agent.SetDestination(point);
+                }
+            }
+           /* else if (gameObject.GetComponent<BugBehavior>().movingState == 0)
+            {
+                Vector3 point = 
+                if (Vector3.Distance(transform.position, player.transform.position) <= maxDistance)
+                {
+                    Attack();
+                    print("attack");
+                }
+            }*/
+        }
+
+
+        
+
+    }
+    bool RandomPoint(Vector3 center, float range, out Vector3 result)
+    {
+
+        Vector3 randomPoint = center + UnityEngine.Random.insideUnitSphere * range; 
+        NavMeshHit hit;
+        if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas)) 
+        { 
+            result = hit.position;
+            return true;
+        }
+
+        result = Vector3.zero;
+        return false;
+    }
+
+  void FixedUpdate()
+    {
+        /*if (movingState == 1)
+        {
+           // movingState = 1;
             transform.LookAt(player.transform);
             rb.MovePosition(transform.position + transform.forward * Time.deltaTime * speed);
             if (Vector3.Distance(transform.position, player.transform.position) <= maxDistance)
@@ -47,8 +99,20 @@ public class BugBehavior : MonoBehaviour
                 Attack();
                 print("attack");
             }
+        }*/
+        if (movingState == 1)
+        {
+            if (agent.remainingDistance <= maxDistance)
+            {
+                Attack();
+                print("attack");
+            }
+            else
+            {
+                agent.SetDestination(player.transform.position);
+            }
         }
-    }*/
+    }
 
     public void ChangeAnimationState(string newState)
     {
@@ -72,9 +136,10 @@ public class BugBehavior : MonoBehaviour
     private IEnumerator waitAttack(float time)
     {
         yield return new WaitForSecondsRealtime(time);
-        movingState = 1;
         ChangeAnimationState("Walk");
         attackHitbox.SetActive(false);
+        movingState = 1;
+        agent.SetDestination(player.transform.position);
     }
 
     private void OnCollisionEnter(Collision coll)
@@ -90,6 +155,7 @@ public class BugBehavior : MonoBehaviour
     {
         if (coll.tag == "Player")
         {
+            agent.SetDestination(Vector3.zero);
             player = coll.gameObject;
             movingState = 1;
         }
@@ -99,6 +165,7 @@ public class BugBehavior : MonoBehaviour
     {
         if (coll.tag == "Player")
         {
+            agent.SetDestination(Vector3.zero);
             movingState = 0;
             ChangeAnimationState("Walk");
         }

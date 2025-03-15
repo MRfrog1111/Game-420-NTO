@@ -20,11 +20,18 @@ public class RandomMovement : MonoBehaviour
     {
         if(agent.remainingDistance <= agent.stoppingDistance) 
         {
-            Vector3 point;
-            if (RandomPoint(centrePoint.position, range, out point)) 
+            if (gameObject.GetComponent<BugBehavior>().movingState == 0)
             {
-                Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f); 
-                agent.SetDestination(point);
+                Vector3 point;
+                if (RandomPoint(centrePoint.position, range, out point))
+                {
+                    Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
+                    agent.SetDestination(point);
+                }
+            }
+            else if (gameObject.GetComponent<BugBehavior>().movingState == 0)
+            {
+                //Vector3 point = 
             }
         }
 
