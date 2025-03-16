@@ -17,7 +17,7 @@ public class HP : MonoBehaviour
                 {
                     case "Player":
                         //gameObject.transform.position = new Vector3(1,1,1);
-                        gameObject.GetComponent<MC_attack>().Death();
+                        //gameObject.GetComponent<MC_attack>().Death();
                         currentHp = maxHp;
                         break;
                     case "Bug":

@@ -3,8 +3,8 @@ namespace DefaultNamespace
     [System.Serializable]
     public struct PlayerResources
     {
-        public int hp;
-        public int oxygen;
+        public float hp;
+        public float oxygen;
         public float food;
         public int honey;
         public int wax;
