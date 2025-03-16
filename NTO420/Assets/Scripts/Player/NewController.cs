@@ -13,13 +13,16 @@ public class NewController : MonoBehaviour
     [SerializeField] private float walkSpeed = 4f;
     [SerializeField] private float runSpeed = 4f;
     [SerializeField] private float acceleration = 10f;
+    [SerializeField] private float fovChaneg = 10f;
 
     [Header("Other Things")]
     [SerializeField] private float movementMultiply = 10f;
     [SerializeField] private float airMultiply = 0.4f;
     [SerializeField] private LayerMask layerGround;
     [SerializeField] private Transform groundCheck;
-    [SerializeField] Transform orientaition;
+    [SerializeField] private Transform orientaition;
+    [SerializeField] private Transform player;
+    [SerializeField] private Camera cam;
 
     private float horzintalMovement;
     private float verticalMovement;
@@ -27,6 +30,7 @@ public class NewController : MonoBehaviour
 
     private float plauerHeight;
     private float groundDistance = 0.4f;
+    private float fov = 80f;
 
     private float groundDrag = 6f;
     private float airDrag = 2f;
@@ -60,6 +64,15 @@ public class NewController : MonoBehaviour
             Jump();
         }
 
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            Sit();
+        }
+        else
+        {
+            Stay();
+        }
+
         slopeMoveDirection = Vector3.ProjectOnPlane(moveDirection, slopeHit.normal);
     }
 
@@ -86,7 +99,11 @@ public class NewController : MonoBehaviour
 
     private void Sit()
     {
-        
+        transform.localScale = new Vector3(0, plauerHeight / 2, 0);
+    }
+    private void Stay()
+    {
+        transform.localScale = new Vector3(0, plauerHeight, 0);
     }
 
     private void MyInput()
@@ -121,11 +138,12 @@ public class NewController : MonoBehaviour
         if(Input.GetKey(KeyCode.LeftShift) && isGrounded)
         {
             MoveSpeed = Mathf.Lerp(MoveSpeed, runSpeed, acceleration * Time.deltaTime);
+            cam.fieldOfView = Mathf.Lerp(fov, fov + 20f, fovChaneg);
         }
         else
         {
             MoveSpeed = Mathf.Lerp(MoveSpeed, walkSpeed, acceleration * Time.deltaTime);
-
+            cam.fieldOfView = Mathf.Lerp(fov + 20f, fov, fovChaneg);
         }
     }
 
