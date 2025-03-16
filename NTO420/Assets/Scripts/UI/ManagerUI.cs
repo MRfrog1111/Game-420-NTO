@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class ManagerUI : MonoBehaviour
 {
-    public GameObject Inventory;
-    //public GameObject Setings;
+    public GameObject InventorySlots;
+    public GameObject InventoryInterface;
+
+    public GameObject Setings;
     public GameObject PauseMenu;
     public GameObject CraftMenu;
     public GameObject ShopUI;
@@ -14,15 +16,17 @@ public class ManagerUI : MonoBehaviour
     private GameObject currentWindow;
 
 
-    private bool canOpen = true;
+    public bool canOpen = true;
     public bool isWorking = true;
 
 
     private void Awake()
     {
-        Inventory.SetActive(true);
-        Inventory.SetActive(false);
-        //Setings.SetActive(false);
+        InventorySlots.SetActive(true);
+        InventoryInterface.SetActive(true);
+        InventorySlots.SetActive(false);
+        InventoryInterface.SetActive(false);
+        Setings.SetActive(false);
         PauseMenu.SetActive(false);
         CraftMenu.SetActive(false);
         Tasks.SetActive(false);
@@ -34,7 +38,8 @@ public class ManagerUI : MonoBehaviour
         {
             if (canOpen && isWorking)
             {
-                Open(Inventory);
+               
+                Open(InventorySlots);
             }
             else
             {
@@ -76,13 +81,24 @@ public class ManagerUI : MonoBehaviour
                 Close(currentWindow);
             }
         }
-        
+        if (Input.GetKeyDown(KeyCode.Q) && isWorking)
+        {
+            if (canOpen)
+            {
+                Open(Setings);
+            }
+            else
+            {
+                Close(currentWindow);
+            }
+        }
+
     }
 
    
         public void Open(GameObject window)
         {
-            if (window != null && canOpen)
+            if (window != null && canOpen )
             {
                 window.SetActive(true);
                 canOpen = false;
@@ -92,6 +108,8 @@ public class ManagerUI : MonoBehaviour
                 //CraftMenu.SetActive(true);
                 Time.timeScale = 0f;
                 currentWindow = window;
+                if(window == InventorySlots)
+                    InventoryInterface.SetActive(true);
             }
         }
 
@@ -107,6 +125,8 @@ public class ManagerUI : MonoBehaviour
                 //CraftMenu.SetActive(true);
                 Time.timeScale = 1f;
                 currentWindow = null;
+                if (window == InventorySlots)
+                    InventoryInterface.SetActive(false);
             }
         }
 
