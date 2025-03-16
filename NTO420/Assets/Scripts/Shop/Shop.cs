@@ -10,13 +10,20 @@ using UnityEngine.UI;
 public class Shop : MonoBehaviour
 {
     [SerializeField] private ShopRequests shopReq;
-    private PlayerStats stats;
-    public TextMeshProUGUI[] shopText;
+    private PlayerStats stats; 
+    public  List<TextMeshProUGUI> shopText;
+    private ConnectWithShop connectWithShop;
     public GameObject[] decoratives;
     private ShopStruct shop;
     void Start()
     {
-        stats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        stats = player.GetComponent<PlayerStats>();
+        connectWithShop = player.GetComponent<ConnectWithShop>();
+        for(int i = 0; i < connectWithShop.buttons.Count; i++)
+        {
+            shopText.Add(connectWithShop.buttons[i]);
+        }
         shop = new ShopStruct()
         {
             name = "shop1",
@@ -30,7 +37,7 @@ public class Shop : MonoBehaviour
                 
             }
         };
-        shopText.Add;
+        //print("testShop" + shopText.Count);
         StartCoroutine(shopReq.UpdateShopResources(shop.resources));
        // StartCoroutine(playerReq.GetPlayerResources(GetPLayerRes)); 
         StartCoroutine(shopReq.GetShop(GetShopRes));
