@@ -10,7 +10,7 @@ public class CharacterEnabler : MonoBehaviour
     {
        // gameObject.GetComponent<MeshRenderer>().enabled = isActive;
         gameObject.GetComponent<CharacterController>().enabled = isActive;
-        gameObject.GetComponent<Controller>().enabled = isActive;
+        //gameObject.GetComponent<Controller>().enabled = isActive;
         gameObject.GetComponent<MC_attack>().enabled = isActive;
         gameObject.GetComponent<PlayerStats>().isActive=isActive;
         for (int i = 0; i < transform.childCount; i++)

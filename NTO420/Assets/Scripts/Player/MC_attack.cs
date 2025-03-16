@@ -157,7 +157,7 @@ public class MC_attack : MonoBehaviour
         Destroy(GO, 20);
     }*/
 
-    /*public void Death()
+    public void Death()
     {
         /*gameObject.GetComponent<Controller>().enabled = false;
         gameObject.GetComponent<CharacterController>().enabled = false;*/
@@ -166,6 +166,6 @@ public class MC_attack : MonoBehaviour
         gameObject.GetComponent<CharacterController>().enabled = true;*/
         //gameObject.SetActive(true);
         print("Lox umer");
-    }*/
+    }
 }
 
