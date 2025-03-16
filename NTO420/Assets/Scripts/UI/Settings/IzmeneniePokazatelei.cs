@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class IzmeneniePokazatelei : MonoBehaviour
 {
-    
+    private PlayerStats playerRes;
+
     [SerializeField] private Image hp;
     [SerializeField] private Image oxygen;
     [SerializeField] private Image food;
@@ -19,14 +20,14 @@ public class IzmeneniePokazatelei : MonoBehaviour
 
     public void IzmenenieHP()
     {
-        hp.fillAmount = PlayerResources.hp / 100;
+        hp.fillAmount = playerRes.resources.hp / 100;
     }
     public void IzmenenieOxygen()
     {
-        oxygen.fillAmount = PlayerResources.hp / 100;
+        oxygen.fillAmount = playerRes.resources.oxygen / 100;
     }
     public void IzmenenieFood()
     {
-        food.fillAmount = PlayerResources.hp / 100;
+        food.fillAmount = playerRes.resources.food / 100;
     }
 }
