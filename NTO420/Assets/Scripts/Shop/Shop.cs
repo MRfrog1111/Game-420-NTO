@@ -30,6 +30,7 @@ public class Shop : MonoBehaviour
                 
             }
         };
+        shopText.Add;
         StartCoroutine(shopReq.UpdateShopResources(shop.resources));
        // StartCoroutine(playerReq.GetPlayerResources(GetPLayerRes)); 
         StartCoroutine(shopReq.GetShop(GetShopRes));

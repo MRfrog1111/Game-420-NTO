@@ -143,10 +143,11 @@ public class Craft : MonoBehaviour
                 {
                     case "Home":
                         stats.resources.living_module = 1;
-                        GoToPuzzle();
+                        GoToPuzzle(1);
                         break;
                     case "Honey":
                         stats.resources.apiary_module = 1; 
+                        GoToPuzzle(2);
                         break;
                     default:
                         break;
@@ -157,9 +158,9 @@ public class Craft : MonoBehaviour
         }
     }
 
-    void GoToPuzzle()
+    void GoToPuzzle(int puzzleNum)
     {
-      player.GetComponent<CharacterEnabler>().GotoPuzzle(1);
+      player.GetComponent<CharacterEnabler>().GotoPuzzle(puzzleNum);
     }
 }
 

@@ -51,7 +51,7 @@ public class Tutorial: MonoBehaviour
            pasekaButton.SetActive(true);
            CheckStage();
        }
-       else if (stats.resources.stage == 4)
+      /* else if (stats.resources.stage == 4)
        {
            if (stats.resources.apiary_module >= neededRes[0].apiary_module)
            {
@@ -59,7 +59,7 @@ public class Tutorial: MonoBehaviour
                isCompleted = true;
                CheckStage();
            }
-       }
+       }*/
        else if (stats.resources.stage == 5 && isGotHoney)
        {
            isCompleted = true;
@@ -105,13 +105,13 @@ public class Tutorial: MonoBehaviour
         {
             isCompleted = true;
         }*/
-        else if (stats.resources.stage == 4)
+      /*  else if (stats.resources.stage == 4)
         {
             if (stats.resources.apiary_module >= neededRes[0].apiary_module)
             {
                 isCompleted = true;
             }
-        }
+        }*/
       
         if (isCompleted && stats.resources.stage < tasks.Length)
         {

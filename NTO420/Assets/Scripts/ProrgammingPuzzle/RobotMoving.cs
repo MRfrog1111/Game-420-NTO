@@ -23,6 +23,8 @@ public class RobotMoving : MonoBehaviour
     private Sprite defaultSprite;
 
     private Vector3 startRotation;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
