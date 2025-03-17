@@ -127,11 +127,7 @@ public class CollectResource : MonoBehaviour
                     slot.itemCountText.text = slot.count.ToString();
                     //
                 }
-                else
-                {
-                    return;
-                }
-                break;
+                continue;
             }
         }
         

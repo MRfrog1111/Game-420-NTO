@@ -6,23 +6,25 @@ using UnityEngine;
 public class NewController : MonoBehaviour
 {
 
-
     [Header("Player Meaning")]
     public float MoveSpeed = 6f;
     public float jumpForce = 10f;
     [SerializeField] private float walkSpeed = 4f;
     [SerializeField] private float runSpeed = 4f;
     [SerializeField] private float acceleration = 10f;
-    [SerializeField] private float fovChaneg = 10f;
+    [SerializeField] private float fovChangeSpeed = 10f;
 
     [Header("Other Things")]
     [SerializeField] private float movementMultiply = 10f;
     [SerializeField] private float airMultiply = 0.4f;
-    [SerializeField] private LayerMask layerGround;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private Transform orientaition;
     [SerializeField] private Transform player;
     [SerializeField] private Camera cam;
+    [SerializeField] private LayerMask layerGround;
+    [SerializeField] private AudioClip soundWalk;
+    [SerializeField] private List<LayerMask> layerForSound;
+    [SerializeField] private List<AudioClip> soundForWalk;
 
     private float horzintalMovement;
     private float verticalMovement;
@@ -30,7 +32,11 @@ public class NewController : MonoBehaviour
 
     private float plauerHeight;
     private float groundDistance = 0.4f;
-    private float fov = 80f;
+
+    private float initialFov = 80f;
+    private float desiredFov = 100f;
+    private float currentFov;
+
 
     private float groundDrag = 6f;
     private float airDrag = 2f;
@@ -135,17 +141,20 @@ public class NewController : MonoBehaviour
 
     private void ControlSpeed()
     {
-        if(Input.GetKey(KeyCode.LeftShift) && isGrounded)
+        if (Input.GetKey(KeyCode.LeftShift) && isGrounded)
         {
             MoveSpeed = Mathf.Lerp(MoveSpeed, runSpeed, acceleration * Time.deltaTime);
-            cam.fieldOfView = Mathf.Lerp(fov, fov + 20f, fovChaneg);
+            currentFov = Mathf.Lerp(currentFov, desiredFov, fovChangeSpeed * Time.deltaTime);
+            cam.fieldOfView = currentFov;
         }
         else
         {
             MoveSpeed = Mathf.Lerp(MoveSpeed, walkSpeed, acceleration * Time.deltaTime);
-            cam.fieldOfView = Mathf.Lerp(fov + 20f, fov, fovChaneg);
+            currentFov = Mathf.Lerp(currentFov, initialFov, fovChangeSpeed * Time.deltaTime);
+            cam.fieldOfView = currentFov;
         }
     }
+
 
     private void ControllDrag()
     {
@@ -165,6 +174,23 @@ public class NewController : MonoBehaviour
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
     }
 
-    
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(MoveSpeed != 0)
+        {
+            for (int i = layerForSound.Count - 1; i < layerForSound.Count; i++)
+            {
+                if(collision.gameObject.layer == layerForSound[i])
+                {
+                   soundWalk = soundForWalk[i];
+                   
+                }
+            }
+        }
+        else
+        {
+            soundWalk = null;
+        }
+    }
 
 }
