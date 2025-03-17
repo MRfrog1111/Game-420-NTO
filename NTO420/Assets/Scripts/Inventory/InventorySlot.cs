@@ -13,14 +13,7 @@ public class SlotInventory : MonoBehaviour
     public TMP_Text itemCountText;
     public PlayerStats stats;
 
-    [SerializeField] private TMP_Text opis;
-    [SerializeField] private TMP_Text nameItem;
-
-    private void Start()
-    {
-        opis.text = "";
-        nameItem.text = "";
-    }
+    
     /*void ChangeText(){
         if (item != null)
         {
@@ -66,7 +59,7 @@ public class SlotInventory : MonoBehaviour
         _icon.GetComponent<Image>().color = new Color(1, 1, 1, 1);
         _icon.GetComponent<Image>().sprite = icon;
     }
-
+    /*
     public void SetDiscription()
     {
         if (item == null)
@@ -78,5 +71,5 @@ public class SlotInventory : MonoBehaviour
 
         nameItem.text = item.name;
         opis.text = item.itemDescription;
-    }
+    }*/
 }
