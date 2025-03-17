@@ -13,7 +13,7 @@ public class Tutorial: MonoBehaviour
     [SerializeField] private string [] tasks;
    // private PlayerResources currentRes;
     private bool isCompleted = false;
-    [SerializeField] private TextMeshProUGUI [] completedTasks;
+    [SerializeField] private Text [] completedTasks;
     private bool isPressedC = false;
     public bool isGotHoney;
     public bool isUsedGenerator;
