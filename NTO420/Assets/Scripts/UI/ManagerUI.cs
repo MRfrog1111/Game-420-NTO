@@ -13,6 +13,7 @@ public class ManagerUI : MonoBehaviour
     public GameObject CraftMenu;
     public GameObject ShopUI;
     public GameObject Tasks;
+    
     private GameObject currentWindow;
 
 
@@ -30,6 +31,7 @@ public class ManagerUI : MonoBehaviour
         PauseMenu.SetActive(false);
         CraftMenu.SetActive(false);
         Tasks.SetActive(false);
+        
     }
 
     private void Update()
@@ -108,7 +110,8 @@ public class ManagerUI : MonoBehaviour
                 //CraftMenu.SetActive(true);
                 Time.timeScale = 0f;
                 currentWindow = window;
-                if(window == InventorySlots)
+                
+                if (window == InventorySlots)
                     InventoryInterface.SetActive(true);
             }
         }
@@ -125,6 +128,7 @@ public class ManagerUI : MonoBehaviour
                 //CraftMenu.SetActive(true);
                 Time.timeScale = 1f;
                 currentWindow = null;
+                
                 if (window == InventorySlots)
                     InventoryInterface.SetActive(false);
             }

@@ -71,7 +71,7 @@ public class MC_attack : MonoBehaviour
 
         // PLAY THE ANIMATION //
         currentAnimationState = newState;
-        animator.CrossFadeInFixedTime(currentAnimationState, 0.2f);
+        //animator.CrossFadeInFixedTime(currentAnimationState, 0.2f);
     }
 
     void SetAnimations()
