@@ -13,12 +13,13 @@ public class HP : MonoBehaviour
             currentHp -= damage;
             if (currentHp <= 0)
             {
+                print("death"+gameObject.tag);
                 switch (gameObject.tag)
                 {
-                    case "Player":
+                    case "Player1":
                         //gameObject.transform.position = new Vector3(1,1,1);
-                        //gameObject.GetComponent<MC_attack>().Death();
                         currentHp = maxHp;
+                        gameObject.GetComponentInParent<MC_attack>().Death();
                         break;
                     case "Bug":
                         gameObject.GetComponent<BugBehavior>().Death();

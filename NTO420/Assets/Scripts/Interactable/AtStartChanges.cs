@@ -13,10 +13,10 @@ public class AtStartChanges : MonoBehaviour
     {
          player = GameObject.FindGameObjectWithTag("Player");
          print(player.name);
-         player.GetComponent<CharacterController>().enabled = false;
+//         player.GetComponent<CharacterController>().enabled = false;
          //player.GetComponent<Controller>().enabled = false;
          player.transform.position = new Vector3(0, 15, 0);
-         player.GetComponent<CharacterController>().enabled = true;
+         //player.GetComponent<CharacterController>().enabled = true;
         //player.GetComponent<Controller>().enabled = true;
          craft.FirstUpdate();
          player.GetComponentInChildren<Tutorial>().FirstUpdate();

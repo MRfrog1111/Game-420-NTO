@@ -11,9 +11,9 @@ public class Bite : MonoBehaviour
    private void OnTriggerEnter(Collider coll)
    {
       gameObject.GetComponent<AudioSource>().PlayOneShot(bite);
-      if (coll.CompareTag("Player"))
+      if (coll.CompareTag("Player1"))
       {
-         coll.gameObject.GetComponent<HP>().GiveDamage(damage);
+         coll.gameObject.GetComponentInParent<HP>().GiveDamage(damage);
       }
    }
 }

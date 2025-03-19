@@ -18,14 +18,31 @@ public class Craft : MonoBehaviour
 
     void Start()
     {
-        
+        print("updated");
+        player = GameObject.Find("PlayerCompleteEdition");
+        tutor = GameObject.FindObjectOfType<Tutorial>();
+        stats = player.GetComponent<PlayerStats>();
+        print(player.name);
+        print(tutor.name);
+        if (stats.resources.living_module > 0)
+        {
+            buildings[0].SetActive(true);
+            bases[0].SetActive(false);
+        }
+        if (stats.resources.apiary_module > 0)
+        {
+            buildings[1].SetActive(true);
+            bases[1].SetActive(false);
+        }
     }
     public void FirstUpdate()
     {
         print("updated");
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.Find("PlayerCompleteEdition");
         tutor = GameObject.FindObjectOfType<Tutorial>();
         stats = player.GetComponent<PlayerStats>();
+        print(player.name);
+        print(tutor.name);
         if (stats.resources.living_module > 0)
         {
             buildings[0].SetActive(true);
@@ -52,6 +69,7 @@ public class Craft : MonoBehaviour
     public void CraftBuilding(int buildingNum)
     {
         AddBase(bases[buildingNum], buildings);
+        //print("step2");
     }
 
     public void AddBase(GameObject _base, GameObject[] builds)
@@ -69,10 +87,13 @@ public class Craft : MonoBehaviour
                 {
                     foreach (SlotInventory slot in FindObjectsOfType<CollectResource>()[0].slots)
                     {
+                        print(FindObjectsOfType<CollectResource>()[0].name + " " + FindObjectsOfType<CollectResource>()[0].transform.parent.name);
                         int resursesCount = 0;
                         if (slot.isEmpty) continue;
+                        print("test4" + slot.item.name+ " "+builds[i].GetComponent<BuildItem>().buildItem.buildResurses[j].buildObject.name);
                         if (slot.item == builds[i].GetComponent<BuildItem>().buildItem.buildResurses[j].buildObject)
                         {
+                            print("slot test "+slot.item.name);
                             resursesCount += slot.count;
                             l = i;
                             
@@ -80,13 +101,14 @@ public class Craft : MonoBehaviour
                         if (resursesCount >= builds[i].GetComponent<BuildItem>().buildItem.buildResurses[j].buildObjectCount) canBuild++;
                     }
                 }
-                }
+            }
         }
+        print("canBuild "+canBuild+" "+builds[l].GetComponent<BuildItem>().buildItem.buildResurses.Count);
         if (canBuild >= builds[l].GetComponent<BuildItem>().buildItem.buildResurses.Count)
         {
             _base.SetActive(false);
             buildings[l].gameObject.SetActive(true);
-            //print("a");
+            print("a");
             for (int j = 0; j < builds[l].GetComponent<BuildItem>().buildItem.buildResurses.Count; j++)
             {
                 minus = builds[l].GetComponent<BuildItem>().buildItem.buildResurses[j].buildObjectCount;
@@ -160,6 +182,7 @@ public class Craft : MonoBehaviour
 
     void GoToPuzzle(int puzzleNum)
     {
+        print("tp");
       player.GetComponent<CharacterEnabler>().GotoPuzzle(puzzleNum);
     }
 }

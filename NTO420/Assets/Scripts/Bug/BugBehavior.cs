@@ -142,18 +142,20 @@ public class BugBehavior : MonoBehaviour
         agent.SetDestination(player.transform.position);
     }
 
-    private void OnCollisionEnter(Collision coll)
+  /*  private void OnCollisionEnter(Collision coll)
     {
-        if (coll.collider.tag == "Player")
+        if (coll.gameObject.name == "Player")
         {
             //coll.gameObject.GetComponent<HP>().GiveDamage(damage);
             //movingState = 1;
         }
-    }
+    }*/
 
     private void OnTriggerEnter(Collider coll)
     {
-        if (coll.tag == "Player")
+        print("bug"+coll.gameObject.name);
+        print("bugtag"+coll.gameObject.tag);
+        if (coll.CompareTag("Player1"))
         {
             agent.SetDestination(Vector3.zero);
             player = coll.gameObject;
@@ -163,7 +165,7 @@ public class BugBehavior : MonoBehaviour
 
     private void OnTriggerExit(Collider coll)
     {
-        if (coll.tag == "Player")
+        if (coll.CompareTag("Player1"))
         {
             agent.SetDestination(Vector3.zero);
             movingState = 0;

@@ -11,7 +11,7 @@ public class ConnectWithCraft : MonoBehaviour
         print("step1");
     }
 
-    public void CrafHonetEssence()
+    public void CrafHoneyEssence()
     {
         GameObject craftEssence = GameObject.FindObjectOfType<CraftHoneyEssence>().gameObject;
         craftEssence.GetComponent<CraftHoneyEssence>().CraftEssence();

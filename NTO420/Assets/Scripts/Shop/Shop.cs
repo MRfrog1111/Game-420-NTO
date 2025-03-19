@@ -87,13 +87,13 @@ public class Shop : MonoBehaviour
         {
             case "atmosferic_filter":
                // print(shop.resources.quantum_beacon_of_return);
-                if (shop.resources.atmospheric_filter == 1 && stats.resources.honey_esence >= 15)
+                if (shop.resources.atmospheric_filter == 1 && stats.resources.honey_esence >= 5)
                 {
                     //print("you can buy it");
                     shop.resources.atmospheric_filter = 0;
                     stats.resources.atmospheric_filter = 1;
                     stats.resources.oxygen = 100;
-                    stats.resources.honey_esence -= 15;
+                    stats.resources.honey_esence -= 5;
                     stats.UpdateRes();
                     ShopChangesLogs sc = new ShopChangesLogs()
                     {

@@ -39,20 +39,20 @@ public class MC_attack : MonoBehaviour
         
         if(Input.GetMouseButtonDown(0))
         {
-            if(!invetory.InventorySlots.activeSelf)
+           /* if(!invetory.InventorySlots.activeSelf)
             {
-                if (fastSlots.activeSlot != null)
+                /*if (fastSlots.activeSlot != null)
                 {
-                    if (fastSlots.activeSlot.item.itemType == ItemType.Weapon)
+                  /*  if (fastSlots.activeSlot.item.itemType == ItemType.Weapon)
                     {
                         if (fastSlots.activeSlot.item != null)
-                        {
+                        {*/
                             Attack();
                             swordSwing.Play();
-                        }
-                    }
-                }
-            }
+                        //}
+                    //}
+                //}
+            //}
         }
 
         SetAnimations();

@@ -135,14 +135,14 @@ public class CollectResource : MonoBehaviour
         {
             if (slot.isEmpty == true)
             {
-               // print(_item.name + _count);
+                //print("collected");
                 slot.item = _item;
                 slot.count = _count;
                 slot.isEmpty = false;
                 slot.SetIcon(_item.icon);
                 if(slot.item.maxCount != 1)
                     slot.itemCountText.text = _count.ToString();
-               
+                print(slot.gameObject.name + " " +slot.count);
                 switch (_item.name)
                 {
                     case "Honey":

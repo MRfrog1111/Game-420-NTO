@@ -18,7 +18,7 @@ public class ManagerUI : MonoBehaviour
 
     public bool canOpen = true;
     public bool isWorking = true;
-    private bool CraftMenuOpen = false;
+
 
     private void Awake()
     {
@@ -133,7 +133,7 @@ public class ManagerUI : MonoBehaviour
         public void OpenCraftMenu()
         {
 
-            if (!CraftMenuOpen)
+           /* if (!CraftMenuOpen)
             {
                 print("open");
                 Cursor.visible = true;
@@ -142,7 +142,7 @@ public class ManagerUI : MonoBehaviour
                 CraftMenu.SetActive(true);
                 Time.timeScale = 0f;
                 //canOpen = !canOpen;
-            }
+            }*/
             if (canOpen && isWorking)
             {
                 Open(CraftMenu);
