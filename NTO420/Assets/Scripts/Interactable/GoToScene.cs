@@ -8,9 +8,10 @@ public class GoToScene : MonoBehaviour
     [SerializeField] private string sceneName;
     void OnTriggerEnter(Collider coll)
     {
-        if (coll.gameObject.tag == "Player")
+        print(coll.tag);
+        if (coll.CompareTag("Player1"))
         {
-            coll.gameObject.GetComponent<PlayerStats>().resources.stage++;
+            coll.gameObject.GetComponentInParent<PlayerStats>().resources.stage++;
             SceneManager.LoadScene(sceneName);
         }
     }
