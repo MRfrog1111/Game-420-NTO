@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,7 +18,14 @@ public class CharacterEnabler : MonoBehaviour
         {
             if (transform.GetChild(i).gameObject.name != "TutorialGleb (1)")
             {
-                transform.GetChild(i).gameObject.SetActive(isActive);
+                if (transform.GetChild(i).gameObject.name == "UI1")
+                {
+                    transform.GetChild(i).gameObject.SetActive(false);
+                }
+                else
+                {
+                    transform.GetChild(i).gameObject.SetActive(isActive);
+                }
             }
         }
     }

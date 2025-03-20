@@ -44,10 +44,10 @@ public class RobotMoving : MonoBehaviour
             {
                 robot.transform.position =
                     Vector3.MoveTowards(robot.transform.position, target, speed *Time.deltaTime);
-                print("time"+Time.deltaTime);
+                //print("time"+Time.deltaTime);
                 if (Vector3.Distance(robot.transform.position, target) <= 0.0001)
                 {
-                    print("target");
+                    //print("target");
                     isRobotMoving = false;
                     ChangeState();
                 }
@@ -108,7 +108,7 @@ public class RobotMoving : MonoBehaviour
                 target = new Vector3(robot.transform.position.x, robot.transform.position.y, robot.transform.position.z+plusPos);
                 break;
         }
-        print("target" + target);
+        //print("target" + target);
         isRobotMoving = true;
     }
 
@@ -125,7 +125,7 @@ public class RobotMoving : MonoBehaviour
             IsProgrammRunning = false;
             isRobotMoving = false;
             gameObject.GetComponent<SpriteRenderer>().sprite = gameOverSprite;
-            print("gameOver");
+            //print("gameOver");
         }
         else if (coll.gameObject.name == "Finish")
         {
