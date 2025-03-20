@@ -15,7 +15,7 @@ D:/Новая папка/Game-420-NTO/NTO420
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-51350
+50572
 Successfully changed project path to: D:/Новая папка/Game-420-NTO/NTO420
 D:/Новая папка/Game-420-NTO/NTO420
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,11 +49,11 @@ D:/Новая папка/Game-420-NTO/NTO420
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [5476] Host "[IP] 192.168.0.15 [Port] 0 [Flags] 2 [Guid] 344963931 [EditorId] 344963931 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-E8C2CGB) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [17612] Host "[IP] 192.168.0.15 [Port] 0 [Flags] 2 [Guid] 1410000799 [EditorId] 1410000799 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-E8C2CGB) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [5476] Host "[IP] 192.168.0.15 [Port] 0 [Flags] 2 [Guid] 344963931 [EditorId] 344963931 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-E8C2CGB) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [17612] Host "[IP] 192.168.0.15 [Port] 0 [Flags] 2 [Guid] 1410000799 [EditorId] 1410000799 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-E8C2CGB) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 9.13 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 8.48 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.4f1 (35713cd46cd7)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/Resources/UnitySubsystems
@@ -69,46 +69,46 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56004
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56336
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.010105 seconds.
-- Loaded All Assemblies, in  0.505 seconds
+Registered in 0.010272 seconds.
+- Loaded All Assemblies, in  0.515 seconds
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.407 seconds
-Domain Reload Profiling: 910ms
+- Finished resetting the current domain, in  0.415 seconds
+Domain Reload Profiling: 928ms
 	BeginReloadAssembly (128ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (53ms)
+	RebuildCommonClasses (54ms)
 	RebuildNativeTypeToScriptingClass (18ms)
-	initialDomainReloadingComplete (87ms)
-	LoadAllAssembliesAndSetupDomain (217ms)
-		LoadAssemblies (125ms)
+	initialDomainReloadingComplete (89ms)
+	LoadAllAssembliesAndSetupDomain (224ms)
+		LoadAssemblies (126ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (209ms)
-			TypeCache.Refresh (208ms)
-				TypeCache.ScanAssembly (190ms)
+		AnalyzeDomain (216ms)
+			TypeCache.Refresh (215ms)
+				TypeCache.ScanAssembly (197ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (407ms)
+	FinalizeReload (416ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (318ms)
+		SetupLoadedEditorAssemblies (323ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (14ms)
+			InitializePlatformSupportModulesInManaged (15ms)
 			SetLoadedEditorAssemblies (8ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (3ms)
-			ProcessInitializeOnLoadAttributes (218ms)
-			ProcessInitializeOnLoadMethodAttributes (74ms)
+			ProcessInitializeOnLoadAttributes (221ms)
+			ProcessInitializeOnLoadMethodAttributes (75ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -118,8 +118,8 @@ Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Новая папка\Game-420-NTO\NTO420\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image D:\Новая папка\Game-420-NTO\NTO420\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  1.399 seconds
-Refreshing native plugins compatible for Editor in 3.45 ms, found 3 plugins.
+- Loaded All Assemblies, in  1.137 seconds
+Refreshing native plugins compatible for Editor in 2.74 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Package Manager log level set to [2]
@@ -127,47 +127,47 @@ Package Manager log level set to [2]
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.146 seconds
-Domain Reload Profiling: 2543ms
-	BeginReloadAssembly (203ms)
+- Finished resetting the current domain, in  1.143 seconds
+Domain Reload Profiling: 2279ms
+	BeginReloadAssembly (193ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (10ms)
+		DisableScriptedObjects (9ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (31ms)
+		CreateAndSetChildDomain (33ms)
 	RebuildCommonClasses (51ms)
 	RebuildNativeTypeToScriptingClass (18ms)
 	initialDomainReloadingComplete (62ms)
-	LoadAllAssembliesAndSetupDomain (1062ms)
-		LoadAssemblies (443ms)
+	LoadAllAssembliesAndSetupDomain (811ms)
+		LoadAssemblies (391ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (712ms)
-			TypeCache.Refresh (659ms)
-				TypeCache.ScanAssembly (638ms)
-			ScanForSourceGeneratedMonoScriptInfo (42ms)
+		AnalyzeDomain (508ms)
+			TypeCache.Refresh (464ms)
+				TypeCache.ScanAssembly (446ms)
+			ScanForSourceGeneratedMonoScriptInfo (34ms)
 			ResolveRequiredComponents (10ms)
-	FinalizeReload (1147ms)
+	FinalizeReload (1144ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (855ms)
+		SetupLoadedEditorAssemblies (859ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (9ms)
-			SetLoadedEditorAssemblies (7ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (9ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (115ms)
-			ProcessInitializeOnLoadAttributes (596ms)
-			ProcessInitializeOnLoadMethodAttributes (119ms)
+			BeforeProcessingInitializeOnLoad (138ms)
+			ProcessInitializeOnLoadAttributes (584ms)
+			ProcessInitializeOnLoadMethodAttributes (109ms)
 			AfterProcessingInitializeOnLoad (8ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (9ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
-Refreshing native plugins compatible for Editor in 4.48 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (10ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 5.41 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4622 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 61 unused Assets / (1.6 MB). Loaded Objects now: 5098.
-Memory consumption went from 181.6 MB to 180.1 MB.
-Total: 9.523100 ms (FindLiveObjects: 0.830700 ms CreateObjectMapping: 0.400100 ms MarkObjects: 7.571700 ms  DeleteObjects: 0.719000 ms)
+Unloading 4644 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (1.6 MB). Loaded Objects now: 5120.
+Memory consumption went from 182.3 MB to 180.7 MB.
+Total: 9.562400 ms (FindLiveObjects: 0.767700 ms CreateObjectMapping: 0.429600 ms MarkObjects: 7.642300 ms  DeleteObjects: 0.721000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -184,92 +184,84 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 3677.005084 seconds.
-  path: Assets/PlayerPrefab
-  artifactKey: Guid(2f54f38fd14b3ca489d51c721b12b5dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PlayerPrefab using Guid(2f54f38fd14b3ca489d51c721b12b5dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddb6a906b46d4687b90d4f77f043eae7') in 0.005472 seconds
+  Time since last request: 3440.322891 seconds.
+  path: Assets/Шрифт/Новый шрифт/TT Fellows Trial Black Italic.ttf
+  artifactKey: Guid(78b0535971c68544290c413f31183754) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Шрифт/Новый шрифт/TT Fellows Trial Black Italic.ttf using Guid(78b0535971c68544290c413f31183754) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '942e6ced8620c17df6e3e9dd73aad67a') in 0.181600 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 4
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/PlayerCompleteEdition.prefab
-  artifactKey: Guid(bca0b69202e397b469a7514389041f4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PlayerCompleteEdition.prefab using Guid(bca0b69202e397b469a7514389041f4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '139d3951a30ee9b899708b675fa7d5e3') in 0.840927 seconds
-Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
-To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Шрифт/Новый шрифт/TT Fellows Trial Italic.ttf
+  artifactKey: Guid(aa1624f2557e295488f0bc79f70face3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Шрифт/Новый шрифт/TT Fellows Trial Italic.ttf using Guid(aa1624f2557e295488f0bc79f70face3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4a5413634351296339e00c33da64c05') in 0.015148 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2018
+Number of asset objects unloaded after import = 4
 ========================================================================
 Received Import Request.
-  Time since last request: 411.699780 seconds.
-  path: Assets/audio/Helper/2.wav
-  artifactKey: Guid(f21dfbf2b7d6dff4e9f31c37671a812f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/audio/Helper/2.wav using Guid(f21dfbf2b7d6dff4e9f31c37671a812f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0da263b89435723d52a963731b5f655') in 0.057802 seconds
-Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
-To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Шрифт/Новый шрифт/TT Fellows Trial Thin.ttf
+  artifactKey: Guid(32ab405024bc53145b4086a1dbe30465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Шрифт/Новый шрифт/TT Fellows Trial Thin.ttf using Guid(32ab405024bc53145b4086a1dbe30465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ed811ad544ce3bb1d64d657085cc55f') in 0.017674 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 4
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/audio/Helper/3.wav
-  artifactKey: Guid(56f5b3ad382ae3547b7ace097610dfb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/audio/Helper/3.wav using Guid(56f5b3ad382ae3547b7ace097610dfb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2539f9556f2d14e43c80d84611930625') in 0.017517 seconds
-Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
-To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Шрифт/Новый шрифт/TT Fellows Trial ExtraBold.ttf
+  artifactKey: Guid(d2a699e92e724c54395593fd71c35f57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Шрифт/Новый шрифт/TT Fellows Trial ExtraBold.ttf using Guid(d2a699e92e724c54395593fd71c35f57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0df6745421e337d5c9023a5dbde0a811') in 0.011307 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 4
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/audio/Helper/6.wav
-  artifactKey: Guid(38ce8f595692ef84d9708b88e9305201) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/audio/Helper/6.wav using Guid(38ce8f595692ef84d9708b88e9305201) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a4f59ce3f00b61f17a74a9c9037eb1a') in 0.014856 seconds
-Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
-To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Шрифт/Новый шрифт/TT Fellows Trial DemiBold.ttf
+  artifactKey: Guid(53b9aa9f54624ca4abf80167e039bd80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Шрифт/Новый шрифт/TT Fellows Trial DemiBold.ttf using Guid(53b9aa9f54624ca4abf80167e039bd80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9003ee0a4d6c6bb00053a42012b3bd41') in 0.010357 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 4
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/audio/Helper/10.wav
-  artifactKey: Guid(90d78bc1ceb896e439cfd5e8f6962314) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/audio/Helper/10.wav using Guid(90d78bc1ceb896e439cfd5e8f6962314) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e210b64f508babf69e4199f69159a6a') in 0.016539 seconds
-Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
-To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Шрифт/Новый шрифт/TT Fellows Trial ExtraLight.ttf
+  artifactKey: Guid(7f13385c4ccddbb40a9cca9c2fddff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Шрифт/Новый шрифт/TT Fellows Trial ExtraLight.ttf using Guid(7f13385c4ccddbb40a9cca9c2fddff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9753071e82a8c1c2355878d52701ee5') in 0.011336 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/audio/Helper/12.wav
-  artifactKey: Guid(8a31b732bea9bcd43a5cba2f698bccd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/audio/Helper/12.wav using Guid(8a31b732bea9bcd43a5cba2f698bccd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3ee039d18751890a35d0576a4d3c5ab') in 0.013513 seconds
-Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
-To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 4
 ========================================================================
 Received Import Request.
   Time since last request: 0.000018 seconds.
-  path: Assets/audio/Helper/14.wav
-  artifactKey: Guid(346b5c408a969d841acceadd9cc3b6ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/audio/Helper/14.wav using Guid(346b5c408a969d841acceadd9cc3b6ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfb30fd29ecb12cf3fa78552850a5877') in 0.014502 seconds
-Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
-To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+  path: Assets/Шрифт/Новый шрифт/TT Fellows Trial Light Italic.ttf
+  artifactKey: Guid(b19775fc1a12f134abebe68859080ca5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Шрифт/Новый шрифт/TT Fellows Trial Light Italic.ttf using Guid(b19775fc1a12f134abebe68859080ca5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'baabfcd241349df744040f788d9fe649') in 0.012335 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 4
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/audio/Helper/8.wav
-  artifactKey: Guid(552469ffff5f2d242a044ae1ac16c37d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/audio/Helper/8.wav using Guid(552469ffff5f2d242a044ae1ac16c37d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '188c4cb3fcc69359953258795caa8e1d') in 0.016415 seconds
-Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
-To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Шрифт/Новый шрифт/TT Fellows Trial Variable.ttf
+  artifactKey: Guid(62189d447763e6743b0f3d145088444b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Шрифт/Новый шрифт/TT Fellows Trial Variable.ttf using Guid(62189d447763e6743b0f3d145088444b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '957cbbd5ee9be27541cbb480c9e2deae') in 0.001061 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Шрифт/Новый шрифт/TT Fellows Trial Bold Italic.ttf
+  artifactKey: Guid(77ae46eb4e53a1b42a2d4435fd1b20f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Шрифт/Новый шрифт/TT Fellows Trial Bold Italic.ttf using Guid(77ae46eb4e53a1b42a2d4435fd1b20f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bdac5d7b6aa4649a4ec81c0af46c639') in 0.011449 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/Шрифт/Новый шрифт/TT Fellows Trial Regular.ttf
+  artifactKey: Guid(2943dc2b96240a44eb86de42ad8f6420) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Шрифт/Новый шрифт/TT Fellows Trial Regular.ttf using Guid(2943dc2b96240a44eb86de42ad8f6420) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7ce942ae232b0ee46aef797e758e3f8') in 0.013712 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: �������� �����/������ ���� �������� ��-�� ���������� ������ ������ ��� �� ������� ����������.
 AssetImportWorker is now disconnected from the server
