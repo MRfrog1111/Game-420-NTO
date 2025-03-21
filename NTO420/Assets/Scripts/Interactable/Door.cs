@@ -22,7 +22,7 @@ public class Door : MonoBehaviour
     void Start()
     {
          player = GameObject.FindGameObjectWithTag("Player");
-         playerStats = player.GetComponent<PlayerStats>();
+         playerStats = player.GetComponentInParent<PlayerStats>();
          if (playerStats.resources.stage >= openStage)
          {
              anim.SetTrigger(Open);
@@ -34,20 +34,20 @@ public class Door : MonoBehaviour
     {
         if (canPressButton && Input.GetKeyDown(KeyCode.E)&&playerStats.resources.stage<openStage)
         {
-            player.GetComponent<CharacterEnabler>().GotoPuzzle(1);
+            player.GetComponent<CharacterEnabler>().GotoPuzzle(0);
         }
     }
 
     void OnTriggerEnter(Collider coll)
     {
-        if (coll.CompareTag("Player"))
+        if (coll.CompareTag("Player1"))
         {
            canPressButton = true;
         }
     }
     void OnTriggerExit(Collider coll)
     {
-        if (coll.CompareTag("Player"))
+        if (coll.CompareTag("Player1"))
         {
             canPressButton = false;
         }

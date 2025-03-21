@@ -153,8 +153,8 @@ public class BugBehavior : MonoBehaviour
 
     private void OnTriggerEnter(Collider coll)
     {
-        print("bug"+coll.gameObject.name);
-        print("bugtag"+coll.gameObject.tag);
+       /* print("bug"+coll.gameObject.name);
+        print("bugtag"+coll.gameObject.tag);*/
         if (coll.CompareTag("Player1"))
         {
             agent.SetDestination(Vector3.zero);

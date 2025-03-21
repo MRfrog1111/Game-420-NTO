@@ -24,7 +24,7 @@ public class VideoChek : MonoBehaviour
     {
         if (button != null)
         {
-            if (Input.anyKey)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }

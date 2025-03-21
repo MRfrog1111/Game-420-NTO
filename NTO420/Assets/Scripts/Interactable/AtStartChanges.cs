@@ -20,6 +20,14 @@ public class AtStartChanges : MonoBehaviour
         //player.GetComponent<Controller>().enabled = true;
          craft.FirstUpdate();
          player.GetComponentInChildren<Tutorial>().FirstUpdate();
+         foreach (Transform child in player.transform)
+         {
+             child.transform.localPosition = new Vector3(0, 0, 0);
+             if (child.name == "UI1")
+             {
+                 child.gameObject.SetActive(true);
+             }
+         }
         /* if (player.GetComponent<PlayerStats>().resources.stage > 0)
          {
              tutor = GameObject.FindObjectOfType<Tutorial>();

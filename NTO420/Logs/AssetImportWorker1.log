@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2022.3/staging' branch; Version is '2022.3.4f1 (35713cd46cd7) revision 3502396'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22631) 64bit Professional' Language: 'ru' Physical Memory: 32608 MB
+OS: 'Windows 11  (10.0.26100) 64bit Core' Language: 'ru' Physical Memory: 15619 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
@@ -11,13 +11,13 @@ C:\Program Files\Unity\Hub\Editor\2022.3.4f1\Editor\Unity.exe
 -name
 AssetImportWorker1
 -projectPath
-D:/Новая папка/Game-420-NTO/NTO420
+C:/Users/User/Documents/GitHub/Game-420-NTO/NTO420
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-50572
-Successfully changed project path to: D:/Новая папка/Game-420-NTO/NTO420
-D:/Новая папка/Game-420-NTO/NTO420
+62771
+Successfully changed project path to: C:/Users/User/Documents/GitHub/Game-420-NTO/NTO420
+C:/Users/User/Documents/GitHub/Game-420-NTO/NTO420
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -49,66 +49,64 @@ D:/Новая папка/Game-420-NTO/NTO420
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [17612] Host "[IP] 192.168.0.15 [Port] 0 [Flags] 2 [Guid] 1410000799 [EditorId] 1410000799 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-E8C2CGB) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [8672] Host "[IP] 192.168.0.5 [Port] 0 [Flags] 2 [Guid] 2461002581 [EditorId] 2461002581 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-A74T6J5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [17612] Host "[IP] 192.168.0.15 [Port] 0 [Flags] 2 [Guid] 1410000799 [EditorId] 1410000799 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-E8C2CGB) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [8672] Host "[IP] 192.168.0.5 [Port] 0 [Flags] 2 [Guid] 2461002581 [EditorId] 2461002581 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-A74T6J5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 8.48 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 8.36 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.4f1 (35713cd46cd7)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/Новая папка/Game-420-NTO/NTO420/Assets
+[Subsystems] Discovering subsystems at path C:/Users/User/Documents/GitHub/Game-420-NTO/NTO420/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 3050 (ID=0x2507)
+    Renderer: NVIDIA GeForce RTX 4060 Laptop GPU (ID=0x28a0)
     Vendor:   NVIDIA
-    VRAM:     8042 MB
-    Driver:   32.0.15.7242
+    VRAM:     7957 MB
+    Driver:   32.0.15.6590
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56336
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56036
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.010272 seconds.
-- Loaded All Assemblies, in  0.515 seconds
+Registered in 0.006324 seconds.
+- Loaded All Assemblies, in  0.418 seconds
 Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.415 seconds
-Domain Reload Profiling: 928ms
-	BeginReloadAssembly (128ms)
+- Finished resetting the current domain, in  0.381 seconds
+Domain Reload Profiling: 798ms
+	BeginReloadAssembly (115ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (54ms)
-	RebuildNativeTypeToScriptingClass (18ms)
-	initialDomainReloadingComplete (89ms)
-	LoadAllAssembliesAndSetupDomain (224ms)
-		LoadAssemblies (126ms)
+		CreateAndSetChildDomain (2ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (68ms)
+	LoadAllAssembliesAndSetupDomain (182ms)
+		LoadAssemblies (111ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (216ms)
-			TypeCache.Refresh (215ms)
-				TypeCache.ScanAssembly (197ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
+		AnalyzeDomain (177ms)
+			TypeCache.Refresh (176ms)
+				TypeCache.ScanAssembly (160ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (416ms)
+	FinalizeReload (382ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (323ms)
+		SetupLoadedEditorAssemblies (294ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (15ms)
-			SetLoadedEditorAssemblies (8ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (11ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (3ms)
-			ProcessInitializeOnLoadAttributes (221ms)
-			ProcessInitializeOnLoadMethodAttributes (75ms)
+			ProcessInitializeOnLoadAttributes (196ms)
+			ProcessInitializeOnLoadMethodAttributes (73ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -116,58 +114,57 @@ Domain Reload Profiling: 928ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Новая папка\Game-420-NTO\NTO420\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Новая папка\Game-420-NTO\NTO420\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  1.137 seconds
-Refreshing native plugins compatible for Editor in 2.74 ms, found 3 plugins.
+Symbol file LoadedFromMemory doesn't match image C:\Users\User\Documents\GitHub\Game-420-NTO\NTO420\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\User\Documents\GitHub\Game-420-NTO\NTO420\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.268 seconds
+Refreshing native plugins compatible for Editor in 5.25 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.143 seconds
-Domain Reload Profiling: 2279ms
-	BeginReloadAssembly (193ms)
+- Finished resetting the current domain, in  1.072 seconds
+Domain Reload Profiling: 2337ms
+	BeginReloadAssembly (164ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (9ms)
+		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (33ms)
-	RebuildCommonClasses (51ms)
-	RebuildNativeTypeToScriptingClass (18ms)
-	initialDomainReloadingComplete (62ms)
-	LoadAllAssembliesAndSetupDomain (811ms)
-		LoadAssemblies (391ms)
+		CreateAndSetChildDomain (32ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (54ms)
+	LoadAllAssembliesAndSetupDomain (999ms)
+		LoadAssemblies (635ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (508ms)
-			TypeCache.Refresh (464ms)
-				TypeCache.ScanAssembly (446ms)
-			ScanForSourceGeneratedMonoScriptInfo (34ms)
+		AnalyzeDomain (439ms)
+			TypeCache.Refresh (395ms)
+				TypeCache.ScanAssembly (377ms)
+			ScanForSourceGeneratedMonoScriptInfo (33ms)
 			ResolveRequiredComponents (10ms)
-	FinalizeReload (1144ms)
+	FinalizeReload (1073ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (859ms)
+		SetupLoadedEditorAssemblies (814ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (11ms)
-			SetLoadedEditorAssemblies (9ms)
+			InitializePlatformSupportModulesInManaged (8ms)
+			SetLoadedEditorAssemblies (7ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (138ms)
-			ProcessInitializeOnLoadAttributes (584ms)
-			ProcessInitializeOnLoadMethodAttributes (109ms)
-			AfterProcessingInitializeOnLoad (8ms)
+			BeforeProcessingInitializeOnLoad (106ms)
+			ProcessInitializeOnLoadAttributes (564ms)
+			ProcessInitializeOnLoadMethodAttributes (122ms)
+			AfterProcessingInitializeOnLoad (7ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (10ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 5.41 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (8ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 4.27 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4644 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 61 unused Assets / (1.6 MB). Loaded Objects now: 5120.
-Memory consumption went from 182.3 MB to 180.7 MB.
-Total: 9.562400 ms (FindLiveObjects: 0.767700 ms CreateObjectMapping: 0.429600 ms MarkObjects: 7.642300 ms  DeleteObjects: 0.721000 ms)
+Unloading 4738 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (1.6 MB). Loaded Objects now: 5217.
+Memory consumption went from 185.9 MB to 184.4 MB.
+Total: 5.608300 ms (FindLiveObjects: 0.467300 ms CreateObjectMapping: 0.202000 ms MarkObjects: 4.342800 ms  DeleteObjects: 0.594600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -182,86 +179,556 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: b578ed78b7579936be14385dc1eefddb -> fb49ea37850a73980f6af5f8de311403
+  custom:scripting/monoscript/fileName/RoverAudio.cs:  -> ca5457ff50ebb8ed2b550bec35fb6d2b
+  custom:scripting/monoscript/fileName/Simple_C.cs:  -> dee3285b07405a66a72d443135d9e4b4
+  custom:scripting/monoscript/fileName/TweenRXZ.cs:  -> f82b565918b2cf1d04268c27287464bc
+  custom:scripting/monoscript/fileName/TweenSY.cs:  -> 41edc74aae9e4daa644868563a0903d8
+  custom:scripting/monoscript/fileName/TweenXYZ.cs:  -> 7face060fbb443bdea536e1e4fcab568
+  custom:scripting/monoscript/fileName/TweenS.cs:  -> 0d64a7c146b9db4901affea4a47c2193
+  custom:scripting/monoscript/fileName/TweenVec2T.cs:  -> 1a7ad3b7140ff78df2b338a5df6202ea
+  custom:scripting/monoscript/fileName/Simple_A.cs:  -> 649f9b991fcd42b486fd193a2634ae4c
+  custom:scripting/monoscript/fileName/ParticlesFollowBezier.cs:  -> ea94ac6e53a93f7eb2d48e8bd9259038
+  custom:scripting/monoscript/fileName/TweenVec4.cs:  -> cb952d247a31e3f4483c5ab2eab43cc0
+  custom:scripting/monoscript/fileName/BezierWalkerWithSpeed.cs:  -> ba0d23b1371fba247d6434740ef869bf
+  custom:scripting/monoscript/fileName/PlateformMover.cs:  -> 603b1603f527400550ea3666c90d1dfa
+  custom:scripting/monoscript/fileName/VolumetricExplode.cs:  -> 8f1460c26e2e9a801900e7e3984a5f57
+  custom:scripting/monoscript/fileName/DoubleDoorOpen.cs:  -> 50a685a46ab7b732ad1242b220a0ae95
+  custom:scripting/monoscript/fileName/UniFPSCounter.cs:  -> 91c73525b666caf32b2fb1b0bc5a0e68
+  custom:scripting/monoscript/fileName/BezierWalker.cs:  -> dbcaca00967107006ad06abfbd0fc019
+  custom:scripting/monoscript/fileName/RoverWheelDrive.cs:  -> 48c669bf833e174b02fc31657e96a2f7
+  custom:scripting/monoscript/fileName/TweenZ.cs:  -> 66edb46e13ee48a83221de5ae67ee014
+  custom:scripting/monoscript/fileName/BendMeshAlongBezier.cs:  -> c1fd07ee2d98c7f640688399cc0d791c
+  custom:scripting/monoscript/fileName/TweenSYZ.cs:  -> 97ff3e37a2733c762c400ef46e1937e2
+  custom:scripting/monoscript/fileName/Tween.cs:  -> 144ee074d5ed4074f929c3365d97b97a
+  custom:scripting/monoscript/fileName/KitManager.cs:  -> f8b7088748f90c1c9dafe4e82fbf485e
+  custom:scripting/monoscript/fileName/GameObjectDieAfter.cs:  -> 2358b8c6c13f7dbbf2723146b654dc92
+  custom:scripting/monoscript/fileName/ContainerOpen.cs:  -> 1dd574433bf63cb447b9867a3885765b
+  custom:scripting/monoscript/fileName/SuperMouseLook.cs:  -> 56aea1552a1a9aa76e64f34c41a121ea
+  custom:scripting/monoscript/fileName/TweenXZ.cs:  -> 06c90bf336564d58701c2839db6e5f06
+  custom:scripting/monoscript/fileName/TweenVec1T.cs:  -> c8b6204203d20c59658a4920f8188728
+  custom:scripting/monoscript/fileName/TweenRY.cs:  -> e58071c4cf02fad3abe815fe14b80a7a
+  custom:scripting/monoscript/fileName/TweenNull.cs:  -> e93d983eadbe7ec0d1ae8f9a7042ba9f
+  custom:scripting/monoscript/fileName/WhenShootDie.cs:  -> 5fcc5b4adbbf8e28b7780dcb85e9e43a
+  custom:scripting/monoscript/fileName/RoverSuspension.cs:  -> 3c06e8a281940b5d47c0388c1fdc75a1
+  custom:scripting/monoscript/fileName/Simple_F.cs:  -> 1ec0336133a8fa2dec6b173c159397db
+  custom:scripting/monoscript/fileName/TweenYZ.cs:  -> f0bb9ca1f3ef31c110d1142abdb4b95e
+  custom:scripting/monoscript/fileName/WindowCircularOpen.cs:  -> 8cd3724da0708f037f9669b15648f4be
+  custom:scripting/monoscript/fileName/WardrobeOpen.cs:  -> 559e011e7165730267d9d225b2003290
+  custom:scripting/monoscript/fileName/BezierSpline.cs:  -> 672769dbec3e4ca099df40eda1d8b4c5
+  custom:scripting/monoscript/fileName/TweenVec3.cs:  -> e4de3616118557f3a9c6dd201d3294d2
+  custom:scripting/monoscript/fileName/HudSignalLineFreq.cs:  -> 9abd9abd49758c747da51221ccbe636a
+  custom:scripting/monoscript/fileName/TweenRX.cs:  -> cfae4bb78f3aae7e4f3dd91019d8383e
+  custom:scripting/monoscript/fileName/WindowOpen.cs:  -> 4946f4a949fb7201a311cb2305cc1de0
+  custom:scripting/monoscript/fileName/BezierLineRenderer.cs:  -> 1bb3f38ffb74b59b11b8dc43678d8433
+  custom:scripting/monoscript/fileName/BezierPoint.cs:  -> ca863c9ad5a51a1def87bcd3ae8f50a0
+  custom:scripting/monoscript/fileName/Simple_D.cs:  -> 1c41f4994215465a629ef4021dcb31ec
+  custom:scripting/monoscript/fileName/AnimateSpriteSheet.cs:  -> c68debde7403c1b7810100c5653116ca
+  custom:scripting/monoscript/fileName/DemoFirstPersonController.cs:  -> c699855337d823dea3ef789a8b9577f6
+  custom:scripting/monoscript/fileName/TweenY.cs:  -> 13d9a7bcf21ebccf6220b054d15bb2f2
+  custom:scripting/monoscript/fileName/Simple_B.cs:  -> 545f1b6f996f992344a1254d50b5fcfe
+  custom:scripting/monoscript/fileName/SuperMouseLookZoom.cs:  -> a29b7eed7278d4cbd564521f61ab8634
+  custom:scripting/monoscript/fileName/BezierDataStructures.cs:  -> 94f8e54b68df661c8d45e8cea71cf2f5
+  custom:scripting/monoscript/fileName/ReactorEngine.cs:  -> c191f4132c7511981ec6d3928c15c5d2
+  custom:scripting/monoscript/fileName/TweenRXY.cs:  -> 25c0c646665956462b127b1a9e6cf691
+  custom:scripting/monoscript/fileName/TweenSZ.cs:  -> 57e001f1c8414c8a82bed71f3e0f21b8
+  custom:scripting/monoscript/fileName/ShootHitSomething.cs:  -> d58d747ac5918bb5b4fddd3051f5de84
+  custom:scripting/monoscript/fileName/TweenR3.cs:  -> 05a1128d9c22d07fbfdd9a072dd5516b
+  custom:scripting/monoscript/fileName/TrapFloorOpen.cs:  -> 2896c342d44c7e2321d774e6039c77e8
+  custom:scripting/monoscript/fileName/LedButtonRandText.cs:  -> 6e0ea64c8641deb94eb4b2ca704d2ff7
+  custom:scripting/monoscript/fileName/TweenSXZ.cs:  -> 9aa300a9c1b479b6f37255ab5e861ac4
+  custom:scripting/monoscript/fileName/CrateOpen.cs:  -> 05a3ce1aa8c0bcd1bbffa3db44a86377
+  custom:scripting/monoscript/fileName/TweenRXYZ.cs:  -> 55efd0dc5b2ee3a8da77e530fb2e78fd
+  custom:scripting/monoscript/fileName/ShootExplosionSetup.cs:  -> 0179f28111f475bf3b3fe0fb0557be46
+  custom:scripting/monoscript/fileName/CameraFacingBillboard.cs:  -> 4a2d23092b70776f59ff0e6120db1889
+  custom:scripting/monoscript/fileName/TweenVec3T.cs:  -> 65660b80a1319c7360d920010b3eb178
+  custom:scripting/monoscript/fileName/AddForceAtStart.cs:  -> 8941211a2f1e08855c579a2d0c30e978
+  custom:scripting/monoscript/fileName/TweenRZ.cs:  -> 744406a6eac1f0417ccef046f6e59383
+  custom:scripting/monoscript/fileName/RoverPilotHead.cs:  -> 6263b17b368bf9453f08a6a196314f00
+  custom:scripting/monoscript/fileName/LedButtonSeqText.cs:  -> f3085559e323d057ac4732e0203f2679
+  custom:scripting/monoscript/fileName/TweenSX.cs:  -> 7fe8c3da3637a70ef80a511cb13609b4
+  custom:scripting/monoscript/fileName/FluentSyntax.cs:  -> f379bcc4e26e20ff3841401f88fda8fd
+  custom:scripting/monoscript/fileName/LightSwitch.cs:  -> fb87dae9268cecb47af08aa364ba610e
+  custom:scripting/monoscript/fileName/TurnMove.cs:  -> 0fdd3413b89ad72192010708ce6fb2a0
+  custom:scripting/monoscript/fileName/HangarDoorOpenA.cs:  -> f0572c743b45a216d84deb5eeea066cf
+  custom:scripting/monoscript/fileName/EasyTimer.cs:  -> 1945f31d24d7ae329b2f4c24e3a60936
+  custom:scripting/monoscript/fileName/Teleporter.cs:  -> d985ce36f855c981e05b242e07fef67e
+  custom:scripting/monoscript/fileName/TweenVec2.cs:  -> 5bf1cf891da401bf6c0de09d8eb6a631
+  custom:scripting/monoscript/fileName/TweenX.cs:  -> 0bb7fdb3ce1bc3a49013e03af7d803c1
+  custom:scripting/monoscript/fileName/TweenRYZ.cs:  -> 9ff5f58f7c8dd36114001351edb7b012
+  custom:scripting/monoscript/fileName/TweenSXYZ.cs:  -> 7a5cc2c845001a5bb41c4042003b4d42
+  custom:scripting/monoscript/fileName/BezierWalkerWithTime.cs:  -> b8a198e481dde55a08047a7ef0270a65
+  custom:scripting/monoscript/fileName/AddTorqueAtStart.cs:  -> 4cc2cc051d1dd616652bf0815152517e
+  custom:scripting/monoscript/fileName/TweenXY.cs:  -> 02bf35a016af46cd891b3ec4ae922e92
+  custom:scripting/monoscript/fileName/SmallDoorOpen.cs:  -> fe9532ed1f6810739fce6282f76ad550
+  custom:scripting/monoscript/fileName/ShootFlashLight.cs:  -> ed04fa29b2498908a062e11b9a709308
+  custom:scripting/monoscript/fileName/TweenP.cs:  -> c43c958e350a77b902e2ebd26c3ce35e
+  custom:scripting/monoscript/fileName/ObjectTowardOnlyYaw.cs:  -> 99615ab4c446462204a3d8fe505d7004
+  custom:scripting/monoscript/fileName/ButtonClickAnim.cs:  -> f95acd4447d28c0a16d01aa452b24e6d
+  custom:scripting/monoscript/fileName/TweenR.cs:  -> 4e4dae0e550f16404214b97cdbf26fee
+  custom:scripting/monoscript/fileName/DemoDoor.cs:  -> 5fa7e359f22f8b44debc996f07db607e
+  custom:scripting/monoscript/fileName/CreepyCatTestB.cs:  -> e47624a0666b5931280d3d960fb1fcbc
+  custom:scripting/monoscript/fileName/TweenP3.cs:  -> 7ec07b76aa320d1890073ecc9909c674
+  custom:scripting/monoscript/fileName/Easings.cs:  -> ee351d4c99f2617ef880ec09f6a98217
+  custom:scripting/monoscript/fileName/CreepyCatTest.cs:  -> 44f1b00bbbb0a9c9d6f225f30dd3427d
+  custom:scripting/monoscript/fileName/BezierWalkerLocomotion.cs:  -> 471381719253b74bb49a34645d89d7f3
+  custom:scripting/monoscript/fileName/MinMaxRangeAttribute.cs:  -> f68b0fe6f145b4f4f475d10111b80195
+  custom:scripting/monoscript/fileName/SuperMouseLookFpsCamera.cs:  -> 788e9a3174494dcc096984255c53afba
+  custom:scripting/monoscript/fileName/TweenS3.cs:  -> 6cc9d8f2c60414474e28edbbd99b67be
+  custom:scripting/monoscript/fileName/BezierAttachment.cs:  -> 52d88ff7f633982853e5e3412c4c7b94
+  custom:scripting/monoscript/fileName/ShootLaunchFrom.cs:  -> 1cb43510e4837ff68babc0fffd476a5a
+  custom:scripting/monoscript/fileName/TweenVec1.cs:  -> ea5519e266e44aa407cfea84a5d17407
+  custom:scripting/monoscript/fileName/FlickeringLight.cs:  -> 2bcca4fe51bb5b2ee049be9d2524b58a
+  custom:scripting/monoscript/fileName/TweenSXY.cs:  -> 10781e46849508e59dd4e703572e562e
+  custom:scripting/monoscript/fileName/SelectScreenPicture.cs:  -> 169f0b7dbf5e00463bebc656c6a511ce
 ========================================================================
 Received Import Request.
-  Time since last request: 3440.322891 seconds.
-  path: Assets/Шрифт/Новый шрифт/TT Fellows Trial Black Italic.ttf
-  artifactKey: Guid(78b0535971c68544290c413f31183754) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Шрифт/Новый шрифт/TT Fellows Trial Black Italic.ttf using Guid(78b0535971c68544290c413f31183754) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '942e6ced8620c17df6e3e9dd73aad67a') in 0.181600 seconds
+  Time since last request: 453635.925206 seconds.
+  path: Assets/Prefabs/Player/3_base_color.tga
+  artifactKey: Guid(6713323993a361a44a05cbca9b609508) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player/3_base_color.tga using Guid(6713323993a361a44a05cbca9b609508) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa63adc61af04c90f79c7250e2579e94') in 0.111249 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.167629 seconds.
+  path: Assets/ScifiOfficeLite/Meshes/Sci-Fi Environment/Mechanical Arm 1.FBX
+  artifactKey: Guid(2f3f5fc949fea6f46b038941d7fd2e4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScifiOfficeLite/Meshes/Sci-Fi Environment/Mechanical Arm 1.FBX using Guid(2f3f5fc949fea6f46b038941d7fd2e4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f84f14064b4e2fd9f5323f763db5157') in 0.490467 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 118
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Materials/textures/1 деталь/Metal_Embossed.jpg
+  artifactKey: Guid(8d65926cd6b65034c8b9fe2bd6c97797) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/textures/1 деталь/Metal_Embossed.jpg using Guid(8d65926cd6b65034c8b9fe2bd6c97797) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1bbdff0389d5f3b4264e2a3f18ca055') in 0.025308 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Oswald Bold SDF.asset
+  artifactKey: Guid(33e8916ddfcb84f42af046334d1171cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Oswald Bold SDF.asset using Guid(33e8916ddfcb84f42af046334d1171cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99447accae09b0c1277c1892d39a060b') in 0.115620 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 4
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Шрифт/Новый шрифт/TT Fellows Trial Italic.ttf
-  artifactKey: Guid(aa1624f2557e295488f0bc79f70face3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Шрифт/Новый шрифт/TT Fellows Trial Italic.ttf using Guid(aa1624f2557e295488f0bc79f70face3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4a5413634351296339e00c33da64c05') in 0.015148 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 4
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/Шрифт/Новый шрифт/TT Fellows Trial Thin.ttf
-  artifactKey: Guid(32ab405024bc53145b4086a1dbe30465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Шрифт/Новый шрифт/TT Fellows Trial Thin.ttf using Guid(32ab405024bc53145b4086a1dbe30465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ed811ad544ce3bb1d64d657085cc55f') in 0.017674 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 4
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Шрифт/Новый шрифт/TT Fellows Trial ExtraBold.ttf
-  artifactKey: Guid(d2a699e92e724c54395593fd71c35f57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Шрифт/Новый шрифт/TT Fellows Trial ExtraBold.ttf using Guid(d2a699e92e724c54395593fd71c35f57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0df6745421e337d5c9023a5dbde0a811') in 0.011307 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 4
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Шрифт/Новый шрифт/TT Fellows Trial DemiBold.ttf
-  artifactKey: Guid(53b9aa9f54624ca4abf80167e039bd80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Шрифт/Новый шрифт/TT Fellows Trial DemiBold.ttf using Guid(53b9aa9f54624ca4abf80167e039bd80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9003ee0a4d6c6bb00053a42012b3bd41') in 0.010357 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 4
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Шрифт/Новый шрифт/TT Fellows Trial ExtraLight.ttf
-  artifactKey: Guid(7f13385c4ccddbb40a9cca9c2fddff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Шрифт/Новый шрифт/TT Fellows Trial ExtraLight.ttf using Guid(7f13385c4ccddbb40a9cca9c2fddff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9753071e82a8c1c2355878d52701ee5') in 0.011336 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 4
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Шрифт/Новый шрифт/TT Fellows Trial Light Italic.ttf
-  artifactKey: Guid(b19775fc1a12f134abebe68859080ca5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Шрифт/Новый шрифт/TT Fellows Trial Light Italic.ttf using Guid(b19775fc1a12f134abebe68859080ca5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'baabfcd241349df744040f788d9fe649') in 0.012335 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 4
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Шрифт/Новый шрифт/TT Fellows Trial Variable.ttf
-  artifactKey: Guid(62189d447763e6743b0f3d145088444b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Шрифт/Новый шрифт/TT Fellows Trial Variable.ttf using Guid(62189d447763e6743b0f3d145088444b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '957cbbd5ee9be27541cbb480c9e2deae') in 0.001061 seconds
+  Time since last request: 0.000025 seconds.
+  path: Assets/Samples/Shader Graph/14.0.8/Procedural Patterns/Herringbone.ShaderSubGraph
+  artifactKey: Guid(2779352ef2443b545b86854fa838b877) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Shader Graph/14.0.8/Procedural Patterns/Herringbone.ShaderSubGraph using Guid(2779352ef2443b545b86854fa838b877) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e1255326b7b510cd23f1367fbaecf9c') in 0.004100 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Шрифт/Новый шрифт/TT Fellows Trial Bold Italic.ttf
-  artifactKey: Guid(77ae46eb4e53a1b42a2d4435fd1b20f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Шрифт/Новый шрифт/TT Fellows Trial Bold Italic.ttf using Guid(77ae46eb4e53a1b42a2d4435fd1b20f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bdac5d7b6aa4649a4ec81c0af46c639') in 0.011449 seconds
+  Time since last request: 0.000027 seconds.
+  path: Assets/ScifiOfficeLite/Meshes/Textures/Environment/Techware/Keyboard props texture/Keyboard Props_Diffuse.png
+  artifactKey: Guid(6bca6da117a646144a04476fbc898b92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScifiOfficeLite/Meshes/Textures/Environment/Techware/Keyboard props texture/Keyboard Props_Diffuse.png using Guid(6bca6da117a646144a04476fbc898b92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cf2b89ae55b57e2903633abdacf2e69') in 0.027058 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 4
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000229 seconds.
-  path: Assets/Шрифт/Новый шрифт/TT Fellows Trial Regular.ttf
-  artifactKey: Guid(2943dc2b96240a44eb86de42ad8f6420) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Шрифт/Новый шрифт/TT Fellows Trial Regular.ttf using Guid(2943dc2b96240a44eb86de42ad8f6420) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7ce942ae232b0ee46aef797e758e3f8') in 0.013712 seconds
+  Time since last request: 0.000036 seconds.
+  path: Assets/Materials/Интерьер/Сундук/Сундук/Metal_Embossed.jpg
+  artifactKey: Guid(13bdf07b6e1f57a4cbe90fb1ff660a8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Интерьер/Сундук/Сундук/Metal_Embossed.jpg using Guid(13bdf07b6e1f57a4cbe90fb1ff660a8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d35ccfd55c765d4af5fa1451e00e047') in 0.021466 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 4
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/ScifiOfficeLite/Meshes/Textures/Environment/Techware/Keyboard props texture/Keyboard Props_Height.png
+  artifactKey: Guid(94a07b862566eab49a59fdb9f8b95753) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScifiOfficeLite/Meshes/Textures/Environment/Techware/Keyboard props texture/Keyboard Props_Height.png using Guid(94a07b862566eab49a59fdb9f8b95753) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3f5f903f60063f9ef95ccac88dad9a5') in 0.009901 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Materials/textures/Генератор/Metal_Embossed.jpg
+  artifactKey: Guid(2722929631e52ca4497a32556af7d8f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/textures/Генератор/Metal_Embossed.jpg using Guid(2722929631e52ca4497a32556af7d8f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb7d727814ff571e32877a91eddf5e18') in 0.029856 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/ScifiOfficeLite/Meshes/Materials/DemoSkybox.mat
+  artifactKey: Guid(32ea4fce7231ca349a48b944302d257e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScifiOfficeLite/Meshes/Materials/DemoSkybox.mat using Guid(32ea4fce7231ca349a48b944302d257e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f6965a73521ac37dbeedfe73b88f83b') in 0.026794 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/ScifiOfficeLite/Meshes/Textures/Environment/Techware/Keyboard props texture/Keyboard Props_Maskmap.png
+  artifactKey: Guid(7d4d2c52a21e0ca47b62474a7f9f6e74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScifiOfficeLite/Meshes/Textures/Environment/Techware/Keyboard props texture/Keyboard Props_Maskmap.png using Guid(7d4d2c52a21e0ca47b62474a7f9f6e74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '304426218862453f88e1bfa6d603213e') in 0.020612 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Катсцены/Начальная катсчена/Particle_Stars_Box_01.prefab
+  artifactKey: Guid(f707798087222404788e929ee9dcb47f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Катсцены/Начальная катсчена/Particle_Stars_Box_01.prefab using Guid(f707798087222404788e929ee9dcb47f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0600439394222205d22c69de00ef583') in 0.071251 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/ScifiOfficeLite/Meshes/Textures/Environment/Techware/Keyboard props texture/Keyboard Props_Normal.png
+  artifactKey: Guid(ec75dfe1d08f0e845b031ed1962c38bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScifiOfficeLite/Meshes/Textures/Environment/Techware/Keyboard props texture/Keyboard Props_Normal.png using Guid(ec75dfe1d08f0e845b031ed1962c38bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e5e1b3f4571216d2b34aeba4d3b6a9c') in 0.033312 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\User\Documents\GitHub\Game-420-NTO\NTO420\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\User\Documents\GitHub\Game-420-NTO\NTO420\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.079 seconds
+Refreshing native plugins compatible for Editor in 3.86 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.398 seconds
+Domain Reload Profiling: 2474ms
+	BeginReloadAssembly (204ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (64ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (34ms)
+	LoadAllAssembliesAndSetupDomain (785ms)
+		LoadAssemblies (407ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (465ms)
+			TypeCache.Refresh (448ms)
+				TypeCache.ScanAssembly (430ms)
+			ScanForSourceGeneratedMonoScriptInfo (8ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (1399ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (629ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (95ms)
+			ProcessInitializeOnLoadAttributes (425ms)
+			ProcessInitializeOnLoadMethodAttributes (89ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Refreshing native plugins compatible for Editor in 6.31 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4565 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 156 unused Assets / (1.6 MB). Loaded Objects now: 5160.
+Memory consumption went from 173.8 MB to 172.2 MB.
+Total: 8.538700 ms (FindLiveObjects: 0.921700 ms CreateObjectMapping: 0.425900 ms MarkObjects: 6.018100 ms  DeleteObjects: 1.171300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/RoverAudio.cs:  -> ca5457ff50ebb8ed2b550bec35fb6d2b
+  custom:scripting/monoscript/fileName/Simple_C.cs:  -> dee3285b07405a66a72d443135d9e4b4
+  custom:scripting/monoscript/fileName/TweenRXZ.cs:  -> f82b565918b2cf1d04268c27287464bc
+  custom:scripting/monoscript/fileName/TweenSY.cs:  -> 41edc74aae9e4daa644868563a0903d8
+  custom:scripting/monoscript/fileName/TweenXYZ.cs:  -> 7face060fbb443bdea536e1e4fcab568
+  custom:scripting/monoscript/fileName/TweenS.cs:  -> 0d64a7c146b9db4901affea4a47c2193
+  custom:scripting/monoscript/fileName/TweenVec2T.cs:  -> 1a7ad3b7140ff78df2b338a5df6202ea
+  custom:scripting/monoscript/fileName/Simple_A.cs:  -> 649f9b991fcd42b486fd193a2634ae4c
+  custom:scripting/monoscript/fileName/ParticlesFollowBezier.cs:  -> ea94ac6e53a93f7eb2d48e8bd9259038
+  custom:scripting/monoscript/fileName/TweenVec4.cs:  -> cb952d247a31e3f4483c5ab2eab43cc0
+  custom:scripting/monoscript/fileName/BezierWalkerWithSpeed.cs:  -> ba0d23b1371fba247d6434740ef869bf
+  custom:scripting/monoscript/fileName/PlateformMover.cs:  -> 603b1603f527400550ea3666c90d1dfa
+  custom:scripting/monoscript/fileName/VolumetricExplode.cs:  -> 8f1460c26e2e9a801900e7e3984a5f57
+  custom:scripting/monoscript/fileName/DoubleDoorOpen.cs:  -> 50a685a46ab7b732ad1242b220a0ae95
+  custom:scripting/monoscript/fileName/UniFPSCounter.cs:  -> 91c73525b666caf32b2fb1b0bc5a0e68
+  custom:scripting/monoscript/fileName/BezierWalker.cs:  -> dbcaca00967107006ad06abfbd0fc019
+  custom:scripting/monoscript/fileName/RoverWheelDrive.cs:  -> 48c669bf833e174b02fc31657e96a2f7
+  custom:scripting/monoscript/fileName/TweenZ.cs:  -> 66edb46e13ee48a83221de5ae67ee014
+  custom:scripting/monoscript/fileName/BendMeshAlongBezier.cs:  -> c1fd07ee2d98c7f640688399cc0d791c
+  custom:scripting/monoscript/fileName/TweenSYZ.cs:  -> 97ff3e37a2733c762c400ef46e1937e2
+  custom:scripting/monoscript/fileName/Tween.cs:  -> 144ee074d5ed4074f929c3365d97b97a
+  custom:scripting/monoscript/fileName/KitManager.cs:  -> f8b7088748f90c1c9dafe4e82fbf485e
+  custom:scripting/monoscript/fileName/GameObjectDieAfter.cs:  -> 2358b8c6c13f7dbbf2723146b654dc92
+  custom:scripting/monoscript/fileName/ContainerOpen.cs:  -> 1dd574433bf63cb447b9867a3885765b
+  custom:scripting/monoscript/fileName/SuperMouseLook.cs:  -> 56aea1552a1a9aa76e64f34c41a121ea
+  custom:scripting/monoscript/fileName/TweenXZ.cs:  -> 06c90bf336564d58701c2839db6e5f06
+  custom:scripting/monoscript/fileName/TweenVec1T.cs:  -> c8b6204203d20c59658a4920f8188728
+  custom:scripting/monoscript/fileName/TweenRY.cs:  -> e58071c4cf02fad3abe815fe14b80a7a
+  custom:scripting/monoscript/fileName/TweenNull.cs:  -> e93d983eadbe7ec0d1ae8f9a7042ba9f
+  custom:scripting/monoscript/fileName/WhenShootDie.cs:  -> 5fcc5b4adbbf8e28b7780dcb85e9e43a
+  custom:scripting/monoscript/fileName/RoverSuspension.cs:  -> 3c06e8a281940b5d47c0388c1fdc75a1
+  custom:scripting/monoscript/fileName/Simple_F.cs:  -> 1ec0336133a8fa2dec6b173c159397db
+  custom:scripting/monoscript/fileName/TweenYZ.cs:  -> f0bb9ca1f3ef31c110d1142abdb4b95e
+  custom:scripting/monoscript/fileName/WindowCircularOpen.cs:  -> 8cd3724da0708f037f9669b15648f4be
+  custom:scripting/monoscript/fileName/WardrobeOpen.cs:  -> 559e011e7165730267d9d225b2003290
+  custom:scripting/monoscript/fileName/TweenVec3.cs:  -> e4de3616118557f3a9c6dd201d3294d2
+  custom:scripting/monoscript/fileName/HudSignalLineFreq.cs:  -> 9abd9abd49758c747da51221ccbe636a
+  custom:scripting/monoscript/fileName/TweenRX.cs:  -> cfae4bb78f3aae7e4f3dd91019d8383e
+  custom:scripting/monoscript/fileName/WindowOpen.cs:  -> 4946f4a949fb7201a311cb2305cc1de0
+  custom:scripting/monoscript/fileName/BezierLineRenderer.cs:  -> 1bb3f38ffb74b59b11b8dc43678d8433
+  custom:scripting/monoscript/fileName/Simple_D.cs:  -> 1c41f4994215465a629ef4021dcb31ec
+  custom:scripting/monoscript/fileName/AnimateSpriteSheet.cs:  -> c68debde7403c1b7810100c5653116ca
+  custom:scripting/monoscript/fileName/TweenY.cs:  -> 13d9a7bcf21ebccf6220b054d15bb2f2
+  custom:scripting/monoscript/fileName/Simple_B.cs:  -> 545f1b6f996f992344a1254d50b5fcfe
+  custom:scripting/monoscript/fileName/SuperMouseLookZoom.cs:  -> a29b7eed7278d4cbd564521f61ab8634
+  custom:scripting/monoscript/fileName/BezierDataStructures.cs:  -> 94f8e54b68df661c8d45e8cea71cf2f5
+  custom:scripting/monoscript/fileName/ReactorEngine.cs:  -> c191f4132c7511981ec6d3928c15c5d2
+  custom:scripting/monoscript/fileName/TweenRXY.cs:  -> 25c0c646665956462b127b1a9e6cf691
+  custom:scripting/monoscript/fileName/TweenSZ.cs:  -> 57e001f1c8414c8a82bed71f3e0f21b8
+  custom:scripting/monoscript/fileName/ShootHitSomething.cs:  -> d58d747ac5918bb5b4fddd3051f5de84
+  custom:scripting/monoscript/fileName/TweenR3.cs:  -> 05a1128d9c22d07fbfdd9a072dd5516b
+  custom:scripting/monoscript/fileName/TrapFloorOpen.cs:  -> 2896c342d44c7e2321d774e6039c77e8
+  custom:scripting/monoscript/fileName/LedButtonRandText.cs:  -> 6e0ea64c8641deb94eb4b2ca704d2ff7
+  custom:scripting/monoscript/fileName/TweenSXZ.cs:  -> 9aa300a9c1b479b6f37255ab5e861ac4
+  custom:scripting/monoscript/fileName/CrateOpen.cs:  -> 05a3ce1aa8c0bcd1bbffa3db44a86377
+  custom:scripting/monoscript/fileName/TweenRXYZ.cs:  -> 55efd0dc5b2ee3a8da77e530fb2e78fd
+  custom:scripting/monoscript/fileName/ShootExplosionSetup.cs:  -> 0179f28111f475bf3b3fe0fb0557be46
+  custom:scripting/monoscript/fileName/CameraFacingBillboard.cs:  -> 4a2d23092b70776f59ff0e6120db1889
+  custom:scripting/monoscript/fileName/TweenVec3T.cs:  -> 65660b80a1319c7360d920010b3eb178
+  custom:scripting/monoscript/fileName/AddForceAtStart.cs:  -> 8941211a2f1e08855c579a2d0c30e978
+  custom:scripting/monoscript/fileName/TweenRZ.cs:  -> 744406a6eac1f0417ccef046f6e59383
+  custom:scripting/monoscript/fileName/RoverPilotHead.cs:  -> 6263b17b368bf9453f08a6a196314f00
+  custom:scripting/monoscript/fileName/LedButtonSeqText.cs:  -> f3085559e323d057ac4732e0203f2679
+  custom:scripting/monoscript/fileName/TweenSX.cs:  -> 7fe8c3da3637a70ef80a511cb13609b4
+  custom:scripting/monoscript/fileName/FluentSyntax.cs:  -> f379bcc4e26e20ff3841401f88fda8fd
+  custom:scripting/monoscript/fileName/LightSwitch.cs:  -> fb87dae9268cecb47af08aa364ba610e
+  custom:scripting/monoscript/fileName/TurnMove.cs:  -> 0fdd3413b89ad72192010708ce6fb2a0
+  custom:scripting/monoscript/fileName/HangarDoorOpenA.cs:  -> f0572c743b45a216d84deb5eeea066cf
+  custom:scripting/monoscript/fileName/EasyTimer.cs:  -> 1945f31d24d7ae329b2f4c24e3a60936
+  custom:scripting/monoscript/fileName/Teleporter.cs:  -> d985ce36f855c981e05b242e07fef67e
+  custom:scripting/monoscript/fileName/TweenVec2.cs:  -> 5bf1cf891da401bf6c0de09d8eb6a631
+  custom:scripting/monoscript/fileName/TweenX.cs:  -> 0bb7fdb3ce1bc3a49013e03af7d803c1
+  custom:scripting/monoscript/fileName/TweenRYZ.cs:  -> 9ff5f58f7c8dd36114001351edb7b012
+  custom:scripting/monoscript/fileName/TweenSXYZ.cs:  -> 7a5cc2c845001a5bb41c4042003b4d42
+  custom:scripting/monoscript/fileName/BezierWalkerWithTime.cs:  -> b8a198e481dde55a08047a7ef0270a65
+  custom:scripting/monoscript/fileName/AddTorqueAtStart.cs:  -> 4cc2cc051d1dd616652bf0815152517e
+  custom:scripting/monoscript/fileName/TweenXY.cs:  -> 02bf35a016af46cd891b3ec4ae922e92
+  custom:scripting/monoscript/fileName/SmallDoorOpen.cs:  -> fe9532ed1f6810739fce6282f76ad550
+  custom:scripting/monoscript/fileName/ShootFlashLight.cs:  -> ed04fa29b2498908a062e11b9a709308
+  custom:scripting/monoscript/fileName/TweenP.cs:  -> c43c958e350a77b902e2ebd26c3ce35e
+  custom:scripting/monoscript/fileName/ObjectTowardOnlyYaw.cs:  -> 99615ab4c446462204a3d8fe505d7004
+  custom:scripting/monoscript/fileName/ButtonClickAnim.cs:  -> f95acd4447d28c0a16d01aa452b24e6d
+  custom:scripting/monoscript/fileName/TweenR.cs:  -> 4e4dae0e550f16404214b97cdbf26fee
+  custom:scripting/monoscript/fileName/CreepyCatTestB.cs:  -> e47624a0666b5931280d3d960fb1fcbc
+  custom:scripting/monoscript/fileName/TweenP3.cs:  -> 7ec07b76aa320d1890073ecc9909c674
+  custom:scripting/monoscript/fileName/Easings.cs:  -> ee351d4c99f2617ef880ec09f6a98217
+  custom:scripting/monoscript/fileName/CreepyCatTest.cs:  -> 44f1b00bbbb0a9c9d6f225f30dd3427d
+  custom:scripting/monoscript/fileName/BezierWalkerLocomotion.cs:  -> 471381719253b74bb49a34645d89d7f3
+  custom:scripting/monoscript/fileName/MinMaxRangeAttribute.cs:  -> f68b0fe6f145b4f4f475d10111b80195
+  custom:scripting/monoscript/fileName/SuperMouseLookFpsCamera.cs:  -> 788e9a3174494dcc096984255c53afba
+  custom:scripting/monoscript/fileName/TweenS3.cs:  -> 6cc9d8f2c60414474e28edbbd99b67be
+  custom:scripting/monoscript/fileName/BezierAttachment.cs:  -> 52d88ff7f633982853e5e3412c4c7b94
+  custom:scripting/monoscript/fileName/ShootLaunchFrom.cs:  -> 1cb43510e4837ff68babc0fffd476a5a
+  custom:scripting/monoscript/fileName/TweenVec1.cs:  -> ea5519e266e44aa407cfea84a5d17407
+  custom:scripting/monoscript/fileName/FlickeringLight.cs:  -> 2bcca4fe51bb5b2ee049be9d2524b58a
+  custom:scripting/monoscript/fileName/TweenSXY.cs:  -> 10781e46849508e59dd4e703572e562e
+  custom:scripting/monoscript/fileName/SelectScreenPicture.cs:  -> 169f0b7dbf5e00463bebc656c6a511ce
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\User\Documents\GitHub\Game-420-NTO\NTO420\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\User\Documents\GitHub\Game-420-NTO\NTO420\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.053 seconds
+Refreshing native plugins compatible for Editor in 4.76 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.625 seconds
+Domain Reload Profiling: 2675ms
+	BeginReloadAssembly (191ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (63ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (37ms)
+	LoadAllAssembliesAndSetupDomain (772ms)
+		LoadAssemblies (451ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (406ms)
+			TypeCache.Refresh (394ms)
+				TypeCache.ScanAssembly (374ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (1626ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (708ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (8ms)
+			SetLoadedEditorAssemblies (7ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (114ms)
+			ProcessInitializeOnLoadAttributes (476ms)
+			ProcessInitializeOnLoadMethodAttributes (91ms)
+			AfterProcessingInitializeOnLoad (10ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Refreshing native plugins compatible for Editor in 4.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4566 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 45 unused Assets / (1.5 MB). Loaded Objects now: 5163.
+Memory consumption went from 173.9 MB to 172.4 MB.
+Total: 9.403400 ms (FindLiveObjects: 1.039800 ms CreateObjectMapping: 0.359400 ms MarkObjects: 6.763000 ms  DeleteObjects: 1.237500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/RoverAudio.cs:  -> ca5457ff50ebb8ed2b550bec35fb6d2b
+  custom:scripting/monoscript/fileName/Simple_C.cs:  -> dee3285b07405a66a72d443135d9e4b4
+  custom:scripting/monoscript/fileName/TweenRXZ.cs:  -> f82b565918b2cf1d04268c27287464bc
+  custom:scripting/monoscript/fileName/TweenSY.cs:  -> 41edc74aae9e4daa644868563a0903d8
+  custom:scripting/monoscript/fileName/TweenXYZ.cs:  -> 7face060fbb443bdea536e1e4fcab568
+  custom:scripting/monoscript/fileName/TweenS.cs:  -> 0d64a7c146b9db4901affea4a47c2193
+  custom:scripting/monoscript/fileName/TweenVec2T.cs:  -> 1a7ad3b7140ff78df2b338a5df6202ea
+  custom:scripting/monoscript/fileName/Simple_A.cs:  -> 649f9b991fcd42b486fd193a2634ae4c
+  custom:scripting/monoscript/fileName/ParticlesFollowBezier.cs:  -> ea94ac6e53a93f7eb2d48e8bd9259038
+  custom:scripting/monoscript/fileName/TweenVec4.cs:  -> cb952d247a31e3f4483c5ab2eab43cc0
+  custom:scripting/monoscript/fileName/BezierWalkerWithSpeed.cs:  -> ba0d23b1371fba247d6434740ef869bf
+  custom:scripting/monoscript/fileName/PlateformMover.cs:  -> 603b1603f527400550ea3666c90d1dfa
+  custom:scripting/monoscript/fileName/VolumetricExplode.cs:  -> 8f1460c26e2e9a801900e7e3984a5f57
+  custom:scripting/monoscript/fileName/DoubleDoorOpen.cs:  -> 50a685a46ab7b732ad1242b220a0ae95
+  custom:scripting/monoscript/fileName/UniFPSCounter.cs:  -> 91c73525b666caf32b2fb1b0bc5a0e68
+  custom:scripting/monoscript/fileName/BezierWalker.cs:  -> dbcaca00967107006ad06abfbd0fc019
+  custom:scripting/monoscript/fileName/RoverWheelDrive.cs:  -> 48c669bf833e174b02fc31657e96a2f7
+  custom:scripting/monoscript/fileName/TweenZ.cs:  -> 66edb46e13ee48a83221de5ae67ee014
+  custom:scripting/monoscript/fileName/BendMeshAlongBezier.cs:  -> c1fd07ee2d98c7f640688399cc0d791c
+  custom:scripting/monoscript/fileName/TweenSYZ.cs:  -> 97ff3e37a2733c762c400ef46e1937e2
+  custom:scripting/monoscript/fileName/Tween.cs:  -> 144ee074d5ed4074f929c3365d97b97a
+  custom:scripting/monoscript/fileName/KitManager.cs:  -> f8b7088748f90c1c9dafe4e82fbf485e
+  custom:scripting/monoscript/fileName/GameObjectDieAfter.cs:  -> 2358b8c6c13f7dbbf2723146b654dc92
+  custom:scripting/monoscript/fileName/ContainerOpen.cs:  -> 1dd574433bf63cb447b9867a3885765b
+  custom:scripting/monoscript/fileName/SuperMouseLook.cs:  -> 56aea1552a1a9aa76e64f34c41a121ea
+  custom:scripting/monoscript/fileName/TweenXZ.cs:  -> 06c90bf336564d58701c2839db6e5f06
+  custom:scripting/monoscript/fileName/TweenVec1T.cs:  -> c8b6204203d20c59658a4920f8188728
+  custom:scripting/monoscript/fileName/TweenRY.cs:  -> e58071c4cf02fad3abe815fe14b80a7a
+  custom:scripting/monoscript/fileName/TweenNull.cs:  -> e93d983eadbe7ec0d1ae8f9a7042ba9f
+  custom:scripting/monoscript/fileName/WhenShootDie.cs:  -> 5fcc5b4adbbf8e28b7780dcb85e9e43a
+  custom:scripting/monoscript/fileName/RoverSuspension.cs:  -> 3c06e8a281940b5d47c0388c1fdc75a1
+  custom:scripting/monoscript/fileName/Simple_F.cs:  -> 1ec0336133a8fa2dec6b173c159397db
+  custom:scripting/monoscript/fileName/TweenYZ.cs:  -> f0bb9ca1f3ef31c110d1142abdb4b95e
+  custom:scripting/monoscript/fileName/WindowCircularOpen.cs:  -> 8cd3724da0708f037f9669b15648f4be
+  custom:scripting/monoscript/fileName/WardrobeOpen.cs:  -> 559e011e7165730267d9d225b2003290
+  custom:scripting/monoscript/fileName/TweenVec3.cs:  -> e4de3616118557f3a9c6dd201d3294d2
+  custom:scripting/monoscript/fileName/HudSignalLineFreq.cs:  -> 9abd9abd49758c747da51221ccbe636a
+  custom:scripting/monoscript/fileName/TweenRX.cs:  -> cfae4bb78f3aae7e4f3dd91019d8383e
+  custom:scripting/monoscript/fileName/WindowOpen.cs:  -> 4946f4a949fb7201a311cb2305cc1de0
+  custom:scripting/monoscript/fileName/BezierLineRenderer.cs:  -> 1bb3f38ffb74b59b11b8dc43678d8433
+  custom:scripting/monoscript/fileName/Simple_D.cs:  -> 1c41f4994215465a629ef4021dcb31ec
+  custom:scripting/monoscript/fileName/AnimateSpriteSheet.cs:  -> c68debde7403c1b7810100c5653116ca
+  custom:scripting/monoscript/fileName/TweenY.cs:  -> 13d9a7bcf21ebccf6220b054d15bb2f2
+  custom:scripting/monoscript/fileName/Simple_B.cs:  -> 545f1b6f996f992344a1254d50b5fcfe
+  custom:scripting/monoscript/fileName/SuperMouseLookZoom.cs:  -> a29b7eed7278d4cbd564521f61ab8634
+  custom:scripting/monoscript/fileName/BezierDataStructures.cs:  -> 94f8e54b68df661c8d45e8cea71cf2f5
+  custom:scripting/monoscript/fileName/ReactorEngine.cs:  -> c191f4132c7511981ec6d3928c15c5d2
+  custom:scripting/monoscript/fileName/TweenRXY.cs:  -> 25c0c646665956462b127b1a9e6cf691
+  custom:scripting/monoscript/fileName/TweenSZ.cs:  -> 57e001f1c8414c8a82bed71f3e0f21b8
+  custom:scripting/monoscript/fileName/ShootHitSomething.cs:  -> d58d747ac5918bb5b4fddd3051f5de84
+  custom:scripting/monoscript/fileName/TweenR3.cs:  -> 05a1128d9c22d07fbfdd9a072dd5516b
+  custom:scripting/monoscript/fileName/TrapFloorOpen.cs:  -> 2896c342d44c7e2321d774e6039c77e8
+  custom:scripting/monoscript/fileName/LedButtonRandText.cs:  -> 6e0ea64c8641deb94eb4b2ca704d2ff7
+  custom:scripting/monoscript/fileName/TweenSXZ.cs:  -> 9aa300a9c1b479b6f37255ab5e861ac4
+  custom:scripting/monoscript/fileName/CrateOpen.cs:  -> 05a3ce1aa8c0bcd1bbffa3db44a86377
+  custom:scripting/monoscript/fileName/TweenRXYZ.cs:  -> 55efd0dc5b2ee3a8da77e530fb2e78fd
+  custom:scripting/monoscript/fileName/ShootExplosionSetup.cs:  -> 0179f28111f475bf3b3fe0fb0557be46
+  custom:scripting/monoscript/fileName/CameraFacingBillboard.cs:  -> 4a2d23092b70776f59ff0e6120db1889
+  custom:scripting/monoscript/fileName/TweenVec3T.cs:  -> 65660b80a1319c7360d920010b3eb178
+  custom:scripting/monoscript/fileName/AddForceAtStart.cs:  -> 8941211a2f1e08855c579a2d0c30e978
+  custom:scripting/monoscript/fileName/TweenRZ.cs:  -> 744406a6eac1f0417ccef046f6e59383
+  custom:scripting/monoscript/fileName/RoverPilotHead.cs:  -> 6263b17b368bf9453f08a6a196314f00
+  custom:scripting/monoscript/fileName/LedButtonSeqText.cs:  -> f3085559e323d057ac4732e0203f2679
+  custom:scripting/monoscript/fileName/TweenSX.cs:  -> 7fe8c3da3637a70ef80a511cb13609b4
+  custom:scripting/monoscript/fileName/FluentSyntax.cs:  -> f379bcc4e26e20ff3841401f88fda8fd
+  custom:scripting/monoscript/fileName/LightSwitch.cs:  -> fb87dae9268cecb47af08aa364ba610e
+  custom:scripting/monoscript/fileName/TurnMove.cs:  -> 0fdd3413b89ad72192010708ce6fb2a0
+  custom:scripting/monoscript/fileName/HangarDoorOpenA.cs:  -> f0572c743b45a216d84deb5eeea066cf
+  custom:scripting/monoscript/fileName/EasyTimer.cs:  -> 1945f31d24d7ae329b2f4c24e3a60936
+  custom:scripting/monoscript/fileName/Teleporter.cs:  -> d985ce36f855c981e05b242e07fef67e
+  custom:scripting/monoscript/fileName/TweenVec2.cs:  -> 5bf1cf891da401bf6c0de09d8eb6a631
+  custom:scripting/monoscript/fileName/TweenX.cs:  -> 0bb7fdb3ce1bc3a49013e03af7d803c1
+  custom:scripting/monoscript/fileName/TweenRYZ.cs:  -> 9ff5f58f7c8dd36114001351edb7b012
+  custom:scripting/monoscript/fileName/TweenSXYZ.cs:  -> 7a5cc2c845001a5bb41c4042003b4d42
+  custom:scripting/monoscript/fileName/BezierWalkerWithTime.cs:  -> b8a198e481dde55a08047a7ef0270a65
+  custom:scripting/monoscript/fileName/AddTorqueAtStart.cs:  -> 4cc2cc051d1dd616652bf0815152517e
+  custom:scripting/monoscript/fileName/TweenXY.cs:  -> 02bf35a016af46cd891b3ec4ae922e92
+  custom:scripting/monoscript/fileName/SmallDoorOpen.cs:  -> fe9532ed1f6810739fce6282f76ad550
+  custom:scripting/monoscript/fileName/ShootFlashLight.cs:  -> ed04fa29b2498908a062e11b9a709308
+  custom:scripting/monoscript/fileName/TweenP.cs:  -> c43c958e350a77b902e2ebd26c3ce35e
+  custom:scripting/monoscript/fileName/ObjectTowardOnlyYaw.cs:  -> 99615ab4c446462204a3d8fe505d7004
+  custom:scripting/monoscript/fileName/ButtonClickAnim.cs:  -> f95acd4447d28c0a16d01aa452b24e6d
+  custom:scripting/monoscript/fileName/TweenR.cs:  -> 4e4dae0e550f16404214b97cdbf26fee
+  custom:scripting/monoscript/fileName/CreepyCatTestB.cs:  -> e47624a0666b5931280d3d960fb1fcbc
+  custom:scripting/monoscript/fileName/TweenP3.cs:  -> 7ec07b76aa320d1890073ecc9909c674
+  custom:scripting/monoscript/fileName/Easings.cs:  -> ee351d4c99f2617ef880ec09f6a98217
+  custom:scripting/monoscript/fileName/CreepyCatTest.cs:  -> 44f1b00bbbb0a9c9d6f225f30dd3427d
+  custom:scripting/monoscript/fileName/BezierWalkerLocomotion.cs:  -> 471381719253b74bb49a34645d89d7f3
+  custom:scripting/monoscript/fileName/MinMaxRangeAttribute.cs:  -> f68b0fe6f145b4f4f475d10111b80195
+  custom:scripting/monoscript/fileName/SuperMouseLookFpsCamera.cs:  -> 788e9a3174494dcc096984255c53afba
+  custom:scripting/monoscript/fileName/TweenS3.cs:  -> 6cc9d8f2c60414474e28edbbd99b67be
+  custom:scripting/monoscript/fileName/BezierAttachment.cs:  -> 52d88ff7f633982853e5e3412c4c7b94
+  custom:scripting/monoscript/fileName/ShootLaunchFrom.cs:  -> 1cb43510e4837ff68babc0fffd476a5a
+  custom:scripting/monoscript/fileName/TweenVec1.cs:  -> ea5519e266e44aa407cfea84a5d17407
+  custom:scripting/monoscript/fileName/FlickeringLight.cs:  -> 2bcca4fe51bb5b2ee049be9d2524b58a
+  custom:scripting/monoscript/fileName/TweenSXY.cs:  -> 10781e46849508e59dd4e703572e562e
+  custom:scripting/monoscript/fileName/SelectScreenPicture.cs:  -> 169f0b7dbf5e00463bebc656c6a511ce
+========================================================================
+Received Import Request.
+  Time since last request: 41.110219 seconds.
+  path: Assets/_Creepy_Cat/_3D Scifi Kit Vol 4/Meshes/Rock_03.FBX
+  artifactKey: Guid(80bf90662709f734dad5dd233f795f30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Creepy_Cat/_3D Scifi Kit Vol 4/Meshes/Rock_03.FBX using Guid(80bf90662709f734dad5dd233f795f30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbd71dfded1bae4f10b65ad3f557e342') in 0.313625 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 38.763378 seconds.
+  path: Assets/_Creepy_Cat/_3D Scifi Kit Vol 4/Textures/Wall_Atlas_01_ID.png
+  artifactKey: Guid(b00c36bc12d46cc4baac6e87af99a3a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Creepy_Cat/_3D Scifi Kit Vol 4/Textures/Wall_Atlas_01_ID.png using Guid(b00c36bc12d46cc4baac6e87af99a3a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39171863b301971bf86a3b4e405b3283') in 0.374475 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: �������� �����/������ ���� �������� ��-�� ���������� ������ ������ ��� �� ������� ����������.
 AssetImportWorker is now disconnected from the server
