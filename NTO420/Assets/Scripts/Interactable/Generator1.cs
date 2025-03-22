@@ -24,8 +24,9 @@ public class Generator1 : MonoBehaviour
 
     private  ManagerUI ui;
     public Paseka paseka;
-    private void Start()
+    public void FirstUpdate()
     {
+        print("JeckieIsBestBoy");
         camera = GameObject.Find("Camera").transform;
         slots = GameObject.FindObjectOfType<CollectResource>();
         stats = GameObject.FindObjectOfType<PlayerStats>();
@@ -33,7 +34,6 @@ public class Generator1 : MonoBehaviour
         tutor = GameObject.FindObjectOfType<Tutorial>();
         StartCoroutine(GeneratorRashod());
     }
-
     private void Update()
     {
         generatortext.text = honeyNow.ToString() + "%";
