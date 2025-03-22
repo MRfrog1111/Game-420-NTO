@@ -12,6 +12,7 @@ public class GoToScene : MonoBehaviour
         if (coll.CompareTag("Player1"))
         {
             coll.gameObject.GetComponentInParent<PlayerStats>().resources.stage =0;
+            coll.gameObject.GetComponentInParent<CharacterEnabler>().ChangeState(false);
             coll.gameObject.transform.position = new Vector3(0, 15, 0);
             SceneManager.LoadScene(sceneName);
         }

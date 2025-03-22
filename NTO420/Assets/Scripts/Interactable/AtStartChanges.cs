@@ -17,16 +17,20 @@ public class AtStartChanges : MonoBehaviour
     {
          player = GameObject.FindGameObjectWithTag("Player");
          print(player.name);
-         player.transform.position = new Vector3(0, 15, 0);
+         player.transform.position = new Vector3(0, 7, 0);
          foreach (Transform child in player.transform)
          {
              child.transform.localPosition = new Vector3(0, 0, 0);
-             if (child.name == "UI1")
+         }
+         player.GetComponent<CharacterEnabler>().ChangeState(true);
+         foreach (Transform child in player.transform)
+         {
+             if (child.gameObject.name == "UI1")
              {
                  child.gameObject.SetActive(true);
              }
          }
-
+         //GameObject.Find("PlayerCapsule").transform.localPosition = new Vector3(0, 0, 0);
          StartCoroutine(Wait());
     }
 
