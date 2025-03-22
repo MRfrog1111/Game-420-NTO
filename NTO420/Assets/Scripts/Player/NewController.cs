@@ -23,8 +23,8 @@ public class NewController : MonoBehaviour
     [SerializeField] private Camera cam;
     [SerializeField] private LayerMask layerGround;
     [SerializeField] private AudioClip soundWalk;
-    [SerializeField] private List<LayerMask> layerForSound;
-    [SerializeField] private List<AudioClip> soundForWalk;
+    //[SerializeField] private List<LayerMask> layerForSound;
+    //[SerializeField] private List<AudioClip> soundForWalk;
 
     private float horzintalMovement;
     private float verticalMovement;
@@ -174,7 +174,7 @@ public class NewController : MonoBehaviour
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
     }
 
-    private void OnCollisionEnter(Collision collision)
+   /* private void OnCollisionEnter(Collision collision)
     {
         if(MoveSpeed != 0)
         {
@@ -192,5 +192,5 @@ public class NewController : MonoBehaviour
             soundWalk = null;
         }
     }
-
+   */
 }

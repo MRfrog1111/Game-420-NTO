@@ -22,11 +22,15 @@ public class Paseka : MonoBehaviour
     public bool isWorking = true;
     private void Start()
     {
+        StartCoroutine(Pasek());
+    }
+
+    public void FirstUpdate()
+    {
         Camera = GameObject.Find("Camera").transform;
         slots = GameObject.FindObjectOfType<CollectResource>();
         stats = GameObject.FindObjectOfType<PlayerStats>();
         tutor = GameObject.FindObjectOfType<Tutorial>();
-        StartCoroutine(Pasek());
     }
 
     private void Update()
