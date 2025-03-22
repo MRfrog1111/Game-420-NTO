@@ -1,8 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SubsystemsImplementation;
 
 public class HP : MonoBehaviour
 {
+    [SerializeField] private GameObject canvas;
+    [SerializeField] private Image hp;
+
     public int currentHp;
     public int maxHp;
     public bool isInvulnerable;
@@ -29,6 +33,28 @@ public class HP : MonoBehaviour
                         break;
                 }
             }
+        }
+    }
+    
+    
+
+    private void Update()
+    {
+        ChangedHp();
+        hp.fillAmount = currentHp / maxHp;
+    }
+
+    private void ChangedHp()
+    {
+        if (currentHp == maxHp)
+        {
+            canvas.SetActive(false);
+        }
+        else
+        {
+            canvas.SetActive(true);
+            
+            
         }
     }
 }

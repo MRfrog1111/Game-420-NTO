@@ -14,6 +14,7 @@ public class CollectResource : MonoBehaviour
     [SerializeField] private PlayerStats stats;
     [SerializeField] private LayerMask pickableLayerMask;
     [SerializeField] private Transform playerCameraTransform;
+    [SerializeField] private Transform player;
     
     public List<SlotInventory> slots = new List<SlotInventory>();
     public Transform inventoryPanel;
@@ -112,6 +113,22 @@ public class CollectResource : MonoBehaviour
 
     private void AddItem(ItemScriptableObject _item, int _count)
     {
+        /*
+        bool allFull = true;
+        foreach (SlotInventory itinventorySlot in slots)
+        {
+            if (!itinventorySlot.isEmpty)
+            {
+                allFull = false;
+                break;
+            }
+        }
+        if(allFull)
+        {
+            GameObject itemObject = Instantiate(_item.itemPrefab, player.position + Vector3.up + player.forward, Quaternion.identity );
+            itemObject.GetComponent<Items>().count = _count;
+        }
+        */
         //StartCoroutine(stats.webAsker.GetPlayerResources(stats.GetRes));
         stats.CheckUpdates();
         //print("item" + _item.name);
@@ -133,6 +150,21 @@ public class CollectResource : MonoBehaviour
         
         foreach (SlotInventory slot in slots)
         {
+            /*
+            foreach (SlotInventory itinventorySlot in slots)
+            {
+                if (!itinventorySlot.isEmpty)
+                {
+                    allFull = false;
+                    break;
+                }
+            }
+            if (allFull)
+            {
+                GameObject itemObject = Instantiate(_item.itemPrefab, player.position + Vector3.up + player.forward, Quaternion.identity);
+                itemObject.GetComponent<Items>().count = _count;
+                return;
+            }*/
             if (slot.isEmpty == true)
             {
                 //print("collected");
