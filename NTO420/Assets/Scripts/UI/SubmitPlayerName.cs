@@ -57,7 +57,7 @@ public class SubmitPlayerName : MonoBehaviour
         }
         print("connection "+isConnected);
         PlayerPrefs.SetString("PlayerName",inputName);
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
 }

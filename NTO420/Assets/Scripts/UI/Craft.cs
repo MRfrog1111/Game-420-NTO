@@ -110,7 +110,7 @@ public class Craft : MonoBehaviour
         {
             _base.SetActive(false);
             buildings[l].gameObject.SetActive(true);
-            print("a");
+            print("tulen");
             for (int j = 0; j < builds[l].GetComponent<BuildItem>().buildItem.buildResurses.Count; j++)
             {
                 minus = builds[l].GetComponent<BuildItem>().buildItem.buildResurses[j].buildObjectCount;

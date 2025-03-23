@@ -73,7 +73,6 @@ public class CraftHoneyEssence : MonoBehaviour
                 }
             //stats.resources.honey_esence += 1;
             }
-            print("a");
             stats.resources.minerals -= essence.buildItem.buildResurses[0].buildObjectCount;
             stats.resources.honey -= essence.buildItem.buildResurses[0].buildObjectCount;
             stats.resources.honey_esence += 1;
