@@ -18,7 +18,7 @@ public class PlayerRequests : MonoBehaviour
 
     public IEnumerator GetPlayerResources(System.Action<PlayerResources> returnResources)
     {
-        string url = "https://2025.nti-gamedev.ru/api/games/"+uuid+"/players/"+currentPlayerName+"/";
+        string url = "https://final.2025.nti-gamedev.ru/api/games/"+uuid+"/players/"+currentPlayerName+"/";
         UnityWebRequest req = UnityWebRequest.Get(url);
 
         yield return req.SendWebRequest();
@@ -34,7 +34,7 @@ public class PlayerRequests : MonoBehaviour
     public IEnumerator UpdatePlayerResources(PlayerResources new_res)
     {
         if (currentPlayerName != null){
-            string url = "https://2025.nti-gamedev.ru/api/games/"+uuid+"/players/"+currentPlayerName+"/";
+            string url = "https://final.2025.nti-gamedev.ru/api/games/"+uuid+"/players/"+currentPlayerName+"/";
             UpdateResourcesStruct upd = new UpdateResourcesStruct()
             {
                 resources = new_res
@@ -51,7 +51,7 @@ public class PlayerRequests : MonoBehaviour
     public IEnumerator AddPlayer(string p_name)
     {
         //WWWForm form = new WWWForm();
-        string url = "https://2025.nti-gamedev.ru/api/games/"+uuid+"/players/";
+        string url = "https://final.2025.nti-gamedev.ru/api/games/"+uuid+"/players/";
         PlayerResources res = new PlayerResources()
         {
             hp = 100,
@@ -74,7 +74,7 @@ public class PlayerRequests : MonoBehaviour
 
     public IEnumerator GetPlayers(System.Action<PlayersStruct> returnPlayers)
     {
-        string url = "https://2025.nti-gamedev.ru/api/games/"+uuid+"/players/";
+        string url = "https://final.2025.nti-gamedev.ru/api/games/"+uuid+"/players/";
         UnityWebRequest req = UnityWebRequest.Get(url);
 
         yield return req.SendWebRequest();
@@ -83,12 +83,12 @@ public class PlayerRequests : MonoBehaviour
         string json = "{\"players\":" + req.downloadHandler.text+ "}";
         PlayersStruct response = JsonUtility.FromJson<PlayersStruct>(json);
         returnPlayers(response);
-        //print(req.downloadHandler.text);
+        print(req.downloadHandler.text);
         //return response;
     }
     public IEnumerator SendLog(string comm, PlayerChangesLogs changes)
     {
-        string url =  "https://2025.nti-gamedev.ru/api/games/"+uuid+"/logs/";
+        string url =  "https://final.2025.nti-gamedev.ru/api/games/"+uuid+"/logs/";
         PlayerLogs pl = new PlayerLogs()
         {
             comment = comm,

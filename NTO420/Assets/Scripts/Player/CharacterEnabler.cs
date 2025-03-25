@@ -14,6 +14,8 @@ public class CharacterEnabler : MonoBehaviour
         //gameObject.GetComponent<Controller>().enabled = isActive;
        // gameObject.GetComponent<MC_attack>().enabled = isActive;
         gameObject.GetComponent<PlayerStats>().isActive=isActive;
+        Cursor.lockState = !isActive ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.visible = !isActive;
         for (int i = 0; i < transform.childCount; i++)
         {
             if (transform.GetChild(i).gameObject.name != "TutorialGleb (1)")

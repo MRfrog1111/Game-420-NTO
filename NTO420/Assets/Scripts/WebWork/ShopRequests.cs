@@ -18,7 +18,7 @@ public class ShopRequests : MonoBehaviour
     {
         //WWWForm form = new WWWForm();
         //print("start");
-        string url = "https://2025.nti-gamedev.ru/api/games/"+uuid+"/players/"+currentPlayerName+"/shops/";
+        string url = "https://final.2025.nti-gamedev.ru/api/games/"+uuid+"/players/"+currentPlayerName+"/shops/";
         ShopResources res = new ShopResources()
         {
             flower = 1,
@@ -46,7 +46,7 @@ public class ShopRequests : MonoBehaviour
 
     public IEnumerator GetShop(System.Action<ShopStruct> returnShop)
     {
-        string url = "https://2025.nti-gamedev.ru/api/games/"+uuid+"/players/"+currentPlayerName+"/shops/"+shopName;
+        string url = "https://final.2025.nti-gamedev.ru/api/games/"+uuid+"/players/"+currentPlayerName+"/shops/"+shopName;
         UnityWebRequest req = UnityWebRequest.Get(url);
 
         yield return req.SendWebRequest();
@@ -60,7 +60,7 @@ public class ShopRequests : MonoBehaviour
     public IEnumerator UpdateShopResources(ShopResources new_res)
     {
         if (currentPlayerName != null){
-            string url = "https://2025.nti-gamedev.ru/api/games/"+uuid+"/players/"+currentPlayerName+"/shops/"+shopName+"/";
+            string url = "https://final.2025.nti-gamedev.ru/api/games/"+uuid+"/players/"+currentPlayerName+"/shops/"+shopName+"/";
             UpdateShopResourcesStruct upd = new UpdateShopResourcesStruct()
             {
                 resources = new_res
@@ -76,7 +76,7 @@ public class ShopRequests : MonoBehaviour
     
     public IEnumerator SendLog(string comm, ShopChangesLogs changes)
     {
-        string url =  "https://2025.nti-gamedev.ru/api/games/"+uuid+"/logs/";
+        string url =  "https://final.2025.nti-gamedev.ru/api/games/"+uuid+"/logs/";
         ShopLogs sl = new ShopLogs()
         {
             comment = comm,
