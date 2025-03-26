@@ -1,0 +1,73 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Tilemaps;
+using System;
+public class SavePuzzleLevel : MonoBehaviour
+{
+    Dictionary<string, Tilemap> tilemaps = new Dictionary<string, Tilemap>();
+    [SerializeField] private BoundsInt bounds;
+    [SerializeField] string filename = "tilemapdata.json";
+
+    private void Start()
+    {
+        InitializeTilemaps();
+    }
+
+    private void InitializeTilemaps()
+    {
+        Tilemap[] maps = FindObjectsOfType<Tilemap>();
+        foreach (var map in maps )
+        {
+            tilemaps.Add(map.name, map);
+        }
+    }
+    public void Savelevel()
+    {
+        List<TilemapData> data = new List<TilemapData>();
+        foreach (var mapObj in tilemaps)
+        {
+            TilemapData mapData = new TilemapData();
+            mapData.key = mapObj.Key;
+            for (int x = bounds.xMin; x < bounds.xMax; x++)
+            {
+                for (int y = bounds.yMin; y < bounds.yMax; y++)
+                {
+                    Vector3Int pos = new Vector3Int(x, y, -2);
+                    TileBase tile = mapObj.Value.GetTile(pos);
+                    if (tile != null)
+                    {
+                        TileInfo ti = new TileInfo(tile, pos);
+                        mapData.tiles.Add(ti);
+                    }
+                }
+            }
+        }
+    }
+
+    public void Loadlevel()
+    {
+        
+    }
+}
+
+[SerializeField]
+public class TilemapData
+{
+    public string key;
+    public List<TileInfo> tiles = new List<TileInfo>();
+}
+
+[SerializeField]
+public class TileInfo
+{
+    public TileBase tile;
+    public Vector3Int position;
+
+    public TileInfo(TileBase tile, Vector3Int pos)
+    {
+        this.tile = tile;
+        position = pos;
+    }
+}

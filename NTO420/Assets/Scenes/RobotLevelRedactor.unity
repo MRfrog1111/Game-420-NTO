@@ -372,13 +372,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 939495458}
+        m_TargetAssemblyTypeName: SavePuzzleLevel, Assembly-CSharp
+        m_MethodName: Savelevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -665,13 +665,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 939495458}
+        m_TargetAssemblyTypeName: SavePuzzleLevel, Assembly-CSharp
+        m_MethodName: Loadlevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1351,11 +1351,6 @@ Transform:
   m_Father: {fileID: 1185006238}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &613012804 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1136959794527377915, guid: 66b6ca49e5210964bba25a03e5a421d2, type: 3}
-  m_PrefabInstance: {fileID: 2318127302147998518}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &647796629
 GameObject:
   m_ObjectHideFlags: 0
@@ -1835,7 +1830,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 939495457}
-  - component: {fileID: 939495456}
+  - component: {fileID: 939495458}
   m_Layer: 0
   m_Name: Loader
   m_TagString: Untagged
@@ -1843,22 +1838,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &939495456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 939495455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f137119836360fd4baec587991bd7ff0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maps:
-  - {fileID: 1882344336}
-  - {fileID: 2029362947}
-  - {fileID: 613012804}
 --- !u!4 &939495457
 Transform:
   m_ObjectHideFlags: 0
@@ -1874,6 +1853,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &939495458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939495455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5202624229815d4fbcebc801279a8b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounds:
+    m_Position: {x: -5, y: -5, z: -2}
+    m_Size: {x: 5, y: 5, z: -2}
+  filename: tilemapdata.json
 --- !u!1 &941397155
 GameObject:
   m_ObjectHideFlags: 0
@@ -3621,11 +3616,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868154243}
   m_CullTransparentMesh: 1
---- !u!1 &1882344336 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2046336343098048139, guid: be4bdafcb9233f54aa6c7a3119f8f9a8, type: 3}
-  m_PrefabInstance: {fileID: 6382402639854863766}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1963026379
 GameObject:
   m_ObjectHideFlags: 0
@@ -3836,11 +3826,6 @@ Transform:
   m_Father: {fileID: 933629854}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2029362947 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8834532843832965066, guid: 8c664c327425d6c42aa1e973d49e7c36, type: 3}
-  m_PrefabInstance: {fileID: 8135199949399360544}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2106910617
 GameObject:
   m_ObjectHideFlags: 0

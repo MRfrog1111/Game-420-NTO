@@ -88,7 +88,7 @@ public class GridObjectsPlacement : MonoBehaviour
         //gridPosition = grid.WorldToCell(newBlock.transform.position);
         //print("gridPos "+gridPosition);
         //gridPosition.y = 0;
-        //print("p" + gridPosition);
+        print("p" + gridPosition);
         placedBlocks.Add(newBlock);
         blockData.AddBlockAt(gridPosition,database.blockData[selectedObjectIndex].Size,
             database.blockData[selectedObjectIndex].ID,placedBlocks.Count-1);
