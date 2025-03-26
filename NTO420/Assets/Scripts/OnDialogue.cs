@@ -9,7 +9,7 @@ public class OnDialogue : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if(other.CompareTag("Player1"))
         {
             ConversationManager.Instance.StartConversation(conversation);
             StartCoroutine(DestroyTrigger());
