@@ -9,7 +9,7 @@ public class IndicatorMoving : MonoBehaviour
 
     private void Update()
     {
-        Vector3 mousePosition = inputManager.GetSelectedMapPosition();
-        mouseIndicator.transform.position = mousePosition;
+       /* Vector3 mousePosition = inputManager.GetSelectedMapPosition();
+        mouseIndicator.transform.position = mousePosition;*/
     }
 }

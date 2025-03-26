@@ -25,6 +25,7 @@ public class GridData : MonoBehaviour
     {
         int r = placedBlocks[gridPosition].PlacedObjectIndex;
         placedBlocks.Remove(gridPosition);
+        print("delete"+gridPosition);
         return r;
     }
     private List<Vector3Int> CalculatePositions(Vector3Int gridPosition, Vector2 blockSize)

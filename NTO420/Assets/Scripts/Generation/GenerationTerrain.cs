@@ -14,6 +14,6 @@ public class GenerationTerrain : MonoBehaviour
 
     private void Update()
     {
-        terrain.
+        //terrain.Ы
     }
 }

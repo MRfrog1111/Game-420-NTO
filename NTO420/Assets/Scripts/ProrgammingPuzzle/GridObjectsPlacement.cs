@@ -38,6 +38,7 @@ public class GridObjectsPlacement : MonoBehaviour
             return;
         }
         cellIndicator.SetActive(true);
+        mouseIndicator.SetActive(false);
         if (cellIndicator.transform.childCount>0)
         {
             Destroy(cellIndicator.transform.GetChild(0).gameObject);
@@ -133,6 +134,7 @@ public class GridObjectsPlacement : MonoBehaviour
     {
         selectedObjectIndex = -1;
         cellIndicator.SetActive(false);
+        mouseIndicator.SetActive(true);
         inputManager.OnClicked -= PlaceBlock;
         inputManager.OnExit -= StopPlacement;
     }
@@ -146,16 +148,25 @@ public class GridObjectsPlacement : MonoBehaviour
         }
         if (selectedObjectIndex < 0)
         {
-            return;
+            Vector3 mousePosition = inputManager.GetSelectedMapPosition();
+            Vector3Int gridPosition = grid.WorldToCell(mousePosition);
+            //mouseIndicator.transform.position = grid.CellToWorld(gridPosition);
+            mouseIndicator.transform.position = grid.CellToWorld(gridPosition);
+            /* bool placementValidity = CheckPlacementValidity(gridPosition, selectedObjectIndex);
+            previewRenderer.material.color = placementValidity ? Color.green : Color.red;*/
+            //return;
         }
-        Vector3 mousePosition = inputManager.GetSelectedMapPosition();
-        Vector3Int gridPosition = grid.WorldToCell(mousePosition);
-        
-        bool placementValidity = CheckPlacementValidity(gridPosition, selectedObjectIndex);
-        previewRenderer.material.color = placementValidity ? Color.green : Color.red;
-        
-        mouseIndicator.transform.position = mousePosition;
-        cellIndicator.transform.position = grid.CellToWorld(gridPosition);
+        else
+        {
+            Vector3 mousePosition = inputManager.GetSelectedMapPosition();
+            Vector3Int gridPosition = grid.WorldToCell(mousePosition);
+
+            bool placementValidity = CheckPlacementValidity(gridPosition, selectedObjectIndex);
+            previewRenderer.material.color = placementValidity ? Color.green : Color.red;
+
+           // mouseIndicator.transform.position = mousePosition;
+            cellIndicator.transform.position = grid.CellToWorld(gridPosition);
+        }
     }
 }
 
