@@ -21,6 +21,8 @@ public class GridObjectsPlacement : MonoBehaviour
 
     public List<GameObject> placedBlocks = new();
     private bool canPlace = false;
+
+    public Savedobjects savedObjects;
     void Start()
     {
         StopPlacement();
@@ -60,6 +62,29 @@ public class GridObjectsPlacement : MonoBehaviour
             block.GetComponentInChildren<BlockBehavior>().enabled = true;
         }
     }
+
+    public void BlockPlacing(Vector3 pos, int blockID,bool isAdding)
+    {
+        Vector3Int gridPosition = grid.WorldToCell(pos);       
+        GameObject newBlock = Instantiate(database.blockData[blockID].Prefab);
+        newBlock.transform.position = grid.CellToWorld(gridPosition);
+        newBlock.transform.position = new Vector3(newBlock.transform.position.x, newBlock.transform.position.y-0.1f, newBlock.transform.position.z);
+        //print("p" + gridPosition);
+        placedBlocks.Add(newBlock);
+        blockData.AddBlockAt(gridPosition,database.blockData[blockID].Size,
+            database.blockData[blockID].ID,placedBlocks.Count-1);
+        if (isAdding)
+        {
+            SaveableGridObject gridObject = new SaveableGridObject()
+            {
+                ID = blockID,
+                xPos = pos.x,
+                yPos = pos.y,
+                zPos = pos.z
+            };
+            savedObjects.savedObjects.gridObjects.Add(gridObject);
+        }
+    }
     
     private void PlaceBlock()
     {
@@ -75,34 +100,22 @@ public class GridObjectsPlacement : MonoBehaviour
         {
             return;
         }
-        
-
-        
-        GameObject newBlock = Instantiate(database.blockData[selectedObjectIndex].Prefab);
-        newBlock.transform.position = grid.CellToWorld(gridPosition);
-        newBlock.transform.position = new Vector3(newBlock.transform.position.x, newBlock.transform.position.y-0.1f, newBlock.transform.position.z);
-       /* if (newBlock.GetComponentInChildren<BlockBehavior>())
-        {
-            StartCoroutine(enableSript(newBlock));
-        }*/
-        //gridPosition = grid.WorldToCell(newBlock.transform.position);
-        //print("gridPos "+gridPosition);
-        //gridPosition.y = 0;
-        print("p" + gridPosition);
-        placedBlocks.Add(newBlock);
-        blockData.AddBlockAt(gridPosition,database.blockData[selectedObjectIndex].Size,
-            database.blockData[selectedObjectIndex].ID,placedBlocks.Count-1);
+        BlockPlacing(mousePosition, selectedObjectIndex,true);
         selectedObjectIndex = -1;
         cellIndicator.SetActive(false);
         StopPlacement();
        // print("p2"+placedBlocks[blockData.GetBlockIndex(gridPosition)].gameObject.name);
     }
 
-    public void DeleteBlock()
+    void DeleteBlockOnClick()
     {
         Vector3 mousePosition = inputManager.GetSelectedMapPosition();
-        Vector3Int gridPosition = grid.WorldToCell(mousePosition);
-        print(gridPosition);
+        DeleteBlock(mousePosition);
+    }
+    public void DeleteBlock(Vector3 pos)
+    {
+        Vector3Int gridPosition = grid.WorldToCell(pos);
+        //print(gridPosition);
         if (!blockData.CanPlaceObjectAt(gridPosition,new Vector2Int(1,1)))
         {
             int idx = blockData.DeleteBlockAt(gridPosition);
@@ -112,6 +125,7 @@ public class GridObjectsPlacement : MonoBehaviour
             //placedBlocks.RemoveAt(idx);
         }
     }
+    
     private bool CheckPlacementValidity(Vector3Int gridPosition, int selectedBlockIndex)
     {
         return blockData.CanPlaceObjectAt(gridPosition, database.blockData[selectedBlockIndex].Size);
@@ -160,7 +174,7 @@ public class GridObjectsPlacement : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(1))
         {
-            DeleteBlock();
+            DeleteBlockOnClick();
         }
         else
         {
@@ -179,6 +193,7 @@ public class GridObjectsPlacement : MonoBehaviour
         }
     }
 }
+
 
 
 

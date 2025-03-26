@@ -1,73 +1,50 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
-using UnityEngine.Tilemaps;
-using System;
+
 public class SavePuzzleLevel : MonoBehaviour
 {
-    Dictionary<string, Tilemap> tilemaps = new Dictionary<string, Tilemap>();
-    [SerializeField] private BoundsInt bounds;
-    [SerializeField] string filename = "tilemapdata.json";
-
-    private void Start()
-    {
-        InitializeTilemaps();
-    }
-
-    private void InitializeTilemaps()
-    {
-        Tilemap[] maps = FindObjectsOfType<Tilemap>();
-        foreach (var map in maps )
-        {
-            tilemaps.Add(map.name, map);
-        }
-    }
+    [SerializeField] private Savedobjects savedObjectsScript;
+    [SerializeField] private string levelName;
+    [SerializeField] private GridObjectsPlacement[] placements;
     public void Savelevel()
     {
-        List<TilemapData> data = new List<TilemapData>();
-        foreach (var mapObj in tilemaps)
-        {
-            TilemapData mapData = new TilemapData();
-            mapData.key = mapObj.Key;
-            for (int x = bounds.xMin; x < bounds.xMax; x++)
-            {
-                for (int y = bounds.yMin; y < bounds.yMax; y++)
-                {
-                    Vector3Int pos = new Vector3Int(x, y, -2);
-                    TileBase tile = mapObj.Value.GetTile(pos);
-                    if (tile != null)
-                    {
-                        TileInfo ti = new TileInfo(tile, pos);
-                        mapData.tiles.Add(ti);
-                    }
-                }
-            }
-        }
+        File.Delete(Application.dataPath + "/TestData.json");
+        string saveFilePath = Application.dataPath + "/TestData.json";
+        string savePlayerData = JsonUtility.ToJson(savedObjectsScript);
+        File.WriteAllText(saveFilePath, savePlayerData);
+        print(saveFilePath);
     }
 
     public void Loadlevel()
     {
-        
+        string saveFilePath = Application.dataPath + "/TestData.json";
+        string loadPlayerData = File.ReadAllText(saveFilePath);
+        gameObject.GetComponent<ClearAll>().DeleteAll();
+        foreach (var obj in JsonUtility.FromJson<SaveableGridObjects>(loadPlayerData).gridObjects)
+        {
+            savedObjectsScript.savedObjects.gridObjects.Add(obj);
+        }
+        print(savedObjectsScript.savedObjects.gridObjects.Count);
+        //placements[0].BlockPlacing(new Vector3(savedObjectsScript.savedObjects.gridObjects[0].xPos,savedObjectsScript.savedObjects.gridObjects[0].yPos,savedObjectsScript.savedObjects.gridObjects[0].zPos),savedObjectsScript.savedObjects.gridObjects[0].ID);
+       for(int i = 0; i < savedObjectsScript.savedObjects.gridObjects.Count; i++)
+        {
+            print(savedObjectsScript.savedObjects.gridObjects[i].ID);
+            if (savedObjectsScript.savedObjects.gridObjects[i].ID < 4 || savedObjectsScript.savedObjects.gridObjects[i].ID>5) // все кроме стен
+            {
+                placements[0].BlockPlacing(new Vector3(savedObjectsScript.savedObjects.gridObjects[i].xPos,savedObjectsScript.savedObjects.gridObjects[i].yPos,savedObjectsScript.savedObjects.gridObjects[i].zPos),savedObjectsScript.savedObjects.gridObjects[i].ID,false);
+            }
+            else if (savedObjectsScript.savedObjects.gridObjects[i].ID == 4)// горизонтальные стены
+            {
+                placements[1].BlockPlacing(new Vector3(savedObjectsScript.savedObjects.gridObjects[i].xPos,savedObjectsScript.savedObjects.gridObjects[i].yPos,savedObjectsScript.savedObjects.gridObjects[i].zPos),savedObjectsScript.savedObjects.gridObjects[i].ID,false);
+            }
+            else if (savedObjectsScript.savedObjects.gridObjects[i].ID == 5)// вертикальные стены
+            {
+                placements[2].BlockPlacing(new Vector3(savedObjectsScript.savedObjects.gridObjects[i].xPos,savedObjectsScript.savedObjects.gridObjects[i].yPos,savedObjectsScript.savedObjects.gridObjects[i].zPos),savedObjectsScript.savedObjects.gridObjects[i].ID,false);
+            }
+        }
     }
 }
 
-[SerializeField]
-public class TilemapData
-{
-    public string key;
-    public List<TileInfo> tiles = new List<TileInfo>();
-}
 
-[SerializeField]
-public class TileInfo
-{
-    public TileBase tile;
-    public Vector3Int position;
-
-    public TileInfo(TileBase tile, Vector3Int pos)
-    {
-        this.tile = tile;
-        position = pos;
-    }
-}
