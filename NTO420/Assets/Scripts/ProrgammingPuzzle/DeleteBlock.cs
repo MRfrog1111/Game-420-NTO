@@ -15,7 +15,7 @@ public class DeleteBlock : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+       /* if (Input.GetMouseButtonDown(1))
         {
             Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
             if (Input.mousePosition.x <= screenPos.x + hitrange && Input.mousePosition.x >= screenPos.x - hitrange &&
@@ -24,7 +24,7 @@ public class DeleteBlock : MonoBehaviour
                 placementSystem.DeleteBlock();
                 Destroy(gameObject.transform.parent.gameObject);
             }
-        }
+        }*/
     }
     
 }

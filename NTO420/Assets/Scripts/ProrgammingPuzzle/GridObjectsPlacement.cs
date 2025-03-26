@@ -19,7 +19,7 @@ public class GridObjectsPlacement : MonoBehaviour
 
     private Renderer previewRenderer;
 
-    private List<GameObject> placedBlocks = new();
+    public List<GameObject> placedBlocks = new();
     private bool canPlace = false;
     void Start()
     {
@@ -88,13 +88,14 @@ public class GridObjectsPlacement : MonoBehaviour
         //gridPosition = grid.WorldToCell(newBlock.transform.position);
         //print("gridPos "+gridPosition);
         //gridPosition.y = 0;
-        print("p" + gridPosition);
+        //print("p" + gridPosition);
         placedBlocks.Add(newBlock);
         blockData.AddBlockAt(gridPosition,database.blockData[selectedObjectIndex].Size,
             database.blockData[selectedObjectIndex].ID,placedBlocks.Count-1);
         selectedObjectIndex = -1;
         cellIndicator.SetActive(false);
         StopPlacement();
+       // print("p2"+placedBlocks[blockData.GetBlockIndex(gridPosition)].gameObject.name);
     }
 
     public void DeleteBlock()
@@ -105,11 +106,12 @@ public class GridObjectsPlacement : MonoBehaviour
         if (!blockData.CanPlaceObjectAt(gridPosition,new Vector2Int(1,1)))
         {
             int idx = blockData.DeleteBlockAt(gridPosition);
-            Destroy(placedBlocks[idx]);
-            placedBlocks.RemoveAt(idx);
+            //print("delete2"+placedBlocks[idx].gameObject.name);
+            Destroy(placedBlocks[idx].gameObject);
+            placedBlocks[idx] = null;
+            //placedBlocks.RemoveAt(idx);
         }
     }
-
     private bool CheckPlacementValidity(Vector3Int gridPosition, int selectedBlockIndex)
     {
         return blockData.CanPlaceObjectAt(gridPosition, database.blockData[selectedBlockIndex].Size);
@@ -142,19 +144,23 @@ public class GridObjectsPlacement : MonoBehaviour
     //[SerializeField] private GameObje
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
-        {
-            DeleteBlock();
-        }
         if (selectedObjectIndex < 0)
         {
-            Vector3 mousePosition = inputManager.GetSelectedMapPosition();
+           /* Vector3 mousePosition = inputManager.GetSelectedMapPosition();
             Vector3Int gridPosition = grid.WorldToCell(mousePosition);
             //mouseIndicator.transform.position = grid.CellToWorld(gridPosition);
             mouseIndicator.transform.position = grid.CellToWorld(gridPosition);
             /* bool placementValidity = CheckPlacementValidity(gridPosition, selectedObjectIndex);
             previewRenderer.material.color = placementValidity ? Color.green : Color.red;*/
-            //return;
+            /*if (!blockData.CanPlaceObjectAt(gridPosition, new Vector2Int(1, 1)))
+            {
+                print("test" + gridPosition+" "+blockData.GetBlockPlacedIndex(gridPosition)/*+" "+placedBlocks[blockData.GetBlockIndex(gridPosition)].gameObject.name);
+            //}*/
+            return;
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            DeleteBlock();
         }
         else
         {
@@ -166,8 +172,13 @@ public class GridObjectsPlacement : MonoBehaviour
 
            // mouseIndicator.transform.position = mousePosition;
             cellIndicator.transform.position = grid.CellToWorld(gridPosition);
+            /*if (!blockData.CanPlaceObjectAt(gridPosition, new Vector2Int(1, 1)))
+            {
+                print("test" + gridPosition + " " + blockData.GetBlockPlacedIndex(gridPosition));
+            }*/
         }
     }
 }
+
 
 

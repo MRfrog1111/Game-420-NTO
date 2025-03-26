@@ -120,21 +120,24 @@ public class RobotMoving : MonoBehaviour
     }
     void OnTriggerEnter(Collider coll)
     {
-        if (coll.CompareTag("StopRobot"))
+        if (IsProgrammRunning)
         {
-            IsProgrammRunning = false;
-            isRobotMoving = false;
-            gameObject.GetComponent<SpriteRenderer>().sprite = gameOverSprite;
-            //print("gameOver");
-        }
-        else if (coll.gameObject.name == "Finish")
-        {
-            IsProgrammRunning = false;
-            isRobotMoving = false;
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            player.GetComponent<PlayerStats>().resources.stage++;
-            player.GetComponent<CharacterEnabler>().ChangeState(true);
-            SceneManager.LoadScene(returnToScene);
+            if (coll.CompareTag("StopRobot"))
+            {
+                IsProgrammRunning = false;
+                isRobotMoving = false;
+                gameObject.GetComponent<SpriteRenderer>().sprite = gameOverSprite;
+                //print("gameOver");
+            }
+            else if (coll.gameObject.name == "Finish")
+            {
+                IsProgrammRunning = false;
+                isRobotMoving = false;
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                player.GetComponent<PlayerStats>().resources.stage++;
+                player.GetComponent<CharacterEnabler>().ChangeState(true);
+                SceneManager.LoadScene(returnToScene);
+            }
         }
     }
 }
