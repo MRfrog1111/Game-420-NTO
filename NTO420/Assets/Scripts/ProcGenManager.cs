@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-#if UNITY_EDITOR
+
 using UnityEditor;
 using UnityEngine.SceneManagement;
-#endif // UNITY_EDITOR
+
 
 public class ProcGenManager : MonoBehaviour
 {
@@ -15,7 +15,7 @@ public class ProcGenManager : MonoBehaviour
 
     Dictionary<TextureConfig, int> BiomeTextureToTerrainLayerIndex = new Dictionary<TextureConfig, int>();
 
-#if UNITY_EDITOR
+
     byte[,] BiomeMap_LowResolution;
     float[,] BiomeStrengths_LowResolution;
 
@@ -23,7 +23,7 @@ public class ProcGenManager : MonoBehaviour
     float[,] BiomeStrengths;
 
     float[,] SlopeMap;
-#endif // UNITY_EDITOR
+
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +38,6 @@ public class ProcGenManager : MonoBehaviour
         
     }
 
-#if UNITY_EDITOR
     public void RegenerateTextures()
     {
         Perform_LayerSetup();    
@@ -521,5 +520,5 @@ public class ProcGenManager : MonoBehaviour
             }
         }        
     }
-#endif // UNITY_EDITOR
+
 }
