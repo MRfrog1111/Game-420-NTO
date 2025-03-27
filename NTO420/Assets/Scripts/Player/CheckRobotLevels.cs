@@ -5,13 +5,10 @@ using UnityEngine;
 
 public class CheckRobotLevels : MonoBehaviour
 {
+    [SerializeField] private GameObject[] textObjs;
+    [SerializeField] private Sprite[] defaultSprites;
+    //private Tutorial tutor;
     public List<string> robotLevels;
-    // Start is called before the first frame update
-    void Start()
-    {
-       FindRobotLevels();
-    }
-
     public void FindRobotLevels()
     {
         string [] fileEntries = Directory.GetFiles(Application.dataPath + "/", "*.json");
@@ -19,5 +16,17 @@ public class CheckRobotLevels : MonoBehaviour
         {
             robotLevels.Add(file);
         }
+    }
+    void Start()
+    {
+        FindRobotLevels();
+        for(int i = 0; i < textObjs.Length; i++)
+        {
+            if (textObjs[i].GetComponent<SpriteRenderer>().sprite == null)
+            {
+                textObjs[i].GetComponent<SpriteRenderer>().sprite = defaultSprites[i];
+            }
+        }
+        //GameObject.Find("PlayerCapsule").transform.localPosition = new Vector3(0, 0, 0);
     }
 }
