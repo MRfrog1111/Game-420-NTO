@@ -114,6 +114,11 @@ public class MenuManager : MonoBehaviour
         _Start = true;
     }
 
+    public void GoToMods()
+    {
+        SceneManager.LoadScene("Mods");
+    }
+
     
    
 }
