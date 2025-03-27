@@ -12,6 +12,9 @@ public class AtStartChanges : MonoBehaviour
     [SerializeField] private Generator1 generator;
 
     [SerializeField] private Paseka paseka;
+
+    [SerializeField] private GameObject[] resources;
+    [SerializeField] private Mesh[] defaultMeshes;
     //private Tutorial tutor;
     void Start()
     {
@@ -28,6 +31,14 @@ public class AtStartChanges : MonoBehaviour
              if (child.gameObject.name == "UI1")
              {
                  child.gameObject.SetActive(true);
+             }
+         }
+
+         for(int i = 0; i < resources.Length; i++)
+         {
+             if (resources[i].GetComponent<MeshFilter>().mesh == null)
+             {
+                 resources[i].GetComponent<MeshFilter>().mesh = defaultMeshes[i];
              }
          }
          //GameObject.Find("PlayerCapsule").transform.localPosition = new Vector3(0, 0, 0);

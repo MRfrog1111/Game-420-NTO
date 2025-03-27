@@ -5,6 +5,7 @@ using UnityEngine;
 public class ClearAll : MonoBehaviour
 {
     [SerializeField] private GridObjectsPlacement[] placements;
+    [SerializeField] private Savedobjects savedobjects;
     public void DeleteAll()
     {
         for (int i = 0; i < placements.Length; i++)
@@ -14,6 +15,8 @@ public class ClearAll : MonoBehaviour
                 placements[i].DeleteBlock(new Vector3(placements[i].savedObjects.savedObjects.gridObjects[j].xPos, placements[i].savedObjects.savedObjects.gridObjects[j].yPos, placements[i].savedObjects.savedObjects.gridObjects[j].zPos));
             }
         }
+        savedobjects.savedObjects.gridObjects.Clear();
+        
     }
 
    /* public void PlaceAll()

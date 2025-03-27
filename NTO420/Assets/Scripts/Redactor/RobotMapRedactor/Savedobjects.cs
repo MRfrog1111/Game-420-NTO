@@ -6,6 +6,7 @@ public class Savedobjects : MonoBehaviour
 {
     public SaveableGridObjects savedObjects;
 }
+
 [System.Serializable]
 public class SaveableGridObject
 {
@@ -18,5 +19,10 @@ public class SaveableGridObject
 [System.Serializable]
 public class SaveableGridObjects
 {
-    public List<SaveableGridObject> gridObjects = new List<SaveableGridObject>();
+    public List<SaveableGridObject> gridObjects=new List<SaveableGridObject>();
+
+    /*public SaveableGridObjects()
+    {
+        gridObjects = new List<SaveableGridObject>();
+    }*/
 }

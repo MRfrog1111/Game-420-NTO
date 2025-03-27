@@ -25,13 +25,16 @@ using UnityEngine.UI;
 using SFB;
 using TMPro;
 using UnityEngine.Networking;
-using Dummiesman; //Load OBJ Model
+using Dummiesman;
+using UnityEditor; //Load OBJ Model
 
 public class OpenFile : MonoBehaviour
 {
     public TextMeshProUGUI textMeshPro;
     public GameObject model; //Load OBJ Model
-
+    public GameObject[] updatedObject;
+    public string saveName = "SavedMesh";
+    public TMP_Dropdown dropdown;
 #if UNITY_WEBGL && !UNITY_EDITOR
     // WebGL
     [DllImport("__Internal")]
@@ -58,7 +61,7 @@ public class OpenFile : MonoBehaviour
     }
 #endif
 
-    private IEnumerator OutputRoutineOpen(string url)
+   private IEnumerator OutputRoutineOpen(string url)
     {
         UnityWebRequest www = UnityWebRequest.Get(url);
         yield return www.SendWebRequest();
@@ -76,8 +79,10 @@ public class OpenFile : MonoBehaviour
             {
                 Destroy(model);
             }
+
             model = new OBJLoader().Load(textStream);
-            model.transform.localScale = new Vector3(-1, 1, 1); // set the position of parent model. Reverse X to show properly 
+            model.transform.localScale =
+                new Vector3(-1, 1, 1); // set the position of parent model. Reverse X to show properly 
             FitOnScreen();
             DoublicateFaces();
         }
@@ -91,6 +96,7 @@ public class OpenFile : MonoBehaviour
         {
             bound.Encapsulate(r.bounds);
         }
+
         return bound;
     }
 
@@ -98,7 +104,9 @@ public class OpenFile : MonoBehaviour
     {
         Bounds bound = GetBound(model);
         Vector3 boundSize = bound.size;
-        float diagonal = Mathf.Sqrt((boundSize.x * boundSize.x) + (boundSize.y * boundSize.y) + (boundSize.z * boundSize.z)); //Get box diagonal
+        float diagonal =
+            Mathf.Sqrt((boundSize.x * boundSize.x) + (boundSize.y * boundSize.y) +
+                       (boundSize.z * boundSize.z)); //Get box diagonal
         Camera.main.orthographicSize = diagonal / 2.0f;
         Camera.main.transform.position = bound.center;
     }
@@ -132,10 +140,16 @@ public class OpenFile : MonoBehaviour
 
             for (int j = 0; j < numOfVertices; j++)
             {
-                newVertices[j] = newVertices[j + numOfVertices] = vertices[j]; //Copy original vertices to make the second half of the mew vertices array
-                newTextureCoordinates[j] = newTextureCoordinates[j + numOfVertices] = textureCoordinates[j]; //Copy original texture coordinates to make the second half of the mew texture coordinates array  
+                newVertices[j] =
+                    newVertices[j + numOfVertices] =
+                        vertices[j]; //Copy original vertices to make the second half of the mew vertices array
+                newTextureCoordinates[j] =
+                    newTextureCoordinates[j + numOfVertices] =
+                        textureCoordinates
+                            [j]; //Copy original texture coordinates to make the second half of the mew texture coordinates array  
                 newNormals[j] = normals[j]; //First half of the new normals array is a copy original normals
-                newNormals[j + numOfVertices] = -normals[j]; //Second half of the new normals array reverse the original normals
+                newNormals[j + numOfVertices] =
+                    -normals[j]; //Second half of the new normals array reverse the original normals
             }
 
             for (int x = 0; x < numOfTriangles; x += 3)
@@ -150,11 +164,24 @@ public class OpenFile : MonoBehaviour
                 newTriangle[j + 2] = triangles[x + 1] + numOfVertices;
                 newTriangle[j + 1] = triangles[x + 2] + numOfVertices;
             }
+
             mesh.vertices = newVertices;
             mesh.uv = newTextureCoordinates;
             mesh.normals = newNormals;
             mesh.triangles = newTriangle;
         }
+        SaveAsset();
+        updatedObject[dropdown.value].GetComponent<MeshFilter>().mesh = model.GetComponentInChildren<MeshFilter>().mesh;
     }
 
+    void SaveAsset()
+    {
+        var mf = model.GetComponent<MeshFilter>();
+        if (mf)
+        {
+            var savePath = "Assets/" + saveName + ".asset";
+            Debug.Log("Saved Mesh to:" + savePath);
+            AssetDatabase.CreateAsset(mf.mesh, savePath);
+        }
+    }
 }
