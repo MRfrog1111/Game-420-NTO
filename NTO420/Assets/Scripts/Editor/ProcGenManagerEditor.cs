@@ -6,6 +6,13 @@ using UnityEditor;
 [CustomEditor(typeof(ProcGenManager))]
 public class ProcGenManagerEditor : Editor
 {
+    void Start()
+    {
+        ProcGenManager targetManager = serializedObject.targetObject as ProcGenManager;
+        targetManager.RegenerateTextures();
+       // ProcGenManager targetManager = serializedObject.targetObject as ProcGenManager;
+        targetManager.RegenerateWorld();
+    }
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
