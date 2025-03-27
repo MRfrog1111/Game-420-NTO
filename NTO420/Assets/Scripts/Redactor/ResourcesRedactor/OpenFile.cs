@@ -170,11 +170,11 @@ public class OpenFile : MonoBehaviour
             mesh.normals = newNormals;
             mesh.triangles = newTriangle;
         }
-        SaveAsset();
+        //SaveAsset();
         updatedObject[dropdown.value].GetComponent<MeshFilter>().mesh = model.GetComponentInChildren<MeshFilter>().mesh;
     }
 
-    void SaveAsset()
+   /* void SaveAsset()
     {
         var mf = model.GetComponent<MeshFilter>();
         if (mf)
@@ -183,5 +183,5 @@ public class OpenFile : MonoBehaviour
             Debug.Log("Saved Mesh to:" + savePath);
             AssetDatabase.CreateAsset(mf.mesh, savePath);
         }
-    }
+    }*/
 }

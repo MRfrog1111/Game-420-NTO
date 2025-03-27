@@ -129,7 +129,7 @@ public class RobotMoving : MonoBehaviour
                 gameObject.GetComponent<SpriteRenderer>().sprite = gameOverSprite;
                 //print("gameOver");
             }
-            else if (coll.gameObject.name == "Finish")
+            else if (coll.CompareTag("Finish"))
             {
                 IsProgrammRunning = false;
                 isRobotMoving = false;

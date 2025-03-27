@@ -8,13 +8,13 @@ public class BlockBehavior : MonoBehaviour
 {
     private RobotMoving robotMoving;
     public string commandLine = "";
-    private GridObjectsPlacement placementSystem;
+    private GridObjectsPlacementProgramming placementSystem;
     private float  down = 2.02f;
     private int hitrange = 50;
     void Start()
     {
-        robotMoving = GameObject.Find("Robot").GetComponent<RobotMoving>();
-        placementSystem = GameObject.FindObjectOfType<GridObjectsPlacement>();
+        robotMoving = GameObject.FindObjectOfType<RobotMoving>().GetComponent<RobotMoving>();
+        placementSystem = GameObject.FindObjectOfType<GridObjectsPlacementProgramming>();
     }
     private void Update()
     {

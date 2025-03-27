@@ -8,7 +8,7 @@ public class Door : MonoBehaviour
 
     private GameObject player;
     private Vector3 openPos;
-    
+    [SerializeField] private GameObject hint;
     private Animator anim;
     [SerializeField] private int openStage;
     private PlayerStats playerStats;
@@ -43,6 +43,7 @@ public class Door : MonoBehaviour
         if (coll.CompareTag("Player1"))
         {
            canPressButton = true;
+           hint.SetActive(true);
         }
     }
     void OnTriggerExit(Collider coll)
@@ -50,6 +51,7 @@ public class Door : MonoBehaviour
         if (coll.CompareTag("Player1"))
         {
             canPressButton = false;
+            hint.SetActive(false);
         }
     }
     
